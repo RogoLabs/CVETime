@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CVETime Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              panel: "#111827",
+              panel2: "#1f2937",
+              accent: "#22d3ee",
+              accent2: "#10b981"
+            },
+            fontFamily: {
+              display: ["Space Grotesk", "ui-sans-serif", "system-ui"]
+            }
+          }
+        }
+      };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script defer src="assets/js/main.js"></script>
+  </head>
+  <body class="bg-slate-950 text-slate-100 min-h-screen">
+    <div class="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_20%_20%,rgba(34,211,238,0.15),transparent_35%),radial-gradient(circle_at_80%_10%,rgba(16,185,129,0.15),transparent_35%),linear-gradient(180deg,#020617,#0b1120)]"></div>
+
+    <main class="max-w-6xl mx-auto px-4 py-8 md:py-12">
+      <header class="mb-8 md:mb-12">
+        <p class="text-cyan-300 tracking-[0.2em] text-xs uppercase">CVE Velocity Dashboard</p>
+        <h1 class="font-display text-3xl md:text-5xl font-semibold mt-2">Global CVE Heartbeat</h1>
+        <p class="text-slate-400 mt-3">Average time between CVE publications globally and across CNAs.</p>
+      </header>
+
+      <section class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+        <article class="bg-panel2/80 border border-slate-800 rounded-2xl p-5">
+          <h2 class="text-slate-400 text-sm">Current Heartbeat (30d)</h2>
+          <p id="heroMetric" class="font-display text-3xl md:text-4xl text-cyan-300 mt-2">Loading...</p>
+          <p class="text-xs text-slate-500 mt-2" id="generatedAt">Updated: --</p>
+        </article>
+        <article class="bg-panel2/80 border border-slate-800 rounded-2xl p-5">
+          <h2 class="text-slate-400 text-sm">Distinct CNAs</h2>
+          <p id="distinctCnas" class="font-display text-3xl md:text-4xl text-emerald-300 mt-2">--</p>
+        </article>
+        <article class="bg-panel2/80 border border-slate-800 rounded-2xl p-5">
+          <h2 class="text-slate-400 text-sm">Records Parsed</h2>
+          <p id="parsedRecords" class="font-display text-3xl md:text-4xl text-sky-300 mt-2">--</p>
+        </article>
+      </section>
+
+      <section class="bg-panel2/70 border border-slate-800 rounded-2xl p-4 md:p-6 mb-8">
+        <div class="flex items-center justify-between gap-3 mb-4">
+          <h2 class="font-display text-xl">Global Trend</h2>
+          <p class="text-xs text-slate-400">Monthly mean interval (seconds) + median trend line</p>
+        </div>
+        <div class="h-80 md:h-96">
+          <canvas id="globalTrendChart"></canvas>
+        </div>
+      </section>
+
+      <section class="bg-panel2/70 border border-slate-800 rounded-2xl p-4 md:p-6">
+        <div class="flex flex-col md:flex-row md:items-center justify-between gap-3 mb-4">
+          <h2 class="font-display text-xl">CNA Velocity</h2>
+          <select id="cnaSelect" class="bg-slate-900 border border-slate-700 rounded-xl px-3 py-2 text-sm">
+            <option value="">All CNAs</option>
+          </select>
+        </div>
+        <div class="overflow-x-auto">
+          <table class="w-full text-sm">
+            <thead>
+              <tr class="text-left text-slate-400 border-b border-slate-800">
+                <th class="py-3 pr-3">CNA</th>
+                <th class="py-3 pr-3">30d seconds/CVE</th>
+                <th class="py-3 pr-3">90d seconds/CVE</th>
+                <th class="py-3 pr-3">Events (30d)</th>
+                <th class="py-3">Total Events</th>
+              </tr>
+            </thead>
+            <tbody id="leaderboardBody"></tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
