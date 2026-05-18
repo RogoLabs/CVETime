@@ -122,6 +122,15 @@ def format_heartbeat(seconds_value: float | None) -> str:
     return f"{seconds}s"
 
 
+def monthly_deltas(timestamps: pd.Series) -> pd.Series:
+    timeline = pd.Series(pd.to_datetime(timestamps, utc=True), copy=False).drop_duplicates().sort_values()
+    if timeline.shape[0] < 2:
+        return pd.Series(dtype="float64")
+
+    indexed_timeline = pd.Series(timeline.values, index=pd.DatetimeIndex(timeline.values))
+    return indexed_timeline.diff().dt.total_seconds().dropna()
+
+
 def global_trend(df: pd.DataFrame) -> list[dict[str, Any]]:
     unique_events = (
         df[["published_second"]]
@@ -130,7 +139,7 @@ def global_trend(df: pd.DataFrame) -> list[dict[str, Any]]:
         .set_index("published_second")
     )
 
-    deltas = unique_events.index.to_series().diff().dt.total_seconds().dropna()
+    deltas = monthly_deltas(unique_events.index.to_series())
     if deltas.empty:
         return []
 
@@ -174,7 +183,7 @@ def cna_rollups(df: pd.DataFrame, min_events: int = 20) -> tuple[list[dict[str, 
             }
         )
 
-        deltas = unique_seconds.diff().dt.total_seconds().dropna()
+        deltas = monthly_deltas(unique_seconds)
         monthly = deltas.resample("MS").agg(["mean", "median", "count"]).dropna()
         trend_by_cna[cna] = [
             {
