@@ -13,7 +13,7 @@ The project is designed for automated refresh on GitHub Pages.
 
 ## Tech Stack
 
-- Data processing: Python + Pandas
+- Data processing: Python 3.14+ + Pandas 3.x
 - Frontend: Tailwind CSS + Chart.js
 - Automation and hosting: GitHub Actions + GitHub Pages
 

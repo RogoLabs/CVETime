@@ -174,7 +174,7 @@ def cna_rollups(df: pd.DataFrame, min_events: int = 20) -> tuple[list[dict[str, 
             }
         )
 
-        deltas = unique_seconds.to_series().diff().dt.total_seconds().dropna()
+        deltas = unique_seconds.diff().dt.total_seconds().dropna()
         monthly = deltas.resample("MS").agg(["mean", "median", "count"]).dropna()
         trend_by_cna[cna] = [
             {
