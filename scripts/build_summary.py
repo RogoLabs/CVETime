@@ -451,7 +451,7 @@ def cna_rollups(df: pd.DataFrame, min_events: int = 20) -> tuple[list[dict[str, 
         shard["cna"]["percentileFaster"] = item["percentileFaster"]
         shard["peers"] = leaderboard[:20]
 
-    return leaderboard[:200], shard_exports
+  return leaderboard[:200], shard_exports
 
 
 def build_summary(cvelist_path: Path) -> tuple[dict[str, Any], dict[str, dict[str, Any]]]:

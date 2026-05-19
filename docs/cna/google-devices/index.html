@@ -12,9 +12,7 @@
           extend: {
             colors: {
               ink: { DEFAULT: "#06101d", light: "#f8fafc" },
-              ink2: { DEFAULT: "#0b1727", light: "#e2e8f0" },
               panel: { DEFAULT: "#10233c", light: "#f1f5f9" },
-              panel2: { DEFAULT: "#162b46", light: "#e0e7ef" },
               accent: { DEFAULT: "#2ee6ff", light: "#0ea5e9" },
               accent2: { DEFAULT: "#2dd4bf", light: "#14b8a6" },
               accent3: { DEFAULT: "#60a5fa", light: "#6366f1" }
@@ -28,12 +26,9 @@
     <link rel="canonical" href="/cna/google-devices/" />
   </head>
   <body class="bg-ink-light text-slate-900 dark:bg-ink dark:text-slate-100 min-h-screen transition-colors duration-300">
-
     <div class="fixed inset-0 -z-20 bg-[radial-gradient(circle_at_15%_15%,rgba(14,165,233,0.14),transparent_30%),radial-gradient(circle_at_80%_0%,rgba(99,102,241,0.12),transparent_26%),radial-gradient(circle_at_90%_90%,rgba(20,184,166,0.10),transparent_22%),linear-gradient(180deg,#f8fbff_0%,#eff6ff_48%,#e0f2fe_100%)] dark:bg-[radial-gradient(circle_at_15%_15%,rgba(46,230,255,0.15),transparent_28%),radial-gradient(circle_at_80%_0%,rgba(96,165,250,0.15),transparent_26%),radial-gradient(circle_at_90%_90%,rgba(45,212,191,0.10),transparent_22%),linear-gradient(180deg,#040a13_0%,#081321_48%,#06101d_100%)]"></div>
     <div class="fixed inset-0 -z-10 opacity-40 dark:opacity-30 bg-[linear-gradient(rgba(14,165,233,0.07)_1px,transparent_1px),linear-gradient(90deg,rgba(14,165,233,0.07)_1px,transparent_1px)] dark:bg-[linear-gradient(rgba(148,163,184,0.07)_1px,transparent_1px),linear-gradient(90deg,rgba(148,163,184,0.07)_1px,transparent_1px)] bg-[size:88px_88px]"></div>
-
     <script>
-      // Sync theme from root
       (function() {
         const saved = localStorage.getItem('theme');
         const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
@@ -42,10 +37,10 @@
     </script>
 
     <header class="sticky top-0 z-20 border-b border-sky-200/80 dark:border-white/10 bg-[rgba(248,250,252,0.78)] dark:bg-slate-950/90 backdrop-blur-xl">
-      <div class="max-w-5xl mx-auto px-4 py-3 flex items-center gap-4">
+      <div class="max-w-6xl mx-auto px-4 py-3 flex items-center gap-4">
         <a href="../../" class="text-xs text-slate-600 dark:text-slate-400 hover:text-sky-600 dark:hover:text-cyan-400 transition-colors">← Global Dashboard</a>
         <span class="text-slate-400 dark:text-slate-600">/</span>
-        <a href="../" class="text-xs text-slate-600 dark:text-slate-400 hover:text-sky-600 dark:hover:text-cyan-400 transition-colors">CNAs</a>
+        <a href="../" class="text-xs text-slate-600 dark:text-slate-400 hover:text-sky-600 dark:hover:text-cyan-400 transition-colors">CNA Directory</a>
         <span class="text-slate-400 dark:text-slate-600">/</span>
         <span class="text-xs text-slate-900 dark:text-slate-200">Google_Devices</span>
         <div class="ml-auto">
@@ -56,12 +51,11 @@
       </div>
     </header>
 
-    <main class="max-w-5xl mx-auto px-4 py-8">
-
+    <main class="max-w-6xl mx-auto px-4 py-8">
       <div class="mb-8">
         <p class="text-xs uppercase tracking-widest text-sky-700 dark:text-cyan-400 mb-2">CNA Profile</p>
         <h1 class="text-3xl md:text-4xl font-semibold text-slate-950 dark:text-white">Google_Devices</h1>
-        <p class="text-slate-600 dark:text-slate-400 mt-1 text-sm">Publication velocity trend and peer comparison</p>
+        <p class="text-slate-600 dark:text-slate-400 mt-1 text-sm">Percentile distribution, consistency, and backlog severity signals</p>
       </div>
 
       <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-8">
@@ -70,12 +64,12 @@
           <p id="hero30d" class="text-2xl font-semibold text-accent-light dark:text-cyan-400 mt-1">--</p>
         </div>
         <div class="rounded-2xl border border-sky-200/80 dark:border-white/10 bg-white/70 dark:bg-white/4 px-4 py-3 shadow-[0_12px_36px_rgba(14,165,233,0.08)] dark:shadow-none">
-          <p class="text-[10px] uppercase tracking-widest text-slate-500 dark:text-slate-400">Rank</p>
-          <p id="heroRank" class="text-2xl font-semibold text-accent3-light dark:text-sky-400 mt-1">--</p>
+          <p class="text-[10px] uppercase tracking-widest text-slate-500 dark:text-slate-400">Consistency</p>
+          <p id="heroConsistency" class="text-2xl font-semibold text-sky-700 dark:text-sky-400 mt-1">--</p>
         </div>
         <div class="rounded-2xl border border-sky-200/80 dark:border-white/10 bg-white/70 dark:bg-white/4 px-4 py-3 shadow-[0_12px_36px_rgba(14,165,233,0.08)] dark:shadow-none">
-          <p class="text-[10px] uppercase tracking-widest text-slate-500 dark:text-slate-400">Faster than</p>
-          <p id="heroPercentile" class="text-2xl font-semibold text-accent2-light dark:text-teal-400 mt-1">--</p>
+          <p class="text-[10px] uppercase tracking-widest text-slate-500 dark:text-slate-400">P50 / P90</p>
+          <p id="heroPercentiles" class="text-2xl font-semibold text-accent2-light dark:text-teal-400 mt-1">--</p>
         </div>
         <div class="rounded-2xl border border-sky-200/80 dark:border-white/10 bg-white/70 dark:bg-white/4 px-4 py-3 shadow-[0_12px_36px_rgba(14,165,233,0.08)] dark:shadow-none">
           <p class="text-[10px] uppercase tracking-widest text-slate-500 dark:text-slate-400">Total CVEs</p>
@@ -86,8 +80,8 @@
       <section class="rounded-2xl border border-sky-200/80 dark:border-white/10 bg-panel-light/90 dark:bg-white/3 p-4 md:p-6 mb-8 shadow-[0_18px_60px_rgba(14,165,233,0.10)] dark:shadow-none">
         <div class="flex items-center justify-between gap-3 mb-4 flex-wrap">
           <div>
-            <h2 class="text-lg font-semibold text-slate-950 dark:text-white">Publication Interval Trend</h2>
-            <p class="text-xs text-slate-500 dark:text-slate-400">Monthly mean with 25th–75th percentile band</p>
+            <h2 class="text-lg font-semibold text-slate-950 dark:text-white">Percentile Distribution</h2>
+            <p class="text-xs text-slate-500 dark:text-slate-400">P50 versus P90 to expose backlog tail behavior</p>
           </div>
           <div class="flex items-center gap-2 flex-wrap justify-end">
             <label for="rangeToggle" class="text-xs text-slate-600 dark:text-slate-300">Range:</label>
@@ -107,8 +101,23 @@
         </div>
       </section>
 
+      <section id="severitySection" class="rounded-2xl border border-sky-200/80 dark:border-white/10 bg-panel-light/90 dark:bg-white/3 p-4 md:p-6 mb-8 shadow-[0_18px_60px_rgba(14,165,233,0.10)] dark:shadow-none hidden">
+        <div class="mb-4">
+          <h2 class="text-lg font-semibold text-slate-950 dark:text-white">Time to Publish vs Severity</h2>
+          <p class="text-xs text-slate-500 dark:text-slate-400">Scatter plot only appears when severity metadata is available</p>
+        </div>
+        <div class="h-72 md:h-80">
+          <canvas id="severityChart"></canvas>
+        </div>
+      </section>
+
       <section class="rounded-2xl border border-sky-200/80 dark:border-white/10 bg-panel-light/90 dark:bg-white/3 p-4 md:p-6 shadow-[0_18px_60px_rgba(14,165,233,0.10)] dark:shadow-none">
-        <h2 class="text-lg font-semibold text-slate-950 dark:text-white mb-4">Top 20 CNAs by Heartbeat</h2>
+        <div class="flex items-center justify-between gap-3 mb-4 flex-wrap">
+          <div>
+            <h2 class="text-lg font-semibold text-slate-950 dark:text-white">Peer Snapshot</h2>
+            <p class="text-xs text-slate-500 dark:text-slate-400">Top CNA leaderboard context from the global summary</p>
+          </div>
+        </div>
         <div class="overflow-x-auto">
           <table class="w-full text-sm">
             <thead>
@@ -123,12 +132,16 @@
           </table>
         </div>
       </section>
-
     </main>
 
     <script>
-      const CNA_SLUG = "google-devices";
+      const SHARD_PATH = "../../assets/data/cna/google-devices.json";
       const SUMMARY_PATH = "../../assets/data/summary.json";
+
+      function fmtNumber(v) {
+        if (v == null || isNaN(v)) return "--";
+        return new Intl.NumberFormat().format(v);
+      }
 
       function formatDuration(seconds) {
         if (seconds == null || isNaN(seconds)) return "--";
@@ -137,7 +150,7 @@
         const h = Math.floor((seconds % 86400) / 3600);
         const m = Math.floor((seconds % 3600) / 60);
         const s = seconds % 60;
-        let out = [];
+        const out = [];
         if (d > 0) out.push(d + "d");
         if (h > 0) out.push(h + "h");
         if (m > 0) out.push(m + "m");
@@ -145,66 +158,63 @@
         return out.join(" ");
       }
 
-      function fmtNumber(v) {
-        if (v == null || isNaN(v)) return "--";
-        return new Intl.NumberFormat().format(v);
+      function themeIsDark() {
+        return document.documentElement.classList.contains("dark");
       }
 
-      let cnaChart;
-      let currentRange = 'recent';
-
-      function isDark() {
-        return document.documentElement.classList.contains('dark');
+      function setTheme(mode) {
+        const icon = document.getElementById("themeIcon");
+        if (mode === "dark") {
+          document.documentElement.classList.add("dark");
+          icon.textContent = "🌙";
+          localStorage.setItem("theme", "dark");
+        } else {
+          document.documentElement.classList.remove("dark");
+          icon.textContent = "☀️";
+          localStorage.setItem("theme", "light");
+        }
       }
 
-      function getTrendPoints(trend, range = 'recent') {
-        if (range === 'all') return trend;
-        return trend.filter(point => point.date >= '2017-01-01');
+      function getTrendPoints(trend, range) {
+        if (range === "all") return trend;
+        return trend.filter(point => point.date >= "2017-01-01");
       }
 
-      function renderChart(trend, scale, range) {
-        const ctx = document.getElementById('cnaChart').getContext('2d');
-        if (cnaChart) cnaChart.destroy();
+      function gradeColor(grade) {
+        const map = { A: "#14b8a6", B: "#0ea5e9", C: "#6366f1", D: "#f59e0b", F: "#ef4444" };
+        return map[grade] || "#0ea5e9";
+      }
 
-        const dark = isDark();
+      function renderPercentileChart(trend, scale, range) {
+        const ctx = document.getElementById("cnaChart").getContext("2d");
+        if (window._cnaChart) window._cnaChart.destroy();
+
         const points = getTrendPoints(trend, range);
-        const labels = points.map(p => p.date);
-        const mean = points.map(p => p.avgIntervalSeconds);
-        const p25 = points.map(p => p.p25IntervalSeconds);
-        const p75 = points.map(p => p.p75IntervalSeconds);
-        const tickColor = dark ? '#94a3b8' : '#64748b';
-        const gridColor = dark ? 'rgba(148,163,184,0.10)' : 'rgba(100,116,139,0.08)';
+        const labels = points.map(point => point.date);
+        const p50 = points.map(point => point.p50IntervalSeconds);
+        const p90 = points.map(point => point.p90IntervalSeconds);
+        const dark = themeIsDark();
 
-        cnaChart = new Chart(ctx, {
-          type: 'line',
+        window._cnaChart = new Chart(ctx, {
+          type: "line",
           data: {
             labels,
             datasets: [
               {
-                label: 'P25–P75 band',
-                data: p75,
-                fill: '+1',
-                borderColor: 'transparent',
-                backgroundColor: dark ? 'rgba(46,230,255,0.10)' : 'rgba(14,165,233,0.10)',
+                label: "P90",
+                data: p90,
+                fill: "+1",
+                borderColor: "transparent",
+                backgroundColor: dark ? "rgba(46,230,255,0.10)" : "rgba(14,165,233,0.10)",
                 pointRadius: 0,
                 tension: 0.25,
-                order: 3
+                order: 2
               },
               {
-                label: 'P25',
-                data: p25,
-                fill: false,
-                borderColor: 'transparent',
-                backgroundColor: 'transparent',
-                pointRadius: 0,
-                tension: 0.25,
-                order: 4
-              },
-              {
-                label: 'Mean interval',
-                data: mean,
-                borderColor: dark ? 'rgba(46,230,255,0.95)' : '#0ea5e9',
-                backgroundColor: 'transparent',
+                label: "P50",
+                data: p50,
+                borderColor: dark ? "rgba(46,230,255,0.95)" : "#0ea5e9",
+                backgroundColor: "transparent",
                 pointRadius: 2,
                 pointHoverRadius: 5,
                 borderWidth: 2.5,
@@ -216,30 +226,95 @@
           options: {
             responsive: true,
             maintainAspectRatio: false,
-            interaction: { mode: 'index', intersect: false },
+            interaction: { mode: "index", intersect: false },
             plugins: {
-              legend: { display: false },
+              legend: { display: true, labels: { color: dark ? "#dbeafe" : "#334155" } },
               tooltip: {
-                backgroundColor: dark ? 'rgba(6,16,29,0.96)' : '#f1f5f9',
-                titleColor: dark ? '#f8fafc' : '#0f172a',
-                bodyColor: dark ? '#dbeafe' : '#334155',
+                backgroundColor: dark ? "rgba(6,16,29,0.96)" : "#f1f5f9",
+                titleColor: dark ? "#f8fafc" : "#0f172a",
+                bodyColor: dark ? "#dbeafe" : "#334155",
                 callbacks: {
                   label: function(ctx) {
-                    if (ctx.dataset.label === 'P25') return 'P25: ' + formatDuration(ctx.parsed.y);
-                    if (ctx.dataset.label === 'P25–P75 band') return 'P75: ' + formatDuration(ctx.parsed.y);
-                    return ctx.dataset.label + ': ' + formatDuration(ctx.parsed.y);
+                    return ctx.dataset.label + ": " + formatDuration(ctx.parsed.y);
                   }
                 }
               }
             },
             scales: {
-              x: { ticks: { color: tickColor }, grid: { color: gridColor } },
+              x: { ticks: { color: dark ? "#94a3b8" : "#64748b" }, grid: { color: dark ? "rgba(148,163,184,0.10)" : "rgba(100,116,139,0.08)" } },
               y: {
                 type: scale,
-                min: scale === 'logarithmic' ? undefined : 0,
-                ticks: { color: tickColor, callback: (v) => formatDuration(v) },
-                grid: { color: gridColor },
-                title: { display: true, text: 'Interval per CVE', color: dark ? '#94a3b8' : '#64748b' }
+                min: scale === "logarithmic" ? undefined : 0,
+                ticks: { color: dark ? "#94a3b8" : "#64748b", callback: value => formatDuration(value) },
+                grid: { color: dark ? "rgba(148,163,184,0.10)" : "rgba(100,116,139,0.08)" },
+                title: { display: true, text: "Time to Publish", color: dark ? "#94a3b8" : "#64748b" }
+              }
+            }
+          }
+        });
+      }
+
+      function renderSeverityChart(points) {
+        if (!points || points.length === 0) return;
+        const section = document.getElementById("severitySection");
+        section.classList.remove("hidden");
+
+        const ctx = document.getElementById("severityChart").getContext("2d");
+        if (window._severityChart) window._severityChart.destroy();
+
+        const severityLabels = ["NONE", "LOW", "MEDIUM", "HIGH", "CRITICAL"];
+        const dark = themeIsDark();
+
+        window._severityChart = new Chart(ctx, {
+          type: "scatter",
+          data: {
+            datasets: [{
+              label: "Time to Publish vs Severity",
+              data: points.map(point => ({
+                x: point.timeToPublishSeconds,
+                y: point.severityValue,
+                severity: point.severity,
+                cveId: point.cveId,
+              })),
+              backgroundColor: dark ? "rgba(46,230,255,0.65)" : "rgba(14,165,233,0.65)",
+              borderColor: dark ? "rgba(46,230,255,0.95)" : "#0ea5e9",
+              pointRadius: 4,
+            }]
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+              legend: { display: false },
+              tooltip: {
+                backgroundColor: dark ? "rgba(6,16,29,0.96)" : "#f1f5f9",
+                titleColor: dark ? "#f8fafc" : "#0f172a",
+                bodyColor: dark ? "#dbeafe" : "#334155",
+                callbacks: {
+                  label: function(ctx) {
+                    const label = ctx.raw.severity || "UNKNOWN";
+                    return label + ": " + formatDuration(ctx.parsed.x);
+                  }
+                }
+              }
+            },
+            scales: {
+              x: {
+                type: "linear",
+                ticks: { color: dark ? "#94a3b8" : "#64748b", callback: value => formatDuration(value) },
+                grid: { color: dark ? "rgba(148,163,184,0.10)" : "rgba(100,116,139,0.08)" },
+                title: { display: true, text: "Time to Publish", color: dark ? "#94a3b8" : "#64748b" }
+              },
+              y: {
+                min: 0,
+                max: 4,
+                ticks: {
+                  color: dark ? "#94a3b8" : "#64748b",
+                  stepSize: 1,
+                  callback: value => severityLabels[value] || ""
+                },
+                grid: { color: dark ? "rgba(148,163,184,0.10)" : "rgba(100,116,139,0.08)" },
+                title: { display: true, text: "Severity", color: dark ? "#94a3b8" : "#64748b" }
               }
             }
           }
@@ -247,72 +322,54 @@
       }
 
       async function boot() {
-        const themeToggle = document.getElementById('themeToggle');
-        const themeIcon = document.getElementById('themeIcon');
+        const saved = localStorage.getItem("theme");
+        const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        setTheme(saved || (prefersDark ? "dark" : "light"));
 
-        function setTheme(mode) {
-          if (mode === 'dark') {
-            document.documentElement.classList.add('dark');
-            themeIcon.textContent = '🌙';
-            localStorage.setItem('theme', 'dark');
-          } else {
-            document.documentElement.classList.remove('dark');
-            themeIcon.textContent = '☀️';
-            localStorage.setItem('theme', 'light');
-          }
+        const themeToggle = document.getElementById("themeToggle");
+        themeToggle.addEventListener("click", () => {
+          setTheme(themeIsDark() ? "light" : "dark");
+          if (window._cnaChart) renderPercentileChart(window._shard.trend || [], document.getElementById("scaleToggle").value, document.getElementById("rangeToggle").value);
+          if (window._severityChart && window._shard.severity && window._shard.severity.points.length) renderSeverityChart(window._shard.severity.points);
+        });
+
+        const response = await fetch(SHARD_PATH, { cache: "no-store" });
+        if (!response.ok) throw new Error(`Failed to fetch shard: ${response.status}`);
+        const shard = await response.json();
+        window._shard = shard;
+
+        const cna = shard.cna || {};
+        document.getElementById("hero30d").textContent = formatDuration(cna.window30SecondsPerCve);
+        document.getElementById("heroConsistency").textContent = (cna.consistencyGrade || "--") + (cna.consistencyScore != null ? ` / ${cna.consistencyScore}` : "");
+        document.getElementById("heroPercentiles").textContent = `${formatDuration(shard.metrics?.p50Seconds)} / ${formatDuration(shard.metrics?.p90Seconds)}`;
+        document.getElementById("heroTotal").textContent = fmtNumber(cna.totalEvents);
+
+        const trend = shard.trend || [];
+        renderPercentileChart(trend, document.getElementById("scaleToggle").value, document.getElementById("rangeToggle").value);
+
+        document.getElementById("rangeToggle").addEventListener("change", e => {
+          renderPercentileChart(trend, document.getElementById("scaleToggle").value, e.target.value);
+        });
+
+        document.getElementById("scaleToggle").addEventListener("change", e => {
+          renderPercentileChart(trend, e.target.value, document.getElementById("rangeToggle").value);
+        });
+
+        if (shard.severity && shard.severity.points && shard.severity.points.length) {
+          renderSeverityChart(shard.severity.points);
         }
 
-        const saved = localStorage.getItem('theme');
-        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        setTheme(saved || (prefersDark ? 'dark' : 'light'));
-        themeIcon.textContent = isDark() ? '🌙' : '☀️';
-
-        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
-          if (!localStorage.getItem('theme')) setTheme(e.matches ? 'dark' : 'light');
-        });
-        themeToggle.addEventListener('click', () => {
-          setTheme(isDark() ? 'light' : 'dark');
-          if (cnaChart) renderChart(window._cnaTrend, document.getElementById('scaleToggle').value, currentRange);
-        });
-
-        const resp = await fetch(SUMMARY_PATH, { cache: 'no-store' });
-        const data = await resp.json();
-        const entry = (data.cna.leaderboard || []).find(r => r.slug === CNA_SLUG);
-        const trend = (data.cna.trendByCna || {})[entry?.cna] || [];
-        window._cnaTrend = trend;
-
-        if (entry) {
-          document.getElementById('hero30d').textContent = formatDuration(entry.window30SecondsPerCve);
-          document.getElementById('heroRank').textContent = '#' + (entry.rank ?? '--');
-          document.getElementById('heroPercentile').textContent = (entry.percentileFaster ?? '--') + '%';
-          document.getElementById('heroTotal').textContent = fmtNumber(entry.totalEvents);
-        }
-
-        let scale = 'linear';
-        renderChart(trend, scale, currentRange);
-
-        document.getElementById('rangeToggle').addEventListener('change', e => {
-          currentRange = e.target.value;
-          renderChart(trend, scale, currentRange);
-        });
-
-        document.getElementById('scaleToggle').addEventListener('change', e => {
-          scale = e.target.value;
-          renderChart(trend, scale, currentRange);
-        });
-
-        // Peer table — top 20
-        const tbody = document.getElementById('peerTable');
-        (data.cna.leaderboard || []).slice(0, 20).forEach(row => {
-          const isCurrent = row.slug === CNA_SLUG;
-          const tr = document.createElement('tr');
-          tr.className = 'border-b border-sky-200/70 dark:border-white/5 ' + (isCurrent ? 'bg-sky-100/90 dark:bg-cyan-400/10 font-semibold' : 'hover:bg-sky-100/70 dark:hover:bg-white/5') + ' transition-colors';
+        const tbody = document.getElementById("peerTable");
+        (shard.peers || []).slice(0, 20).forEach(row => {
+          const isCurrent = row.slug === "google-devices";
+          const tr = document.createElement("tr");
+          tr.className = "border-b border-sky-200/70 dark:border-white/5 " + (isCurrent ? "bg-sky-100/90 dark:bg-cyan-400/10 font-semibold" : "hover:bg-sky-100/70 dark:hover:bg-white/5") + " transition-colors";
+          const cnaCell = isCurrent
+            ? '<span class="text-sky-700 dark:text-cyan-300">' + row.cna + '</span>'
+            : '<a href="../' + row.slug + '/" class="text-slate-900 dark:text-slate-200 hover:text-sky-600 dark:hover:text-cyan-300 transition-colors">' + row.cna + '</a>';
           tr.innerHTML = `
             <td class="py-2 pr-3 text-slate-500 dark:text-slate-400">${row.rank ?? '--'}</td>
-            <td class="py-2 pr-3">${isCurrent
-              ? '<span class="text-sky-700 dark:text-cyan-300">' + row.cna + '</span>'
-              : '<a href="../' + row.slug + '/" class="text-slate-900 dark:text-slate-200 hover:text-sky-600 dark:hover:text-cyan-300 transition-colors">' + row.cna + '</a>'
-            }</td>
+            <td class="py-2 pr-3">${cnaCell}</td>
             <td class="py-2 pr-3 text-sky-700 dark:text-cyan-200">${formatDuration(row.window30SecondsPerCve)}</td>
             <td class="py-2 text-slate-700 dark:text-slate-300">${fmtNumber(row.totalEvents)}</td>
           `;
