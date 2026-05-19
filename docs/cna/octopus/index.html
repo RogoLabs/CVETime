@@ -86,7 +86,8 @@
           <div class="flex items-center gap-2 flex-wrap justify-end">
             <label for="rangeToggle" class="text-xs text-slate-600 dark:text-slate-300">Range:</label>
             <select id="rangeToggle" class="bg-white/80 dark:bg-slate-900 border border-sky-200/80 dark:border-white/10 rounded px-2 py-1 text-xs text-slate-900 dark:text-slate-100">
-              <option value="recent" selected>2017+</option>
+              <option value="24m" selected>24 months</option>
+              <option value="recent">2017+</option>
               <option value="all">All history</option>
             </select>
             <label for="scaleToggle" class="text-xs text-slate-600 dark:text-slate-300">Y Scale:</label>
@@ -177,6 +178,12 @@
 
       function getTrendPoints(trend, range) {
         if (range === "all") return trend;
+        if (range === "24m") {
+          const now = new Date();
+          const twentyFourMonthsAgo = new Date(now.getFullYear(), now.getMonth() - 24, 1);
+          const cutoffDate = twentyFourMonthsAgo.toISOString().split('T')[0];
+          return trend.filter(point => point.date >= cutoffDate);
+        }
         return trend.filter(point => point.date >= "2017-01-01");
       }
 
