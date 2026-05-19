@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
 from dataclasses import dataclass
 from datetime import UTC, datetime
 from pathlib import Path
@@ -143,16 +144,30 @@ def global_trend(df: pd.DataFrame) -> list[dict[str, Any]]:
     if deltas.empty:
         return []
 
-    monthly = deltas.resample("MS").agg(["mean", "median", "count"]).dropna()
+    monthly = deltas.resample("MS").agg(
+        mean="mean",
+        median="median",
+        count="count",
+        p25=lambda x: float(x.quantile(0.25)),
+        p75=lambda x: float(x.quantile(0.75)),
+    ).dropna()
     return [
         {
             "date": idx.strftime("%Y-%m-%d"),
             "avgIntervalSeconds": float(row["mean"]),
             "medianIntervalSeconds": float(row["median"]),
+            "p25IntervalSeconds": float(row["p25"]),
+            "p75IntervalSeconds": float(row["p75"]),
             "eventCount": int(row["count"]),
         }
         for idx, row in monthly.iterrows()
     ]
+
+
+def to_slug(name: str) -> str:
+    slug = re.sub(r"[^\w\s-]", "", name.lower())
+    slug = re.sub(r"[\s_]+", "-", slug)
+    return slug.strip("-")
 
 
 def cna_rollups(df: pd.DataFrame, min_events: int = 20) -> tuple[list[dict[str, Any]], dict[str, list[dict[str, Any]]]]:
@@ -172,6 +187,7 @@ def cna_rollups(df: pd.DataFrame, min_events: int = 20) -> tuple[list[dict[str, 
         leaderboard.append(
             {
                 "cna": cna,
+                "slug": to_slug(str(cna)),
                 "window30SecondsPerCve": sec_30,
                 "window90SecondsPerCve": sec_90,
                 "recentEvents30d": int(
@@ -184,12 +200,20 @@ def cna_rollups(df: pd.DataFrame, min_events: int = 20) -> tuple[list[dict[str, 
         )
 
         deltas = monthly_deltas(unique_seconds)
-        monthly = deltas.resample("MS").agg(["mean", "median", "count"]).dropna()
+        monthly = deltas.resample("MS").agg(
+            mean="mean",
+            median="median",
+            count="count",
+            p25=lambda x: float(x.quantile(0.25)),
+            p75=lambda x: float(x.quantile(0.75)),
+        ).dropna()
         trend_by_cna[cna] = [
             {
                 "date": idx.strftime("%Y-%m-%d"),
                 "avgIntervalSeconds": float(row["mean"]),
                 "medianIntervalSeconds": float(row["median"]),
+                "p25IntervalSeconds": float(row["p25"]),
+                "p75IntervalSeconds": float(row["p75"]),
                 "eventCount": int(row["count"]),
             }
             for idx, row in monthly.iterrows()
@@ -200,6 +224,13 @@ def cna_rollups(df: pd.DataFrame, min_events: int = 20) -> tuple[list[dict[str, 
         if item["window30SecondsPerCve"] is not None
         else float("inf")
     )
+
+    # Assign ranks and percentiles now that list is sorted
+    total = len(leaderboard)
+    for rank, item in enumerate(leaderboard, start=1):
+        item["rank"] = rank
+        item["percentileFaster"] = round((1 - (rank - 1) / max(total - 1, 1)) * 100) if total > 1 else 100
+
     return leaderboard[:200], trend_by_cna
 
 
@@ -257,7 +288,418 @@ def parse_args() -> argparse.Namespace:
         default=Path("docs/assets/data/summary.json"),
         help="Output JSON path.",
     )
+    parser.add_argument(
+        "--cna-pages-dir",
+        type=Path,
+        default=None,
+        help="If set, generate per-CNA static data files under this directory.",
+    )
     return parser.parse_args()
+
+
+CNA_TEMPLATE = """\
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{cna_name} · CVETime</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {{
+        darkMode: 'class',
+        theme: {{
+          extend: {{
+            fontFamily: {{ display: ["Space Grotesk", "ui-sans-serif", "system-ui"] }}
+          }}
+        }}
+      }};
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="canonical" href="/cna/{slug}/" />
+  </head>
+  <body class="bg-slate-950 text-slate-100 min-h-screen transition-colors duration-300">
+
+    <script>
+      // Sync theme from root
+      (function() {{
+        const saved = localStorage.getItem('theme');
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        if (saved === 'dark' || (!saved && prefersDark)) document.documentElement.classList.add('dark');
+      }})();
+    </script>
+
+    <header class="sticky top-0 z-20 border-b border-white/10 bg-slate-950/90 backdrop-blur-xl">
+      <div class="max-w-5xl mx-auto px-4 py-3 flex items-center gap-4">
+        <a href="../../" class="text-xs text-slate-400 hover:text-cyan-400 transition-colors">← Global Dashboard</a>
+        <span class="text-slate-600">/</span>
+        <a href="../" class="text-xs text-slate-400 hover:text-cyan-400 transition-colors">CNAs</a>
+        <span class="text-slate-600">/</span>
+        <span class="text-xs text-slate-200">{cna_name}</span>
+        <div class="ml-auto">
+          <button id="themeToggle" class="px-2 py-1 rounded bg-white/5 border border-white/10 text-xs text-slate-300 hover:bg-cyan-400/10 transition-colors">
+            <span id="themeIcon">🌙</span> Theme
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main class="max-w-5xl mx-auto px-4 py-8">
+
+      <div class="mb-8">
+        <p class="text-xs uppercase tracking-widest text-cyan-400 mb-2">CNA Profile</p>
+        <h1 class="text-3xl md:text-4xl font-semibold text-white">{cna_name}</h1>
+        <p class="text-slate-400 mt-1 text-sm">Publication velocity trend and peer comparison</p>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-8">
+        <div class="rounded-2xl border border-white/10 bg-white/4 px-4 py-3">
+          <p class="text-[10px] uppercase tracking-widest text-slate-400">30d Heartbeat</p>
+          <p id="hero30d" class="text-2xl font-semibold text-cyan-400 mt-1">--</p>
+        </div>
+        <div class="rounded-2xl border border-white/10 bg-white/4 px-4 py-3">
+          <p class="text-[10px] uppercase tracking-widest text-slate-400">Rank</p>
+          <p id="heroRank" class="text-2xl font-semibold text-sky-400 mt-1">--</p>
+        </div>
+        <div class="rounded-2xl border border-white/10 bg-white/4 px-4 py-3">
+          <p class="text-[10px] uppercase tracking-widest text-slate-400">Faster than</p>
+          <p id="heroPercentile" class="text-2xl font-semibold text-teal-400 mt-1">--</p>
+        </div>
+        <div class="rounded-2xl border border-white/10 bg-white/4 px-4 py-3">
+          <p class="text-[10px] uppercase tracking-widest text-slate-400">Total CVEs</p>
+          <p id="heroTotal" class="text-2xl font-semibold text-indigo-400 mt-1">--</p>
+        </div>
+      </div>
+
+      <section class="rounded-2xl border border-white/10 bg-white/3 p-4 md:p-6 mb-8">
+        <div class="flex items-center justify-between mb-4">
+          <div>
+            <h2 class="text-lg font-semibold text-white">Publication Interval Trend</h2>
+            <p class="text-xs text-slate-400">Monthly mean with 25th–75th percentile band</p>
+          </div>
+          <select id="scaleToggle" class="bg-slate-900 border border-white/10 rounded px-2 py-1 text-xs text-slate-100">
+            <option value="linear" selected>Linear</option>
+            <option value="logarithmic">Logarithmic</option>
+          </select>
+        </div>
+        <div class="h-72 md:h-80">
+          <canvas id="cnaChart"></canvas>
+        </div>
+      </section>
+
+      <section class="rounded-2xl border border-white/10 bg-white/3 p-4 md:p-6">
+        <h2 class="text-lg font-semibold text-white mb-4">Top 20 CNAs by Heartbeat</h2>
+        <div class="overflow-x-auto">
+          <table class="w-full text-sm">
+            <thead>
+              <tr class="text-left text-slate-400 border-b border-white/10 text-xs uppercase tracking-wider">
+                <th class="py-2 pr-3">Rank</th>
+                <th class="py-2 pr-3">CNA</th>
+                <th class="py-2 pr-3">30d Interval</th>
+                <th class="py-2">Total CVEs</th>
+              </tr>
+            </thead>
+            <tbody id="peerTable"></tbody>
+          </table>
+        </div>
+      </section>
+
+    </main>
+
+    <script>
+      const CNA_SLUG = {slug_json};
+      const SUMMARY_PATH = "../../assets/data/summary.json";
+
+      function formatDuration(seconds) {{
+        if (seconds == null || isNaN(seconds)) return "--";
+        seconds = Math.round(seconds);
+        const d = Math.floor(seconds / 86400);
+        const h = Math.floor((seconds % 86400) / 3600);
+        const m = Math.floor((seconds % 3600) / 60);
+        const s = seconds % 60;
+        let out = [];
+        if (d > 0) out.push(d + "d");
+        if (h > 0) out.push(h + "h");
+        if (m > 0) out.push(m + "m");
+        if (s > 0 || out.length === 0) out.push(s + "s");
+        return out.join(" ");
+      }}
+
+      function fmtNumber(v) {{
+        if (v == null || isNaN(v)) return "--";
+        return new Intl.NumberFormat().format(v);
+      }}
+
+      let cnaChart;
+
+      function isDark() {{
+        return document.documentElement.classList.contains('dark');
+      }}
+
+      function renderChart(trend, scale) {{
+        const ctx = document.getElementById('cnaChart').getContext('2d');
+        if (cnaChart) cnaChart.destroy();
+
+        const dark = isDark();
+        const labels = trend.map(p => p.date);
+        const mean = trend.map(p => p.avgIntervalSeconds);
+        const p25 = trend.map(p => p.p25IntervalSeconds);
+        const p75 = trend.map(p => p.p75IntervalSeconds);
+        const tickColor = dark ? '#94a3b8' : '#64748b';
+        const gridColor = dark ? 'rgba(148,163,184,0.10)' : 'rgba(100,116,139,0.08)';
+
+        cnaChart = new Chart(ctx, {{
+          type: 'line',
+          data: {{
+            labels,
+            datasets: [
+              {{
+                label: 'P25–P75 band',
+                data: p75,
+                fill: '+1',
+                borderColor: 'transparent',
+                backgroundColor: dark ? 'rgba(46,230,255,0.10)' : 'rgba(14,165,233,0.10)',
+                pointRadius: 0,
+                tension: 0.25,
+                order: 3
+              }},
+              {{
+                label: 'P25',
+                data: p25,
+                fill: false,
+                borderColor: 'transparent',
+                backgroundColor: 'transparent',
+                pointRadius: 0,
+                tension: 0.25,
+                order: 4
+              }},
+              {{
+                label: 'Mean interval',
+                data: mean,
+                borderColor: dark ? 'rgba(46,230,255,0.95)' : '#0ea5e9',
+                backgroundColor: 'transparent',
+                pointRadius: 2,
+                pointHoverRadius: 5,
+                borderWidth: 2.5,
+                tension: 0.25,
+                order: 1
+              }}
+            ]
+          }},
+          options: {{
+            responsive: true,
+            maintainAspectRatio: false,
+            interaction: {{ mode: 'index', intersect: false }},
+            plugins: {{
+              legend: {{ display: false }},
+              tooltip: {{
+                backgroundColor: dark ? 'rgba(6,16,29,0.96)' : '#f1f5f9',
+                titleColor: dark ? '#f8fafc' : '#0f172a',
+                bodyColor: dark ? '#dbeafe' : '#334155',
+                callbacks: {{
+                  label: function(ctx) {{
+                    if (ctx.dataset.label === 'P25') return 'P25: ' + formatDuration(ctx.parsed.y);
+                    if (ctx.dataset.label === 'P25–P75 band') return 'P75: ' + formatDuration(ctx.parsed.y);
+                    return ctx.dataset.label + ': ' + formatDuration(ctx.parsed.y);
+                  }}
+                }}
+              }}
+            }},
+            scales: {{
+              x: {{ ticks: {{ color: tickColor }}, grid: {{ color: gridColor }} }},
+              y: {{
+                type: scale,
+                min: scale === 'logarithmic' ? undefined : 0,
+                ticks: {{ color: tickColor, callback: (v) => formatDuration(v) }},
+                grid: {{ color: gridColor }},
+                title: {{ display: true, text: 'Interval per CVE', color: dark ? '#94a3b8' : '#64748b' }}
+              }}
+            }}
+          }}
+        }});
+      }}
+
+      async function boot() {{
+        const themeToggle = document.getElementById('themeToggle');
+        const themeIcon = document.getElementById('themeIcon');
+
+        function setTheme(mode) {{
+          if (mode === 'dark') {{
+            document.documentElement.classList.add('dark');
+            themeIcon.textContent = '🌙';
+            localStorage.setItem('theme', 'dark');
+          }} else {{
+            document.documentElement.classList.remove('dark');
+            themeIcon.textContent = '☀️';
+            localStorage.setItem('theme', 'light');
+          }}
+        }}
+
+        const saved = localStorage.getItem('theme');
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        setTheme(saved || (prefersDark ? 'dark' : 'light'));
+        themeIcon.textContent = isDark() ? '🌙' : '☀️';
+
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {{
+          if (!localStorage.getItem('theme')) setTheme(e.matches ? 'dark' : 'light');
+        }});
+        themeToggle.addEventListener('click', () => {{
+          setTheme(isDark() ? 'light' : 'dark');
+          if (cnaChart) renderChart(window._cnaTrend, document.getElementById('scaleToggle').value);
+        }});
+
+        const resp = await fetch(SUMMARY_PATH, {{ cache: 'no-store' }});
+        const data = await resp.json();
+        const entry = (data.cna.leaderboard || []).find(r => r.slug === CNA_SLUG);
+        const trend = (data.cna.trendByCna || {{}})[entry?.cna] || [];
+        window._cnaTrend = trend;
+
+        if (entry) {{
+          document.getElementById('hero30d').textContent = formatDuration(entry.window30SecondsPerCve);
+          document.getElementById('heroRank').textContent = '#' + (entry.rank ?? '--');
+          document.getElementById('heroPercentile').textContent = (entry.percentileFaster ?? '--') + '%';
+          document.getElementById('heroTotal').textContent = fmtNumber(entry.totalEvents);
+        }}
+
+        let scale = 'linear';
+        renderChart(trend, scale);
+
+        document.getElementById('scaleToggle').addEventListener('change', e => {{
+          scale = e.target.value;
+          renderChart(trend, scale);
+        }});
+
+        // Peer table — top 20
+        const tbody = document.getElementById('peerTable');
+        (data.cna.leaderboard || []).slice(0, 20).forEach(row => {{
+          const isCurrent = row.slug === CNA_SLUG;
+          const tr = document.createElement('tr');
+          tr.className = 'border-b border-white/5 ' + (isCurrent ? 'bg-cyan-400/10 font-semibold' : 'hover:bg-white/5') + ' transition-colors';
+          tr.innerHTML = `
+            <td class="py-2 pr-3 text-slate-400">${{row.rank ?? '--'}}</td>
+            <td class="py-2 pr-3">${{isCurrent
+              ? '<span class="text-cyan-300">' + row.cna + '</span>'
+              : '<a href="../' + row.slug + '/" class="text-slate-200 hover:text-cyan-300 transition-colors">' + row.cna + '</a>'
+            }}</td>
+            <td class="py-2 pr-3 text-cyan-200">${{formatDuration(row.window30SecondsPerCve)}}</td>
+            <td class="py-2 text-slate-300">${{fmtNumber(row.totalEvents)}}</td>
+          `;
+          tbody.appendChild(tr);
+        }});
+      }}
+
+      boot().catch(console.error);
+    </script>
+  </body>
+</html>
+"""
+
+
+def generate_cna_pages(summary: dict[str, Any], pages_dir: Path) -> None:
+    """Generate one static HTML page per CNA under pages_dir/<slug>/index.html."""
+    pages_dir.mkdir(parents=True, exist_ok=True)
+
+    leaderboard = summary["cna"]["leaderboard"]
+
+    # Build index page listing all CNAs
+    index_rows = ""
+    for entry in leaderboard:
+        cna_name = entry["cna"]
+        slug = entry["slug"]
+        rank = entry.get("rank", "--")
+        heartbeat = entry.get("window30SecondsPerCve")
+        total = entry.get("totalEvents", 0)
+
+        # Format heartbeat for display
+        hb_display = format_heartbeat(heartbeat) if heartbeat else "N/A"
+
+        index_rows += f"""      <tr class="border-b border-white/5 hover:bg-white/5 transition-colors">
+        <td class="py-2.5 pr-3 text-slate-400">{rank}</td>
+        <td class="py-2.5 pr-3"><a href="{slug}/" class="text-cyan-300 hover:underline">{cna_name}</a></td>
+        <td class="py-2.5 pr-3 text-cyan-200">{hb_display}</td>
+        <td class="py-2.5 text-slate-300">{total:,}</td>
+      </tr>\n"""
+
+    index_html = f"""<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CNA Profiles · CVETime</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>tailwind.config = {{ darkMode: 'class' }};</script>
+  </head>
+  <body class="bg-slate-950 text-slate-100 min-h-screen">
+    <script>
+      (function() {{
+        const saved = localStorage.getItem('theme');
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        if (saved === 'dark' || (!saved && prefersDark)) document.documentElement.classList.add('dark');
+      }})();
+    </script>
+    <header class="sticky top-0 z-20 border-b border-white/10 bg-slate-950/90 backdrop-blur-xl">
+      <div class="max-w-5xl mx-auto px-4 py-3 flex items-center gap-4">
+        <a href="../" class="text-xs text-slate-400 hover:text-cyan-400 transition-colors">← Global Dashboard</a>
+        <span class="text-slate-600">/</span>
+        <span class="text-xs text-slate-200">CNA Profiles</span>
+      </div>
+    </header>
+    <main class="max-w-5xl mx-auto px-4 py-8">
+      <h1 class="text-3xl font-semibold text-white mb-2">CNA Profiles</h1>
+      <p class="text-slate-400 mb-6 text-sm">Individual publication velocity for each CVE Numbering Authority</p>
+      <div class="overflow-x-auto rounded-2xl border border-white/10 bg-white/3">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="text-left text-slate-400 border-b border-white/10 text-xs uppercase tracking-wider">
+              <th class="py-3 pr-3 pl-4">Rank</th>
+              <th class="py-3 pr-3">CNA</th>
+              <th class="py-3 pr-3">30d Interval</th>
+              <th class="py-3 pr-4">Total CVEs</th>
+            </tr>
+          </thead>
+          <tbody class="pl-4">
+{index_rows}          </tbody>
+        </table>
+      </div>
+    </main>
+  </body>
+</html>
+"""
+    (pages_dir / "index.html").write_text(index_html, encoding="utf-8")
+
+    # Generate individual CNA pages
+    for entry in leaderboard:
+        cna_name = entry["cna"]
+        slug = entry["slug"]
+        slug_json = json.dumps(slug)
+
+        page_dir = pages_dir / slug
+        page_dir.mkdir(parents=True, exist_ok=True)
+
+        html = CNA_TEMPLATE.format(
+            cna_name=cna_name,
+            slug=slug,
+            slug_json=slug_json,
+        )
+        (page_dir / "index.html").write_text(html, encoding="utf-8")
+
+    # Generate sitemap.xml in docs/
+    docs_dir = pages_dir.parent
+    base_url = "https://gamblin.github.io/CVETime"
+    sitemap_urls = [
+        f"  <url><loc>{base_url}/</loc></url>",
+        f"  <url><loc>{base_url}/cna/</loc></url>",
+    ] + [
+        f"  <url><loc>{base_url}/cna/{entry['slug']}/</loc></url>"
+        for entry in leaderboard
+    ]
+    sitemap = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<urlset xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\">\n"
+    sitemap += "\n".join(sitemap_urls)
+    sitemap += "\n</urlset>\n"
+    (docs_dir / "sitemap.xml").write_text(sitemap, encoding="utf-8")
+
+    print(f"Generated {len(leaderboard)} CNA pages + index under {pages_dir}")
+    print(f"Generated sitemap.xml at {docs_dir / 'sitemap.xml'}")
 
 
 def main() -> None:
@@ -267,6 +709,9 @@ def main() -> None:
     args.output.parent.mkdir(parents=True, exist_ok=True)
     args.output.write_text(json.dumps(summary, indent=2), encoding="utf-8")
     print(f"Wrote summary to {args.output}")
+
+    if args.cna_pages_dir is not None:
+        generate_cna_pages(summary, args.cna_pages_dir)
 
 
 if __name__ == "__main__":

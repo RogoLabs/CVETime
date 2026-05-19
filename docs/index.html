@@ -7,17 +7,42 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
+        darkMode: 'class',
         theme: {
           extend: {
             colors: {
-              ink: "#06101d",
-              ink2: "#0b1727",
-              panel: "#10233c",
-              panel2: "#162b46",
-              line: "rgba(148, 163, 184, 0.16)",
-              accent: "#2ee6ff",
-              accent2: "#2dd4bf",
-              accent3: "#60a5fa"
+              ink: {
+                DEFAULT: "#06101d",
+                light: "#f8fafc"
+              },
+              ink2: {
+                DEFAULT: "#0b1727",
+                light: "#e2e8f0"
+              },
+              panel: {
+                DEFAULT: "#10233c",
+                light: "#f1f5f9"
+              },
+              panel2: {
+                DEFAULT: "#162b46",
+                light: "#e0e7ef"
+              },
+              line: {
+                DEFAULT: "rgba(148, 163, 184, 0.16)",
+                light: "rgba(100,116,139,0.10)"
+              },
+              accent: {
+                DEFAULT: "#2ee6ff",
+                light: "#0ea5e9"
+              },
+              accent2: {
+                DEFAULT: "#2dd4bf",
+                light: "#14b8a6"
+              },
+              accent3: {
+                DEFAULT: "#60a5fa",
+                light: "#6366f1"
+              }
             },
             fontFamily: {
               display: ["Space Grotesk", "ui-sans-serif", "system-ui"]
@@ -27,9 +52,19 @@
       };
     </script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+      // Apply theme before first paint to avoid flash
+      (function() {
+        const saved = localStorage.getItem('theme');
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        if (saved === 'dark' || (!saved && prefersDark)) {
+          document.documentElement.classList.add('dark');
+        }
+      })();
+    </script>
     <script defer src="assets/js/main.js"></script>
   </head>
-  <body class="bg-ink text-slate-100 min-h-screen">
+  <body class="bg-ink text-slate-100 min-h-screen transition-colors duration-300">
     <div class="fixed inset-0 -z-20 bg-[radial-gradient(circle_at_15%_15%,rgba(46,230,255,0.15),transparent_28%),radial-gradient(circle_at_80%_0%,rgba(96,165,250,0.15),transparent_26%),radial-gradient(circle_at_90%_90%,rgba(45,212,191,0.10),transparent_22%),linear-gradient(180deg,#040a13_0%,#081321_48%,#06101d_100%)]"></div>
     <div class="fixed inset-0 -z-10 opacity-30 bg-[linear-gradient(rgba(148,163,184,0.07)_1px,transparent_1px),linear-gradient(90deg,rgba(148,163,184,0.07)_1px,transparent_1px)] bg-[size:88px_88px]"></div>
 
@@ -49,9 +84,45 @@
           <a href="#overview" class="hover:text-accent transition-colors">Overview</a>
           <a href="#trend" class="hover:text-accent transition-colors">Trend</a>
           <a href="#cna" class="hover:text-accent transition-colors">CNA</a>
+          <a href="cna/" class="hover:text-accent transition-colors">CNA Profiles</a>
         </nav>
+
+        <button id="themeToggle" aria-label="Toggle dark/light mode" class="flex items-center gap-1 px-2 py-1 rounded bg-white/5 border border-white/10 text-xs text-slate-300 hover:bg-accent/10 transition-colors">
+          <span id="themeIcon">🌙</span>
+          <span class="hidden sm:inline">Theme</span>
+        </button>
       </div>
     </header>
+
+    <script>
+      // Theme toggle wiring (runs after button is in DOM)
+      (function() {
+        const root = document.documentElement;
+        const toggle = document.getElementById('themeToggle');
+        const icon = document.getElementById('themeIcon');
+        function setTheme(mode) {
+          if (mode === 'dark') {
+            root.classList.add('dark');
+            icon.textContent = '🌙';
+            localStorage.setItem('theme', 'dark');
+          } else {
+            root.classList.remove('dark');
+            icon.textContent = '☀️';
+            localStorage.setItem('theme', 'light');
+          }
+        }
+        // Sync icon with current state
+        icon.textContent = root.classList.contains('dark') ? '🌙' : '☀️';
+        // Manual toggle
+        toggle.addEventListener('click', () => {
+          setTheme(root.classList.contains('dark') ? 'light' : 'dark');
+        });
+        // System preference changes (only if no override)
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+          if (!localStorage.getItem('theme')) setTheme(e.matches ? 'dark' : 'light');
+        });
+      })();
+    </script>
 
     <main id="top" class="max-w-6xl mx-auto px-4 py-8 md:py-12">
       <header class="mb-8 md:mb-12 flex flex-col gap-5">
@@ -102,13 +173,13 @@
         <div class="flex flex-col md:flex-row md:items-center justify-between gap-3 mb-4">
           <div>
             <h2 class="font-display text-xl text-white">Global Trend</h2>
-            <p class="text-xs text-slate-400">Monthly mean interval (seconds) + median trend line</p>
+            <p class="text-xs text-slate-400">Monthly mean interval with P25–P75 confidence band · dashed line = median</p>
           </div>
           <div class="flex items-center gap-2 mt-2 md:mt-0">
             <label for="scaleToggle" class="text-xs text-slate-300 mr-1">Y Scale:</label>
             <select id="scaleToggle" class="bg-ink2 border border-white/10 rounded px-2 py-1 text-xs text-slate-100 focus:outline-none focus:ring-2 focus:ring-accent/40 focus:border-accent/50">
-              <option value="logarithmic" selected>Logarithmic</option>
-              <option value="linear">Linear</option>
+              <option value="linear" selected>Linear</option>
+              <option value="logarithmic">Logarithmic</option>
             </select>
           </div>
         </div>
@@ -132,10 +203,10 @@
             <thead>
               <tr class="text-left text-slate-400 border-b border-white/10">
                 <th class="py-3 pr-3 uppercase tracking-[0.14em] text-xs">CNA</th>
-                <th class="py-3 pr-3 uppercase tracking-[0.14em] text-xs">30d seconds/CVE</th>
-                <th class="py-3 pr-3 uppercase tracking-[0.14em] text-xs">90d seconds/CVE</th>
-                <th class="py-3 pr-3 uppercase tracking-[0.14em] text-xs">Events (30d)</th>
-                <th class="py-3 uppercase tracking-[0.14em] text-xs">Total Events</th>
+                <th class="py-3 pr-3 uppercase tracking-[0.14em] text-xs">30d Interval</th>
+                <th class="py-3 pr-3 uppercase tracking-[0.14em] text-xs">90d Interval</th>
+                <th class="py-3 pr-3 uppercase tracking-[0.14em] text-xs">CVEs (30d)</th>
+                <th class="py-3 uppercase tracking-[0.14em] text-xs">Total CVEs</th>
               </tr>
             </thead>
             <tbody id="leaderboardBody"></tbody>

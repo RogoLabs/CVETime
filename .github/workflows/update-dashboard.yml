@@ -46,24 +46,24 @@ jobs:
             git clone --depth=1 https://github.com/CVEProject/cvelistV5.git .cache/cvelistV5
           fi
 
-      - name: Build summary data
+      - name: Build summary data and CNA pages
         run: |
           python scripts/build_summary.py \
             --cvelist-path .cache/cvelistV5 \
-            --output docs/assets/data/summary.json
+            --output docs/assets/data/summary.json \
+            --cna-pages-dir docs/cna
 
-      - name: Commit updated summary
+      - name: Commit updated summary and CNA pages
         run: |
-          if git diff --quiet docs/assets/data/summary.json; then
-            echo "No summary changes to commit."
-            exit 0
-          fi
-
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add docs/assets/data/summary.json
-          git commit -m "chore: update CVE summary"
-          git push
+          git add docs/assets/data/summary.json docs/cna/
+          if git diff --staged --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "chore: update CVE summary and CNA pages"
+            git push
+          fi
 
       - name: Configure Pages
         uses: actions/configure-pages@v5
