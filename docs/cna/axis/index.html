@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Axis · CVETime</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            fontFamily: { display: ["Space Grotesk", "ui-sans-serif", "system-ui"] }
+          }
+        }
+      };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="canonical" href="/cna/axis/" />
+  </head>
+  <body class="bg-slate-950 text-slate-100 min-h-screen transition-colors duration-300">
+
+    <script>
+      // Sync theme from root
+      (function() {
+        const saved = localStorage.getItem('theme');
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        if (saved === 'dark' || (!saved && prefersDark)) document.documentElement.classList.add('dark');
+      })();
+    </script>
+
+    <header class="sticky top-0 z-20 border-b border-white/10 bg-slate-950/90 backdrop-blur-xl">
+      <div class="max-w-5xl mx-auto px-4 py-3 flex items-center gap-4">
+        <a href="../../" class="text-xs text-slate-400 hover:text-cyan-400 transition-colors">← Global Dashboard</a>
+        <span class="text-slate-600">/</span>
+        <a href="../" class="text-xs text-slate-400 hover:text-cyan-400 transition-colors">CNAs</a>
+        <span class="text-slate-600">/</span>
+        <span class="text-xs text-slate-200">Axis</span>
+        <div class="ml-auto">
+          <button id="themeToggle" class="px-2 py-1 rounded bg-white/5 border border-white/10 text-xs text-slate-300 hover:bg-cyan-400/10 transition-colors">
+            <span id="themeIcon">🌙</span> Theme
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main class="max-w-5xl mx-auto px-4 py-8">
+
+      <div class="mb-8">
+        <p class="text-xs uppercase tracking-widest text-cyan-400 mb-2">CNA Profile</p>
+        <h1 class="text-3xl md:text-4xl font-semibold text-white">Axis</h1>
+        <p class="text-slate-400 mt-1 text-sm">Publication velocity trend and peer comparison</p>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-8">
+        <div class="rounded-2xl border border-white/10 bg-white/4 px-4 py-3">
+          <p class="text-[10px] uppercase tracking-widest text-slate-400">30d Heartbeat</p>
+          <p id="hero30d" class="text-2xl font-semibold text-cyan-400 mt-1">--</p>
+        </div>
+        <div class="rounded-2xl border border-white/10 bg-white/4 px-4 py-3">
+          <p class="text-[10px] uppercase tracking-widest text-slate-400">Rank</p>
+          <p id="heroRank" class="text-2xl font-semibold text-sky-400 mt-1">--</p>
+        </div>
+        <div class="rounded-2xl border border-white/10 bg-white/4 px-4 py-3">
+          <p class="text-[10px] uppercase tracking-widest text-slate-400">Faster than</p>
+          <p id="heroPercentile" class="text-2xl font-semibold text-teal-400 mt-1">--</p>
+        </div>
+        <div class="rounded-2xl border border-white/10 bg-white/4 px-4 py-3">
+          <p class="text-[10px] uppercase tracking-widest text-slate-400">Total CVEs</p>
+          <p id="heroTotal" class="text-2xl font-semibold text-indigo-400 mt-1">--</p>
+        </div>
+      </div>
+
+      <section class="rounded-2xl border border-white/10 bg-white/3 p-4 md:p-6 mb-8">
+        <div class="flex items-center justify-between mb-4">
+          <div>
+            <h2 class="text-lg font-semibold text-white">Publication Interval Trend</h2>
+            <p class="text-xs text-slate-400">Monthly mean with 25th–75th percentile band</p>
+          </div>
+          <select id="scaleToggle" class="bg-slate-900 border border-white/10 rounded px-2 py-1 text-xs text-slate-100">
+            <option value="linear" selected>Linear</option>
+            <option value="logarithmic">Logarithmic</option>
+          </select>
+        </div>
+        <div class="h-72 md:h-80">
+          <canvas id="cnaChart"></canvas>
+        </div>
+      </section>
+
+      <section class="rounded-2xl border border-white/10 bg-white/3 p-4 md:p-6">
+        <h2 class="text-lg font-semibold text-white mb-4">Top 20 CNAs by Heartbeat</h2>
+        <div class="overflow-x-auto">
+          <table class="w-full text-sm">
+            <thead>
+              <tr class="text-left text-slate-400 border-b border-white/10 text-xs uppercase tracking-wider">
+                <th class="py-2 pr-3">Rank</th>
+                <th class="py-2 pr-3">CNA</th>
+                <th class="py-2 pr-3">30d Interval</th>
+                <th class="py-2">Total CVEs</th>
+              </tr>
+            </thead>
+            <tbody id="peerTable"></tbody>
+          </table>
+        </div>
+      </section>
+
+    </main>
+
+    <script>
+      const CNA_SLUG = "axis";
+      const SUMMARY_PATH = "../../assets/data/summary.json";
+
+      function formatDuration(seconds) {
+        if (seconds == null || isNaN(seconds)) return "--";
+        seconds = Math.round(seconds);
+        const d = Math.floor(seconds / 86400);
+        const h = Math.floor((seconds % 86400) / 3600);
+        const m = Math.floor((seconds % 3600) / 60);
+        const s = seconds % 60;
+        let out = [];
+        if (d > 0) out.push(d + "d");
+        if (h > 0) out.push(h + "h");
+        if (m > 0) out.push(m + "m");
+        if (s > 0 || out.length === 0) out.push(s + "s");
+        return out.join(" ");
+      }
+
+      function fmtNumber(v) {
+        if (v == null || isNaN(v)) return "--";
+        return new Intl.NumberFormat().format(v);
+      }
+
+      let cnaChart;
+
+      function isDark() {
+        return document.documentElement.classList.contains('dark');
+      }
+
+      function renderChart(trend, scale) {
+        const ctx = document.getElementById('cnaChart').getContext('2d');
+        if (cnaChart) cnaChart.destroy();
+
+        const dark = isDark();
+        const labels = trend.map(p => p.date);
+        const mean = trend.map(p => p.avgIntervalSeconds);
+        const p25 = trend.map(p => p.p25IntervalSeconds);
+        const p75 = trend.map(p => p.p75IntervalSeconds);
+        const tickColor = dark ? '#94a3b8' : '#64748b';
+        const gridColor = dark ? 'rgba(148,163,184,0.10)' : 'rgba(100,116,139,0.08)';
+
+        cnaChart = new Chart(ctx, {
+          type: 'line',
+          data: {
+            labels,
+            datasets: [
+              {
+                label: 'P25–P75 band',
+                data: p75,
+                fill: '+1',
+                borderColor: 'transparent',
+                backgroundColor: dark ? 'rgba(46,230,255,0.10)' : 'rgba(14,165,233,0.10)',
+                pointRadius: 0,
+                tension: 0.25,
+                order: 3
+              },
+              {
+                label: 'P25',
+                data: p25,
+                fill: false,
+                borderColor: 'transparent',
+                backgroundColor: 'transparent',
+                pointRadius: 0,
+                tension: 0.25,
+                order: 4
+              },
+              {
+                label: 'Mean interval',
+                data: mean,
+                borderColor: dark ? 'rgba(46,230,255,0.95)' : '#0ea5e9',
+                backgroundColor: 'transparent',
+                pointRadius: 2,
+                pointHoverRadius: 5,
+                borderWidth: 2.5,
+                tension: 0.25,
+                order: 1
+              }
+            ]
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            interaction: { mode: 'index', intersect: false },
+            plugins: {
+              legend: { display: false },
+              tooltip: {
+                backgroundColor: dark ? 'rgba(6,16,29,0.96)' : '#f1f5f9',
+                titleColor: dark ? '#f8fafc' : '#0f172a',
+                bodyColor: dark ? '#dbeafe' : '#334155',
+                callbacks: {
+                  label: function(ctx) {
+                    if (ctx.dataset.label === 'P25') return 'P25: ' + formatDuration(ctx.parsed.y);
+                    if (ctx.dataset.label === 'P25–P75 band') return 'P75: ' + formatDuration(ctx.parsed.y);
+                    return ctx.dataset.label + ': ' + formatDuration(ctx.parsed.y);
+                  }
+                }
+              }
+            },
+            scales: {
+              x: { ticks: { color: tickColor }, grid: { color: gridColor } },
+              y: {
+                type: scale,
+                min: scale === 'logarithmic' ? undefined : 0,
+                ticks: { color: tickColor, callback: (v) => formatDuration(v) },
+                grid: { color: gridColor },
+                title: { display: true, text: 'Interval per CVE', color: dark ? '#94a3b8' : '#64748b' }
+              }
+            }
+          }
+        });
+      }
+
+      async function boot() {
+        const themeToggle = document.getElementById('themeToggle');
+        const themeIcon = document.getElementById('themeIcon');
+
+        function setTheme(mode) {
+          if (mode === 'dark') {
+            document.documentElement.classList.add('dark');
+            themeIcon.textContent = '🌙';
+            localStorage.setItem('theme', 'dark');
+          } else {
+            document.documentElement.classList.remove('dark');
+            themeIcon.textContent = '☀️';
+            localStorage.setItem('theme', 'light');
+          }
+        }
+
+        const saved = localStorage.getItem('theme');
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        setTheme(saved || (prefersDark ? 'dark' : 'light'));
+        themeIcon.textContent = isDark() ? '🌙' : '☀️';
+
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+          if (!localStorage.getItem('theme')) setTheme(e.matches ? 'dark' : 'light');
+        });
+        themeToggle.addEventListener('click', () => {
+          setTheme(isDark() ? 'light' : 'dark');
+          if (cnaChart) renderChart(window._cnaTrend, document.getElementById('scaleToggle').value);
+        });
+
+        const resp = await fetch(SUMMARY_PATH, { cache: 'no-store' });
+        const data = await resp.json();
+        const entry = (data.cna.leaderboard || []).find(r => r.slug === CNA_SLUG);
+        const trend = (data.cna.trendByCna || {})[entry?.cna] || [];
+        window._cnaTrend = trend;
+
+        if (entry) {
+          document.getElementById('hero30d').textContent = formatDuration(entry.window30SecondsPerCve);
+          document.getElementById('heroRank').textContent = '#' + (entry.rank ?? '--');
+          document.getElementById('heroPercentile').textContent = (entry.percentileFaster ?? '--') + '%';
+          document.getElementById('heroTotal').textContent = fmtNumber(entry.totalEvents);
+        }
+
+        let scale = 'linear';
+        renderChart(trend, scale);
+
+        document.getElementById('scaleToggle').addEventListener('change', e => {
+          scale = e.target.value;
+          renderChart(trend, scale);
+        });
+
+        // Peer table — top 20
+        const tbody = document.getElementById('peerTable');
+        (data.cna.leaderboard || []).slice(0, 20).forEach(row => {
+          const isCurrent = row.slug === CNA_SLUG;
+          const tr = document.createElement('tr');
+          tr.className = 'border-b border-white/5 ' + (isCurrent ? 'bg-cyan-400/10 font-semibold' : 'hover:bg-white/5') + ' transition-colors';
+          tr.innerHTML = `
+            <td class="py-2 pr-3 text-slate-400">${row.rank ?? '--'}</td>
+            <td class="py-2 pr-3">${isCurrent
+              ? '<span class="text-cyan-300">' + row.cna + '</span>'
+              : '<a href="../' + row.slug + '/" class="text-slate-200 hover:text-cyan-300 transition-colors">' + row.cna + '</a>'
+            }</td>
+            <td class="py-2 pr-3 text-cyan-200">${formatDuration(row.window30SecondsPerCve)}</td>
+            <td class="py-2 text-slate-300">${fmtNumber(row.totalEvents)}</td>
+          `;
+          tbody.appendChild(tr);
+        });
+      }
+
+      boot().catch(console.error);
+    </script>
+  </body>
+</html>
