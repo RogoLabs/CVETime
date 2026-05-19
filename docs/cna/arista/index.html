@@ -10,6 +10,15 @@
         darkMode: 'class',
         theme: {
           extend: {
+            colors: {
+              ink: { DEFAULT: "#06101d", light: "#f8fafc" },
+              ink2: { DEFAULT: "#0b1727", light: "#e2e8f0" },
+              panel: { DEFAULT: "#10233c", light: "#f1f5f9" },
+              panel2: { DEFAULT: "#162b46", light: "#e0e7ef" },
+              accent: { DEFAULT: "#2ee6ff", light: "#0ea5e9" },
+              accent2: { DEFAULT: "#2dd4bf", light: "#14b8a6" },
+              accent3: { DEFAULT: "#60a5fa", light: "#6366f1" }
+            },
             fontFamily: { display: ["Space Grotesk", "ui-sans-serif", "system-ui"] }
           }
         }
@@ -18,7 +27,10 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="canonical" href="/cna/arista/" />
   </head>
-  <body class="bg-slate-950 text-slate-100 min-h-screen transition-colors duration-300">
+  <body class="bg-ink-light text-slate-900 dark:bg-ink dark:text-slate-100 min-h-screen transition-colors duration-300">
+
+    <div class="fixed inset-0 -z-20 bg-[radial-gradient(circle_at_15%_15%,rgba(14,165,233,0.14),transparent_30%),radial-gradient(circle_at_80%_0%,rgba(99,102,241,0.12),transparent_26%),radial-gradient(circle_at_90%_90%,rgba(20,184,166,0.10),transparent_22%),linear-gradient(180deg,#f8fbff_0%,#eff6ff_48%,#e0f2fe_100%)] dark:bg-[radial-gradient(circle_at_15%_15%,rgba(46,230,255,0.15),transparent_28%),radial-gradient(circle_at_80%_0%,rgba(96,165,250,0.15),transparent_26%),radial-gradient(circle_at_90%_90%,rgba(45,212,191,0.10),transparent_22%),linear-gradient(180deg,#040a13_0%,#081321_48%,#06101d_100%)]"></div>
+    <div class="fixed inset-0 -z-10 opacity-40 dark:opacity-30 bg-[linear-gradient(rgba(14,165,233,0.07)_1px,transparent_1px),linear-gradient(90deg,rgba(14,165,233,0.07)_1px,transparent_1px)] dark:bg-[linear-gradient(rgba(148,163,184,0.07)_1px,transparent_1px),linear-gradient(90deg,rgba(148,163,184,0.07)_1px,transparent_1px)] bg-[size:88px_88px]"></div>
 
     <script>
       // Sync theme from root
@@ -29,15 +41,15 @@
       })();
     </script>
 
-    <header class="sticky top-0 z-20 border-b border-white/10 bg-slate-950/90 backdrop-blur-xl">
+    <header class="sticky top-0 z-20 border-b border-sky-200/80 dark:border-white/10 bg-[rgba(248,250,252,0.78)] dark:bg-slate-950/90 backdrop-blur-xl">
       <div class="max-w-5xl mx-auto px-4 py-3 flex items-center gap-4">
-        <a href="../../" class="text-xs text-slate-400 hover:text-cyan-400 transition-colors">← Global Dashboard</a>
-        <span class="text-slate-600">/</span>
-        <a href="../" class="text-xs text-slate-400 hover:text-cyan-400 transition-colors">CNAs</a>
-        <span class="text-slate-600">/</span>
-        <span class="text-xs text-slate-200">Arista</span>
+        <a href="../../" class="text-xs text-slate-600 dark:text-slate-400 hover:text-sky-600 dark:hover:text-cyan-400 transition-colors">← Global Dashboard</a>
+        <span class="text-slate-400 dark:text-slate-600">/</span>
+        <a href="../" class="text-xs text-slate-600 dark:text-slate-400 hover:text-sky-600 dark:hover:text-cyan-400 transition-colors">CNAs</a>
+        <span class="text-slate-400 dark:text-slate-600">/</span>
+        <span class="text-xs text-slate-900 dark:text-slate-200">Arista</span>
         <div class="ml-auto">
-          <button id="themeToggle" class="px-2 py-1 rounded bg-white/5 border border-white/10 text-xs text-slate-300 hover:bg-cyan-400/10 transition-colors">
+          <button id="themeToggle" class="px-2 py-1 rounded bg-white/70 dark:bg-white/5 border border-sky-200/80 dark:border-white/10 text-xs text-slate-700 dark:text-slate-300 hover:bg-sky-100 dark:hover:bg-cyan-400/10 transition-colors">
             <span id="themeIcon">🌙</span> Theme
           </button>
         </div>
@@ -47,52 +59,60 @@
     <main class="max-w-5xl mx-auto px-4 py-8">
 
       <div class="mb-8">
-        <p class="text-xs uppercase tracking-widest text-cyan-400 mb-2">CNA Profile</p>
-        <h1 class="text-3xl md:text-4xl font-semibold text-white">Arista</h1>
-        <p class="text-slate-400 mt-1 text-sm">Publication velocity trend and peer comparison</p>
+        <p class="text-xs uppercase tracking-widest text-sky-700 dark:text-cyan-400 mb-2">CNA Profile</p>
+        <h1 class="text-3xl md:text-4xl font-semibold text-slate-950 dark:text-white">Arista</h1>
+        <p class="text-slate-600 dark:text-slate-400 mt-1 text-sm">Publication velocity trend and peer comparison</p>
       </div>
 
       <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-8">
-        <div class="rounded-2xl border border-white/10 bg-white/4 px-4 py-3">
-          <p class="text-[10px] uppercase tracking-widest text-slate-400">30d Heartbeat</p>
-          <p id="hero30d" class="text-2xl font-semibold text-cyan-400 mt-1">--</p>
+        <div class="rounded-2xl border border-sky-200/80 dark:border-white/10 bg-white/70 dark:bg-white/4 px-4 py-3 shadow-[0_12px_36px_rgba(14,165,233,0.08)] dark:shadow-none">
+          <p class="text-[10px] uppercase tracking-widest text-slate-500 dark:text-slate-400">30d Heartbeat</p>
+          <p id="hero30d" class="text-2xl font-semibold text-accent-light dark:text-cyan-400 mt-1">--</p>
         </div>
-        <div class="rounded-2xl border border-white/10 bg-white/4 px-4 py-3">
-          <p class="text-[10px] uppercase tracking-widest text-slate-400">Rank</p>
-          <p id="heroRank" class="text-2xl font-semibold text-sky-400 mt-1">--</p>
+        <div class="rounded-2xl border border-sky-200/80 dark:border-white/10 bg-white/70 dark:bg-white/4 px-4 py-3 shadow-[0_12px_36px_rgba(14,165,233,0.08)] dark:shadow-none">
+          <p class="text-[10px] uppercase tracking-widest text-slate-500 dark:text-slate-400">Rank</p>
+          <p id="heroRank" class="text-2xl font-semibold text-accent3-light dark:text-sky-400 mt-1">--</p>
         </div>
-        <div class="rounded-2xl border border-white/10 bg-white/4 px-4 py-3">
-          <p class="text-[10px] uppercase tracking-widest text-slate-400">Faster than</p>
-          <p id="heroPercentile" class="text-2xl font-semibold text-teal-400 mt-1">--</p>
+        <div class="rounded-2xl border border-sky-200/80 dark:border-white/10 bg-white/70 dark:bg-white/4 px-4 py-3 shadow-[0_12px_36px_rgba(14,165,233,0.08)] dark:shadow-none">
+          <p class="text-[10px] uppercase tracking-widest text-slate-500 dark:text-slate-400">Faster than</p>
+          <p id="heroPercentile" class="text-2xl font-semibold text-accent2-light dark:text-teal-400 mt-1">--</p>
         </div>
-        <div class="rounded-2xl border border-white/10 bg-white/4 px-4 py-3">
-          <p class="text-[10px] uppercase tracking-widest text-slate-400">Total CVEs</p>
-          <p id="heroTotal" class="text-2xl font-semibold text-indigo-400 mt-1">--</p>
+        <div class="rounded-2xl border border-sky-200/80 dark:border-white/10 bg-white/70 dark:bg-white/4 px-4 py-3 shadow-[0_12px_36px_rgba(14,165,233,0.08)] dark:shadow-none">
+          <p class="text-[10px] uppercase tracking-widest text-slate-500 dark:text-slate-400">Total CVEs</p>
+          <p id="heroTotal" class="text-2xl font-semibold text-indigo-600 dark:text-indigo-400 mt-1">--</p>
         </div>
       </div>
 
-      <section class="rounded-2xl border border-white/10 bg-white/3 p-4 md:p-6 mb-8">
-        <div class="flex items-center justify-between mb-4">
+      <section class="rounded-2xl border border-sky-200/80 dark:border-white/10 bg-panel-light/90 dark:bg-white/3 p-4 md:p-6 mb-8 shadow-[0_18px_60px_rgba(14,165,233,0.10)] dark:shadow-none">
+        <div class="flex items-center justify-between gap-3 mb-4 flex-wrap">
           <div>
-            <h2 class="text-lg font-semibold text-white">Publication Interval Trend</h2>
-            <p class="text-xs text-slate-400">Monthly mean with 25th–75th percentile band</p>
+            <h2 class="text-lg font-semibold text-slate-950 dark:text-white">Publication Interval Trend</h2>
+            <p class="text-xs text-slate-500 dark:text-slate-400">Monthly mean with 25th–75th percentile band</p>
           </div>
-          <select id="scaleToggle" class="bg-slate-900 border border-white/10 rounded px-2 py-1 text-xs text-slate-100">
-            <option value="linear" selected>Linear</option>
-            <option value="logarithmic">Logarithmic</option>
-          </select>
+          <div class="flex items-center gap-2 flex-wrap justify-end">
+            <label for="rangeToggle" class="text-xs text-slate-600 dark:text-slate-300">Range:</label>
+            <select id="rangeToggle" class="bg-white/80 dark:bg-slate-900 border border-sky-200/80 dark:border-white/10 rounded px-2 py-1 text-xs text-slate-900 dark:text-slate-100">
+              <option value="recent" selected>2017+</option>
+              <option value="all">All history</option>
+            </select>
+            <label for="scaleToggle" class="text-xs text-slate-600 dark:text-slate-300">Y Scale:</label>
+            <select id="scaleToggle" class="bg-white/80 dark:bg-slate-900 border border-sky-200/80 dark:border-white/10 rounded px-2 py-1 text-xs text-slate-900 dark:text-slate-100">
+              <option value="linear" selected>Linear</option>
+              <option value="logarithmic">Logarithmic</option>
+            </select>
+          </div>
         </div>
         <div class="h-72 md:h-80">
           <canvas id="cnaChart"></canvas>
         </div>
       </section>
 
-      <section class="rounded-2xl border border-white/10 bg-white/3 p-4 md:p-6">
-        <h2 class="text-lg font-semibold text-white mb-4">Top 20 CNAs by Heartbeat</h2>
+      <section class="rounded-2xl border border-sky-200/80 dark:border-white/10 bg-panel-light/90 dark:bg-white/3 p-4 md:p-6 shadow-[0_18px_60px_rgba(14,165,233,0.10)] dark:shadow-none">
+        <h2 class="text-lg font-semibold text-slate-950 dark:text-white mb-4">Top 20 CNAs by Heartbeat</h2>
         <div class="overflow-x-auto">
           <table class="w-full text-sm">
             <thead>
-              <tr class="text-left text-slate-400 border-b border-white/10 text-xs uppercase tracking-wider">
+              <tr class="text-left text-slate-500 dark:text-slate-400 border-b border-sky-200/80 dark:border-white/10 text-xs uppercase tracking-wider">
                 <th class="py-2 pr-3">Rank</th>
                 <th class="py-2 pr-3">CNA</th>
                 <th class="py-2 pr-3">30d Interval</th>
@@ -131,20 +151,27 @@
       }
 
       let cnaChart;
+      let currentRange = 'recent';
 
       function isDark() {
         return document.documentElement.classList.contains('dark');
       }
 
-      function renderChart(trend, scale) {
+      function getTrendPoints(trend, range = 'recent') {
+        if (range === 'all') return trend;
+        return trend.filter(point => point.date >= '2017-01-01');
+      }
+
+      function renderChart(trend, scale, range) {
         const ctx = document.getElementById('cnaChart').getContext('2d');
         if (cnaChart) cnaChart.destroy();
 
         const dark = isDark();
-        const labels = trend.map(p => p.date);
-        const mean = trend.map(p => p.avgIntervalSeconds);
-        const p25 = trend.map(p => p.p25IntervalSeconds);
-        const p75 = trend.map(p => p.p75IntervalSeconds);
+        const points = getTrendPoints(trend, range);
+        const labels = points.map(p => p.date);
+        const mean = points.map(p => p.avgIntervalSeconds);
+        const p25 = points.map(p => p.p25IntervalSeconds);
+        const p75 = points.map(p => p.p75IntervalSeconds);
         const tickColor = dark ? '#94a3b8' : '#64748b';
         const gridColor = dark ? 'rgba(148,163,184,0.10)' : 'rgba(100,116,139,0.08)';
 
@@ -245,7 +272,7 @@
         });
         themeToggle.addEventListener('click', () => {
           setTheme(isDark() ? 'light' : 'dark');
-          if (cnaChart) renderChart(window._cnaTrend, document.getElementById('scaleToggle').value);
+          if (cnaChart) renderChart(window._cnaTrend, document.getElementById('scaleToggle').value, currentRange);
         });
 
         const resp = await fetch(SUMMARY_PATH, { cache: 'no-store' });
@@ -262,11 +289,16 @@
         }
 
         let scale = 'linear';
-        renderChart(trend, scale);
+        renderChart(trend, scale, currentRange);
+
+        document.getElementById('rangeToggle').addEventListener('change', e => {
+          currentRange = e.target.value;
+          renderChart(trend, scale, currentRange);
+        });
 
         document.getElementById('scaleToggle').addEventListener('change', e => {
           scale = e.target.value;
-          renderChart(trend, scale);
+          renderChart(trend, scale, currentRange);
         });
 
         // Peer table — top 20
@@ -274,15 +306,15 @@
         (data.cna.leaderboard || []).slice(0, 20).forEach(row => {
           const isCurrent = row.slug === CNA_SLUG;
           const tr = document.createElement('tr');
-          tr.className = 'border-b border-white/5 ' + (isCurrent ? 'bg-cyan-400/10 font-semibold' : 'hover:bg-white/5') + ' transition-colors';
+          tr.className = 'border-b border-sky-200/70 dark:border-white/5 ' + (isCurrent ? 'bg-sky-100/90 dark:bg-cyan-400/10 font-semibold' : 'hover:bg-sky-100/70 dark:hover:bg-white/5') + ' transition-colors';
           tr.innerHTML = `
-            <td class="py-2 pr-3 text-slate-400">${row.rank ?? '--'}</td>
+            <td class="py-2 pr-3 text-slate-500 dark:text-slate-400">${row.rank ?? '--'}</td>
             <td class="py-2 pr-3">${isCurrent
-              ? '<span class="text-cyan-300">' + row.cna + '</span>'
-              : '<a href="../' + row.slug + '/" class="text-slate-200 hover:text-cyan-300 transition-colors">' + row.cna + '</a>'
+              ? '<span class="text-sky-700 dark:text-cyan-300">' + row.cna + '</span>'
+              : '<a href="../' + row.slug + '/" class="text-slate-900 dark:text-slate-200 hover:text-sky-600 dark:hover:text-cyan-300 transition-colors">' + row.cna + '</a>'
             }</td>
-            <td class="py-2 pr-3 text-cyan-200">${formatDuration(row.window30SecondsPerCve)}</td>
-            <td class="py-2 text-slate-300">${fmtNumber(row.totalEvents)}</td>
+            <td class="py-2 pr-3 text-sky-700 dark:text-cyan-200">${formatDuration(row.window30SecondsPerCve)}</td>
+            <td class="py-2 text-slate-700 dark:text-slate-300">${fmtNumber(row.totalEvents)}</td>
           `;
           tbody.appendChild(tr);
         });
