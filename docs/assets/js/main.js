@@ -31,17 +31,25 @@ function renderOverview(data) {
 
 let globalChart;
 let currentScale = "linear";
-let currentRange = "recent";
+let currentRange = "24m";
 
-function getGlobalTrendPoints(data, range = "recent") {
+function getGlobalTrendPoints(data, range = "24m") {
   const points = data.global.trend || [];
   if (range === "all") {
     return points;
   }
+  if (range === "24m") {
+    // Calculate date 24 months ago from today
+    const now = new Date();
+    const twentyFourMonthsAgo = new Date(now.getFullYear(), now.getMonth() - 24, 1);
+    const cutoffDate = twentyFourMonthsAgo.toISOString().split('T')[0];
+    return points.filter((point) => point.date >= cutoffDate);
+  }
+  // Default to 2017+
   return points.filter((point) => point.date >= "2017-01-01");
 }
 
-function renderGlobalTrend(data, scale = "linear", range = "recent") {
+function renderGlobalTrend(data, scale = "linear", range = "24m") {
   const points = getGlobalTrendPoints(data, range);
   const labels = points.map((p) => p.date);
   const meanValues = points.map((p) => p.avgIntervalSeconds);
