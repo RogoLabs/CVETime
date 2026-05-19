@@ -789,14 +789,14 @@ CNA_TEMPLATE = """\
         window._severityChart = new Chart(ctx, {{
           type: "scatter",
           data: {{
-            datasets: [{
+            datasets: [{{
               label: "Time to Publish vs Severity",
-              data: points.map(point => ({
+              data: points.map(point => ({{
                 x: point.timeToPublishSeconds,
                 y: point.severityValue,
                 severity: point.severity,
                 cveId: point.cveId,
-              })),
+              }})),
               backgroundColor: dark ? "rgba(46,230,255,0.65)" : "rgba(14,165,233,0.65)",
               borderColor: dark ? "rgba(46,230,255,0.95)" : "#0ea5e9",
               pointRadius: 4,
@@ -855,13 +855,13 @@ CNA_TEMPLATE = """\
         }});
 
         const response = await fetch(SHARD_PATH, {{ cache: "no-store" }});
-        if (!response.ok) throw new Error(`Failed to fetch shard: ${response.status}`);
+        if (!response.ok) throw new Error(`Failed to fetch shard: ${{response.status}}`);
         const shard = await response.json();
         window._shard = shard;
 
         const cna = shard.cna || {{}};
         document.getElementById("hero30d").textContent = formatDuration(cna.window30SecondsPerCve);
-        document.getElementById("heroConsistency").textContent = (cna.consistencyGrade || "--") + (cna.consistencyScore != null ? ` / ${cna.consistencyScore}` : "");
+        document.getElementById("heroConsistency").textContent = (cna.consistencyGrade || "--") + (cna.consistencyScore != null ? ` / ${{cna.consistencyScore}}` : "");
         document.getElementById("heroPercentiles").textContent = `${{formatDuration(shard.metrics?.p50Seconds)}} / ${{formatDuration(shard.metrics?.p90Seconds)}}`;
         document.getElementById("heroTotal").textContent = fmtNumber(cna.totalEvents);
 
