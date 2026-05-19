@@ -64,30 +64,30 @@
     </script>
     <script defer src="assets/js/main.js"></script>
   </head>
-  <body class="bg-ink text-slate-100 min-h-screen transition-colors duration-300">
-    <div class="fixed inset-0 -z-20 bg-[radial-gradient(circle_at_15%_15%,rgba(46,230,255,0.15),transparent_28%),radial-gradient(circle_at_80%_0%,rgba(96,165,250,0.15),transparent_26%),radial-gradient(circle_at_90%_90%,rgba(45,212,191,0.10),transparent_22%),linear-gradient(180deg,#040a13_0%,#081321_48%,#06101d_100%)]"></div>
-    <div class="fixed inset-0 -z-10 opacity-30 bg-[linear-gradient(rgba(148,163,184,0.07)_1px,transparent_1px),linear-gradient(90deg,rgba(148,163,184,0.07)_1px,transparent_1px)] bg-[size:88px_88px]"></div>
+  <body class="bg-ink-light text-slate-900 dark:bg-ink dark:text-slate-100 min-h-screen transition-colors duration-300">
+    <div class="fixed inset-0 -z-20 bg-[radial-gradient(circle_at_15%_15%,rgba(14,165,233,0.14),transparent_30%),radial-gradient(circle_at_80%_0%,rgba(99,102,241,0.12),transparent_26%),radial-gradient(circle_at_90%_90%,rgba(20,184,166,0.10),transparent_22%),linear-gradient(180deg,#f8fbff_0%,#eff6ff_48%,#e0f2fe_100%)] dark:bg-[radial-gradient(circle_at_15%_15%,rgba(46,230,255,0.15),transparent_28%),radial-gradient(circle_at_80%_0%,rgba(96,165,250,0.15),transparent_26%),radial-gradient(circle_at_90%_90%,rgba(45,212,191,0.10),transparent_22%),linear-gradient(180deg,#040a13_0%,#081321_48%,#06101d_100%)]"></div>
+    <div class="fixed inset-0 -z-10 opacity-40 dark:opacity-30 bg-[linear-gradient(rgba(14,165,233,0.07)_1px,transparent_1px),linear-gradient(90deg,rgba(14,165,233,0.07)_1px,transparent_1px)] dark:bg-[linear-gradient(rgba(148,163,184,0.07)_1px,transparent_1px),linear-gradient(90deg,rgba(148,163,184,0.07)_1px,transparent_1px)] bg-[size:88px_88px]"></div>
 
-    <header class="sticky top-0 z-20 border-b border-white/8 bg-[rgba(4,10,19,0.72)] backdrop-blur-xl">
+    <header class="sticky top-0 z-20 border-b border-sky-200/80 dark:border-white/8 bg-[rgba(248,250,252,0.78)] dark:bg-[rgba(4,10,19,0.72)] backdrop-blur-xl">
       <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between gap-4">
         <a href="#top" class="flex items-center gap-3 group">
-          <span class="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-white/6 border border-white/10 shadow-[0_0_22px_rgba(46,230,255,0.18)] group-hover:border-accent/40 transition-colors">
+          <span class="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-white/60 dark:bg-white/6 border border-sky-200/80 dark:border-white/10 shadow-[0_0_22px_rgba(14,165,233,0.18)] dark:shadow-[0_0_22px_rgba(46,230,255,0.18)] group-hover:border-accent-light/40 dark:group-hover:border-accent/40 transition-colors">
             <span class="h-2.5 w-2.5 rounded-full bg-accent shadow-[0_0_18px_rgba(46,230,255,0.95)]"></span>
           </span>
           <div>
-            <p class="text-[10px] uppercase tracking-[0.28em] text-slate-400">CVETime</p>
-            <p class="text-sm text-slate-100">Velocity Dashboard</p>
+            <p class="text-[10px] uppercase tracking-[0.28em] text-slate-500 dark:text-slate-400">CVETime</p>
+            <p class="text-sm text-slate-900 dark:text-slate-100">Velocity Dashboard</p>
           </div>
         </a>
 
-        <nav class="hidden md:flex items-center gap-6 text-sm text-slate-300">
+        <nav class="hidden md:flex items-center gap-6 text-sm text-slate-600 dark:text-slate-300">
           <a href="#overview" class="hover:text-accent transition-colors">Overview</a>
           <a href="#trend" class="hover:text-accent transition-colors">Trend</a>
           <a href="#cna" class="hover:text-accent transition-colors">CNA</a>
           <a href="cna/" class="hover:text-accent transition-colors">CNA Profiles</a>
         </nav>
 
-        <button id="themeToggle" aria-label="Toggle dark/light mode" class="flex items-center gap-1 px-2 py-1 rounded bg-white/5 border border-white/10 text-xs text-slate-300 hover:bg-accent/10 transition-colors">
+        <button id="themeToggle" aria-label="Toggle dark/light mode" class="flex items-center gap-1 px-2 py-1 rounded bg-white/70 dark:bg-white/5 border border-sky-200/80 dark:border-white/10 text-xs text-slate-700 dark:text-slate-300 hover:bg-accent-light/10 dark:hover:bg-accent/10 transition-colors">
           <span id="themeIcon">🌙</span>
           <span class="hidden sm:inline">Theme</span>
         </button>
@@ -126,58 +126,63 @@
 
     <main id="top" class="max-w-6xl mx-auto px-4 py-8 md:py-12">
       <header class="mb-8 md:mb-12 flex flex-col gap-5">
-        <div class="flex items-center gap-3 text-xs uppercase tracking-[0.26em] text-cyan-200/90">
+        <div class="flex items-center gap-3 text-xs uppercase tracking-[0.26em] text-sky-700 dark:text-cyan-200/90">
           <span class="inline-flex h-2.5 w-2.5 rounded-full bg-accent shadow-[0_0_18px_rgba(46,230,255,0.9)]"></span>
           CVE Velocity Dashboard
         </div>
         <div class="max-w-3xl">
-          <h1 class="font-display text-3xl md:text-5xl font-semibold mt-1 text-white">Global CVE Heartbeat</h1>
-          <p class="text-slate-300/90 mt-3 text-base md:text-lg">
+          <h1 class="font-display text-3xl md:text-5xl font-semibold mt-1 text-slate-950 dark:text-white">Global CVE Heartbeat</h1>
+          <p class="text-slate-700 dark:text-slate-300/90 mt-3 text-base md:text-lg">
             Average time between CVE publications globally and across CNAs, styled after the cve.icu dark analytics aesthetic.
           </p>
         </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 max-w-4xl">
-          <div class="rounded-2xl border border-white/8 bg-white/4 px-4 py-3 backdrop-blur-xl">
-            <p class="text-[10px] uppercase tracking-[0.22em] text-slate-400">Coverage</p>
-            <p class="mt-1 text-sm text-slate-100">Global + per-CNA rolling windows</p>
+          <div class="rounded-2xl border border-sky-200/80 dark:border-white/8 bg-white/70 dark:bg-white/4 px-4 py-3 backdrop-blur-xl shadow-[0_12px_36px_rgba(14,165,233,0.08)] dark:shadow-none">
+            <p class="text-[10px] uppercase tracking-[0.22em] text-slate-500 dark:text-slate-400">Coverage</p>
+            <p class="mt-1 text-sm text-slate-900 dark:text-slate-100">Global + per-CNA rolling windows</p>
           </div>
-          <div class="rounded-2xl border border-white/8 bg-white/4 px-4 py-3 backdrop-blur-xl">
-            <p class="text-[10px] uppercase tracking-[0.22em] text-slate-400">Refresh</p>
-            <p class="mt-1 text-sm text-slate-100">Daily GitHub Actions sync</p>
+          <div class="rounded-2xl border border-sky-200/80 dark:border-white/8 bg-white/70 dark:bg-white/4 px-4 py-3 backdrop-blur-xl shadow-[0_12px_36px_rgba(14,165,233,0.08)] dark:shadow-none">
+            <p class="text-[10px] uppercase tracking-[0.22em] text-slate-500 dark:text-slate-400">Refresh</p>
+            <p class="mt-1 text-sm text-slate-900 dark:text-slate-100">Daily GitHub Actions sync</p>
           </div>
-          <div class="rounded-2xl border border-white/8 bg-white/4 px-4 py-3 backdrop-blur-xl">
-            <p class="text-[10px] uppercase tracking-[0.22em] text-slate-400">Stack</p>
-            <p class="mt-1 text-sm text-slate-100">Python 3.14 · Pandas 3 · Chart.js</p>
+          <div class="rounded-2xl border border-sky-200/80 dark:border-white/8 bg-white/70 dark:bg-white/4 px-4 py-3 backdrop-blur-xl shadow-[0_12px_36px_rgba(14,165,233,0.08)] dark:shadow-none">
+            <p class="text-[10px] uppercase tracking-[0.22em] text-slate-500 dark:text-slate-400">Stack</p>
+            <p class="mt-1 text-sm text-slate-900 dark:text-slate-100">Python 3.14 · Pandas 3 · Chart.js</p>
           </div>
         </div>
       </header>
 
       <section id="overview" class="grid grid-cols-1 md:grid-cols-3 gap-3 mb-8">
-        <article class="bg-panel/70 border border-white/10 rounded-2xl p-4 md:p-4.5 shadow-[0_18px_60px_rgba(0,0,0,0.32)] backdrop-blur-xl">
-          <h2 class="text-slate-400 text-sm uppercase tracking-[0.18em]">Current Heartbeat (30d)</h2>
+        <article class="bg-panel-light/90 dark:bg-panel/70 border border-sky-200/80 dark:border-white/10 rounded-2xl p-4 md:p-4.5 shadow-[0_18px_60px_rgba(14,165,233,0.10)] dark:shadow-[0_18px_60px_rgba(0,0,0,0.32)] backdrop-blur-xl">
+          <h2 class="text-slate-500 dark:text-slate-400 text-sm uppercase tracking-[0.18em]">Current Heartbeat (30d)</h2>
           <p id="heroMetric" class="font-display text-[1.9rem] md:text-[2.35rem] text-accent mt-2 leading-none">Loading...</p>
-          <p class="text-xs text-slate-400 mt-2" id="generatedAt">Updated: --</p>
+          <p class="text-xs text-slate-500 dark:text-slate-400 mt-2" id="generatedAt">Updated: --</p>
         </article>
-        <article class="bg-panel/70 border border-white/10 rounded-2xl p-4 md:p-4.5 shadow-[0_18px_60px_rgba(0,0,0,0.32)] backdrop-blur-xl">
-          <h2 class="text-slate-400 text-sm uppercase tracking-[0.18em]">Distinct CNAs</h2>
+        <article class="bg-panel-light/90 dark:bg-panel/70 border border-sky-200/80 dark:border-white/10 rounded-2xl p-4 md:p-4.5 shadow-[0_18px_60px_rgba(14,165,233,0.10)] dark:shadow-[0_18px_60px_rgba(0,0,0,0.32)] backdrop-blur-xl">
+          <h2 class="text-slate-500 dark:text-slate-400 text-sm uppercase tracking-[0.18em]">Distinct CNAs</h2>
           <p id="distinctCnas" class="font-display text-[1.9rem] md:text-[2.35rem] text-accent2 mt-2 leading-none">--</p>
         </article>
-        <article class="bg-panel/70 border border-white/10 rounded-2xl p-4 md:p-4.5 shadow-[0_18px_60px_rgba(0,0,0,0.32)] backdrop-blur-xl">
-          <h2 class="text-slate-400 text-sm uppercase tracking-[0.18em]">Records Parsed</h2>
+        <article class="bg-panel-light/90 dark:bg-panel/70 border border-sky-200/80 dark:border-white/10 rounded-2xl p-4 md:p-4.5 shadow-[0_18px_60px_rgba(14,165,233,0.10)] dark:shadow-[0_18px_60px_rgba(0,0,0,0.32)] backdrop-blur-xl">
+          <h2 class="text-slate-500 dark:text-slate-400 text-sm uppercase tracking-[0.18em]">Records Parsed</h2>
           <p id="parsedRecords" class="font-display text-[1.9rem] md:text-[2.35rem] text-accent3 mt-2 leading-none">--</p>
         </article>
       </section>
 
-      <section id="trend" class="bg-panel/70 border border-white/10 rounded-2xl p-4 md:p-6 mb-8 shadow-[0_20px_70px_rgba(0,0,0,0.35)] backdrop-blur-xl">
+      <section id="trend" class="bg-panel-light/90 dark:bg-panel/70 border border-sky-200/80 dark:border-white/10 rounded-2xl p-4 md:p-6 mb-8 shadow-[0_20px_70px_rgba(14,165,233,0.10)] dark:shadow-[0_20px_70px_rgba(0,0,0,0.35)] backdrop-blur-xl">
         <div class="flex flex-col md:flex-row md:items-center justify-between gap-3 mb-4">
           <div>
-            <h2 class="font-display text-xl text-white">Global Trend</h2>
-            <p class="text-xs text-slate-400">Monthly mean interval with P25–P75 confidence band · dashed line = median</p>
+            <h2 class="font-display text-xl text-slate-950 dark:text-white">Global Trend</h2>
+            <p class="text-xs text-slate-500 dark:text-slate-400">Monthly mean interval with P25–P75 confidence band · dashed line = median</p>
           </div>
-          <div class="flex items-center gap-2 mt-2 md:mt-0">
-            <label for="scaleToggle" class="text-xs text-slate-300 mr-1">Y Scale:</label>
-            <select id="scaleToggle" class="bg-ink2 border border-white/10 rounded px-2 py-1 text-xs text-slate-100 focus:outline-none focus:ring-2 focus:ring-accent/40 focus:border-accent/50">
+          <div class="flex items-center gap-2 mt-2 md:mt-0 flex-wrap justify-end">
+            <label for="rangeToggle" class="text-xs text-slate-600 dark:text-slate-300 mr-1">Range:</label>
+            <select id="rangeToggle" class="bg-white/80 dark:bg-ink2 border border-sky-200/80 dark:border-white/10 rounded px-2 py-1 text-xs text-slate-900 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-accent/40 focus:border-accent/50">
+              <option value="recent" selected>2017+</option>
+              <option value="all">All history</option>
+            </select>
+            <label for="scaleToggle" class="text-xs text-slate-600 dark:text-slate-300 mr-1">Y Scale:</label>
+            <select id="scaleToggle" class="bg-white/80 dark:bg-ink2 border border-sky-200/80 dark:border-white/10 rounded px-2 py-1 text-xs text-slate-900 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-accent/40 focus:border-accent/50">
               <option value="linear" selected>Linear</option>
               <option value="logarithmic">Logarithmic</option>
             </select>
@@ -188,20 +193,20 @@
         </div>
       </section>
 
-      <section id="cna" class="bg-panel/70 border border-white/10 rounded-2xl p-4 md:p-6 shadow-[0_20px_70px_rgba(0,0,0,0.35)] backdrop-blur-xl">
+      <section id="cna" class="bg-panel-light/90 dark:bg-panel/70 border border-sky-200/80 dark:border-white/10 rounded-2xl p-4 md:p-6 shadow-[0_20px_70px_rgba(14,165,233,0.10)] dark:shadow-[0_20px_70px_rgba(0,0,0,0.35)] backdrop-blur-xl">
         <div class="flex flex-col md:flex-row md:items-center justify-between gap-3 mb-4">
           <div>
-            <h2 class="font-display text-xl text-white">CNA Velocity</h2>
-            <p class="text-xs text-slate-400 mt-1">Filter by CNA to inspect rolling publication speed</p>
+            <h2 class="font-display text-xl text-slate-950 dark:text-white">CNA Velocity</h2>
+            <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Filter by CNA to inspect rolling publication speed</p>
           </div>
-          <select id="cnaSelect" class="bg-ink2 border border-white/10 rounded-xl px-3 py-2 text-sm text-slate-100 focus:outline-none focus:ring-2 focus:ring-accent/40 focus:border-accent/50">
+          <select id="cnaSelect" class="bg-white/80 dark:bg-ink2 border border-sky-200/80 dark:border-white/10 rounded-xl px-3 py-2 text-sm text-slate-900 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-accent/40 focus:border-accent/50">
             <option value="">All CNAs</option>
           </select>
         </div>
         <div class="overflow-x-auto">
           <table class="w-full text-sm">
             <thead>
-              <tr class="text-left text-slate-400 border-b border-white/10">
+              <tr class="text-left text-slate-500 dark:text-slate-400 border-b border-sky-200/80 dark:border-white/10">
                 <th class="py-3 pr-3 uppercase tracking-[0.14em] text-xs">CNA</th>
                 <th class="py-3 pr-3 uppercase tracking-[0.14em] text-xs">30d Interval</th>
                 <th class="py-3 pr-3 uppercase tracking-[0.14em] text-xs">90d Interval</th>

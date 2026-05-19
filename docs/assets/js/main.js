@@ -31,9 +31,18 @@ function renderOverview(data) {
 
 let globalChart;
 let currentScale = "linear";
+let currentRange = "recent";
 
-function renderGlobalTrend(data, scale = "linear") {
+function getGlobalTrendPoints(data, range = "recent") {
   const points = data.global.trend || [];
+  if (range === "all") {
+    return points;
+  }
+  return points.filter((point) => point.date >= "2017-01-01");
+}
+
+function renderGlobalTrend(data, scale = "linear", range = "recent") {
+  const points = getGlobalTrendPoints(data, range);
   const labels = points.map((p) => p.date);
   const meanValues = points.map((p) => p.avgIntervalSeconds);
   const medianValues = points.map((p) => p.medianIntervalSeconds);
@@ -43,8 +52,8 @@ function renderGlobalTrend(data, scale = "linear") {
   const ctx = document.getElementById("globalTrendChart").getContext("2d");
   if (globalChart) globalChart.destroy();
 
-  // Annotation: first date >= 2003-01-01
-  const annotationIndex = labels.findIndex((d) => d >= "2003-01-01");
+  // Annotation: first date >= 2003-01-01, only when showing full history
+  const annotationIndex = range === "all" ? labels.findIndex((d) => d >= "2003-01-01") : -1;
   const annotationDate = annotationIndex !== -1 ? labels[annotationIndex] : null;
 
   // Theme-aware colors
@@ -209,10 +218,10 @@ function renderGlobalTrend(data, scale = "linear") {
   if (!window._chartThemeListener) {
     window._chartThemeListener = true;
     window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
-      renderGlobalTrend(data, currentScale);
+      renderGlobalTrend(data, currentScale, currentRange);
     });
     document.getElementById('themeToggle').addEventListener('click', () => {
-      setTimeout(() => renderGlobalTrend(data, currentScale), 100);
+      setTimeout(() => renderGlobalTrend(data, currentScale, currentRange), 100);
     });
   }
 }
@@ -225,22 +234,22 @@ function renderLeaderboard(data, cnaFilter = "") {
 
   body.innerHTML = "";
   if (rows.length === 0) {
-    body.innerHTML = '<tr><td class="py-4 text-slate-400" colspan="5">No leaderboard data available.</td></tr>';
+    body.innerHTML = '<tr><td class="py-4 text-slate-500 dark:text-slate-400" colspan="5">No leaderboard data available.</td></tr>';
     return;
   }
 
   for (const item of rows.slice(0, 50)) {
     const tr = document.createElement("tr");
-    tr.className = "border-b border-white/5 hover:bg-white/5 transition-colors";
+    tr.className = "border-b border-sky-200/70 dark:border-white/5 hover:bg-sky-100/70 dark:hover:bg-white/5 transition-colors";
     const cnaCell = item.slug
-      ? `<a href="cna/${item.slug}/" class="hover:text-cyan-300 transition-colors">${item.cna}</a>`
+      ? `<a href="cna/${item.slug}/" class="text-slate-900 dark:text-slate-100 hover:text-sky-600 dark:hover:text-cyan-300 transition-colors">${item.cna}</a>`
       : item.cna;
     tr.innerHTML = `
-      <td class="py-2.5 pr-3 text-slate-100">${cnaCell}</td>
-      <td class="py-2.5 pr-3 text-cyan-200" title="Average interval between CVEs (30d)">${formatDuration(item.window30SecondsPerCve)}</td>
-      <td class="py-2.5 pr-3 text-sky-200" title="Average interval between CVEs (90d)">${formatDuration(item.window90SecondsPerCve)}</td>
-      <td class="py-2.5 pr-3 text-slate-300" title="CVEs published in last 30 days">${fmtNumber(item.recentEvents30d)}</td>
-      <td class="py-2.5 text-slate-300" title="Total CVEs published">${fmtNumber(item.totalEvents)}</td>
+      <td class="py-2.5 pr-3 text-slate-900 dark:text-slate-100">${cnaCell}</td>
+      <td class="py-2.5 pr-3 text-sky-700 dark:text-cyan-200" title="Average interval between CVEs (30d)">${formatDuration(item.window30SecondsPerCve)}</td>
+      <td class="py-2.5 pr-3 text-indigo-700 dark:text-sky-200" title="Average interval between CVEs (90d)">${formatDuration(item.window90SecondsPerCve)}</td>
+      <td class="py-2.5 pr-3 text-slate-700 dark:text-slate-300" title="CVEs published in last 30 days">${fmtNumber(item.recentEvents30d)}</td>
+      <td class="py-2.5 text-slate-700 dark:text-slate-300" title="Total CVEs published">${fmtNumber(item.totalEvents)}</td>
     `;
     body.appendChild(tr);
   }
@@ -282,16 +291,24 @@ async function boot() {
 
     const data = await response.json();
     renderOverview(data);
-    renderGlobalTrend(data, currentScale);
+    renderGlobalTrend(data, currentScale, currentRange);
     renderCnaFilter(data);
     renderLeaderboard(data);
+
+    const rangeToggle = document.getElementById("rangeToggle");
+    if (rangeToggle) {
+      rangeToggle.addEventListener("change", () => {
+        currentRange = rangeToggle.value;
+        renderGlobalTrend(data, currentScale, currentRange);
+      });
+    }
 
     // Add scale toggle event
     const scaleToggle = document.getElementById("scaleToggle");
     if (scaleToggle) {
       scaleToggle.addEventListener("change", (e) => {
         currentScale = scaleToggle.value;
-        renderGlobalTrend(data, currentScale);
+        renderGlobalTrend(data, currentScale, currentRange);
       });
     }
   } catch (error) {
