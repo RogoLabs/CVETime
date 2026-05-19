@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CNA Profiles · CVETime</title>
+    <title>CNA Directory · CVETime</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
@@ -11,8 +11,26 @@
         theme: {
           extend: {
             colors: {
+<<<<<<< HEAD
               ink: { DEFAULT: "#06101d", light: "#f8fafc" },
               panel: { DEFAULT: "#10233c", light: "#f1f5f9" }
+=======
+              ink: {
+                DEFAULT: "#06101d",
+                light: "#f8fafc"
+              },
+              panel: {
+                DEFAULT: "#10233c",
+                light: "#f1f5f9"
+              },
+              accent: {
+                DEFAULT: "#2ee6ff",
+                light: "#0ea5e9"
+              }
+            },
+            fontFamily: {
+              display: ["Space Grotesk", "ui-sans-serif", "system-ui"]
+>>>>>>> 056aeb0 (feat: split CNA data and refocus dashboard)
             }
           }
         }
@@ -30,10 +48,17 @@
       })();
     </script>
     <header class="sticky top-0 z-20 border-b border-sky-200/80 dark:border-white/10 bg-[rgba(248,250,252,0.78)] dark:bg-slate-950/90 backdrop-blur-xl">
+<<<<<<< HEAD
       <div class="max-w-5xl mx-auto px-4 py-3 flex items-center gap-4">
         <a href="../" class="text-xs text-slate-600 dark:text-slate-400 hover:text-sky-600 dark:hover:text-cyan-400 transition-colors">← Global Dashboard</a>
         <span class="text-slate-400 dark:text-slate-600">/</span>
         <span class="text-xs text-slate-900 dark:text-slate-200">CNA Profiles</span>
+=======
+      <div class="max-w-6xl mx-auto px-4 py-3 flex items-center gap-4">
+        <a href="../" class="text-xs text-slate-600 dark:text-slate-400 hover:text-sky-600 dark:hover:text-cyan-400 transition-colors">← Global Dashboard</a>
+        <span class="text-slate-400 dark:text-slate-600">/</span>
+        <span class="text-xs text-slate-900 dark:text-slate-200">CNA Directory</span>
+>>>>>>> 056aeb0 (feat: split CNA data and refocus dashboard)
         <div class="ml-auto">
           <button id="themeToggle" class="px-2 py-1 rounded bg-white/70 dark:bg-white/5 border border-sky-200/80 dark:border-white/10 text-xs text-slate-700 dark:text-slate-300 hover:bg-sky-100 dark:hover:bg-cyan-400/10 transition-colors">
             <span id="themeIcon">🌙</span> Theme
@@ -41,6 +66,7 @@
         </div>
       </div>
     </header>
+<<<<<<< HEAD
     <script>
       (function() {
         const root = document.documentElement;
@@ -76,468 +102,110 @@
               <th class="py-3 pr-3 pl-4">Rank</th>
               <th class="py-3 pr-3">CNA</th>
               <th class="py-3 pr-3">30d Interval</th>
-              <th class="py-3 pr-4">Total CVEs</th>
-            </tr>
-          </thead>
-          <tbody class="pl-4">
-      <tr class="border-b border-sky-200/70 dark:border-white/5 hover:bg-sky-100/70 dark:hover:bg-white/5 transition-colors">
-        <td class="py-2.5 pr-3 text-slate-500 dark:text-slate-400">1</td>
-        <td class="py-2.5 pr-3"><a href="github-m/" class="text-slate-900 dark:text-cyan-300 hover:text-sky-600 dark:hover:underline transition-colors">GitHub_M</a></td>
-        <td class="py-2.5 pr-3 text-sky-700 dark:text-cyan-200">35m 39s</td>
-        <td class="py-2.5 text-slate-700 dark:text-slate-300">14,557</td>
-      </tr>
-      <tr class="border-b border-sky-200/70 dark:border-white/5 hover:bg-sky-100/70 dark:hover:bg-white/5 transition-colors">
-        <td class="py-2.5 pr-3 text-slate-500 dark:text-slate-400">2</td>
-        <td class="py-2.5 pr-3"><a href="vuldb/" class="text-slate-900 dark:text-cyan-300 hover:text-sky-600 dark:hover:underline transition-colors">VulDB</a></td>
-        <td class="py-2.5 pr-3 text-sky-700 dark:text-cyan-200">1h 0m 56s</td>
-        <td class="py-2.5 text-slate-700 dark:text-slate-300">13,892</td>
-      </tr>
-      <tr class="border-b border-sky-200/70 dark:border-white/5 hover:bg-sky-100/70 dark:hover:bg-white/5 transition-colors">
-        <td class="py-2.5 pr-3 text-slate-500 dark:text-slate-400">3</td>
-        <td class="py-2.5 pr-3"><a href="linux/" class="text-slate-900 dark:text-cyan-300 hover:text-sky-600 dark:hover:underline transition-colors">Linux</a></td>
-        <td class="py-2.5 pr-3 text-sky-700 dark:text-cyan-200">1h 9m 54s</td>
-        <td class="py-2.5 text-slate-700 dark:text-slate-300">8,936</td>
-      </tr>
-      <tr class="border-b border-sky-200/70 dark:border-white/5 hover:bg-sky-100/70 dark:hover:bg-white/5 transition-colors">
-        <td class="py-2.5 pr-3 text-slate-500 dark:text-slate-400">4</td>
-        <td class="py-2.5 pr-3"><a href="vulncheck/" class="text-slate-900 dark:text-cyan-300 hover:text-sky-600 dark:hover:underline transition-colors">VulnCheck</a></td>
-        <td class="py-2.5 pr-3 text-sky-700 dark:text-cyan-200">1h 35m 22s</td>
-        <td class="py-2.5 text-slate-700 dark:text-slate-300">2,953</td>
-      </tr>
-      <tr class="border-b border-sky-200/70 dark:border-white/5 hover:bg-sky-100/70 dark:hover:bg-white/5 transition-colors">
-        <td class="py-2.5 pr-3 text-slate-500 dark:text-slate-400">5</td>
-        <td class="py-2.5 pr-3"><a href="wordfence/" class="text-slate-900 dark:text-cyan-300 hover:text-sky-600 dark:hover:underline transition-colors">Wordfence</a></td>
-        <td class="py-2.5 pr-3 text-sky-700 dark:text-cyan-200">3h 39m 17s</td>
-        <td class="py-2.5 text-slate-700 dark:text-slate-300">6,664</td>
-      </tr>
-      <tr class="border-b border-sky-200/70 dark:border-white/5 hover:bg-sky-100/70 dark:hover:bg-white/5 transition-colors">
-        <td class="py-2.5 pr-3 text-slate-500 dark:text-slate-400">6</td>
-        <td class="py-2.5 pr-3"><a href="chrome/" class="text-slate-900 dark:text-cyan-300 hover:text-sky-600 dark:hover:underline transition-colors">Chrome</a></td>
-        <td class="py-2.5 pr-3 text-sky-700 dark:text-cyan-200">6h 3m 2s</td>
-        <td class="py-2.5 text-slate-700 dark:text-slate-300">1,491</td>
-      </tr>
-      <tr class="border-b border-sky-200/70 dark:border-white/5 hover:bg-sky-100/70 dark:hover:bg-white/5 transition-colors">
-        <td class="py-2.5 pr-3 text-slate-500 dark:text-slate-400">7</td>
-        <td class="py-2.5 pr-3"><a href="microsoft/" class="text-slate-900 dark:text-cyan-300 hover:text-sky-600 dark:hover:underline transition-colors">microsoft</a></td>
-        <td class="py-2.5 pr-3 text-sky-700 dark:text-cyan-200">6h 29m 11s</td>
-        <td class="py-2.5 text-slate-700 dark:text-slate-300">5,073</td>
-      </tr>
-      <tr class="border-b border-sky-200/70 dark:border-white/5 hover:bg-sky-100/70 dark:hover:bg-white/5 transition-colors">
-        <td class="py-2.5 pr-3 text-slate-500 dark:text-slate-400">8</td>
-        <td class="py-2.5 pr-3"><a href="adobe/" class="text-slate-900 dark:text-cyan-300 hover:text-sky-600 dark:hover:underline transition-colors">adobe</a></td>
-        <td class="py-2.5 pr-3 text-sky-700 dark:text-cyan-200">7h 30m 0s</td>
-        <td class="py-2.5 text-slate-700 dark:text-slate-300">3,926</td>
-      </tr>
-      <tr class="border-b border-sky-200/70 dark:border-white/5 hover:bg-sky-100/70 dark:hover:bg-white/5 transition-colors">
-        <td class="py-2.5 pr-3 text-slate-500 dark:text-slate-400">9</td>
-        <td class="py-2.5 pr-3"><a href="apache/" class="text-slate-900 dark:text-cyan-300 hover:text-sky-600 dark:hover:underline transition-colors">apache</a></td>
-        <td class="py-2.5 pr-3 text-sky-700 dark:text-cyan-200">7h 54m 44s</td>
-        <td class="py-2.5 text-slate-700 dark:text-slate-300">1,843</td>
-      </tr>
-      <tr class="border-b border-sky-200/70 dark:border-white/5 hover:bg-sky-100/70 dark:hover:bg-white/5 transition-colors">
-        <td class="py-2.5 pr-3 text-slate-500 dark:text-slate-400">10</td>
-        <td class="py-2.5 pr-3"><a href="apple/" class="text-slate-900 dark:text-cyan-300 hover:text-sky-600 dark:hover:underline transition-colors">apple</a></td>
-        <td class="py-2.5 pr-3 text-sky-700 dark:text-cyan-200">8h 34m 17s</td>
-        <td class="py-2.5 text-slate-700 dark:text-slate-300">3,103</td>
-      </tr>
-      <tr class="border-b border-sky-200/70 dark:border-white/5 hover:bg-sky-100/70 dark:hover:bg-white/5 transition-colors">
-        <td class="py-2.5 pr-3 text-slate-500 dark:text-slate-400">11</td>
-        <td class="py-2.5 pr-3"><a href="gitlab/" class="text-slate-900 dark:text-cyan-300 hover:text-sky-600 dark:hover:underline transition-colors">GitLab</a></td>
-        <td class="py-2.5 pr-3 text-sky-700 dark:text-cyan-200">9h 6m 50s</td>
-        <td class="py-2.5 text-slate-700 dark:text-slate-300">1,041</td>
-      </tr>
-      <tr class="border-b border-sky-200/70 dark:border-white/5 hover:bg-sky-100/70 dark:hover:bg-white/5 transition-colors">
-        <td class="py-2.5 pr-3 text-slate-500 dark:text-slate-400">12</td>
-        <td class="py-2.5 pr-3"><a href="mitre/" class="text-slate-900 dark:text-cyan-300 hover:text-sky-600 dark:hover:underline transition-colors">mitre</a></td>
-        <td class="py-2.5 pr-3 text-sky-700 dark:text-cyan-200">9h 43m 47s</td>
-        <td class="py-2.5 text-slate-700 dark:text-slate-300">37,331</td>
-      </tr>
-      <tr class="border-b border-sky-200/70 dark:border-white/5 hover:bg-sky-100/70 dark:hover:bg-white/5 transition-colors">
-        <td class="py-2.5 pr-3 text-slate-500 dark:text-slate-400">13</td>
-        <td class="py-2.5 pr-3"><a href="oracle/" class="text-slate-900 dark:text-cyan-300 hover:text-sky-600 dark:hover:underline transition-colors">oracle</a></td>
-        <td class="py-2.5 pr-3 text-sky-700 dark:text-cyan-200">11h 36m 46s</td>
-        <td class="py-2.5 text-slate-700 dark:text-slate-300">1,339</td>
-      </tr>
-      <tr class="border-b border-sky-200/70 dark:border-white/5 hover:bg-sky-100/70 dark:hover:bg-white/5 transition-colors">
-        <td class="py-2.5 pr-3 text-slate-500 dark:text-slate-400">14</td>
-        <td class="py-2.5 pr-3"><a href="canonical/" class="text-slate-900 dark:text-cyan-300 hover:text-sky-600 dark:hover:underline transition-colors">canonical</a></td>
-        <td class="py-2.5 pr-3 text-sky-700 dark:text-cyan-200">13h 20m 0s</td>
-        <td class="py-2.5 text-slate-700 dark:text-slate-300">400</td>
-      </tr>
-      <tr class="border-b border-sky-200/70 dark:border-white/5 hover:bg-sky-100/70 dark:hover:bg-white/5 transition-colors">
-        <td class="py-2.5 pr-3 text-slate-500 dark:text-slate-400">15</td>
-        <td class="py-2.5 pr-3"><a href="amd/" class="text-slate-900 dark:text-cyan-300 hover:text-sky-600 dark:hover:underline transition-colors">AMD</a></td>
-        <td class="py-2.5 pr-3 text-sky-700 dark:text-cyan-200">13h 50m 46s</td>
-        <td class="py-2.5 text-slate-700 dark:text-slate-300">589</td>
-      </tr>
-      <tr class="border-b border-sky-200/70 dark:border-white/5 hover:bg-sky-100/70 dark:hover:bg-white/5 transition-colors">
-        <td class="py-2.5 pr-3 text-slate-500 dark:text-slate-400">16</td>
-        <td class="py-2.5 pr-3"><a href="ibm/" class="text-slate-900 dark:text-cyan-300 hover:text-sky-600 dark:hover:underline transition-colors">ibm</a></td>
-        <td class="py-2.5 pr-3 text-sky-700 dark:text-cyan-200">15h 0m 0s</td>
-        <td class="py-2.5 text-slate-700 dark:text-slate-300">4,049</td>
-      </tr>
-      <tr class="border-b border-sky-200/70 dark:border-white/5 hover:bg-sky-100/70 dark:hover:bg-white/5 transition-colors">
-        <td class="py-2.5 pr-3 text-slate-500 dark:text-slate-400">17</td>
-        <td class="py-2.5 pr-3"><a href="mozilla/" class="text-slate-900 dark:text-cyan-300 hover:text-sky-600 dark:hover:underline transition-colors">mozilla</a></td>
-        <td class="py-2.5 pr-3 text-sky-700 dark:text-cyan-200">15h 19m 9s</td>
-        <td class="py-2.5 text-slate-700 dark:text-slate-300">965</td>
-      </tr>
-      <tr class="border-b border-sky-200/70 dark:border-white/5 hover:bg-sky-100/70 dark:hover:bg-white/5 transition-colors">
-        <td class="py-2.5 pr-3 text-slate-500 dark:text-slate-400">18</td>
-        <td class="py-2.5 pr-3"><a href="icscert/" class="text-slate-900 dark:text-cyan-300 hover:text-sky-600 dark:hover:underline transition-colors">icscert</a></td>
-        <td class="py-2.5 pr-3 text-sky-700 dark:text-cyan-200">15h 39m 8s</td>
-        <td class="py-2.5 text-slate-700 dark:text-slate-300">2,720</td>
-      </tr>
-      <tr class="border-b border-sky-200/70 dark:border-white/5 hover:bg-sky-100/70 dark:hover:bg-white/5 transition-colors">
-        <td class="py-2.5 pr-3 text-slate-500 dark:text-slate-400">19</td>
-        <td class="py-2.5 pr-3"><a href="huntrdev/" class="text-slate-900 dark:text-cyan-300 hover:text-sky-600 dark:hover:underline transition-colors">@huntrdev</a></td>
-        <td class="py-2.5 pr-3 text-sky-700 dark:text-cyan-200">16h 0m 0s</td>
-        <td class="py-2.5 text-slate-700 dark:text-slate-300">1,196</td>
-      </tr>
-      <tr class="border-b border-sky-200/70 dark:border-white/5 hover:bg-sky-100/70 dark:hover:bg-white/5 transition-colors">
-        <td class="py-2.5 pr-3 text-slate-500 dark:text-slate-400">20</td>
-        <td class="py-2.5 pr-3"><a href="zdi/" class="text-slate-900 dark:text-cyan-300 hover:text-sky-600 dark:hover:underline transition-colors">zdi</a></td>
-        <td class="py-2.5 pr-3 text-sky-700 dark:text-cyan-200">16h 0m 0s</td>
-        <td class="py-2.5 text-slate-700 dark:text-slate-300">2,343</td>
-      </tr>
-      <tr class="border-b border-sky-200/70 dark:border-white/5 hover:bg-sky-100/70 dark:hover:bg-white/5 transition-colors">
-        <td class="py-2.5 pr-3 text-slate-500 dark:text-slate-400">21</td>
-        <td class="py-2.5 pr-3"><a href="toshiba/" class="text-slate-900 dark:text-cyan-300 hover:text-sky-600 dark:hover:underline transition-colors">Toshiba</a></td>
-        <td class="py-2.5 pr-3 text-sky-700 dark:text-cyan-200">16h 44m 39s</td>
-        <td class="py-2.5 text-slate-700 dark:text-slate-300">43</td>
-      </tr>
-      <tr class="border-b border-sky-200/70 dark:border-white/5 hover:bg-sky-100/70 dark:hover:bg-white/5 transition-colors">
-        <td class="py-2.5 pr-3 text-slate-500 dark:text-slate-400">22</td>
-        <td class="py-2.5 pr-3"><a href="liferay/" class="text-slate-900 dark:text-cyan-300 hover:text-sky-600 dark:hover:underline transition-colors">Liferay</a></td>
-        <td class="py-2.5 pr-3 text-sky-700 dark:text-cyan-200">17h 33m 40s</td>
-        <td class="py-2.5 text-slate-700 dark:text-slate-300">211</td>
-      </tr>
-      <tr class="border-b border-sky-200/70 dark:border-white/5 hover:bg-sky-100/70 dark:hover:bg-white/5 transition-colors">
-        <td class="py-2.5 pr-3 text-slate-500 dark:text-slate-400">23</td>
-        <td class="py-2.5 pr-3"><a href="jpcert/" class="text-slate-900 dark:text-cyan-300 hover:text-sky-600 dark:hover:underline transition-colors">jpcert</a></td>
-        <td class="py-2.5 pr-3 text-sky-700 dark:text-cyan-200">18h 0m 0s</td>
-        <td class="py-2.5 text-slate-700 dark:text-slate-300">1,786</td>
-      </tr>
-      <tr class="border-b border-sky-200/70 dark:border-white/5 hover:bg-sky-100/70 dark:hover:bg-white/5 transition-colors">
-        <td class="py-2.5 pr-3 text-slate-500 dark:text-slate-400">24</td>
-        <td class="py-2.5 pr-3"><a href="patchstack/" class="text-slate-900 dark:text-cyan-300 hover:text-sky-600 dark:hover:underline transition-colors">Patchstack</a></td>
-        <td class="py-2.5 pr-3 text-sky-700 dark:text-cyan-200">18h 27m 42s</td>
-        <td class="py-2.5 text-slate-700 dark:text-slate-300">11,220</td>
-      </tr>
-      <tr class="border-b border-sky-200/70 dark:border-white/5 hover:bg-sky-100/70 dark:hover:bg-white/5 transition-colors">
-        <td class="py-2.5 pr-3 text-slate-500 dark:text-slate-400">25</td>
-        <td class="py-2.5 pr-3"><a href="azure-access/" class="text-slate-900 dark:text-cyan-300 hover:text-sky-600 dark:hover:underline transition-colors">azure-access</a></td>
-        <td class="py-2.5 pr-3 text-sky-700 dark:text-cyan-200">18h 27m 42s</td>
-        <td class="py-2.5 text-slate-700 dark:text-slate-300">39</td>
-      </tr>
-      <tr class="border-b border-sky-200/70 dark:border-white/5 hover:bg-sky-100/70 dark:hover:bg-white/5 transition-colors">
-        <td class="py-2.5 pr-3 text-slate-500 dark:text-slate-400">26</td>
-        <td class="py-2.5 pr-3"><a href="cpansec/" class="text-slate-900 dark:text-cyan-300 hover:text-sky-600 dark:hover:underline transition-colors">CPANSec</a></td>
-        <td class="py-2.5 pr-3 text-sky-700 dark:text-cyan-200">18h 56m 51s</td>
-        <td class="py-2.5 text-slate-700 dark:text-slate-300">124</td>
-      </tr>
-      <tr class="border-b border-sky-200/70 dark:border-white/5 hover:bg-sky-100/70 dark:hover:bg-white/5 transition-colors">
-        <td class="py-2.5 pr-3 text-slate-500 dark:text-slate-400">27</td>
-        <td class="py-2.5 pr-3"><a href="redhat/" class="text-slate-900 dark:text-cyan-300 hover:text-sky-600 dark:hover:underline transition-colors">redhat</a></td>
-        <td class="py-2.5 pr-3 text-sky-700 dark:text-cyan-200">20h 0m 0s</td>
-        <td class="py-2.5 text-slate-700 dark:text-slate-300">6,283</td>
-      </tr>
-      <tr class="border-b border-sky-200/70 dark:border-white/5 hover:bg-sky-100/70 dark:hover:bg-white/5 transition-colors">
-        <td class="py-2.5 pr-3 text-slate-500 dark:text-slate-400">28</td>
-        <td class="py-2.5 pr-3"><a href="hcl/" class="text-slate-900 dark:text-cyan-300 hover:text-sky-600 dark:hover:underline transition-colors">HCL</a></td>
-        <td class="py-2.5 pr-3 text-sky-700 dark:text-cyan-200">21h 10m 35s</td>
-        <td class="py-2.5 text-slate-700 dark:text-slate-300">487</td>
-      </tr>
-      <tr class="border-b border-sky-200/70 dark:border-white/5 hover:bg-sky-100/70 dark:hover:bg-white/5 transition-colors">
-        <td class="py-2.5 pr-3 text-slate-500 dark:text-slate-400">29</td>
-        <td class="py-2.5 pr-3"><a href="vmware/" class="text-slate-900 dark:text-cyan-300 hover:text-sky-600 dark:hover:underline transition-colors">vmware</a></td>
-        <td class="py-2.5 pr-3 text-sky-700 dark:text-cyan-200">21h 10m 35s</td>
-        <td class="py-2.5 text-slate-700 dark:text-slate-300">584</td>
-      </tr>
-      <tr class="border-b border-sky-200/70 dark:border-white/5 hover:bg-sky-100/70 dark:hover:bg-white/5 transition-colors">
-        <td class="py-2.5 pr-3 text-slate-500 dark:text-slate-400">30</td>
-        <td class="py-2.5 pr-3"><a href="govtech-csg/" class="text-slate-900 dark:text-cyan-300 hover:text-sky-600 dark:hover:underline transition-colors">GovTech CSG</a></td>
-        <td class="py-2.5 pr-3 text-sky-700 dark:text-cyan-200">21h 49m 5s</td>
-        <td class="py-2.5 text-slate-700 dark:text-slate-300">124</td>
-      </tr>
-      <tr class="border-b border-sky-200/70 dark:border-white/5 hover:bg-sky-100/70 dark:hover:bg-white/5 transition-colors">
-        <td class="py-2.5 pr-3 text-slate-500 dark:text-slate-400">31</td>
-        <td class="py-2.5 pr-3"><a href="hpe/" class="text-slate-900 dark:text-cyan-300 hover:text-sky-600 dark:hover:underline transition-colors">hpe</a></td>
-        <td class="py-2.5 pr-3 text-sky-700 dark:text-cyan-200">22h 30m 0s</td>
-        <td class="py-2.5 text-slate-700 dark:text-slate-300">1,051</td>
-      </tr>
-      <tr class="border-b border-sky-200/70 dark:border-white/5 hover:bg-sky-100/70 dark:hover:bg-white/5 transition-colors">
-        <td class="py-2.5 pr-3 text-slate-500 dark:text-slate-400">32</td>
-        <td class="py-2.5 pr-3"><a href="cisco/" class="text-slate-900 dark:text-cyan-300 hover:text-sky-600 dark:hover:underline transition-colors">cisco</a></td>
-        <td class="py-2.5 pr-3 text-sky-700 dark:text-cyan-200">1d 0h 49m</td>
-        <td class="py-2.5 text-slate-700 dark:text-slate-300">3,559</td>
-      </tr>
-      <tr class="border-b border-sky-200/70 dark:border-white/5 hover:bg-sky-100/70 dark:hover:bg-white/5 transition-colors">
-        <td class="py-2.5 pr-3 text-slate-500 dark:text-slate-400">33</td>
-        <td class="py-2.5 pr-3"><a href="tr-cert/" class="text-slate-900 dark:text-cyan-300 hover:text-sky-600 dark:hover:underline transition-colors">TR-CERT</a></td>
-        <td class="py-2.5 pr-3 text-sky-700 dark:text-cyan-200">1d 1h 42m</td>
-        <td class="py-2.5 text-slate-700 dark:text-slate-300">619</td>
-      </tr>
-      <tr class="border-b border-sky-200/70 dark:border-white/5 hover:bg-sky-100/70 dark:hover:bg-white/5 transition-colors">
-        <td class="py-2.5 pr-3 text-slate-500 dark:text-slate-400">34</td>
-        <td class="py-2.5 pr-3"><a href="fortinet/" class="text-slate-900 dark:text-cyan-300 hover:text-sky-600 dark:hover:underline transition-colors">fortinet</a></td>
-        <td class="py-2.5 pr-3 text-sky-700 dark:text-cyan-200">1d 2h 40m</td>
-        <td class="py-2.5 text-slate-700 dark:text-slate-300">841</td>
-      </tr>
-      <tr class="border-b border-sky-200/70 dark:border-white/5 hover:bg-sky-100/70 dark:hover:bg-white/5 transition-colors">
-        <td class="py-2.5 pr-3 text-slate-500 dark:text-slate-400">35</td>
-        <td class="py-2.5 pr-3"><a href="juniper/" class="text-slate-900 dark:text-cyan-300 hover:text-sky-600 dark:hover:underline transition-colors">juniper</a></td>
-        <td class="py-2.5 pr-3 text-sky-700 dark:text-cyan-200">1d 2h 40m</td>
-        <td class="py-2.5 text-slate-700 dark:text-slate-300">599</td>
-      </tr>
-      <tr class="border-b border-sky-200/70 dark:border-white/5 hover:bg-sky-100/70 dark:hover:bg-white/5 transition-colors">
-        <td class="py-2.5 pr-3 text-slate-500 dark:text-slate-400">36</td>
-        <td class="py-2.5 pr-3"><a href="palo-alto/" class="text-slate-900 dark:text-cyan-300 hover:text-sky-600 dark:hover:underline transition-colors">palo_alto</a></td>
-        <td class="py-2.5 pr-3 text-sky-700 dark:text-cyan-200">1d 2h 40m</td>
-        <td class="py-2.5 text-slate-700 dark:text-slate-300">315</td>
-      </tr>
-      <tr class="border-b border-sky-200/70 dark:border-white/5 hover:bg-sky-100/70 dark:hover:bg-white/5 transition-colors">
-        <td class="py-2.5 pr-3 text-slate-500 dark:text-slate-400">37</td>
-        <td class="py-2.5 pr-3"><a href="qualcomm/" class="text-slate-900 dark:text-cyan-300 hover:text-sky-600 dark:hover:underline transition-colors">qualcomm</a></td>
-        <td class="py-2.5 pr-3 text-sky-700 dark:text-cyan-200">1d 2h 40m</td>
-        <td class="py-2.5 text-slate-700 dark:text-slate-300">2,046</td>
-      </tr>
-      <tr class="border-b border-sky-200/70 dark:border-white/5 hover:bg-sky-100/70 dark:hover:bg-white/5 transition-colors">
-        <td class="py-2.5 pr-3 text-slate-500 dark:text-slate-400">38</td>
-        <td class="py-2.5 pr-3"><a href="cert-pl/" class="text-slate-900 dark:text-cyan-300 hover:text-sky-600 dark:hover:underline transition-colors">CERT-PL</a></td>
-        <td class="py-2.5 pr-3 text-sky-700 dark:text-cyan-200">1d 3h 41m</td>
-        <td class="py-2.5 text-slate-700 dark:text-slate-300">350</td>
-      </tr>
-      <tr class="border-b border-sky-200/70 dark:border-white/5 hover:bg-sky-100/70 dark:hover:bg-white/5 transition-colors">
-        <td class="py-2.5 pr-3 text-slate-500 dark:text-slate-400">39</td>
-        <td class="py-2.5 pr-3"><a href="ox/" class="text-slate-900 dark:text-cyan-300 hover:text-sky-600 dark:hover:underline transition-colors">OX</a></td>
-        <td class="py-2.5 pr-3 text-sky-700 dark:text-cyan-200">1d 3h 41m</td>
-        <td class="py-2.5 text-slate-700 dark:text-slate-300">116</td>
-      </tr>
-      <tr class="border-b border-sky-200/70 dark:border-white/5 hover:bg-sky-100/70 dark:hover:bg-white/5 transition-colors">
-        <td class="py-2.5 pr-3 text-slate-500 dark:text-slate-400">40</td>
-        <td class="py-2.5 pr-3"><a href="samsung-mobile/" class="text-slate-900 dark:text-cyan-300 hover:text-sky-600 dark:hover:underline transition-colors">Samsung Mobile</a></td>
-        <td class="py-2.5 pr-3 text-sky-700 dark:text-cyan-200">1d 3h 41m</td>
-        <td class="py-2.5 text-slate-700 dark:text-slate-300">529</td>
-      </tr>
-      <tr class="border-b border-sky-200/70 dark:border-white/5 hover:bg-sky-100/70 dark:hover:bg-white/5 transition-colors">
-        <td class="py-2.5 pr-3 text-slate-500 dark:text-slate-400">41</td>
-        <td class="py-2.5 pr-3"><a href="securifera/" class="text-slate-900 dark:text-cyan-300 hover:text-sky-600 dark:hover:underline transition-colors">Securifera</a></td>
-        <td class="py-2.5 pr-3 text-sky-700 dark:text-cyan-200">1d 4h 48m</td>
-        <td class="py-2.5 text-slate-700 dark:text-slate-300">25</td>
-      </tr>
-      <tr class="border-b border-sky-200/70 dark:border-white/5 hover:bg-sky-100/70 dark:hover:bg-white/5 transition-colors">
-        <td class="py-2.5 pr-3 text-slate-500 dark:text-slate-400">42</td>
-        <td class="py-2.5 pr-3"><a href="dell/" class="text-slate-900 dark:text-cyan-300 hover:text-sky-600 dark:hover:underline transition-colors">dell</a></td>
-        <td class="py-2.5 pr-3 text-sky-700 dark:text-cyan-200">1d 4h 48m</td>
-        <td class="py-2.5 text-slate-700 dark:text-slate-300">1,627</td>
-      </tr>
-      <tr class="border-b border-sky-200/70 dark:border-white/5 hover:bg-sky-100/70 dark:hover:bg-white/5 transition-colors">
-        <td class="py-2.5 pr-3 text-slate-500 dark:text-slate-400">43</td>
-        <td class="py-2.5 pr-3"><a href="drupal/" class="text-slate-900 dark:text-cyan-300 hover:text-sky-600 dark:hover:underline transition-colors">drupal</a></td>
-        <td class="py-2.5 pr-3 text-sky-700 dark:text-cyan-200">1d 4h 48m</td>
-        <td class="py-2.5 text-slate-700 dark:text-slate-300">287</td>
-      </tr>
-      <tr class="border-b border-sky-200/70 dark:border-white/5 hover:bg-sky-100/70 dark:hover:bg-white/5 transition-colors">
-        <td class="py-2.5 pr-3 text-slate-500 dark:text-slate-400">44</td>
-        <td class="py-2.5 pr-3"><a href="intel/" class="text-slate-900 dark:text-cyan-300 hover:text-sky-600 dark:hover:underline transition-colors">intel</a></td>
-        <td class="py-2.5 pr-3 text-sky-700 dark:text-cyan-200">1d 4h 48m</td>
-        <td class="py-2.5 text-slate-700 dark:text-slate-300">1,727</td>
-      </tr>
-      <tr class="border-b border-sky-200/70 dark:border-white/5 hover:bg-sky-100/70 dark:hover:bg-white/5 transition-colors">
-        <td class="py-2.5 pr-3 text-slate-500 dark:text-slate-400">45</td>
-        <td class="py-2.5 pr-3"><a href="mattermost/" class="text-slate-900 dark:text-cyan-300 hover:text-sky-600 dark:hover:underline transition-colors">Mattermost</a></td>
-        <td class="py-2.5 pr-3 text-sky-700 dark:text-cyan-200">1d 7h 18m</td>
-        <td class="py-2.5 text-slate-700 dark:text-slate-300">401</td>
-      </tr>
-      <tr class="border-b border-sky-200/70 dark:border-white/5 hover:bg-sky-100/70 dark:hover:bg-white/5 transition-colors">
-        <td class="py-2.5 pr-3 text-slate-500 dark:text-slate-400">46</td>
-        <td class="py-2.5 pr-3"><a href="siemens/" class="text-slate-900 dark:text-cyan-300 hover:text-sky-600 dark:hover:underline transition-colors">siemens</a></td>
-        <td class="py-2.5 pr-3 text-sky-700 dark:text-cyan-200">1d 7h 18m</td>
-        <td class="py-2.5 text-slate-700 dark:text-slate-300">1,371</td>
-      </tr>
-      <tr class="border-b border-sky-200/70 dark:border-white/5 hover:bg-sky-100/70 dark:hover:bg-white/5 transition-colors">
-        <td class="py-2.5 pr-3 text-slate-500 dark:text-slate-400">47</td>
-        <td class="py-2.5 pr-3"><a href="wolfssl/" class="text-slate-900 dark:text-cyan-300 hover:text-sky-600 dark:hover:underline transition-colors">wolfSSL</a></td>
-        <td class="py-2.5 pr-3 text-sky-700 dark:text-cyan-200">1d 7h 18m</td>
-        <td class="py-2.5 text-slate-700 dark:text-slate-300">69</td>
-      </tr>
-      <tr class="border-b border-sky-200/70 dark:border-white/5 hover:bg-sky-100/70 dark:hover:bg-white/5 transition-colors">
-        <td class="py-2.5 pr-3 text-slate-500 dark:text-slate-400">48</td>
-        <td class="py-2.5 pr-3"><a href="eef/" class="text-slate-900 dark:text-cyan-300 hover:text-sky-600 dark:hover:underline transition-colors">EEF</a></td>
-        <td class="py-2.5 pr-3 text-sky-700 dark:text-cyan-200">1d 8h 43m</td>
-        <td class="py-2.5 text-slate-700 dark:text-slate-300">49</td>
-      </tr>
-      <tr class="border-b border-sky-200/70 dark:border-white/5 hover:bg-sky-100/70 dark:hover:bg-white/5 transition-colors">
-        <td class="py-2.5 pr-3 text-slate-500 dark:text-slate-400">49</td>
-        <td class="py-2.5 pr-3"><a href="gridware/" class="text-slate-900 dark:text-cyan-300 hover:text-sky-600 dark:hover:underline transition-colors">Gridware</a></td>
-        <td class="py-2.5 pr-3 text-sky-700 dark:text-cyan-200">1d 10h 17m</td>
-        <td class="py-2.5 text-slate-700 dark:text-slate-300">52</td>
-      </tr>
-      <tr class="border-b border-sky-200/70 dark:border-white/5 hover:bg-sky-100/70 dark:hover:bg-white/5 transition-colors">
-        <td class="py-2.5 pr-3 text-slate-500 dark:text-slate-400">50</td>
-        <td class="py-2.5 pr-3"><a href="incibe/" class="text-slate-900 dark:text-cyan-300 hover:text-sky-600 dark:hover:underline transition-colors">INCIBE</a></td>
-        <td class="py-2.5 pr-3 text-sky-700 dark:text-cyan-200">1d 10h 17m</td>
-        <td class="py-2.5 text-slate-700 dark:text-slate-300">1,063</td>
-      </tr>
-      <tr class="border-b border-sky-200/70 dark:border-white/5 hover:bg-sky-100/70 dark:hover:bg-white/5 transition-colors">
-        <td class="py-2.5 pr-3 text-slate-500 dark:text-slate-400">51</td>
-        <td class="py-2.5 pr-3"><a href="twcert/" class="text-slate-900 dark:text-cyan-300 hover:text-sky-600 dark:hover:underline transition-colors">twcert</a></td>
-        <td class="py-2.5 pr-3 text-sky-700 dark:text-cyan-200">1d 10h 17m</td>
-        <td class="py-2.5 text-slate-700 dark:text-slate-300">764</td>
-      </tr>
-      <tr class="border-b border-sky-200/70 dark:border-white/5 hover:bg-sky-100/70 dark:hover:bg-white/5 transition-colors">
-        <td class="py-2.5 pr-3 text-slate-500 dark:text-slate-400">52</td>
-        <td class="py-2.5 pr-3"><a href="f5/" class="text-slate-900 dark:text-cyan-300 hover:text-sky-600 dark:hover:underline transition-colors">f5</a></td>
-        <td class="py-2.5 pr-3 text-sky-700 dark:text-cyan-200">1d 12h 0m</td>
-        <td class="py-2.5 text-slate-700 dark:text-slate-300">604</td>
-      </tr>
-      <tr class="border-b border-sky-200/70 dark:border-white/5 hover:bg-sky-100/70 dark:hover:bg-white/5 transition-colors">
-        <td class="py-2.5 pr-3 text-slate-500 dark:text-slate-400">53</td>
-        <td class="py-2.5 pr-3"><a href="amzn/" class="text-slate-900 dark:text-cyan-300 hover:text-sky-600 dark:hover:underline transition-colors">AMZN</a></td>
-        <td class="py-2.5 pr-3 text-sky-700 dark:text-cyan-200">1d 13h 53m</td>
-        <td class="py-2.5 text-slate-700 dark:text-slate-300">92</td>
-      </tr>
-      <tr class="border-b border-sky-200/70 dark:border-white/5 hover:bg-sky-100/70 dark:hover:bg-white/5 transition-colors">
-        <td class="py-2.5 pr-3 text-slate-500 dark:text-slate-400">54</td>
-        <td class="py-2.5 pr-3"><a href="google-devices/" class="text-slate-900 dark:text-cyan-300 hover:text-sky-600 dark:hover:underline transition-colors">Google_Devices</a></td>
-        <td class="py-2.5 pr-3 text-sky-700 dark:text-cyan-200">1d 13h 53m</td>
-        <td class="py-2.5 text-slate-700 dark:text-slate-300">147</td>
-      </tr>
-      <tr class="border-b border-sky-200/70 dark:border-white/5 hover:bg-sky-100/70 dark:hover:bg-white/5 transition-colors">
-        <td class="py-2.5 pr-3 text-slate-500 dark:text-slate-400">55</td>
-        <td class="py-2.5 pr-3"><a href="sel/" class="text-slate-900 dark:text-cyan-300 hover:text-sky-600 dark:hover:underline transition-colors">SEL</a></td>
-        <td class="py-2.5 pr-3 text-sky-700 dark:text-cyan-200">1d 13h 53m</td>
-        <td class="py-2.5 text-slate-700 dark:text-slate-300">60</td>
-      </tr>
-      <tr class="border-b border-sky-200/70 dark:border-white/5 hover:bg-sky-100/70 dark:hover:bg-white/5 transition-colors">
-        <td class="py-2.5 pr-3 text-slate-500 dark:text-slate-400">56</td>
-        <td class="py-2.5 pr-3"><a href="samsungmobile/" class="text-slate-900 dark:text-cyan-300 hover:text-sky-600 dark:hover:underline transition-colors">SamsungMobile</a></td>
-        <td class="py-2.5 pr-3 text-sky-700 dark:text-cyan-200">1d 13h 53m</td>
-        <td class="py-2.5 text-slate-700 dark:text-slate-300">542</td>
-      </tr>
-      <tr class="border-b border-sky-200/70 dark:border-white/5 hover:bg-sky-100/70 dark:hover:bg-white/5 transition-colors">
-        <td class="py-2.5 pr-3 text-slate-500 dark:text-slate-400">57</td>
-        <td class="py-2.5 pr-3"><a href="nvidia/" class="text-slate-900 dark:text-cyan-300 hover:text-sky-600 dark:hover:underline transition-colors">nvidia</a></td>
-        <td class="py-2.5 pr-3 text-sky-700 dark:text-cyan-200">1d 13h 53m</td>
-        <td class="py-2.5 text-slate-700 dark:text-slate-300">650</td>
-      </tr>
-      <tr class="border-b border-sky-200/70 dark:border-white/5 hover:bg-sky-100/70 dark:hover:bg-white/5 transition-colors">
-        <td class="py-2.5 pr-3 text-slate-500 dark:text-slate-400">58</td>
-        <td class="py-2.5 pr-3"><a href="baidu/" class="text-slate-900 dark:text-cyan-300 hover:text-sky-600 dark:hover:underline transition-colors">Baidu</a></td>
-        <td class="py-2.5 pr-3 text-sky-700 dark:text-cyan-200">1d 16h 0m</td>
-        <td class="py-2.5 text-slate-700 dark:text-slate-300">25</td>
-      </tr>
-      <tr class="border-b border-sky-200/70 dark:border-white/5 hover:bg-sky-100/70 dark:hover:bg-white/5 transition-colors">
-        <td class="py-2.5 pr-3 text-slate-500 dark:text-slate-400">59</td>
-        <td class="py-2.5 pr-3"><a href="postgresql/" class="text-slate-900 dark:text-cyan-300 hover:text-sky-600 dark:hover:underline transition-colors">PostgreSQL</a></td>
-        <td class="py-2.5 pr-3 text-sky-700 dark:text-cyan-200">1d 16h 0m</td>
-        <td class="py-2.5 text-slate-700 dark:text-slate-300">60</td>
-      </tr>
-      <tr class="border-b border-sky-200/70 dark:border-white/5 hover:bg-sky-100/70 dark:hover:bg-white/5 transition-colors">
-        <td class="py-2.5 pr-3 text-slate-500 dark:text-slate-400">60</td>
-        <td class="py-2.5 pr-3"><a href="samsungtv-appliance/" class="text-slate-900 dark:text-cyan-300 hover:text-sky-600 dark:hover:underline transition-colors">samsung.tv_appliance</a></td>
-        <td class="py-2.5 pr-3 text-sky-700 dark:text-cyan-200">1d 16h 0m</td>
-        <td class="py-2.5 text-slate-700 dark:text-slate-300">60</td>
-      </tr>
-      <tr class="border-b border-sky-200/70 dark:border-white/5 hover:bg-sky-100/70 dark:hover:bg-white/5 transition-colors">
-        <td class="py-2.5 pr-3 text-slate-500 dark:text-slate-400">61</td>
-        <td class="py-2.5 pr-3"><a href="certcc/" class="text-slate-900 dark:text-cyan-300 hover:text-sky-600 dark:hover:underline transition-colors">certcc</a></td>
-        <td class="py-2.5 pr-3 text-sky-700 dark:text-cyan-200">1d 18h 21m</td>
-        <td class="py-2.5 text-slate-700 dark:text-slate-300">875</td>
-      </tr>
-      <tr class="border-b border-sky-200/70 dark:border-white/5 hover:bg-sky-100/70 dark:hover:bg-white/5 transition-colors">
-        <td class="py-2.5 pr-3 text-slate-500 dark:text-slate-400">62</td>
-        <td class="py-2.5 pr-3"><a href="foxit/" class="text-slate-900 dark:text-cyan-300 hover:text-sky-600 dark:hover:underline transition-colors">Foxit</a></td>
-        <td class="py-2.5 pr-3 text-sky-700 dark:text-cyan-200">1d 21h 0m</td>
-        <td class="py-2.5 text-slate-700 dark:text-slate-300">34</td>
-      </tr>
-      <tr class="border-b border-sky-200/70 dark:border-white/5 hover:bg-sky-100/70 dark:hover:bg-white/5 transition-colors">
-        <td class="py-2.5 pr-3 text-slate-500 dark:text-slate-400">63</td>
-        <td class="py-2.5 pr-3"><a href="tplink/" class="text-slate-900 dark:text-cyan-300 hover:text-sky-600 dark:hover:underline transition-colors">TPLink</a></td>
-        <td class="py-2.5 pr-3 text-sky-700 dark:text-cyan-200">2d 0h 0m</td>
-        <td class="py-2.5 text-slate-700 dark:text-slate-300">110</td>
-      </tr>
-      <tr class="border-b border-sky-200/70 dark:border-white/5 hover:bg-sky-100/70 dark:hover:bg-white/5 transition-colors">
-        <td class="py-2.5 pr-3 text-slate-500 dark:text-slate-400">64</td>
-        <td class="py-2.5 pr-3"><a href="openjs/" class="text-slate-900 dark:text-cyan-300 hover:text-sky-600 dark:hover:underline transition-colors">openjs</a></td>
-        <td class="py-2.5 pr-3 text-sky-700 dark:text-cyan-200">2d 0h 0m</td>
-        <td class="py-2.5 text-slate-700 dark:text-slate-300">37</td>
-      </tr>
-      <tr class="border-b border-sky-200/70 dark:border-white/5 hover:bg-sky-100/70 dark:hover:bg-white/5 transition-colors">
-        <td class="py-2.5 pr-3 text-slate-500 dark:text-slate-400">65</td>
-        <td class="py-2.5 pr-3"><a href="qnap/" class="text-slate-900 dark:text-cyan-300 hover:text-sky-600 dark:hover:underline transition-colors">qnap</a></td>
-        <td class="py-2.5 pr-3 text-sky-700 dark:text-cyan-200">2d 0h 0m</td>
-        <td class="py-2.5 text-slate-700 dark:text-slate-300">555</td>
-      </tr>
-      <tr class="border-b border-sky-200/70 dark:border-white/5 hover:bg-sky-100/70 dark:hover:bg-white/5 transition-colors">
-        <td class="py-2.5 pr-3 text-slate-500 dark:text-slate-400">66</td>
-        <td class="py-2.5 pr-3"><a href="sap/" class="text-slate-900 dark:text-cyan-300 hover:text-sky-600 dark:hover:underline transition-colors">sap</a></td>
-        <td class="py-2.5 pr-3 text-sky-700 dark:text-cyan-200">2d 0h 0m</td>
-        <td class="py-2.5 text-slate-700 dark:text-slate-300">1,308</td>
-      </tr>
-      <tr class="border-b border-sky-200/70 dark:border-white/5 hover:bg-sky-100/70 dark:hover:bg-white/5 transition-colors">
-        <td class="py-2.5 pr-3 text-slate-500 dark:text-slate-400">67</td>
-        <td class="py-2.5 pr-3"><a href="grafana/" class="text-slate-900 dark:text-cyan-300 hover:text-sky-600 dark:hover:underline transition-colors">GRAFANA</a></td>
-        <td class="py-2.5 pr-3 text-sky-700 dark:text-cyan-200">2d 3h 25m</td>
-        <td class="py-2.5 text-slate-700 dark:text-slate-300">68</td>
-      </tr>
-      <tr class="border-b border-sky-200/70 dark:border-white/5 hover:bg-sky-100/70 dark:hover:bg-white/5 transition-colors">
-        <td class="py-2.5 pr-3 text-slate-500 dark:text-slate-400">68</td>
-        <td class="py-2.5 pr-3"><a href="progresssoftware/" class="text-slate-900 dark:text-cyan-300 hover:text-sky-600 dark:hover:underline transition-colors">ProgressSoftware</a></td>
-        <td class="py-2.5 pr-3 text-sky-700 dark:text-cyan-200">2d 3h 25m</td>
-        <td class="py-2.5 text-slate-700 dark:text-slate-300">167</td>
-      </tr>
-      <tr class="border-b border-sky-200/70 dark:border-white/5 hover:bg-sky-100/70 dark:hover:bg-white/5 transition-colors">
-        <td class="py-2.5 pr-3 text-slate-500 dark:text-slate-400">69</td>
-        <td class="py-2.5 pr-3"><a href="vulsec/" class="text-slate-900 dark:text-cyan-300 hover:text-sky-600 dark:hover:underline transition-colors">VULSec</a></td>
-        <td class="py-2.5 pr-3 text-sky-700 dark:text-cyan-200">2d 3h 25m</td>
-        <td class="py-2.5 text-slate-700 dark:text-slate-300">26</td>
-      </tr>
-      <tr class="border-b border-sky-200/70 dark:border-white/5 hover:bg-sky-100/70 dark:hover:bg-white/5 transition-colors">
-        <td class="py-2.5 pr-3 text-slate-500 dark:text-slate-400">70</td>
-        <td class="py-2.5 pr-3"><a href="ivanti/" class="text-slate-900 dark:text-cyan-300 hover:text-sky-600 dark:hover:underline transition-colors">ivanti</a></td>
-        <td class="py-2.5 pr-3 text-sky-700 dark:text-cyan-200">2d 3h 25m</td>
-        <td class="py-2.5 text-slate-700 dark:text-slate-300">186</td>
-      </tr>
-      <tr class="border-b border-sky-200/70 dark:border-white/5 hover:bg-sky-100/70 dark:hover:bg-white/5 transition-colors">
-        <td class="py-2.5 pr-3 text-slate-500 dark:text-slate-400">71</td>
-        <td class="py-2.5 pr-3"><a href="pandorafms/" class="text-slate-900 dark:text-cyan-300 hover:text-sky-600 dark:hover:underline transition-colors">PandoraFMS</a></td>
-        <td class="py-2.5 pr-3 text-sky-700 dark:text-cyan-200">2d 7h 23m</td>
-        <td class="py-2.5 text-slate-700 dark:text-slate-300">48</td>
-      </tr>
-      <tr class="border-b border-sky-200/70 dark:border-white/5 hover:bg-sky-100/70 dark:hover:bg-white/5 transition-colors">
-        <td class="py-2.5 pr-3 text-slate-500 dark:text-slate-400">72</td>
-        <td class="py-2.5 pr-3"><a href="rockwell/" class="text-slate-900 dark:text-cyan-300 hover:text-sky-600 dark:hover:underline transition-colors">Rockwell</a></td>
-        <td class="py-2.5 pr-3 text-sky-700 dark:text-cyan-200">2d 7h 23m</td>
-        <td class="py-2.5 text-slate-700 dark:text-slate-300">205</td>
-      </tr>
-      <tr class="border-b border-sky-200/70 dark:border-white/5 hover:bg-sky-100/70 dark:hover:bg-white/5 transition-colors">
-        <td class="py-2.5 pr-3 text-slate-500 dark:text-slate-400">73</td>
-        <td class="py-2.5 pr-3"><a href="wso2/" class="text-slate-900 dark:text-cyan-300 hover:text-sky-600 dark:hover:underline transition-colors">WSO2</a></td>
-        <td class="py-2.5 pr-3 text-sky-700 dark:text-cyan-200">2d 7h 23m</td>
-        <td class="py-2.5 text-slate-700 dark:text-slate-300">61</td>
-      </tr>
-      <tr class="border-b border-sky-200/70 dark:border-white/5 hover:bg-sky-100/70 dark:hover:bg-white/5 transition-colors">
-        <td class="py-2.5 pr-3 text-slate-500 dark:text-slate-400">74</td>
-        <td class="py-2.5 pr-3"><a href="brocade/" class="text-slate-900 dark:text-cyan-300 hover:text-sky-600 dark:hover:underline transition-colors">brocade</a></td>
-        <td class="py-2.5 pr-3 text-sky-700 dark:text-cyan-200">2d 7h 23m</td>
-        <td class="py-2.5 text-slate-700 dark:text-slate-300">148</td>
-      </tr>
-      <tr class="border-b border-sky-200/70 dark:border-white/5 hover:bg-sky-100/70 dark:hover:bg-white/5 transition-colors">
-        <td class="py-2.5 pr-3 text-slate-500 dark:text-slate-400">75</td>
-        <td class="py-2.5 pr-3"><a href="fedora/" class="text-slate-900 dark:text-cyan-300 hover:text-sky-600 dark:hover:underline transition-colors">fedora</a></td>
-        <td class="py-2.5 pr-3 text-sky-700 dark:text-cyan-200">2d 7h 23m</td>
-        <td class="py-2.5 text-slate-700 dark:text-slate-300">256</td>
-      </tr>
-      <tr class="border-b border-sky-200/70 dark:border-white/5 hover:bg-sky-100/70 dark:hover:bg-white/5 transition-colors">
-        <td class="py-2.5 pr-3 text-slate-500 dark:text-slate-400">76</td>
-        <td class="py-2.5 pr-3"><a href="mongodb/" class="text-slate-900 dark:text-cyan-300 hover:text-sky-600 dark:hover:underline transition-colors">mongodb</a></td>
-        <td class="py-2.5 pr-3 text-sky-700 dark:text-cyan-200">2d 7h 23m</td>
-        <td class="py-2.5 text-slate-700 dark:text-slate-300">130</td>
-      </tr>
-      <tr class="border-b border-sky-200/70 dark:border-white/5 hover:bg-sky-100/70 dark:hover:bg-white/5 transition-colors">
-        <td class="py-2.5 pr-3 text-slate-500 dark:text-slate-400">77</td>
+              <!doctype html>
+              <html lang="en">
+                <head>
+                  <meta charset="UTF-8" />
+                  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                  <title>CNA Directory · CVETime</title>
+                  <script src="https://cdn.tailwindcss.com"></script>
+                  <script>
+                    tailwind.config = {
+                      darkMode: 'class',
+                      theme: {
+                        extend: {
+                          colors: {
+                            ink: {
+                              DEFAULT: "#06101d",
+                              light: "#f8fafc"
+                            },
+                            panel: {
+                              DEFAULT: "#10233c",
+                              light: "#f1f5f9"
+                            },
+                            accent: {
+                              DEFAULT: "#2ee6ff",
+                              light: "#0ea5e9"
+                            }
+                          },
+                          fontFamily: {
+                            display: ["Space Grotesk", "ui-sans-serif", "system-ui"]
+                          }
+                        }
+                      }
+                    };
+                  </script>
+                </head>
+                <body class="bg-ink-light text-slate-900 dark:bg-ink dark:text-slate-100 min-h-screen transition-colors duration-300">
+                  <div class="fixed inset-0 -z-20 bg-[radial-gradient(circle_at_15%_15%,rgba(14,165,233,0.14),transparent_30%),radial-gradient(circle_at_80%_0%,rgba(99,102,241,0.12),transparent_26%),radial-gradient(circle_at_90%_90%,rgba(20,184,166,0.10),transparent_22%),linear-gradient(180deg,#f8fbff_0%,#eff6ff_48%,#e0f2fe_100%)] dark:bg-[radial-gradient(circle_at_15%_15%,rgba(46,230,255,0.15),transparent_28%),radial-gradient(circle_at_80%_0%,rgba(96,165,250,0.15),transparent_26%),radial-gradient(circle_at_90%_90%,rgba(45,212,191,0.10),transparent_22%),linear-gradient(180deg,#040a13_0%,#081321_48%,#06101d_100%)]"></div>
+                  <div class="fixed inset-0 -z-10 opacity-40 dark:opacity-30 bg-[linear-gradient(rgba(14,165,233,0.07)_1px,transparent_1px),linear-gradient(90deg,rgba(14,165,233,0.07)_1px,transparent_1px)] dark:bg-[linear-gradient(rgba(148,163,184,0.07)_1px,transparent_1px),linear-gradient(90deg,rgba(148,163,184,0.07)_1px,transparent_1px)] bg-[size:88px_88px]"></div>
+                  <script>
+                    (function() {
+                      const saved = localStorage.getItem('theme');
+                      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                      if (saved === 'dark' || (!saved && prefersDark)) document.documentElement.classList.add('dark');
+                    })();
+                  </script>
+                  <header class="sticky top-0 z-20 border-b border-sky-200/80 dark:border-white/10 bg-[rgba(248,250,252,0.78)] dark:bg-slate-950/90 backdrop-blur-xl">
+                    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center gap-4">
+                      <a href="../" class="text-xs text-slate-600 dark:text-slate-400 hover:text-sky-600 dark:hover:text-cyan-400 transition-colors">← Global Dashboard</a>
+                      <span class="text-slate-400 dark:text-slate-600">/</span>
+                      <span class="text-xs text-slate-900 dark:text-slate-200">CNA Directory</span>
+                      <div class="ml-auto">
+                        <button id="themeToggle" class="px-2 py-1 rounded bg-white/70 dark:bg-white/5 border border-sky-200/80 dark:border-white/10 text-xs text-slate-700 dark:text-slate-300 hover:bg-sky-100 dark:hover:bg-cyan-400/10 transition-colors">
+                          <span id="themeIcon">🌙</span> Theme
+                        </button>
+                      </div>
+                    </div>
+                  </header>
+
+                  <main class="max-w-6xl mx-auto px-4 py-8">
+                    <div class="max-w-3xl mb-6">
+                      <h1 class="font-display text-3xl md:text-5xl font-semibold mt-1 text-slate-950 dark:text-white">CNA Directory</h1>
+                      <p class="text-slate-700 dark:text-slate-300/90 mt-3 text-base md:text-lg">Search and sort the publisher leaderboard without leaving the directory page.</p>
+                    </div>
+
+                    <section class="rounded-2xl border border-sky-200/80 dark:border-white/10 bg-panel-light/90 dark:bg-white/3 p-4 md:p-6 mb-6 shadow-[0_18px_60px_rgba(14,165,233,0.10)] dark:shadow-none">
+                      <div class="flex flex-col md:flex-row md:items-center gap-3 justify-between mb-4">
+                        <div class="flex items-center gap-2">
+                          <label for="directorySearch" class="text-xs text-slate-600 dark:text-slate-300">Search</label>
+                          <input id="directorySearch" type="search" placeholder="Find a CNA" class="w-64 max-w-full rounded-lg border border-sky-200/80 dark:border-white/10 bg-white/80 dark:bg-slate-900 px-3 py-2 text-sm text-slate-900 dark:text-slate-100" />
+                        </div>
+                        <div class="flex items-center gap-2">
+                          <label for="directorySort" class="text-xs text-slate-600 dark:text-slate-300">Sort</label>
+                          <select id="directorySort" class="rounded-lg border border-sky-200/80 dark:border-white/10 bg-white/80 dark:bg-slate-900 px-3 py-2 text-sm text-slate-900 dark:text-slate-100">
+                            <option value="rank-asc" selected>Rank</option>
+                            <option value="heartbeat-asc">Fastest heartbeat</option>
+                            <option value="heartbeat-desc">Slowest heartbeat</option>
+                            <option value="total-desc">Most CVEs</option>
+                            <option value="name-asc">Name A-Z</option>
+                          </select>
+                          <div id="directoryCount" class="text-xs text-slate-500 dark:text-slate-400"></div>
+                        </div>
+                      </div>
+
+                      <div class="overflow-x-auto rounded-xl border border-sky-200/80 dark:border-white/10">
+                        <table class="w-full text-sm">
+                          <thead>
+                            <tr class="text-left text-slate-500 dark:text-slate-400 border-b border-sky-200/80 dark:border-white/10 text-xs uppercase tracking-wider">
+                              <th class="py-3 pr-3 pl-4">Rank</th>
+                              <th class="py-3 pr-3">CNA</th>
+                              <th class="py-3 pr-3">30d Interval</th>
+                              <th class="py-3 pr-4">Total CVEs</th>
+                            </tr>
+                          </thead>
+                          <tbody id="directoryTable" class="pl-4"></tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </main>
+
+                  <script>
+                    window.CVE_TIME_SUMMARY_PATH = "../assets/data/summary.json";
+                  </script>
+                  <script defer src="../assets/js/main.js"></script>
+                </body>
+              </html>
         <td class="py-2.5 pr-3"><a href="mend/" class="text-slate-900 dark:text-cyan-300 hover:text-sky-600 dark:hover:underline transition-colors">Mend</a></td>
         <td class="py-2.5 pr-3 text-sky-700 dark:text-cyan-200">2d 12h 0m</td>
         <td class="py-2.5 text-slate-700 dark:text-slate-300">158</td>
@@ -1282,7 +950,53 @@
       </tr>
           </tbody>
         </table>
+=======
+
+    <main class="max-w-6xl mx-auto px-4 py-8">
+      <div class="max-w-3xl mb-6">
+        <h1 class="font-display text-3xl md:text-5xl font-semibold mt-1 text-slate-950 dark:text-white">CNA Directory</h1>
+        <p class="text-slate-700 dark:text-slate-300/90 mt-3 text-base md:text-lg">Search and sort the publisher leaderboard without leaving the directory page.</p>
+>>>>>>> 056aeb0 (feat: split CNA data and refocus dashboard)
       </div>
+
+      <section class="rounded-2xl border border-sky-200/80 dark:border-white/10 bg-panel-light/90 dark:bg-white/3 p-4 md:p-6 mb-6 shadow-[0_18px_60px_rgba(14,165,233,0.10)] dark:shadow-none">
+        <div class="flex flex-col md:flex-row md:items-center gap-3 justify-between mb-4">
+          <div class="flex items-center gap-2">
+            <label for="directorySearch" class="text-xs text-slate-600 dark:text-slate-300">Search</label>
+            <input id="directorySearch" type="search" placeholder="Find a CNA" class="w-64 max-w-full rounded-lg border border-sky-200/80 dark:border-white/10 bg-white/80 dark:bg-slate-900 px-3 py-2 text-sm text-slate-900 dark:text-slate-100" />
+          </div>
+          <div class="flex items-center gap-2">
+            <label for="directorySort" class="text-xs text-slate-600 dark:text-slate-300">Sort</label>
+            <select id="directorySort" class="rounded-lg border border-sky-200/80 dark:border-white/10 bg-white/80 dark:bg-slate-900 px-3 py-2 text-sm text-slate-900 dark:text-slate-100">
+              <option value="rank-asc" selected>Rank</option>
+              <option value="heartbeat-asc">Fastest heartbeat</option>
+              <option value="heartbeat-desc">Slowest heartbeat</option>
+              <option value="total-desc">Most CVEs</option>
+              <option value="name-asc">Name A-Z</option>
+            </select>
+            <div id="directoryCount" class="text-xs text-slate-500 dark:text-slate-400"></div>
+          </div>
+        </div>
+
+        <div class="overflow-x-auto rounded-xl border border-sky-200/80 dark:border-white/10">
+          <table class="w-full text-sm">
+            <thead>
+              <tr class="text-left text-slate-500 dark:text-slate-400 border-b border-sky-200/80 dark:border-white/10 text-xs uppercase tracking-wider">
+                <th class="py-3 pr-3 pl-4">Rank</th>
+                <th class="py-3 pr-3">CNA</th>
+                <th class="py-3 pr-3">30d Interval</th>
+                <th class="py-3 pr-4">Total CVEs</th>
+              </tr>
+            </thead>
+            <tbody id="directoryTable" class="pl-4"></tbody>
+          </table>
+        </div>
+      </section>
     </main>
+
+    <script>
+      window.CVE_TIME_SUMMARY_PATH = "../assets/data/summary.json";
+    </script>
+    <script defer src="../assets/js/main.js"></script>
   </body>
 </html>

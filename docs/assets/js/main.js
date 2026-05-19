@@ -1,4 +1,4 @@
-const SUMMARY_PATH = "assets/data/summary.json";
+const SUMMARY_PATH = window.CVE_TIME_SUMMARY_PATH || "assets/data/summary.json";
 
 function fmtNumber(value) {
   if (value === null || value === undefined || Number.isNaN(value)) return "--";
@@ -226,50 +226,55 @@ function renderGlobalTrend(data, scale = "linear", range = "recent") {
   }
 }
 
-function renderLeaderboard(data, cnaFilter = "") {
-  const body = document.getElementById("leaderboardBody");
-  const rows = (data.cna.leaderboard || []).filter((item) => {
-    return !cnaFilter || item.cna === cnaFilter;
-  });
+function renderCnaDirectory(data) {
+  const tableBody = document.getElementById("directoryTable");
+  if (!tableBody) return;
 
-  body.innerHTML = "";
-  if (rows.length === 0) {
-    body.innerHTML = '<tr><td class="py-4 text-slate-500 dark:text-slate-400" colspan="5">No leaderboard data available.</td></tr>';
-    return;
+  const searchInput = document.getElementById("directorySearch");
+  const sortSelect = document.getElementById("directorySort");
+  const countLabel = document.getElementById("directoryCount");
+  const sourceRows = Array.isArray(data.cna?.leaderboard) ? data.cna.leaderboard.slice() : [];
+
+  const sorters = {
+    "rank-asc": (a, b) => (a.rank ?? 1e9) - (b.rank ?? 1e9),
+    "heartbeat-asc": (a, b) => (a.window30SecondsPerCve ?? Infinity) - (b.window30SecondsPerCve ?? Infinity),
+    "heartbeat-desc": (a, b) => (b.window30SecondsPerCve ?? -Infinity) - (a.window30SecondsPerCve ?? -Infinity),
+    "total-desc": (a, b) => (b.totalEvents ?? 0) - (a.totalEvents ?? 0),
+    "name-asc": (a, b) => String(a.cna || "").localeCompare(String(b.cna || "")),
+  };
+
+  function render() {
+    const query = String(searchInput?.value || "").trim().toLowerCase();
+    const sortKey = sortSelect?.value || "rank-asc";
+    const rows = sourceRows
+      .filter((item) => !query || String(item.cna || "").toLowerCase().includes(query) || String(item.slug || "").toLowerCase().includes(query))
+      .sort(sorters[sortKey] || sorters["rank-asc"]);
+
+    tableBody.innerHTML = "";
+    if (rows.length === 0) {
+      tableBody.innerHTML = '<tr><td class="py-4 text-slate-500 dark:text-slate-400" colspan="4">No CNAs matched your search.</td></tr>';
+      if (countLabel) countLabel.textContent = "0 CNAs";
+      return;
+    }
+
+    for (const item of rows) {
+      const tr = document.createElement("tr");
+      tr.className = "border-b border-sky-200/70 dark:border-white/5 hover:bg-sky-100/70 dark:hover:bg-white/5 transition-colors";
+      tr.innerHTML = `
+        <td class="py-2.5 pr-3 text-slate-500 dark:text-slate-400">${item.rank ?? "--"}</td>
+        <td class="py-2.5 pr-3 text-slate-900 dark:text-slate-100"><a class="hover:text-sky-600 dark:hover:text-cyan-300 transition-colors" href="${item.slug}/">${item.cna}</a></td>
+        <td class="py-2.5 pr-3 text-sky-700 dark:text-cyan-200">${formatDuration(item.window30SecondsPerCve)}</td>
+        <td class="py-2.5 text-slate-700 dark:text-slate-300">${fmtNumber(item.totalEvents)}</td>
+      `;
+      tableBody.appendChild(tr);
+    }
+
+    if (countLabel) countLabel.textContent = `${rows.length} CNA${rows.length === 1 ? "" : "s"}`;
   }
 
-  for (const item of rows.slice(0, 50)) {
-    const tr = document.createElement("tr");
-    tr.className = "border-b border-sky-200/70 dark:border-white/5 hover:bg-sky-100/70 dark:hover:bg-white/5 transition-colors";
-    const cnaCell = item.slug
-      ? `<a href="cna/${item.slug}/" class="text-slate-900 dark:text-slate-100 hover:text-sky-600 dark:hover:text-cyan-300 transition-colors">${item.cna}</a>`
-      : item.cna;
-    tr.innerHTML = `
-      <td class="py-2.5 pr-3 text-slate-900 dark:text-slate-100">${cnaCell}</td>
-      <td class="py-2.5 pr-3 text-sky-700 dark:text-cyan-200" title="Average interval between CVEs (30d)">${formatDuration(item.window30SecondsPerCve)}</td>
-      <td class="py-2.5 pr-3 text-indigo-700 dark:text-sky-200" title="Average interval between CVEs (90d)">${formatDuration(item.window90SecondsPerCve)}</td>
-      <td class="py-2.5 pr-3 text-slate-700 dark:text-slate-300" title="CVEs published in last 30 days">${fmtNumber(item.recentEvents30d)}</td>
-      <td class="py-2.5 text-slate-700 dark:text-slate-300" title="Total CVEs published">${fmtNumber(item.totalEvents)}</td>
-    `;
-    body.appendChild(tr);
-  }
-}
-
-function renderCnaFilter(data) {
-  const select = document.getElementById("cnaSelect");
-  const existing = new Set([""]);
-  for (const item of data.cna.leaderboard || []) {
-    if (existing.has(item.cna)) continue;
-    const opt = document.createElement("option");
-    opt.value = item.cna;
-    opt.textContent = item.cna;
-    select.appendChild(opt);
-    existing.add(item.cna);
-  }
-
-  select.addEventListener("change", () => {
-    renderLeaderboard(data, select.value);
-  });
+  searchInput?.addEventListener("input", render);
+  sortSelect?.addEventListener("change", render);
+  render();
 }
 
 
@@ -290,10 +295,14 @@ async function boot() {
     }
 
     const data = await response.json();
-    renderOverview(data);
-    renderGlobalTrend(data, currentScale, currentRange);
-    renderCnaFilter(data);
-    renderLeaderboard(data);
+    if (document.getElementById("globalTrendChart")) {
+      renderOverview(data);
+      renderGlobalTrend(data, currentScale, currentRange);
+    }
+
+    if (document.getElementById("directoryTable")) {
+      renderCnaDirectory(data);
+    }
 
     const rangeToggle = document.getElementById("rangeToggle");
     if (rangeToggle) {

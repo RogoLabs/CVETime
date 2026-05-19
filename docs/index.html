@@ -83,8 +83,7 @@
         <nav class="hidden md:flex items-center gap-6 text-sm text-slate-600 dark:text-slate-300">
           <a href="#overview" class="hover:text-accent transition-colors">Overview</a>
           <a href="#trend" class="hover:text-accent transition-colors">Trend</a>
-          <a href="#cna" class="hover:text-accent transition-colors">CNA</a>
-          <a href="cna/" class="hover:text-accent transition-colors">CNA Profiles</a>
+          <a href="cna/" class="hover:text-accent transition-colors">CNA Directory</a>
         </nav>
 
         <button id="themeToggle" aria-label="Toggle dark/light mode" class="flex items-center gap-1 px-2 py-1 rounded bg-white/70 dark:bg-white/5 border border-sky-200/80 dark:border-white/10 text-xs text-slate-700 dark:text-slate-300 hover:bg-accent-light/10 dark:hover:bg-accent/10 transition-colors">
@@ -131,10 +130,14 @@
           CVE Velocity Dashboard
         </div>
         <div class="max-w-3xl">
-          <h1 class="font-display text-3xl md:text-5xl font-semibold mt-1 text-slate-950 dark:text-white">Global CVE Heartbeat</h1>
+          <h1 class="font-display text-3xl md:text-5xl font-semibold mt-1 text-slate-950 dark:text-white">CVETime: The Consensus Engine for Vulnerability Velocity</h1>
           <p class="text-slate-700 dark:text-slate-300/90 mt-3 text-base md:text-lg">
-            Average time between CVE publications globally and across CNAs, styled after the cve.icu dark analytics aesthetic.
+            We are moving beyond raw volume to track the real-time publication velocity, consistency, and transparency of CNAs across the ecosystem.
           </p>
+          <div class="mt-5 flex flex-wrap gap-3">
+            <a href="#trend" class="inline-flex items-center rounded-full bg-accent px-4 py-2 text-sm font-medium text-slate-950 shadow-[0_0_24px_rgba(46,230,255,0.28)] hover:shadow-[0_0_28px_rgba(46,230,255,0.35)] transition-shadow">Explore the ecosystem trend</a>
+            <a href="cna/" class="inline-flex items-center rounded-full border border-sky-200/80 dark:border-white/10 bg-white/70 dark:bg-white/5 px-4 py-2 text-sm font-medium text-slate-800 dark:text-slate-200 hover:bg-sky-100 dark:hover:bg-white/10 transition-colors">Open CNA directory</a>
+          </div>
         </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 max-w-4xl">
@@ -193,31 +196,6 @@
         </div>
       </section>
 
-      <section id="cna" class="bg-panel-light/90 dark:bg-panel/70 border border-sky-200/80 dark:border-white/10 rounded-2xl p-4 md:p-6 shadow-[0_20px_70px_rgba(14,165,233,0.10)] dark:shadow-[0_20px_70px_rgba(0,0,0,0.35)] backdrop-blur-xl">
-        <div class="flex flex-col md:flex-row md:items-center justify-between gap-3 mb-4">
-          <div>
-            <h2 class="font-display text-xl text-slate-950 dark:text-white">CNA Velocity</h2>
-            <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Filter by CNA to inspect rolling publication speed</p>
-          </div>
-          <select id="cnaSelect" class="bg-white/80 dark:bg-ink2 border border-sky-200/80 dark:border-white/10 rounded-xl px-3 py-2 text-sm text-slate-900 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-accent/40 focus:border-accent/50">
-            <option value="">All CNAs</option>
-          </select>
-        </div>
-        <div class="overflow-x-auto">
-          <table class="w-full text-sm">
-            <thead>
-              <tr class="text-left text-slate-500 dark:text-slate-400 border-b border-sky-200/80 dark:border-white/10">
-                <th class="py-3 pr-3 uppercase tracking-[0.14em] text-xs">CNA</th>
-                <th class="py-3 pr-3 uppercase tracking-[0.14em] text-xs">30d Interval</th>
-                <th class="py-3 pr-3 uppercase tracking-[0.14em] text-xs">90d Interval</th>
-                <th class="py-3 pr-3 uppercase tracking-[0.14em] text-xs">CVEs (30d)</th>
-                <th class="py-3 uppercase tracking-[0.14em] text-xs">Total CVEs</th>
-              </tr>
-            </thead>
-            <tbody id="leaderboardBody"></tbody>
-          </table>
-        </div>
-      </section>
     </main>
   </body>
 </html>
