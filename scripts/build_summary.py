@@ -1082,6 +1082,7 @@ def generate_cna_pages(summary: dict[str, Any], shard_exports: dict[str, dict[st
     base_url = "https://gamblin.github.io/CVETime"
     sitemap_urls = [
         f"  <url><loc>{base_url}/</loc></url>",
+      f"  <url><loc>{base_url}/methodology/</loc></url>",
         f"  <url><loc>{base_url}/cna/</loc></url>",
     ] + [
         f"  <url><loc>{base_url}/cna/{entry['slug']}/</loc></url>"

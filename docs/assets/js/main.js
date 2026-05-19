@@ -28,10 +28,149 @@ function renderOverview(data) {
   document.getElementById("parsedRecords").textContent = fmtNumber(data.stats.parsedRecords);
 }
 
+function renderSupplementalCharts(data, range = currentRange) {
+  const volumeCanvas = document.getElementById("monthlyVolumeChart");
+  const cnaCanvas = document.getElementById("cnaVelocityChart");
+  if (!volumeCanvas && !cnaCanvas) return;
+
+  const colors = getChartColors();
+
+  if (volumeCanvas) {
+    const points = getGlobalTrendPoints(data, range);
+    if (monthlyVolumeChart) monthlyVolumeChart.destroy();
+    monthlyVolumeChart = new Chart(volumeCanvas.getContext("2d"), {
+      type: "bar",
+      data: {
+        labels: points.map((point) => point.date),
+        datasets: [{
+          label: "CVE count",
+          data: points.map((point) => point.eventCount),
+          backgroundColor: colors.volumeFill,
+          borderColor: colors.volume,
+          borderWidth: 1.5,
+          borderRadius: 6,
+          maxBarThickness: 14,
+        }],
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: { display: false },
+          tooltip: {
+            backgroundColor: colors.tooltipBg,
+            borderColor: colors.tooltipBorder,
+            borderWidth: 1,
+            titleColor: colors.tooltipTitle,
+            bodyColor: colors.tooltipBody,
+            callbacks: {
+              label(context) {
+                return `${context.parsed.y} CVEs`;
+              },
+            },
+          },
+        },
+        scales: {
+          x: { ticks: { color: colors.xTicks, maxRotation: 0 }, grid: { color: colors.xGrid } },
+          y: {
+            beginAtZero: true,
+            ticks: { color: colors.yTicks, precision: 0 },
+            grid: { color: colors.yGrid },
+            title: { display: true, text: "Published CVEs", color: colors.yTitle },
+          },
+        },
+      },
+    });
+  }
+
+  if (cnaCanvas) {
+    const leaderboard = Array.isArray(data.cna?.leaderboard) ? data.cna.leaderboard.slice(0, 10) : [];
+    if (cnaVelocityChart) cnaVelocityChart.destroy();
+    cnaVelocityChart = new Chart(cnaCanvas.getContext("2d"), {
+      type: "bar",
+      data: {
+        labels: leaderboard.map((row) => row.cna),
+        datasets: [{
+          label: "30d interval",
+          data: leaderboard.map((row) => row.window30SecondsPerCve),
+          backgroundColor: colors.cnaFill,
+          borderColor: colors.cna,
+          borderWidth: 1.5,
+          borderRadius: 6,
+        }],
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        indexAxis: "y",
+        plugins: {
+          legend: { display: false },
+          tooltip: {
+            backgroundColor: colors.tooltipBg,
+            borderColor: colors.tooltipBorder,
+            borderWidth: 1,
+            titleColor: colors.tooltipTitle,
+            bodyColor: colors.tooltipBody,
+            callbacks: {
+              label(context) {
+                return formatDuration(context.parsed.x);
+              },
+            },
+          },
+        },
+        scales: {
+          x: {
+            beginAtZero: true,
+            ticks: { color: colors.xTicks, callback: (value) => formatDuration(value) },
+            grid: { color: colors.xGrid },
+            title: { display: true, text: "Seconds per CVE", color: colors.yTitle },
+          },
+          y: { ticks: { color: colors.yTicks }, grid: { color: colors.yGrid } },
+        },
+      },
+    });
+  }
+}
+
+function renderDashboardCharts(data, scale = currentScale, range = currentRange) {
+  renderOverview(data);
+  renderGlobalTrend(data, scale, range);
+  renderSupplementalCharts(data, range);
+}
+
 
 let globalChart;
+let monthlyVolumeChart;
+let cnaVelocityChart;
 let currentScale = "linear";
 let currentRange = "24m";
+
+function getChartColors() {
+  const isDark = document.documentElement.classList.contains('dark');
+  return {
+    mean: isDark ? "rgba(46, 230, 255, 0.95)" : "#0ea5e9",
+    meanPoint: isDark ? "rgba(46, 230, 255, 1)" : "#0ea5e9",
+    meanBorder: isDark ? "rgba(4, 10, 19, 1)" : "#f1f5f9",
+    median: isDark ? "rgba(96, 165, 250, 0.90)" : "#6366f1",
+    band: isDark ? "rgba(46, 230, 255, 0.10)" : "rgba(14, 165, 233, 0.10)",
+    legend: isDark ? "#dbeafe" : "#334155",
+    tooltipBg: isDark ? "rgba(6, 16, 29, 0.96)" : "#f1f5f9",
+    tooltipBorder: isDark ? "rgba(46, 230, 255, 0.24)" : "#0ea5e9",
+    tooltipTitle: isDark ? "#f8fafc" : "#0f172a",
+    tooltipBody: isDark ? "#dbeafe" : "#334155",
+    annotation: isDark ? "#2ee6ff" : "#0ea5e9",
+    annotationBg: isDark ? "rgba(46,230,255,0.13)" : "#bae6fd",
+    xTicks: isDark ? "#94a3b8" : "#64748b",
+    xGrid: isDark ? "rgba(148, 163, 184, 0.12)" : "rgba(100,116,139,0.10)",
+    yTicks: isDark ? "#94a3b8" : "#64748b",
+    yGrid: isDark ? "rgba(148, 163, 184, 0.12)" : "rgba(100,116,139,0.10)",
+    yTitle: isDark ? "#cbd5e1" : "#334155",
+    volume: isDark ? "rgba(96, 165, 250, 0.95)" : "#6366f1",
+    volumeFill: isDark ? "rgba(96, 165, 250, 0.22)" : "rgba(99, 102, 241, 0.18)",
+    cna: isDark ? "rgba(45, 212, 191, 0.95)" : "#14b8a6",
+    cnaFill: isDark ? "rgba(45, 212, 191, 0.24)" : "rgba(20, 184, 166, 0.18)",
+  };
+}
 
 function getGlobalTrendPoints(data, range = "24m") {
   const points = data.global.trend || [];
@@ -65,26 +204,7 @@ function renderGlobalTrend(data, scale = "linear", range = "24m") {
   const annotationDate = annotationIndex !== -1 ? labels[annotationIndex] : null;
 
   // Theme-aware colors
-  const isDark = document.documentElement.classList.contains('dark');
-  const colors = {
-    mean: isDark ? "rgba(46, 230, 255, 0.95)" : "#0ea5e9",
-    meanPoint: isDark ? "rgba(46, 230, 255, 1)" : "#0ea5e9",
-    meanBorder: isDark ? "rgba(4, 10, 19, 1)" : "#f1f5f9",
-    median: isDark ? "rgba(96, 165, 250, 0.90)" : "#6366f1",
-    band: isDark ? "rgba(46, 230, 255, 0.10)" : "rgba(14, 165, 233, 0.10)",
-    legend: isDark ? "#dbeafe" : "#334155",
-    tooltipBg: isDark ? "rgba(6, 16, 29, 0.96)" : "#f1f5f9",
-    tooltipBorder: isDark ? "rgba(46, 230, 255, 0.24)" : "#0ea5e9",
-    tooltipTitle: isDark ? "#f8fafc" : "#0f172a",
-    tooltipBody: isDark ? "#dbeafe" : "#334155",
-    annotation: isDark ? "#2ee6ff" : "#0ea5e9",
-    annotationBg: isDark ? "rgba(46,230,255,0.13)" : "#bae6fd",
-    xTicks: isDark ? "#94a3b8" : "#64748b",
-    xGrid: isDark ? "rgba(148, 163, 184, 0.12)" : "rgba(100,116,139,0.10)",
-    yTicks: isDark ? "#94a3b8" : "#64748b",
-    yGrid: isDark ? "rgba(148, 163, 184, 0.12)" : "rgba(100,116,139,0.10)",
-    yTitle: isDark ? "#cbd5e1" : "#334155"
-  };
+  const colors = getChartColors();
 
   globalChart = new Chart(ctx, {
     type: "line",
@@ -226,10 +346,10 @@ function renderGlobalTrend(data, scale = "linear", range = "24m") {
   if (!window._chartThemeListener) {
     window._chartThemeListener = true;
     window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
-      renderGlobalTrend(data, currentScale, currentRange);
+      renderDashboardCharts(data, currentScale, currentRange);
     });
     document.getElementById('themeToggle').addEventListener('click', () => {
-      setTimeout(() => renderGlobalTrend(data, currentScale, currentRange), 100);
+      setTimeout(() => renderDashboardCharts(data, currentScale, currentRange), 100);
     });
   }
 }
@@ -304,8 +424,7 @@ async function boot() {
 
     const data = await response.json();
     if (document.getElementById("globalTrendChart")) {
-      renderOverview(data);
-      renderGlobalTrend(data, currentScale, currentRange);
+      renderDashboardCharts(data, currentScale, currentRange);
     }
 
     if (document.getElementById("directoryTable")) {
@@ -316,7 +435,7 @@ async function boot() {
     if (rangeToggle) {
       rangeToggle.addEventListener("change", () => {
         currentRange = rangeToggle.value;
-        renderGlobalTrend(data, currentScale, currentRange);
+        renderDashboardCharts(data, currentScale, currentRange);
       });
     }
 
@@ -325,7 +444,7 @@ async function boot() {
     if (scaleToggle) {
       scaleToggle.addEventListener("change", (e) => {
         currentScale = scaleToggle.value;
-        renderGlobalTrend(data, currentScale, currentRange);
+        renderDashboardCharts(data, currentScale, currentRange);
       });
     }
   } catch (error) {

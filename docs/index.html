@@ -83,6 +83,7 @@
         <nav class="hidden md:flex items-center gap-6 text-sm text-slate-600 dark:text-slate-300">
           <a href="#overview" class="hover:text-accent transition-colors">Overview</a>
           <a href="#trend" class="hover:text-accent transition-colors">Trend</a>
+          <a href="methodology/" class="hover:text-accent transition-colors">Methodology</a>
           <a href="cna/" class="hover:text-accent transition-colors">CNA Directory</a>
         </nav>
 
@@ -136,22 +137,8 @@
           </p>
           <div class="mt-5 flex flex-wrap gap-3">
             <a href="#trend" class="inline-flex items-center rounded-full bg-accent px-4 py-2 text-sm font-medium text-slate-950 shadow-[0_0_24px_rgba(46,230,255,0.28)] hover:shadow-[0_0_28px_rgba(46,230,255,0.35)] transition-shadow">Explore the ecosystem trend</a>
+            <a href="methodology/" class="inline-flex items-center rounded-full border border-sky-200/80 dark:border-white/10 bg-white/70 dark:bg-white/5 px-4 py-2 text-sm font-medium text-slate-800 dark:text-slate-200 hover:bg-sky-100 dark:hover:bg-white/10 transition-colors">Read the methodology</a>
             <a href="cna/" class="inline-flex items-center rounded-full border border-sky-200/80 dark:border-white/10 bg-white/70 dark:bg-white/5 px-4 py-2 text-sm font-medium text-slate-800 dark:text-slate-200 hover:bg-sky-100 dark:hover:bg-white/10 transition-colors">Open CNA directory</a>
-          </div>
-        </div>
-
-        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 max-w-4xl">
-          <div class="rounded-2xl border border-sky-200/80 dark:border-white/8 bg-white/70 dark:bg-white/4 px-4 py-3 backdrop-blur-xl shadow-[0_12px_36px_rgba(14,165,233,0.08)] dark:shadow-none">
-            <p class="text-[10px] uppercase tracking-[0.22em] text-slate-500 dark:text-slate-400">Coverage</p>
-            <p class="mt-1 text-sm text-slate-900 dark:text-slate-100">Global + per-CNA rolling windows</p>
-          </div>
-          <div class="rounded-2xl border border-sky-200/80 dark:border-white/8 bg-white/70 dark:bg-white/4 px-4 py-3 backdrop-blur-xl shadow-[0_12px_36px_rgba(14,165,233,0.08)] dark:shadow-none">
-            <p class="text-[10px] uppercase tracking-[0.22em] text-slate-500 dark:text-slate-400">Refresh</p>
-            <p class="mt-1 text-sm text-slate-900 dark:text-slate-100">Daily GitHub Actions sync</p>
-          </div>
-          <div class="rounded-2xl border border-sky-200/80 dark:border-white/8 bg-white/70 dark:bg-white/4 px-4 py-3 backdrop-blur-xl shadow-[0_12px_36px_rgba(14,165,233,0.08)] dark:shadow-none">
-            <p class="text-[10px] uppercase tracking-[0.22em] text-slate-500 dark:text-slate-400">Stack</p>
-            <p class="mt-1 text-sm text-slate-900 dark:text-slate-100">Python 3.14 · Pandas 3 · Chart.js</p>
           </div>
         </div>
       </header>
@@ -196,6 +183,49 @@
           <canvas id="globalTrendChart"></canvas>
         </div>
       </section>
+
+      <section id="moreGraphs" class="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-8">
+        <article class="rounded-2xl border border-sky-200/80 dark:border-white/10 bg-panel-light/90 dark:bg-panel/70 p-4 md:p-6 shadow-[0_18px_60px_rgba(14,165,233,0.10)] dark:shadow-[0_18px_60px_rgba(0,0,0,0.32)] backdrop-blur-xl">
+          <div class="flex items-center justify-between gap-3 mb-4 flex-wrap">
+            <div>
+              <h2 class="font-display text-xl text-slate-950 dark:text-white">Monthly Publication Volume</h2>
+              <p class="text-xs text-slate-500 dark:text-slate-400">New CVEs per month in the selected range</p>
+            </div>
+            <span class="text-[10px] uppercase tracking-[0.22em] text-slate-500 dark:text-slate-400">Range-aware</span>
+          </div>
+          <div class="h-72 md:h-80">
+            <canvas id="monthlyVolumeChart"></canvas>
+          </div>
+        </article>
+
+        <article class="rounded-2xl border border-sky-200/80 dark:border-white/10 bg-panel-light/90 dark:bg-panel/70 p-4 md:p-6 shadow-[0_18px_60px_rgba(14,165,233,0.10)] dark:shadow-[0_18px_60px_rgba(0,0,0,0.32)] backdrop-blur-xl">
+          <div class="flex items-center justify-between gap-3 mb-4 flex-wrap">
+            <div>
+              <h2 class="font-display text-xl text-slate-950 dark:text-white">Fastest CNA Leaders</h2>
+              <p class="text-xs text-slate-500 dark:text-slate-400">Top 10 CNAs by 30-day heartbeat, lower is faster</p>
+            </div>
+            <span class="text-[10px] uppercase tracking-[0.22em] text-slate-500 dark:text-slate-400">Leaderboard</span>
+          </div>
+          <div class="h-72 md:h-80">
+            <canvas id="cnaVelocityChart"></canvas>
+          </div>
+        </article>
+      </section>
+
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 max-w-4xl mt-8 mb-2">
+        <div class="rounded-2xl border border-sky-200/80 dark:border-white/8 bg-white/70 dark:bg-white/4 px-4 py-3 backdrop-blur-xl shadow-[0_12px_36px_rgba(14,165,233,0.08)] dark:shadow-none">
+          <p class="text-[10px] uppercase tracking-[0.22em] text-slate-500 dark:text-slate-400">Coverage</p>
+          <p class="mt-1 text-sm text-slate-900 dark:text-slate-100">Global + per-CNA rolling windows</p>
+        </div>
+        <div class="rounded-2xl border border-sky-200/80 dark:border-white/8 bg-white/70 dark:bg-white/4 px-4 py-3 backdrop-blur-xl shadow-[0_12px_36px_rgba(14,165,233,0.08)] dark:shadow-none">
+          <p class="text-[10px] uppercase tracking-[0.22em] text-slate-500 dark:text-slate-400">Refresh</p>
+          <p class="mt-1 text-sm text-slate-900 dark:text-slate-100">Daily GitHub Actions sync</p>
+        </div>
+        <div class="rounded-2xl border border-sky-200/80 dark:border-white/8 bg-white/70 dark:bg-white/4 px-4 py-3 backdrop-blur-xl shadow-[0_12px_36px_rgba(14,165,233,0.08)] dark:shadow-none">
+          <p class="text-[10px] uppercase tracking-[0.22em] text-slate-500 dark:text-slate-400">Stack</p>
+          <p class="mt-1 text-sm text-slate-900 dark:text-slate-100">Python 3.14 · Pandas 3 · Chart.js</p>
+        </div>
+      </div>
 
     </main>
   </body>

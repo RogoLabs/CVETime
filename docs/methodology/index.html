@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Methodology · CVETime</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              ink: { DEFAULT: '#06101d', light: '#f8fafc' },
+              panel: { DEFAULT: '#10233c', light: '#f1f5f9' },
+              accent: { DEFAULT: '#2ee6ff', light: '#0ea5e9' },
+              accent2: { DEFAULT: '#2dd4bf', light: '#14b8a6' }
+            },
+            fontFamily: {
+              display: ['Space Grotesk', 'ui-sans-serif', 'system-ui']
+            }
+          }
+        }
+      };
+    </script>
+  </head>
+  <body class="bg-ink-light text-slate-900 dark:bg-ink dark:text-slate-100 min-h-screen transition-colors duration-300">
+    <div class="fixed inset-0 -z-20 bg-[radial-gradient(circle_at_15%_15%,rgba(14,165,233,0.14),transparent_30%),radial-gradient(circle_at_80%_0%,rgba(99,102,241,0.12),transparent_26%),radial-gradient(circle_at_90%_90%,rgba(20,184,166,0.10),transparent_22%),linear-gradient(180deg,#f8fbff_0%,#eff6ff_48%,#e0f2fe_100%)] dark:bg-[radial-gradient(circle_at_15%_15%,rgba(46,230,255,0.15),transparent_28%),radial-gradient(circle_at_80%_0%,rgba(96,165,250,0.15),transparent_26%),radial-gradient(circle_at_90%_90%,rgba(45,212,191,0.10),transparent_22%),linear-gradient(180deg,#040a13_0%,#081321_48%,#06101d_100%)]"></div>
+    <div class="fixed inset-0 -z-10 opacity-40 dark:opacity-30 bg-[linear-gradient(rgba(14,165,233,0.07)_1px,transparent_1px),linear-gradient(90deg,rgba(14,165,233,0.07)_1px,transparent_1px)] dark:bg-[linear-gradient(rgba(148,163,184,0.07)_1px,transparent_1px),linear-gradient(90deg,rgba(148,163,184,0.07)_1px,transparent_1px)] bg-[size:88px_88px]"></div>
+    <script>
+      (function() {
+        const saved = localStorage.getItem('theme');
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        if (saved === 'dark' || (!saved && prefersDark)) {
+          document.documentElement.classList.add('dark');
+        }
+      })();
+    </script>
+
+    <header class="sticky top-0 z-20 border-b border-sky-200/80 dark:border-white/8 bg-[rgba(248,250,252,0.78)] dark:bg-[rgba(4,10,19,0.72)] backdrop-blur-xl">
+      <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between gap-4">
+        <a href="../" class="flex items-center gap-3 group">
+          <span class="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-white/60 dark:bg-white/6 border border-sky-200/80 dark:border-white/10 shadow-[0_0_22px_rgba(14,165,233,0.18)] dark:shadow-[0_0_22px_rgba(46,230,255,0.18)] group-hover:border-accent-light/40 dark:group-hover:border-accent/40 transition-colors">
+            <span class="h-2.5 w-2.5 rounded-full bg-accent shadow-[0_0_18px_rgba(46,230,255,0.95)]"></span>
+          </span>
+          <div>
+            <p class="text-[10px] uppercase tracking-[0.28em] text-slate-500 dark:text-slate-400">CVETime</p>
+            <p class="text-sm text-slate-900 dark:text-slate-100">Velocity Dashboard</p>
+          </div>
+        </a>
+
+        <nav class="hidden md:flex items-center gap-6 text-sm text-slate-600 dark:text-slate-300">
+          <a href="../" class="hover:text-accent transition-colors">Dashboard</a>
+          <a href="../cna/" class="hover:text-accent transition-colors">CNA Directory</a>
+        </nav>
+
+        <button id="themeToggle" aria-label="Toggle dark/light mode" class="flex items-center gap-1 px-2 py-1 rounded bg-white/70 dark:bg-white/5 border border-sky-200/80 dark:border-white/10 text-xs text-slate-700 dark:text-slate-300 hover:bg-accent-light/10 dark:hover:bg-accent/10 transition-colors">
+          <span id="themeIcon">🌙</span>
+          <span class="hidden sm:inline">Theme</span>
+        </button>
+      </div>
+    </header>
+
+    <script>
+      (function() {
+        const root = document.documentElement;
+        const toggle = document.getElementById('themeToggle');
+        const icon = document.getElementById('themeIcon');
+        function setTheme(mode) {
+          if (mode === 'dark') {
+            root.classList.add('dark');
+            icon.textContent = '🌙';
+            localStorage.setItem('theme', 'dark');
+          } else {
+            root.classList.remove('dark');
+            icon.textContent = '☀️';
+            localStorage.setItem('theme', 'light');
+          }
+        }
+        icon.textContent = root.classList.contains('dark') ? '🌙' : '☀️';
+        toggle.addEventListener('click', () => {
+          setTheme(root.classList.contains('dark') ? 'light' : 'dark');
+        });
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+          if (!localStorage.getItem('theme')) setTheme(e.matches ? 'dark' : 'light');
+        });
+      })();
+    </script>
+
+    <main class="max-w-6xl mx-auto px-4 py-8 md:py-12">
+      <div class="max-w-3xl mb-8">
+        <p class="text-xs uppercase tracking-[0.26em] text-sky-700 dark:text-cyan-200/90">Methodology</p>
+        <h1 class="font-display text-3xl md:text-5xl font-semibold mt-2 text-slate-950 dark:text-white">How CVETime measures publication velocity</h1>
+        <p class="text-slate-700 dark:text-slate-300/90 mt-3 text-base md:text-lg">
+          The dashboard measures the time between distinct CVE publication events, then rolls those intervals into global and per-CNA views so the signals stay comparable across the ecosystem.
+        </p>
+      </div>
+
+      <section class="grid gap-4 md:grid-cols-2 mb-8">
+        <article class="rounded-2xl border border-sky-200/80 dark:border-white/10 bg-white/70 dark:bg-white/4 p-5 md:p-6 backdrop-blur-xl shadow-[0_18px_60px_rgba(14,165,233,0.10)] dark:shadow-none">
+          <h2 class="font-display text-xl text-slate-950 dark:text-white">Data source</h2>
+          <p class="mt-2 text-sm text-slate-700 dark:text-slate-300">The pipeline reads the local cvelistV5 mirror, parses <code>datePublished</code> fields with schema fallbacks, and normalizes CNA metadata into a shared summary file.</p>
+        </article>
+        <article class="rounded-2xl border border-sky-200/80 dark:border-white/10 bg-white/70 dark:bg-white/4 p-5 md:p-6 backdrop-blur-xl shadow-[0_18px_60px_rgba(14,165,233,0.10)] dark:shadow-none">
+          <h2 class="font-display text-xl text-slate-950 dark:text-white">Interval logic</h2>
+          <p class="mt-2 text-sm text-slate-700 dark:text-slate-300">Same-second publication events are collapsed to a logical single event before computing rolling windows, which keeps bursty releases from being counted twice.</p>
+        </article>
+        <article class="rounded-2xl border border-sky-200/80 dark:border-white/10 bg-white/70 dark:bg-white/4 p-5 md:p-6 backdrop-blur-xl shadow-[0_18px_60px_rgba(14,165,233,0.10)] dark:shadow-none">
+          <h2 class="font-display text-xl text-slate-950 dark:text-white">Rolling windows</h2>
+          <p class="mt-2 text-sm text-slate-700 dark:text-slate-300">The homepage defaults to a 24-month window, while 2017+ and all-history views remain available for broader context. CNA pages use the same range model so charts stay consistent.</p>
+        </article>
+        <article class="rounded-2xl border border-sky-200/80 dark:border-white/10 bg-white/70 dark:bg-white/4 p-5 md:p-6 backdrop-blur-xl shadow-[0_18px_60px_rgba(14,165,233,0.10)] dark:shadow-none">
+          <h2 class="font-display text-xl text-slate-950 dark:text-white">Interpretation</h2>
+          <p class="mt-2 text-sm text-slate-700 dark:text-slate-300">Lower intervals mean faster publication cadence. The trend line shows the monthly mean interval, while the shaded band shows the P25 to P75 spread around that monthly behavior.</p>
+        </article>
+      </section>
+
+      <section class="rounded-2xl border border-sky-200/80 dark:border-white/10 bg-panel-light/90 dark:bg-panel/70 p-5 md:p-6 shadow-[0_18px_60px_rgba(14,165,233,0.10)] dark:shadow-[0_18px_60px_rgba(0,0,0,0.32)] backdrop-blur-xl">
+        <h2 class="font-display text-xl text-slate-950 dark:text-white">Notes and limitations</h2>
+        <ul class="mt-3 space-y-2 text-sm text-slate-700 dark:text-slate-300 list-disc pl-5">
+          <li>CNAs with too few events are excluded from the leaderboard and per-CNA shards.</li>
+          <li>Metrics are optimized for broad comparison, not for forensic timing analysis of individual CVEs.</li>
+          <li>All charts are regenerated from the same summary artifact so the dashboard stays internally consistent.</li>
+        </ul>
+      </section>
+    </main>
+  </body>
+</html>
