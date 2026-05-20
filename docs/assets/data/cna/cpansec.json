@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-05-19T21:47:46.703523+00:00",
+  "generatedAt": "2026-05-20T00:53:35.522961+00:00",
   "cna": {
     "name": "CPANSec",
     "slug": "cpansec",
-    "rank": 25,
-    "window30SecondsPerCve": 68210.52631578948,
-    "window90SecondsPerCve": 109521.12676056338,
-    "totalEvents": 124,
+    "rank": 24,
+    "window30SecondsPerCve": 66461.53846153847,
+    "window90SecondsPerCve": 108000.0,
+    "totalEvents": 125,
     "consistencyScore": 0,
     "consistencyGrade": "F",
-    "consistencyMedianSeconds": 48954.0,
-    "consistencyP90Seconds": 968716.6,
+    "consistencyMedianSeconds": 50753.0,
+    "consistencyP90Seconds": 967018.4,
     "percentileFaster": 91
   },
   "trend": [
@@ -100,15 +100,15 @@
     },
     {
       "date": "2026-05-01",
-      "p50IntervalSeconds": 25264.0,
-      "p90IntervalSeconds": 157696.70000000004,
-      "eventCount": 30
+      "p50IntervalSeconds": 34368.0,
+      "p90IntervalSeconds": 155259.0,
+      "eventCount": 31
     }
   ],
   "metrics": {
-    "p50Seconds": 48954.0,
-    "p90Seconds": 968716.6,
-    "trimmedCount": 109
+    "p50Seconds": 50753.0,
+    "p90Seconds": 967018.4,
+    "trimmedCount": 110
   },
   "severity": {
     "summary": {
@@ -126,6 +126,11 @@
         "count": 39,
         "medianSeconds": 134023.0,
         "p90Seconds": 611518.6000000006
+      },
+      "NAN": {
+        "count": 1,
+        "medianSeconds": 140139.0,
+        "p90Seconds": 140139.0
       }
     },
     "points": [
@@ -989,6 +994,13 @@
         "severity": "HIGH",
         "severityValue": 3,
         "timeToPublishSeconds": 42163.0
+      },
+      {
+        "date": "2026-05-19",
+        "cveId": "CVE-2026-5090",
+        "severity": "NAN",
+        "severityValue": -1,
+        "timeToPublishSeconds": 140139.0
       }
     ]
   },
@@ -997,8 +1009,8 @@
       "cna": "GitHub_M",
       "slug": "github-m",
       "rank": 1,
-      "window30SecondsPerCve": 2097.0873786407765,
-      "totalEvents": 14581,
+      "window30SecondsPerCve": 2080.2568218298557,
+      "totalEvents": 14591,
       "percentileFaster": 100
     },
     {
@@ -1021,8 +1033,8 @@
       "cna": "VulnCheck",
       "slug": "vulncheck",
       "rank": 4,
-      "window30SecondsPerCve": 5659.388646288209,
-      "totalEvents": 2958,
+      "window30SecondsPerCve": 5634.782608695652,
+      "totalEvents": 2960,
       "percentileFaster": 99
     },
     {
@@ -1045,8 +1057,8 @@
       "cna": "microsoft",
       "slug": "microsoft",
       "rank": 7,
-      "window30SecondsPerCve": 23351.35135135135,
-      "totalEvents": 5073,
+      "window30SecondsPerCve": 23142.85714285714,
+      "totalEvents": 5074,
       "percentileFaster": 98
     },
     {

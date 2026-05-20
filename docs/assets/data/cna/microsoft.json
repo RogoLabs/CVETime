@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-05-19T21:48:14.704492+00:00",
+  "generatedAt": "2026-05-20T00:53:51.769795+00:00",
   "cna": {
     "name": "microsoft",
     "slug": "microsoft",
     "rank": 7,
-    "window30SecondsPerCve": 23351.35135135135,
-    "window90SecondsPerCve": 25578.947368421053,
-    "totalEvents": 5073,
+    "window30SecondsPerCve": 23142.85714285714,
+    "window90SecondsPerCve": 25663.366336633662,
+    "totalEvents": 5074,
     "consistencyScore": 0,
     "consistencyGrade": "F",
     "consistencyMedianSeconds": 1.0,
-    "consistencyP90Seconds": 146880.00000000393,
+    "consistencyP90Seconds": 146160.0000000013,
     "percentileFaster": 98
   },
   "trend": [
@@ -1511,14 +1511,14 @@
     {
       "date": "2026-05-01",
       "p50IntervalSeconds": 1.0,
-      "p90IntervalSeconds": 2.0,
-      "eventCount": 103
+      "p90IntervalSeconds": 2.700000000000003,
+      "eventCount": 104
     }
   ],
   "metrics": {
     "p50Seconds": 1.0,
-    "p90Seconds": 146880.00000000393,
-    "trimmedCount": 4818
+    "p90Seconds": 146160.0000000013,
+    "trimmedCount": 4819
   },
   "severity": {
     "summary": {
@@ -1538,9 +1538,9 @@
         "p90Seconds": 436478.1
       },
       "MEDIUM": {
-        "count": 1164,
+        "count": 1165,
         "medianSeconds": 1.0,
-        "p90Seconds": 32.0
+        "p90Seconds": 32.600000000000136
       },
       "LOW": {
         "count": 26,
@@ -37052,6 +37052,13 @@
         "severity": "CRITICAL",
         "severityValue": 4,
         "timeToPublishSeconds": 6.0
+      },
+      {
+        "date": "2026-05-19",
+        "cveId": "CVE-2026-45585",
+        "severity": "MEDIUM",
+        "severityValue": 2,
+        "timeToPublishSeconds": 109622.0
       }
     ]
   },
@@ -37060,8 +37067,8 @@
       "cna": "GitHub_M",
       "slug": "github-m",
       "rank": 1,
-      "window30SecondsPerCve": 2097.0873786407765,
-      "totalEvents": 14581,
+      "window30SecondsPerCve": 2080.2568218298557,
+      "totalEvents": 14591,
       "percentileFaster": 100
     },
     {
@@ -37084,8 +37091,8 @@
       "cna": "VulnCheck",
       "slug": "vulncheck",
       "rank": 4,
-      "window30SecondsPerCve": 5659.388646288209,
-      "totalEvents": 2958,
+      "window30SecondsPerCve": 5634.782608695652,
+      "totalEvents": 2960,
       "percentileFaster": 99
     },
     {
@@ -37108,8 +37115,8 @@
       "cna": "microsoft",
       "slug": "microsoft",
       "rank": 7,
-      "window30SecondsPerCve": 23351.35135135135,
-      "totalEvents": 5073,
+      "window30SecondsPerCve": 23142.85714285714,
+      "totalEvents": 5074,
       "percentileFaster": 98
     },
     {
