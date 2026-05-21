@@ -1,17 +1,17 @@
 {
-  "generatedAt": "2026-05-20T00:53:36.236530+00:00",
+  "generatedAt": "2026-05-21T00:54:24.203126+00:00",
   "cna": {
     "name": "Esri",
     "slug": "esri",
-    "rank": 190,
-    "window30SecondsPerCve": 1296000.0,
-    "window90SecondsPerCve": 2592000.0,
-    "totalEvents": 142,
+    "rank": 142,
+    "window30SecondsPerCve": 648000.0,
+    "window90SecondsPerCve": 1944000.0,
+    "totalEvents": 144,
     "consistencyScore": 0,
     "consistencyGrade": "F",
-    "consistencyMedianSeconds": 74.0,
-    "consistencyP90Seconds": 3715200.0,
-    "percentileFaster": 29
+    "consistencyMedianSeconds": 75.0,
+    "consistencyP90Seconds": 3676789.5999999996,
+    "percentileFaster": 47
   },
   "trend": [
     {
@@ -163,19 +163,25 @@
       "p50IntervalSeconds": 3677828.0,
       "p90IntervalSeconds": 6620061.600000001,
       "eventCount": 2
+    },
+    {
+      "date": "2026-05-01",
+      "p50IntervalSeconds": 1247801.5,
+      "p90IntervalSeconds": 2245841.9,
+      "eventCount": 2
     }
   ],
   "metrics": {
-    "p50Seconds": 74.0,
-    "p90Seconds": 3715200.0,
-    "trimmedCount": 128
+    "p50Seconds": 75.0,
+    "p90Seconds": 3676789.5999999996,
+    "trimmedCount": 129
   },
   "severity": {
     "summary": {
       "MEDIUM": {
-        "count": 101,
-        "medianSeconds": 50.0,
-        "p90Seconds": 2228715.0
+        "count": 103,
+        "medianSeconds": 53.0,
+        "p90Seconds": 2442024.599999999
       },
       "HIGH": {
         "count": 26,
@@ -1185,6 +1191,20 @@
         "severity": "CRITICAL",
         "severityValue": 4,
         "timeToPublishSeconds": 36.0
+      },
+      {
+        "date": "2026-05-20",
+        "cveId": "CVE-2026-2812",
+        "severity": "MEDIUM",
+        "severityValue": 2,
+        "timeToPublishSeconds": 2495352.0
+      },
+      {
+        "date": "2026-05-20",
+        "cveId": "CVE-2026-2813",
+        "severity": "MEDIUM",
+        "severityValue": 2,
+        "timeToPublishSeconds": 251.0
       }
     ]
   },
@@ -1193,8 +1213,8 @@
       "cna": "GitHub_M",
       "slug": "github-m",
       "rank": 1,
-      "window30SecondsPerCve": 2080.2568218298557,
-      "totalEvents": 14591,
+      "window30SecondsPerCve": 2100.486223662885,
+      "totalEvents": 14604,
       "percentileFaster": 100
     },
     {
@@ -1217,32 +1237,32 @@
       "cna": "VulnCheck",
       "slug": "vulncheck",
       "rank": 4,
-      "window30SecondsPerCve": 5634.782608695652,
-      "totalEvents": 2960,
+      "window30SecondsPerCve": 5526.652452025586,
+      "totalEvents": 2982,
       "percentileFaster": 99
     },
     {
       "cna": "Wordfence",
       "slug": "wordfence",
       "rank": 5,
-      "window30SecondsPerCve": 14320.441988950277,
-      "totalEvents": 6669,
-      "percentileFaster": 98
-    },
-    {
-      "cna": "Chrome",
-      "slug": "chrome",
-      "rank": 6,
-      "window30SecondsPerCve": 21781.51260504202,
-      "totalEvents": 1491,
+      "window30SecondsPerCve": 12705.882352941177,
+      "totalEvents": 6692,
       "percentileFaster": 98
     },
     {
       "cna": "microsoft",
       "slug": "microsoft",
+      "rank": 6,
+      "window30SecondsPerCve": 22539.130434782608,
+      "totalEvents": 5077,
+      "percentileFaster": 98
+    },
+    {
+      "cna": "Chrome",
+      "slug": "chrome",
       "rank": 7,
-      "window30SecondsPerCve": 23142.85714285714,
-      "totalEvents": 5074,
+      "window30SecondsPerCve": 22736.842105263157,
+      "totalEvents": 1501,
       "percentileFaster": 98
     },
     {
@@ -1289,8 +1309,8 @@
       "cna": "mitre",
       "slug": "mitre",
       "rank": 13,
-      "window30SecondsPerCve": 35506.849315068495,
-      "totalEvents": 37332,
+      "window30SecondsPerCve": 34560.0,
+      "totalEvents": 37335,
       "percentileFaster": 95
     },
     {
@@ -1310,9 +1330,17 @@
       "percentileFaster": 95
     },
     {
+      "cna": "redhat",
+      "slug": "redhat",
+      "rank": 16,
+      "window30SecondsPerCve": 50823.529411764706,
+      "totalEvents": 6298,
+      "percentileFaster": 94
+    },
+    {
       "cna": "AMD",
       "slug": "amd",
-      "rank": 16,
+      "rank": 17,
       "window30SecondsPerCve": 51840.0,
       "totalEvents": 590,
       "percentileFaster": 94
@@ -1320,17 +1348,9 @@
     {
       "cna": "ibm",
       "slug": "ibm",
-      "rank": 17,
+      "rank": 18,
       "window30SecondsPerCve": 54000.0,
       "totalEvents": 4049,
-      "percentileFaster": 94
-    },
-    {
-      "cna": "redhat",
-      "slug": "redhat",
-      "rank": 18,
-      "window30SecondsPerCve": 55148.936170212764,
-      "totalEvents": 6294,
       "percentileFaster": 94
     },
     {

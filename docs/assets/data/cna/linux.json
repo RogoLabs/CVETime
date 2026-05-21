@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-20T00:53:39.515415+00:00",
+  "generatedAt": "2026-05-21T00:54:29.970032+00:00",
   "cna": {
     "name": "Linux",
     "slug": "linux",
@@ -191,17 +191,17 @@
   "severity": {
     "summary": {
       "HIGH": {
-        "count": 766,
+        "count": 770,
         "medianSeconds": 1.0,
         "p90Seconds": 6.0
       },
       "NAN": {
-        "count": 6965,
+        "count": 6960,
         "medianSeconds": 1.0,
         "p90Seconds": 6.0
       },
       "MEDIUM": {
-        "count": 1136,
+        "count": 1135,
         "medianSeconds": 1.0,
         "p90Seconds": 4.0
       },
@@ -211,9 +211,9 @@
         "p90Seconds": 258.79999999999995
       },
       "CRITICAL": {
-        "count": 56,
+        "count": 58,
         "medianSeconds": 1.0,
-        "p90Seconds": 2.5
+        "p90Seconds": 2.3000000000000043
       }
     },
     "points": [
@@ -62219,8 +62219,8 @@
       {
         "date": "2026-05-08",
         "cveId": "CVE-2026-43378",
-        "severity": "NAN",
-        "severityValue": -1,
+        "severity": "CRITICAL",
+        "severityValue": 4,
         "timeToPublishSeconds": 1.0
       },
       {
@@ -62695,8 +62695,8 @@
       {
         "date": "2026-05-13",
         "cveId": "CVE-2026-43476",
-        "severity": "NAN",
-        "severityValue": -1,
+        "severity": "HIGH",
+        "severityValue": 3,
         "timeToPublishSeconds": 204101.0
       },
       {
@@ -62716,8 +62716,8 @@
       {
         "date": "2026-05-13",
         "cveId": "CVE-2026-43481",
-        "severity": "NAN",
-        "severityValue": -1,
+        "severity": "HIGH",
+        "severityValue": 3,
         "timeToPublishSeconds": 1.0
       },
       {
@@ -62751,15 +62751,15 @@
       {
         "date": "2026-05-15",
         "cveId": "CVE-2026-43490",
-        "severity": "NAN",
-        "severityValue": -1,
+        "severity": "HIGH",
+        "severityValue": 3,
         "timeToPublishSeconds": 137224.0
       },
       {
         "date": "2026-05-15",
         "cveId": "CVE-2026-46333",
-        "severity": "MEDIUM",
-        "severityValue": 2,
+        "severity": "HIGH",
+        "severityValue": 3,
         "timeToPublishSeconds": 27787.0
       },
       {
@@ -62779,8 +62779,8 @@
       {
         "date": "2026-05-19",
         "cveId": "CVE-2026-43493",
-        "severity": "NAN",
-        "severityValue": -1,
+        "severity": "CRITICAL",
+        "severityValue": 4,
         "timeToPublishSeconds": 1.0
       }
     ]
@@ -62790,8 +62790,8 @@
       "cna": "GitHub_M",
       "slug": "github-m",
       "rank": 1,
-      "window30SecondsPerCve": 2080.2568218298557,
-      "totalEvents": 14591,
+      "window30SecondsPerCve": 2100.486223662885,
+      "totalEvents": 14604,
       "percentileFaster": 100
     },
     {
@@ -62814,32 +62814,32 @@
       "cna": "VulnCheck",
       "slug": "vulncheck",
       "rank": 4,
-      "window30SecondsPerCve": 5634.782608695652,
-      "totalEvents": 2960,
+      "window30SecondsPerCve": 5526.652452025586,
+      "totalEvents": 2982,
       "percentileFaster": 99
     },
     {
       "cna": "Wordfence",
       "slug": "wordfence",
       "rank": 5,
-      "window30SecondsPerCve": 14320.441988950277,
-      "totalEvents": 6669,
-      "percentileFaster": 98
-    },
-    {
-      "cna": "Chrome",
-      "slug": "chrome",
-      "rank": 6,
-      "window30SecondsPerCve": 21781.51260504202,
-      "totalEvents": 1491,
+      "window30SecondsPerCve": 12705.882352941177,
+      "totalEvents": 6692,
       "percentileFaster": 98
     },
     {
       "cna": "microsoft",
       "slug": "microsoft",
+      "rank": 6,
+      "window30SecondsPerCve": 22539.130434782608,
+      "totalEvents": 5077,
+      "percentileFaster": 98
+    },
+    {
+      "cna": "Chrome",
+      "slug": "chrome",
       "rank": 7,
-      "window30SecondsPerCve": 23142.85714285714,
-      "totalEvents": 5074,
+      "window30SecondsPerCve": 22736.842105263157,
+      "totalEvents": 1501,
       "percentileFaster": 98
     },
     {
@@ -62886,8 +62886,8 @@
       "cna": "mitre",
       "slug": "mitre",
       "rank": 13,
-      "window30SecondsPerCve": 35506.849315068495,
-      "totalEvents": 37332,
+      "window30SecondsPerCve": 34560.0,
+      "totalEvents": 37335,
       "percentileFaster": 95
     },
     {
@@ -62907,9 +62907,17 @@
       "percentileFaster": 95
     },
     {
+      "cna": "redhat",
+      "slug": "redhat",
+      "rank": 16,
+      "window30SecondsPerCve": 50823.529411764706,
+      "totalEvents": 6298,
+      "percentileFaster": 94
+    },
+    {
       "cna": "AMD",
       "slug": "amd",
-      "rank": 16,
+      "rank": 17,
       "window30SecondsPerCve": 51840.0,
       "totalEvents": 590,
       "percentileFaster": 94
@@ -62917,17 +62925,9 @@
     {
       "cna": "ibm",
       "slug": "ibm",
-      "rank": 17,
+      "rank": 18,
       "window30SecondsPerCve": 54000.0,
       "totalEvents": 4049,
-      "percentileFaster": 94
-    },
-    {
-      "cna": "redhat",
-      "slug": "redhat",
-      "rank": 18,
-      "window30SecondsPerCve": 55148.936170212764,
-      "totalEvents": 6294,
       "percentileFaster": 94
     },
     {
