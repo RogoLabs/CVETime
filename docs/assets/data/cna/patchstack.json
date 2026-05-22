@@ -1,17 +1,17 @@
 {
-  "generatedAt": "2026-05-21T00:54:33.222864+00:00",
+  "generatedAt": "2026-05-22T00:52:46.411486+00:00",
   "cna": {
     "name": "Patchstack",
     "slug": "patchstack",
-    "rank": 27,
-    "window30SecondsPerCve": 72000.0,
-    "window90SecondsPerCve": 22803.519061583578,
-    "totalEvents": 11227,
+    "rank": 25,
+    "window30SecondsPerCve": 66461.53846153847,
+    "window90SecondsPerCve": 26181.81818181818,
+    "totalEvents": 11231,
     "consistencyScore": 0,
     "consistencyGrade": "F",
     "consistencyMedianSeconds": 82.0,
-    "consistencyP90Seconds": 1281.0,
-    "percentileFaster": 90
+    "consistencyP90Seconds": 1287.2000000000007,
+    "percentileFaster": 91
   },
   "trend": [
     {
@@ -352,32 +352,32 @@
     },
     {
       "date": "2026-05-01",
-      "p50IntervalSeconds": 2257.0,
-      "p90IntervalSeconds": 364382.80000000016,
-      "eventCount": 23
+      "p50IntervalSeconds": 2651.0,
+      "p90IntervalSeconds": 269908.4000000005,
+      "eventCount": 27
     }
   ],
   "metrics": {
     "p50Seconds": 82.0,
-    "p90Seconds": 1281.0,
-    "trimmedCount": 10664
+    "p90Seconds": 1287.2000000000007,
+    "trimmedCount": 10668
   },
   "severity": {
     "summary": {
       "MEDIUM": {
-        "count": 6935,
-        "medianSeconds": 94.0,
-        "p90Seconds": 1513.0000000000036
+        "count": 6939,
+        "medianSeconds": 95.0,
+        "p90Seconds": 1527.7999999999993
       },
       "CRITICAL": {
-        "count": 754,
+        "count": 755,
         "medianSeconds": 90.0,
-        "p90Seconds": 1510.4000000000005
+        "p90Seconds": 1533.8000000000006
       },
       "HIGH": {
-        "count": 3438,
+        "count": 3437,
         "medianSeconds": 58.0,
-        "p90Seconds": 914.2000000000007
+        "p90Seconds": 914.6000000000004
       },
       "LOW": {
         "count": 82,
@@ -76638,8 +76638,8 @@
       {
         "date": "2026-02-20",
         "cveId": "CVE-2025-67972",
-        "severity": "HIGH",
-        "severityValue": 3,
+        "severity": "MEDIUM",
+        "severityValue": 2,
         "timeToPublishSeconds": 1.0
       },
       {
@@ -78972,6 +78972,34 @@
         "severity": "CRITICAL",
         "severityValue": 4,
         "timeToPublishSeconds": 18301.0
+      },
+      {
+        "date": "2026-05-21",
+        "cveId": "CVE-2026-27349",
+        "severity": "MEDIUM",
+        "severityValue": 2,
+        "timeToPublishSeconds": 51634.0
+      },
+      {
+        "date": "2026-05-21",
+        "cveId": "CVE-2026-27393",
+        "severity": "MEDIUM",
+        "severityValue": 2,
+        "timeToPublishSeconds": 212.0
+      },
+      {
+        "date": "2026-05-21",
+        "cveId": "CVE-2026-39531",
+        "severity": "CRITICAL",
+        "severityValue": 4,
+        "timeToPublishSeconds": 24207.0
+      },
+      {
+        "date": "2026-05-21",
+        "cveId": "CVE-2026-39593",
+        "severity": "MEDIUM",
+        "severityValue": 2,
+        "timeToPublishSeconds": 6485.0
       }
     ]
   },
@@ -78996,24 +79024,24 @@
       "cna": "Linux",
       "slug": "linux",
       "rank": 3,
-      "window30SecondsPerCve": 4173.913043478261,
-      "totalEvents": 8939,
+      "window30SecondsPerCve": 4133.971291866029,
+      "totalEvents": 8946,
       "percentileFaster": 99
     },
     {
       "cna": "VulnCheck",
       "slug": "vulncheck",
       "rank": 4,
-      "window30SecondsPerCve": 5526.652452025586,
-      "totalEvents": 2982,
+      "window30SecondsPerCve": 5257.606490872211,
+      "totalEvents": 3023,
       "percentileFaster": 99
     },
     {
       "cna": "Wordfence",
       "slug": "wordfence",
       "rank": 5,
-      "window30SecondsPerCve": 12705.882352941177,
-      "totalEvents": 6692,
+      "window30SecondsPerCve": 12768.47290640394,
+      "totalEvents": 6699,
       "percentileFaster": 98
     },
     {
@@ -79036,8 +79064,8 @@
       "cna": "apache",
       "slug": "apache",
       "rank": 8,
-      "window30SecondsPerCve": 24923.076923076922,
-      "totalEvents": 1863,
+      "window30SecondsPerCve": 25165.04854368932,
+      "totalEvents": 1865,
       "percentileFaster": 97
     },
     {
@@ -79077,7 +79105,7 @@
       "slug": "mitre",
       "rank": 13,
       "window30SecondsPerCve": 34560.0,
-      "totalEvents": 37335,
+      "totalEvents": 37337,
       "percentileFaster": 95
     },
     {
