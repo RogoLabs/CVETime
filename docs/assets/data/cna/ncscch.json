@@ -1,17 +1,17 @@
 {
-  "generatedAt": "2026-05-22T00:52:43.818786+00:00",
+  "generatedAt": "2026-05-23T00:51:08.235648+00:00",
   "cna": {
     "name": "NCSC.ch",
     "slug": "ncscch",
-    "rank": 90,
-    "window30SecondsPerCve": 259200.0,
-    "window90SecondsPerCve": 216000.0,
-    "totalEvents": 144,
+    "rank": 74,
+    "window30SecondsPerCve": 199384.61538461538,
+    "window90SecondsPerCve": 194400.0,
+    "totalEvents": 148,
     "consistencyScore": 0,
     "consistencyGrade": "F",
-    "consistencyMedianSeconds": 221.0,
-    "consistencyP90Seconds": 3682883.5999999996,
-    "percentileFaster": 67
+    "consistencyMedianSeconds": 163.0,
+    "consistencyP90Seconds": 3627456.8000000007,
+    "percentileFaster": 73
   },
   "trend": [
     {
@@ -238,27 +238,27 @@
     },
     {
       "date": "2026-05-01",
-      "p50IntervalSeconds": 49.0,
-      "p90IntervalSeconds": 632461.8,
-      "eventCount": 8
+      "p50IntervalSeconds": 84.0,
+      "p90IntervalSeconds": 675413.4,
+      "eventCount": 12
     }
   ],
   "metrics": {
-    "p50Seconds": 221.0,
-    "p90Seconds": 3682883.5999999996,
-    "trimmedCount": 135
+    "p50Seconds": 163.0,
+    "p90Seconds": 3627456.8000000007,
+    "trimmedCount": 139
   },
   "severity": {
     "summary": {
       "HIGH": {
-        "count": 52,
+        "count": 53,
         "medianSeconds": 156.0,
-        "p90Seconds": 3389115.5999999973
+        "p90Seconds": 3206201.2000000076
       },
       "MEDIUM": {
-        "count": 62,
-        "medianSeconds": 192.0,
-        "p90Seconds": 2676772.6
+        "count": 64,
+        "medianSeconds": 157.5,
+        "p90Seconds": 2673517.8
       },
       "LOW": {
         "count": 6,
@@ -266,9 +266,9 @@
         "p90Seconds": 2299919.5
       },
       "CRITICAL": {
-        "count": 23,
-        "medianSeconds": 78951.0,
-        "p90Seconds": 3611749.400000001
+        "count": 24,
+        "medianSeconds": 272058.0,
+        "p90Seconds": 3515325.599999999
       }
     },
     "points": [
@@ -1272,6 +1272,34 @@
         "severity": "CRITICAL",
         "severityValue": 4,
         "timeToPublishSeconds": 45.0
+      },
+      {
+        "date": "2026-05-22",
+        "cveId": "CVE-2026-8670",
+        "severity": "CRITICAL",
+        "severityValue": 4,
+        "timeToPublishSeconds": 1209420.0
+      },
+      {
+        "date": "2026-05-22",
+        "cveId": "CVE-2026-8671",
+        "severity": "HIGH",
+        "severityValue": 3,
+        "timeToPublishSeconds": 156.0
+      },
+      {
+        "date": "2026-05-22",
+        "cveId": "CVE-2026-8672",
+        "severity": "MEDIUM",
+        "severityValue": 2,
+        "timeToPublishSeconds": 97.0
+      },
+      {
+        "date": "2026-05-22",
+        "cveId": "CVE-2026-8673",
+        "severity": "MEDIUM",
+        "severityValue": 2,
+        "timeToPublishSeconds": 71.0
       }
     ]
   },
@@ -1280,8 +1308,8 @@
       "cna": "GitHub_M",
       "slug": "github-m",
       "rank": 1,
-      "window30SecondsPerCve": 2100.486223662885,
-      "totalEvents": 14604,
+      "window30SecondsPerCve": 2352.087114337568,
+      "totalEvents": 14634,
       "percentileFaster": 100
     },
     {
@@ -1312,16 +1340,16 @@
       "cna": "Wordfence",
       "slug": "wordfence",
       "rank": 5,
-      "window30SecondsPerCve": 12768.47290640394,
-      "totalEvents": 6699,
+      "window30SecondsPerCve": 13090.90909090909,
+      "totalEvents": 6710,
       "percentileFaster": 98
     },
     {
       "cna": "microsoft",
       "slug": "microsoft",
       "rank": 6,
-      "window30SecondsPerCve": 22539.130434782608,
-      "totalEvents": 5077,
+      "window30SecondsPerCve": 20903.225806451614,
+      "totalEvents": 5087,
       "percentileFaster": 98
     },
     {
@@ -1336,8 +1364,8 @@
       "cna": "apache",
       "slug": "apache",
       "rank": 8,
-      "window30SecondsPerCve": 25165.04854368932,
-      "totalEvents": 1865,
+      "window30SecondsPerCve": 24685.714285714286,
+      "totalEvents": 1868,
       "percentileFaster": 97
     },
     {
@@ -1376,8 +1404,8 @@
       "cna": "mitre",
       "slug": "mitre",
       "rank": 13,
-      "window30SecondsPerCve": 34560.0,
-      "totalEvents": 37337,
+      "window30SecondsPerCve": 34105.26315789474,
+      "totalEvents": 37339,
       "percentileFaster": 95
     },
     {
