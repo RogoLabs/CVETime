@@ -1,17 +1,17 @@
 {
-  "generatedAt": "2026-05-27T00:53:34.163993+00:00",
+  "generatedAt": "2026-05-28T00:49:41.080330+00:00",
   "cna": {
     "name": "GitLab",
     "slug": "gitlab",
-    "rank": 12,
-    "window30SecondsPerCve": 32810.126582278484,
-    "window90SecondsPerCve": 58029.850746268654,
-    "totalEvents": 1041,
+    "rank": 13,
+    "window30SecondsPerCve": 35027.02702702703,
+    "window90SecondsPerCve": 60279.06976744186,
+    "totalEvents": 1048,
     "consistencyScore": 0,
     "consistencyGrade": "F",
-    "consistencyMedianSeconds": 96.0,
-    "consistencyP90Seconds": 689798.5000000001,
-    "percentileFaster": 96
+    "consistencyMedianSeconds": 94.0,
+    "consistencyP90Seconds": 690726.9999999999,
+    "percentileFaster": 95
   },
   "trend": [
     {
@@ -437,26 +437,26 @@
     {
       "date": "2026-05-01",
       "p50IntervalSeconds": 10.0,
-      "p90IntervalSeconds": 42.00000000000003,
-      "eventCount": 25
+      "p90IntervalSeconds": 2030.0000000000048,
+      "eventCount": 32
     }
   ],
   "metrics": {
-    "p50Seconds": 96.0,
-    "p90Seconds": 689798.5000000001,
-    "trimmedCount": 942
+    "p50Seconds": 94.0,
+    "p90Seconds": 690726.9999999999,
+    "trimmedCount": 948
   },
   "severity": {
     "summary": {
       "MEDIUM": {
-        "count": 641,
+        "count": 647,
         "medianSeconds": 80.0,
         "p90Seconds": 604800.0
       },
       "HIGH": {
-        "count": 214,
-        "medianSeconds": 202.5,
-        "p90Seconds": 699682.400000001
+        "count": 215,
+        "medianSeconds": 194.0,
+        "p90Seconds": 694116.1999999997
       },
       "CRITICAL": {
         "count": 25,
@@ -7754,6 +7754,55 @@
         "severity": "MEDIUM",
         "severityValue": 2,
         "timeToPublishSeconds": 10.0
+      },
+      {
+        "date": "2026-05-27",
+        "cveId": "CVE-2026-8716",
+        "severity": "MEDIUM",
+        "severityValue": 2,
+        "timeToPublishSeconds": 1167382.0
+      },
+      {
+        "date": "2026-05-27",
+        "cveId": "CVE-2026-6713",
+        "severity": "MEDIUM",
+        "severityValue": 2,
+        "timeToPublishSeconds": 14.0
+      },
+      {
+        "date": "2026-05-27",
+        "cveId": "CVE-2026-5296",
+        "severity": "MEDIUM",
+        "severityValue": 2,
+        "timeToPublishSeconds": 5.0
+      },
+      {
+        "date": "2026-05-27",
+        "cveId": "CVE-2026-4868",
+        "severity": "HIGH",
+        "severityValue": 3,
+        "timeToPublishSeconds": 5.0
+      },
+      {
+        "date": "2026-05-27",
+        "cveId": "CVE-2026-2601",
+        "severity": "MEDIUM",
+        "severityValue": 2,
+        "timeToPublishSeconds": 15.0
+      },
+      {
+        "date": "2026-05-27",
+        "cveId": "CVE-2026-1402",
+        "severity": "MEDIUM",
+        "severityValue": 2,
+        "timeToPublishSeconds": 10.0
+      },
+      {
+        "date": "2026-05-27",
+        "cveId": "CVE-2026-9759",
+        "severity": "MEDIUM",
+        "severityValue": 2,
+        "timeToPublishSeconds": 2250.0
       }
     ]
   },
@@ -7762,40 +7811,40 @@
       "cna": "GitHub_M",
       "slug": "github-m",
       "rank": 1,
-      "window30SecondsPerCve": 2499.5178399228544,
-      "totalEvents": 14707,
+      "window30SecondsPerCve": 2244.155844155844,
+      "totalEvents": 14825,
+      "percentileFaster": 100
+    },
+    {
+      "cna": "Linux",
+      "slug": "linux",
+      "rank": 2,
+      "window30SecondsPerCve": 3692.3076923076924,
+      "totalEvents": 9208,
       "percentileFaster": 100
     },
     {
       "cna": "VulDB",
       "slug": "vuldb",
-      "rank": 2,
-      "window30SecondsPerCve": 3415.01976284585,
-      "totalEvents": 14104,
-      "percentileFaster": 100
+      "rank": 3,
+      "window30SecondsPerCve": 3702.8571428571427,
+      "totalEvents": 14113,
+      "percentileFaster": 99
     },
     {
       "cna": "VulnCheck",
       "slug": "vulncheck",
-      "rank": 3,
-      "window30SecondsPerCve": 5772.8285077951,
-      "totalEvents": 3063,
-      "percentileFaster": 99
-    },
-    {
-      "cna": "Linux",
-      "slug": "linux",
       "rank": 4,
-      "window30SecondsPerCve": 5824.7191011235955,
-      "totalEvents": 8951,
+      "window30SecondsPerCve": 5709.251101321586,
+      "totalEvents": 3069,
       "percentileFaster": 99
     },
     {
       "cna": "Wordfence",
       "slug": "wordfence",
       "rank": 5,
-      "window30SecondsPerCve": 13224.489795918367,
-      "totalEvents": 6713,
+      "window30SecondsPerCve": 11781.818181818182,
+      "totalEvents": 6747,
       "percentileFaster": 98
     },
     {
@@ -7839,33 +7888,41 @@
       "percentileFaster": 97
     },
     {
+      "cna": "Patchstack",
+      "slug": "patchstack",
+      "rank": 11,
+      "window30SecondsPerCve": 29454.545454545456,
+      "totalEvents": 11289,
+      "percentileFaster": 96
+    },
+    {
       "cna": "mitre",
       "slug": "mitre",
-      "rank": 11,
-      "window30SecondsPerCve": 30139.53488372093,
-      "totalEvents": 37355,
+      "rank": 12,
+      "window30SecondsPerCve": 29793.103448275862,
+      "totalEvents": 37360,
       "percentileFaster": 96
     },
     {
       "cna": "GitLab",
       "slug": "gitlab",
-      "rank": 12,
-      "window30SecondsPerCve": 32810.126582278484,
-      "totalEvents": 1041,
-      "percentileFaster": 96
+      "rank": 13,
+      "window30SecondsPerCve": 35027.02702702703,
+      "totalEvents": 1048,
+      "percentileFaster": 95
     },
     {
-      "cna": "Patchstack",
-      "slug": "patchstack",
-      "rank": 13,
-      "window30SecondsPerCve": 36507.042253521126,
-      "totalEvents": 11268,
+      "cna": "ibm",
+      "slug": "ibm",
+      "rank": 14,
+      "window30SecondsPerCve": 41142.857142857145,
+      "totalEvents": 4098,
       "percentileFaster": 95
     },
     {
       "cna": "oracle",
       "slug": "oracle",
-      "rank": 14,
+      "rank": 15,
       "window30SecondsPerCve": 41806.45161290323,
       "totalEvents": 1339,
       "percentileFaster": 95
@@ -7873,49 +7930,41 @@
     {
       "cna": "canonical",
       "slug": "canonical",
-      "rank": 15,
+      "rank": 16,
       "window30SecondsPerCve": 48000.0,
       "totalEvents": 400,
-      "percentileFaster": 95
-    },
-    {
-      "cna": "AMD",
-      "slug": "amd",
-      "rank": 16,
-      "window30SecondsPerCve": 51840.0,
-      "totalEvents": 590,
       "percentileFaster": 94
     },
     {
-      "cna": "mozilla",
-      "slug": "mozilla",
+      "cna": "CERTVDE",
+      "slug": "certvde",
       "rank": 17,
-      "window30SecondsPerCve": 54000.0,
-      "totalEvents": 998,
+      "window30SecondsPerCve": 49846.153846153844,
+      "totalEvents": 623,
       "percentileFaster": 94
     },
     {
       "cna": "CPANSec",
       "slug": "cpansec",
       "rank": 18,
-      "window30SecondsPerCve": 56347.82608695652,
-      "totalEvents": 135,
+      "window30SecondsPerCve": 50823.529411764706,
+      "totalEvents": 140,
       "percentileFaster": 94
     },
     {
-      "cna": "@huntrdev",
-      "slug": "huntrdev",
+      "cna": "AMD",
+      "slug": "amd",
       "rank": 19,
-      "window30SecondsPerCve": 57600.0,
-      "totalEvents": 1196,
+      "window30SecondsPerCve": 51840.0,
+      "totalEvents": 590,
       "percentileFaster": 93
     },
     {
-      "cna": "zdi",
-      "slug": "zdi",
+      "cna": "mozilla",
+      "slug": "mozilla",
       "rank": 20,
-      "window30SecondsPerCve": 57600.0,
-      "totalEvents": 2343,
+      "window30SecondsPerCve": 54000.0,
+      "totalEvents": 998,
       "percentileFaster": 93
     }
   ]
