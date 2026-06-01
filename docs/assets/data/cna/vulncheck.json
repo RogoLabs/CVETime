@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-05-31T00:56:09.070716+00:00",
+  "generatedAt": "2026-06-01T00:58:37.730720+00:00",
   "cna": {
     "name": "VulnCheck",
     "slug": "vulncheck",
     "rank": 4,
-    "window30SecondsPerCve": 5917.808219178082,
-    "window90SecondsPerCve": 5610.38961038961,
-    "totalEvents": 3130,
+    "window30SecondsPerCve": 6000.0,
+    "window90SecondsPerCve": 5602.305475504323,
+    "totalEvents": 3132,
     "consistencyScore": 0,
     "consistencyGrade": "F",
     "consistencyMedianSeconds": 8.0,
-    "consistencyP90Seconds": 11328.000000000058,
+    "consistencyP90Seconds": 11500.0,
     "percentileFaster": 99
   },
   "trend": [
@@ -191,21 +191,21 @@
     {
       "date": "2026-05-01",
       "p50IntervalSeconds": 1.0,
-      "p90IntervalSeconds": 5944.800000000005,
-      "eventCount": 430
+      "p90IntervalSeconds": 6095.200000000006,
+      "eventCount": 432
     }
   ],
   "metrics": {
     "p50Seconds": 8.0,
-    "p90Seconds": 11328.000000000058,
-    "trimmedCount": 2972
+    "p90Seconds": 11500.0,
+    "trimmedCount": 2974
   },
   "severity": {
     "summary": {
       "HIGH": {
-        "count": 1375,
+        "count": 1377,
         "medianSeconds": 2.0,
-        "p90Seconds": 8431.400000000049
+        "p90Seconds": 8582.600000000002
       },
       "CRITICAL": {
         "count": 506,
@@ -22131,6 +22131,20 @@
         "severity": "HIGH",
         "severityValue": 3,
         "timeToPublishSeconds": 1.0
+      },
+      {
+        "date": "2026-05-31",
+        "cveId": "CVE-2026-49489",
+        "severity": "HIGH",
+        "severityValue": 3,
+        "timeToPublishSeconds": 76159.0
+      },
+      {
+        "date": "2026-05-31",
+        "cveId": "CVE-2026-49490",
+        "severity": "HIGH",
+        "severityValue": 3,
+        "timeToPublishSeconds": 187.0
       }
     ]
   },
@@ -22155,24 +22169,24 @@
       "cna": "VulDB",
       "slug": "vuldb",
       "rank": 3,
-      "window30SecondsPerCve": 4327.212020033389,
-      "totalEvents": 14146,
+      "window30SecondsPerCve": 4235.294117647059,
+      "totalEvents": 14194,
       "percentileFaster": 99
     },
     {
       "cna": "VulnCheck",
       "slug": "vulncheck",
       "rank": 4,
-      "window30SecondsPerCve": 5917.808219178082,
-      "totalEvents": 3130,
+      "window30SecondsPerCve": 6000.0,
+      "totalEvents": 3132,
       "percentileFaster": 99
     },
     {
       "cna": "Wordfence",
       "slug": "wordfence",
       "rank": 5,
-      "window30SecondsPerCve": 10536.585365853658,
-      "totalEvents": 6778,
+      "window30SecondsPerCve": 10579.591836734693,
+      "totalEvents": 6779,
       "percentileFaster": 98
     },
     {
@@ -22275,8 +22289,8 @@
       "cna": "CPANSec",
       "slug": "cpansec",
       "rank": 18,
-      "window30SecondsPerCve": 52897.95918367347,
-      "totalEvents": 143,
+      "window30SecondsPerCve": 51840.0,
+      "totalEvents": 144,
       "percentileFaster": 94
     },
     {
