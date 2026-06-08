@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-06-07T00:57:54.661190+00:00",
+  "generatedAt": "2026-06-08T00:58:57.129711+00:00",
   "cna": {
     "name": "VulnCheck",
     "slug": "vulncheck",
     "rank": 4,
-    "window30SecondsPerCve": 5877.551020408163,
-    "window90SecondsPerCve": 5688.368690563278,
-    "totalEvents": 3202,
+    "window30SecondsPerCve": 5890.909090909091,
+    "window90SecondsPerCve": 5684.210526315789,
+    "totalEvents": 3203,
     "consistencyScore": 0,
     "consistencyGrade": "F",
     "consistencyMedianSeconds": 9.0,
-    "consistencyP90Seconds": 12336.0,
+    "consistencyP90Seconds": 12410.700000000008,
     "percentileFaster": 99
   },
   "trend": [
@@ -196,22 +196,22 @@
     },
     {
       "date": "2026-06-01",
-      "p50IntervalSeconds": 376.5,
-      "p90IntervalSeconds": 14206.500000000002,
-      "eventCount": 70
+      "p50IntervalSeconds": 416.0,
+      "p90IntervalSeconds": 15921.0,
+      "eventCount": 71
     }
   ],
   "metrics": {
     "p50Seconds": 9.0,
-    "p90Seconds": 12336.0,
+    "p90Seconds": 12410.700000000008,
     "trimmedCount": 3041
   },
   "severity": {
     "summary": {
       "HIGH": {
-        "count": 1418,
+        "count": 1419,
         "medianSeconds": 2.0,
-        "p90Seconds": 8323.699999999984
+        "p90Seconds": 8578.800000000001
       },
       "CRITICAL": {
         "count": 517,
@@ -22641,6 +22641,13 @@
         "severity": "HIGH",
         "severityValue": 3,
         "timeToPublishSeconds": 5159.0
+      },
+      {
+        "date": "2026-06-07",
+        "cveId": "CVE-2026-49494",
+        "severity": "HIGH",
+        "severityValue": 3,
+        "timeToPublishSeconds": 138370.0
       }
     ]
   },
@@ -22665,16 +22672,16 @@
       "cna": "VulDB",
       "slug": "vuldb",
       "rank": 3,
-      "window30SecondsPerCve": 3951.2195121951218,
-      "totalEvents": 14376,
+      "window30SecondsPerCve": 4012.3839009287926,
+      "totalEvents": 14398,
       "percentileFaster": 99
     },
     {
       "cna": "VulnCheck",
       "slug": "vulncheck",
       "rank": 4,
-      "window30SecondsPerCve": 5877.551020408163,
-      "totalEvents": 3202,
+      "window30SecondsPerCve": 5890.909090909091,
+      "totalEvents": 3203,
       "percentileFaster": 99
     },
     {
