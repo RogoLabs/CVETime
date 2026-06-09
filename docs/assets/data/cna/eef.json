@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-06-08T00:58:46.745780+00:00",
+  "generatedAt": "2026-06-09T00:51:17.875518+00:00",
   "cna": {
     "name": "EEF",
     "slug": "eef",
-    "rank": 26,
-    "window30SecondsPerCve": 61714.28571428572,
-    "window90SecondsPerCve": 121500.0,
-    "totalEvents": 77,
+    "rank": 25,
+    "window30SecondsPerCve": 60279.06976744186,
+    "window90SecondsPerCve": 114352.94117647059,
+    "totalEvents": 83,
     "consistencyScore": 0,
     "consistencyGrade": "F",
-    "consistencyMedianSeconds": 8513.0,
-    "consistencyP90Seconds": 573587.0,
+    "consistencyMedianSeconds": 4239.0,
+    "consistencyP90Seconds": 547818.6000000001,
     "percentileFaster": 91
   },
   "trend": [
@@ -64,32 +64,32 @@
     },
     {
       "date": "2026-06-01",
-      "p50IntervalSeconds": 8.0,
-      "p90IntervalSeconds": 17582.0,
-      "eventCount": 11
+      "p50IntervalSeconds": 21.0,
+      "p90IntervalSeconds": 189966.40000000014,
+      "eventCount": 17
     }
   ],
   "metrics": {
-    "p50Seconds": 8513.0,
-    "p90Seconds": 573587.0,
-    "trimmedCount": 72
+    "p50Seconds": 4239.0,
+    "p90Seconds": 547818.6000000001,
+    "trimmedCount": 77
   },
   "severity": {
     "summary": {
       "LOW": {
-        "count": 9,
-        "medianSeconds": 17582.0,
-        "p90Seconds": 764759.6000000004
+        "count": 10,
+        "medianSeconds": 10822.0,
+        "p90Seconds": 516296.7999999991
       },
       "HIGH": {
-        "count": 41,
-        "medianSeconds": 16669.0,
-        "p90Seconds": 597324.0
+        "count": 44,
+        "medianSeconds": 13308.5,
+        "p90Seconds": 576987.6000000002
       },
       "MEDIUM": {
-        "count": 23,
+        "count": 25,
         "medianSeconds": 32.0,
-        "p90Seconds": 529588.6000000001
+        "p90Seconds": 509327.2000000001
       },
       "CRITICAL": {
         "count": 3,
@@ -629,6 +629,48 @@
         "severity": "LOW",
         "severityValue": 1,
         "timeToPublishSeconds": 42.0
+      },
+      {
+        "date": "2026-06-08",
+        "cveId": "CVE-2026-43974",
+        "severity": "HIGH",
+        "severityValue": 3,
+        "timeToPublishSeconds": 500585.0
+      },
+      {
+        "date": "2026-06-08",
+        "cveId": "CVE-2026-43972",
+        "severity": "MEDIUM",
+        "severityValue": 2,
+        "timeToPublishSeconds": 2.0
+      },
+      {
+        "date": "2026-06-08",
+        "cveId": "CVE-2026-43973",
+        "severity": "HIGH",
+        "severityValue": 3,
+        "timeToPublishSeconds": 4.0
+      },
+      {
+        "date": "2026-06-08",
+        "cveId": "CVE-2026-49756",
+        "severity": "LOW",
+        "severityValue": 1,
+        "timeToPublishSeconds": 4062.0
+      },
+      {
+        "date": "2026-06-08",
+        "cveId": "CVE-2026-49755",
+        "severity": "HIGH",
+        "severityValue": 3,
+        "timeToPublishSeconds": 33.0
+      },
+      {
+        "date": "2026-06-08",
+        "cveId": "CVE-2026-43966",
+        "severity": "MEDIUM",
+        "severityValue": 2,
+        "timeToPublishSeconds": 4416.0
       }
     ]
   },
@@ -637,48 +679,48 @@
       "cna": "GitHub_M",
       "slug": "github-m",
       "rank": 1,
-      "window30SecondsPerCve": 1887.836853605244,
-      "totalEvents": 15176,
-      "percentileFaster": 100
-    },
-    {
-      "cna": "Linux",
-      "slug": "linux",
-      "rank": 2,
-      "window30SecondsPerCve": 3460.6141522029375,
-      "totalEvents": 9367,
+      "window30SecondsPerCve": 2230.6368330464716,
+      "totalEvents": 15201,
       "percentileFaster": 100
     },
     {
       "cna": "VulDB",
       "slug": "vuldb",
+      "rank": 2,
+      "window30SecondsPerCve": 3655.8533145275037,
+      "totalEvents": 14471,
+      "percentileFaster": 100
+    },
+    {
+      "cna": "Linux",
+      "slug": "linux",
       "rank": 3,
-      "window30SecondsPerCve": 4012.3839009287926,
-      "totalEvents": 14398,
+      "window30SecondsPerCve": 5366.459627329193,
+      "totalEvents": 9408,
       "percentileFaster": 99
     },
     {
       "cna": "VulnCheck",
       "slug": "vulncheck",
       "rank": 4,
-      "window30SecondsPerCve": 5890.909090909091,
-      "totalEvents": 3203,
+      "window30SecondsPerCve": 5709.251101321586,
+      "totalEvents": 3220,
       "percentileFaster": 99
     },
     {
       "cna": "Chrome",
       "slug": "chrome",
       "rank": 5,
-      "window30SecondsPerCve": 7807.22891566265,
-      "totalEvents": 1738,
+      "window30SecondsPerCve": 8000.0,
+      "totalEvents": 1781,
       "percentileFaster": 99
     },
     {
       "cna": "Wordfence",
       "slug": "wordfence",
       "rank": 6,
-      "window30SecondsPerCve": 11269.565217391304,
-      "totalEvents": 6822,
+      "window30SecondsPerCve": 11469.026548672566,
+      "totalEvents": 6823,
       "percentileFaster": 98
     },
     {
@@ -709,8 +751,8 @@
       "cna": "apache",
       "slug": "apache",
       "rank": 10,
-      "window30SecondsPerCve": 27870.967741935485,
-      "totalEvents": 1912,
+      "window30SecondsPerCve": 27574.468085106382,
+      "totalEvents": 1926,
       "percentileFaster": 97
     },
     {
@@ -722,27 +764,27 @@
       "percentileFaster": 96
     },
     {
-      "cna": "mitre",
-      "slug": "mitre",
+      "cna": "GitLab",
+      "slug": "gitlab",
       "rank": 12,
-      "window30SecondsPerCve": 32810.126582278484,
-      "totalEvents": 37381,
+      "window30SecondsPerCve": 34560.0,
+      "totalEvents": 1049,
       "percentileFaster": 96
     },
     {
-      "cna": "GitLab",
-      "slug": "gitlab",
+      "cna": "mitre",
+      "slug": "mitre",
       "rank": 13,
-      "window30SecondsPerCve": 34560.0,
-      "totalEvents": 1049,
+      "window30SecondsPerCve": 37565.217391304344,
+      "totalEvents": 37383,
       "percentileFaster": 96
     },
     {
       "cna": "redhat",
       "slug": "redhat",
       "rank": 14,
-      "window30SecondsPerCve": 38686.567164179105,
-      "totalEvents": 6346,
+      "window30SecondsPerCve": 37565.217391304344,
+      "totalEvents": 6350,
       "percentileFaster": 95
     },
     {
