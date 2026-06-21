@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-06-20T00:56:06.255403+00:00",
+  "generatedAt": "2026-06-21T01:01:32.662913+00:00",
   "cna": {
     "name": "VulDB",
     "slug": "vuldb",
     "rank": 2,
     "window30SecondsPerCve": 4133.971291866029,
-    "window90SecondsPerCve": 3804.3052837573387,
-    "totalEvents": 14518,
+    "window90SecondsPerCve": 3949.2127983748096,
+    "totalEvents": 14519,
     "consistencyScore": 0,
     "consistencyGrade": "F",
     "consistencyMedianSeconds": 1800.0,
@@ -323,14 +323,14 @@
     {
       "date": "2026-06-01",
       "p50IntervalSeconds": 901.0,
-      "p90IntervalSeconds": 2704.5,
-      "eventCount": 326
+      "p90IntervalSeconds": 3061.0000000000305,
+      "eventCount": 327
     }
   ],
   "metrics": {
     "p50Seconds": 1800.0,
     "p90Seconds": 12541.0,
-    "trimmedCount": 13251
+    "trimmedCount": 13252
   },
   "severity": {
     "summary": {
@@ -340,9 +340,9 @@
         "p90Seconds": 41101.40000000004
       },
       "MEDIUM": {
-        "count": 11268,
+        "count": 11269,
         "medianSeconds": 1800.0,
-        "p90Seconds": 9067.500000000005
+        "p90Seconds": 9157.800000000316
       },
       "NAN": {
         "count": 30,
@@ -101979,6 +101979,13 @@
         "severity": "MEDIUM",
         "severityValue": 2,
         "timeToPublishSeconds": 219596.0
+      },
+      {
+        "date": "2026-06-21",
+        "cveId": "CVE-2026-12770",
+        "severity": "MEDIUM",
+        "severityValue": 2,
+        "timeToPublishSeconds": 279901.0
       }
     ]
   },
@@ -101996,7 +102003,7 @@
       "slug": "vuldb",
       "rank": 2,
       "window30SecondsPerCve": 4133.971291866029,
-      "totalEvents": 14518,
+      "totalEvents": 14519,
       "percentileFaster": 100
     },
     {
@@ -102019,8 +102026,8 @@
       "cna": "VulnCheck",
       "slug": "vulncheck",
       "rank": 5,
-      "window30SecondsPerCve": 5422.594142259414,
-      "totalEvents": 3460,
+      "window30SecondsPerCve": 5598.272138228942,
+      "totalEvents": 3482,
       "percentileFaster": 99
     },
     {
@@ -102035,8 +102042,8 @@
       "cna": "Wordfence",
       "slug": "wordfence",
       "rank": 7,
-      "window30SecondsPerCve": 12960.0,
-      "totalEvents": 6892,
+      "window30SecondsPerCve": 13025.125628140704,
+      "totalEvents": 6895,
       "percentileFaster": 98
     },
     {
@@ -102096,19 +102103,19 @@
       "percentileFaster": 95
     },
     {
-      "cna": "mitre",
-      "slug": "mitre",
+      "cna": "CERTVDE",
+      "slug": "certvde",
       "rank": 15,
-      "window30SecondsPerCve": 39876.92307692308,
-      "totalEvents": 37398,
+      "window30SecondsPerCve": 40500.0,
+      "totalEvents": 638,
       "percentileFaster": 95
     },
     {
-      "cna": "CERTVDE",
-      "slug": "certvde",
+      "cna": "mitre",
+      "slug": "mitre",
       "rank": 16,
-      "window30SecondsPerCve": 40500.0,
-      "totalEvents": 638,
+      "window30SecondsPerCve": 41806.45161290323,
+      "totalEvents": 37399,
       "percentileFaster": 95
     },
     {

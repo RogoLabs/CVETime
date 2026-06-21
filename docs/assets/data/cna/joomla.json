@@ -1,17 +1,17 @@
 {
-  "generatedAt": "2026-06-20T00:55:56.692830+00:00",
+  "generatedAt": "2026-06-21T01:01:23.481074+00:00",
   "cna": {
     "name": "Joomla",
     "slug": "joomla",
-    "rank": 57,
-    "window30SecondsPerCve": 117818.18181818182,
-    "window90SecondsPerCve": 268137.9310344828,
-    "totalEvents": 190,
+    "rank": 47,
+    "window30SecondsPerCve": 103680.0,
+    "window90SecondsPerCve": 243000.0,
+    "totalEvents": 193,
     "consistencyScore": 0,
     "consistencyGrade": "F",
     "consistencyMedianSeconds": 10.0,
-    "consistencyP90Seconds": 3622843.0,
-    "percentileFaster": 80
+    "consistencyP90Seconds": 3619632.8000000003,
+    "percentileFaster": 83
   },
   "trend": [
     {
@@ -256,15 +256,15 @@
     },
     {
       "date": "2026-06-01",
-      "p50IntervalSeconds": 771590.0,
-      "p90IntervalSeconds": 771590.0,
-      "eventCount": 1
+      "p50IntervalSeconds": 385800.0,
+      "p90IntervalSeconds": 1149818.2000000002,
+      "eventCount": 4
     }
   ],
   "metrics": {
     "p50Seconds": 10.0,
-    "p90Seconds": 3622843.0,
-    "trimmedCount": 179
+    "p90Seconds": 3619632.8000000003,
+    "trimmedCount": 182
   },
   "severity": {
     "summary": {
@@ -284,9 +284,9 @@
         "p90Seconds": 2299028.400000001
       },
       "CRITICAL": {
-        "count": 22,
-        "medianSeconds": 612995.0,
-        "p90Seconds": 2953255.9000000013
+        "count": 25,
+        "medianSeconds": 454400.0,
+        "p90Seconds": 2764408.600000001
       },
       "LOW": {
         "count": 3,
@@ -1617,6 +1617,27 @@
         "severity": "CRITICAL",
         "severityValue": 4,
         "timeToPublishSeconds": 771590.0
+      },
+      {
+        "date": "2026-06-20",
+        "cveId": "CVE-2026-48909",
+        "severity": "CRITICAL",
+        "severityValue": 4,
+        "timeToPublishSeconds": 1311916.0
+      },
+      {
+        "date": "2026-06-20",
+        "cveId": "CVE-2026-48939",
+        "severity": "CRITICAL",
+        "severityValue": 4,
+        "timeToPublishSeconds": 4.0
+      },
+      {
+        "date": "2026-06-20",
+        "cveId": "CVE-2026-48908",
+        "severity": "CRITICAL",
+        "severityValue": 4,
+        "timeToPublishSeconds": 10.0
       }
     ]
   },
@@ -1634,7 +1655,7 @@
       "slug": "vuldb",
       "rank": 2,
       "window30SecondsPerCve": 4133.971291866029,
-      "totalEvents": 14518,
+      "totalEvents": 14519,
       "percentileFaster": 100
     },
     {
@@ -1657,8 +1678,8 @@
       "cna": "VulnCheck",
       "slug": "vulncheck",
       "rank": 5,
-      "window30SecondsPerCve": 5422.594142259414,
-      "totalEvents": 3460,
+      "window30SecondsPerCve": 5598.272138228942,
+      "totalEvents": 3482,
       "percentileFaster": 99
     },
     {
@@ -1673,8 +1694,8 @@
       "cna": "Wordfence",
       "slug": "wordfence",
       "rank": 7,
-      "window30SecondsPerCve": 12960.0,
-      "totalEvents": 6892,
+      "window30SecondsPerCve": 13025.125628140704,
+      "totalEvents": 6895,
       "percentileFaster": 98
     },
     {
@@ -1734,19 +1755,19 @@
       "percentileFaster": 95
     },
     {
-      "cna": "mitre",
-      "slug": "mitre",
+      "cna": "CERTVDE",
+      "slug": "certvde",
       "rank": 15,
-      "window30SecondsPerCve": 39876.92307692308,
-      "totalEvents": 37398,
+      "window30SecondsPerCve": 40500.0,
+      "totalEvents": 638,
       "percentileFaster": 95
     },
     {
-      "cna": "CERTVDE",
-      "slug": "certvde",
+      "cna": "mitre",
+      "slug": "mitre",
       "rank": 16,
-      "window30SecondsPerCve": 40500.0,
-      "totalEvents": 638,
+      "window30SecondsPerCve": 41806.45161290323,
+      "totalEvents": 37399,
       "percentileFaster": 95
     },
     {
