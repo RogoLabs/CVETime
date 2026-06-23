@@ -1,17 +1,17 @@
 {
-  "generatedAt": "2026-06-22T01:00:54.207206+00:00",
+  "generatedAt": "2026-06-23T00:54:27.018441+00:00",
   "cna": {
     "name": "WPScan",
     "slug": "wpscan",
-    "rank": 63,
+    "rank": 62,
     "window30SecondsPerCve": 136421.05263157896,
-    "window90SecondsPerCve": 162000.0,
-    "totalEvents": 3249,
+    "window90SecondsPerCve": 158693.8775510204,
+    "totalEvents": 3251,
     "consistencyScore": 0,
     "consistencyGrade": "F",
     "consistencyMedianSeconds": 1.0,
-    "consistencyP90Seconds": 172790.0,
-    "percentileFaster": 77
+    "consistencyP90Seconds": 172790.1,
+    "percentileFaster": 78
   },
   "trend": [
     {
@@ -395,31 +395,31 @@
     {
       "date": "2026-06-01",
       "p50IntervalSeconds": 86399.0,
-      "p90IntervalSeconds": 328314.5999999999,
-      "eventCount": 15
+      "p90IntervalSeconds": 328316.4000000001,
+      "eventCount": 17
     }
   ],
   "metrics": {
     "p50Seconds": 1.0,
-    "p90Seconds": 172790.0,
-    "trimmedCount": 3085
+    "p90Seconds": 172790.1,
+    "trimmedCount": 3087
   },
   "severity": {
     "summary": {
       "NAN": {
-        "count": 1614,
+        "count": 1613,
         "medianSeconds": 2.0,
-        "p90Seconds": 16.0
+        "p90Seconds": 15.799999999999955
       },
       "MEDIUM": {
-        "count": 1204,
+        "count": 1206,
         "medianSeconds": 1.0,
         "p90Seconds": 259195.0
       },
       "HIGH": {
-        "count": 287,
+        "count": 288,
         "medianSeconds": 1.0,
-        "p90Seconds": 242597.80000000095
+        "p90Seconds": 239832.10000000033
       },
       "CRITICAL": {
         "count": 82,
@@ -23165,9 +23165,23 @@
       {
         "date": "2026-06-19",
         "cveId": "CVE-2026-9822",
-        "severity": "NAN",
-        "severityValue": -1,
+        "severity": "MEDIUM",
+        "severityValue": 2,
         "timeToPublishSeconds": 86399.0
+      },
+      {
+        "date": "2026-06-22",
+        "cveId": "CVE-2026-10530",
+        "severity": "MEDIUM",
+        "severityValue": 2,
+        "timeToPublishSeconds": 259200.0
+      },
+      {
+        "date": "2026-06-22",
+        "cveId": "CVE-2026-6858",
+        "severity": "HIGH",
+        "severityValue": 3,
+        "timeToPublishSeconds": 1.0
       }
     ]
   },
@@ -23176,8 +23190,8 @@
       "cna": "GitHub_M",
       "slug": "github-m",
       "rank": 1,
-      "window30SecondsPerCve": 2480.3827751196172,
-      "totalEvents": 15644,
+      "window30SecondsPerCve": 2335.135135135135,
+      "totalEvents": 15744,
       "percentileFaster": 100
     },
     {
@@ -23208,8 +23222,8 @@
       "cna": "VulnCheck",
       "slug": "vulncheck",
       "rank": 5,
-      "window30SecondsPerCve": 5445.378151260505,
-      "totalEvents": 3499,
+      "window30SecondsPerCve": 5422.594142259414,
+      "totalEvents": 3516,
       "percentileFaster": 99
     },
     {
@@ -23248,16 +23262,16 @@
       "cna": "apache",
       "slug": "apache",
       "rank": 10,
-      "window30SecondsPerCve": 25165.04854368932,
-      "totalEvents": 1966,
+      "window30SecondsPerCve": 24923.076923076922,
+      "totalEvents": 1972,
       "percentileFaster": 97
     },
     {
       "cna": "redhat",
       "slug": "redhat",
       "rank": 11,
-      "window30SecondsPerCve": 25411.764705882353,
-      "totalEvents": 6398,
+      "window30SecondsPerCve": 24923.076923076922,
+      "totalEvents": 6402,
       "percentileFaster": 96
     },
     {
@@ -23285,27 +23299,27 @@
       "percentileFaster": 95
     },
     {
+      "cna": "ibm",
+      "slug": "ibm",
+      "rank": 15,
+      "window30SecondsPerCve": 32000.0,
+      "totalEvents": 4130,
+      "percentileFaster": 95
+    },
+    {
       "cna": "mitre",
       "slug": "mitre",
-      "rank": 15,
+      "rank": 16,
       "window30SecondsPerCve": 36507.042253521126,
-      "totalEvents": 37409,
+      "totalEvents": 37410,
       "percentileFaster": 95
     },
     {
       "cna": "CERTVDE",
       "slug": "certvde",
-      "rank": 16,
-      "window30SecondsPerCve": 40500.0,
-      "totalEvents": 638,
-      "percentileFaster": 95
-    },
-    {
-      "cna": "ibm",
-      "slug": "ibm",
       "rank": 17,
-      "window30SecondsPerCve": 43200.0,
-      "totalEvents": 4109,
+      "window30SecondsPerCve": 39876.92307692308,
+      "totalEvents": 640,
       "percentileFaster": 94
     },
     {
