@@ -1,17 +1,17 @@
 {
-  "generatedAt": "2026-06-27T00:52:14.031168+00:00",
+  "generatedAt": "2026-06-28T00:55:52.480591+00:00",
   "cna": {
     "name": "HCL",
     "slug": "hcl",
-    "rank": 77,
-    "window30SecondsPerCve": 162000.0,
-    "window90SecondsPerCve": 134068.9655172414,
-    "totalEvents": 507,
+    "rank": 70,
+    "window30SecondsPerCve": 144000.0,
+    "window90SecondsPerCve": 129600.0,
+    "totalEvents": 509,
     "consistencyScore": 0,
     "consistencyGrade": "F",
     "consistencyMedianSeconds": 4254.0,
-    "consistencyP90Seconds": 1107864.0,
-    "percentileFaster": 73
+    "consistencyP90Seconds": 1107158.0,
+    "percentileFaster": 75
   },
   "trend": [
     {
@@ -394,15 +394,15 @@
     },
     {
       "date": "2026-06-01",
-      "p50IntervalSeconds": 1348.0,
-      "p90IntervalSeconds": 425064.5,
-      "eventCount": 16
+      "p50IntervalSeconds": 1524.5,
+      "p90IntervalSeconds": 393937.5000000001,
+      "eventCount": 18
     }
   ],
   "metrics": {
     "p50Seconds": 4254.0,
-    "p90Seconds": 1107864.0,
-    "trimmedCount": 454
+    "p90Seconds": 1107158.0,
+    "trimmedCount": 456
   },
   "severity": {
     "summary": {
@@ -412,9 +412,9 @@
         "p90Seconds": 3658716.200000003
       },
       "MEDIUM": {
-        "count": 225,
-        "medianSeconds": 6223.0,
-        "p90Seconds": 974409.9999999997
+        "count": 226,
+        "medianSeconds": 6122.0,
+        "p90Seconds": 969053.0
       },
       "LOW": {
         "count": 142,
@@ -422,9 +422,9 @@
         "p90Seconds": 753279.1000000002
       },
       "HIGH": {
-        "count": 65,
-        "medianSeconds": 3403.0,
-        "p90Seconds": 1317625.6000000003
+        "count": 66,
+        "medianSeconds": 4034.5,
+        "p90Seconds": 1301056.0
       },
       "CRITICAL": {
         "count": 11,
@@ -3974,6 +3974,20 @@
         "severity": "MEDIUM",
         "severityValue": 2,
         "timeToPublishSeconds": 278539.0
+      },
+      {
+        "date": "2026-06-27",
+        "cveId": "CVE-2023-37524",
+        "severity": "HIGH",
+        "severityValue": 3,
+        "timeToPublishSeconds": 16782.0
+      },
+      {
+        "date": "2026-06-27",
+        "cveId": "CVE-2025-59868",
+        "severity": "MEDIUM",
+        "severityValue": 2,
+        "timeToPublishSeconds": 1447.0
       }
     ]
   },
@@ -4030,8 +4044,8 @@
       "cna": "Wordfence",
       "slug": "wordfence",
       "rank": 7,
-      "window30SecondsPerCve": 14982.658959537572,
-      "totalEvents": 6917,
+      "window30SecondsPerCve": 15709.09090909091,
+      "totalEvents": 6929,
       "percentileFaster": 98
     },
     {
