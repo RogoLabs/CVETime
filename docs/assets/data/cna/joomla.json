@@ -1,17 +1,17 @@
 {
-  "generatedAt": "2026-06-28T00:55:53.458247+00:00",
+  "generatedAt": "2026-06-29T00:56:41.819055+00:00",
   "cna": {
     "name": "Joomla",
     "slug": "joomla",
-    "rank": 35,
-    "window30SecondsPerCve": 81000.0,
-    "window90SecondsPerCve": 199384.61538461538,
-    "totalEvents": 200,
+    "rank": 93,
+    "window30SecondsPerCve": 216000.0,
+    "window90SecondsPerCve": 194400.0,
+    "totalEvents": 201,
     "consistencyScore": 0,
     "consistencyGrade": "F",
     "consistencyMedianSeconds": 11.0,
-    "consistencyP90Seconds": 3606555.4000000004,
-    "percentileFaster": 88
+    "consistencyP90Seconds": 3604687.1999999997,
+    "percentileFaster": 67
   },
   "trend": [
     {
@@ -256,22 +256,22 @@
     },
     {
       "date": "2026-06-01",
-      "p50IntervalSeconds": 43.0,
-      "p90IntervalSeconds": 771590.0,
-      "eventCount": 11
+      "p50IntervalSeconds": 45.5,
+      "p90IntervalSeconds": 738866.0000000001,
+      "eventCount": 12
     }
   ],
   "metrics": {
     "p50Seconds": 11.0,
-    "p90Seconds": 3606555.4000000004,
-    "trimmedCount": 189
+    "p90Seconds": 3604687.1999999997,
+    "trimmedCount": 190
   },
   "severity": {
     "summary": {
       "NAN": {
-        "count": 71,
+        "count": 72,
         "medianSeconds": 2.0,
-        "p90Seconds": 4162045.0
+        "p90Seconds": 4109936.6999999993
       },
       "HIGH": {
         "count": 30,
@@ -1687,6 +1687,13 @@
         "severity": "MEDIUM",
         "severityValue": 2,
         "timeToPublishSeconds": 21.0
+      },
+      {
+        "date": "2026-06-28",
+        "cveId": "CVE-2026-49048",
+        "severity": "NAN",
+        "severityValue": -1,
+        "timeToPublishSeconds": 270625.0
       }
     ]
   },
@@ -1700,35 +1707,35 @@
       "percentileFaster": 100
     },
     {
-      "cna": "VulDB",
-      "slug": "vuldb",
-      "rank": 2,
-      "window30SecondsPerCve": 3909.502262443439,
-      "totalEvents": 14555,
-      "percentileFaster": 100
-    },
-    {
       "cna": "Patchstack",
       "slug": "patchstack",
-      "rank": 3,
+      "rank": 2,
       "window30SecondsPerCve": 4747.252747252747,
       "totalEvents": 11830,
-      "percentileFaster": 99
+      "percentileFaster": 100
     },
     {
       "cna": "VulnCheck",
       "slug": "vulncheck",
-      "rank": 4,
-      "window30SecondsPerCve": 4844.859813084112,
-      "totalEvents": 3604,
+      "rank": 3,
+      "window30SecondsPerCve": 4881.35593220339,
+      "totalEvents": 3612,
       "percentileFaster": 99
     },
     {
       "cna": "Linux",
       "slug": "linux",
-      "rank": 5,
+      "rank": 4,
       "window30SecondsPerCve": 4899.810964083175,
       "totalEvents": 9737,
+      "percentileFaster": 99
+    },
+    {
+      "cna": "VulDB",
+      "slug": "vuldb",
+      "rank": 5,
+      "window30SecondsPerCve": 5586.206896551724,
+      "totalEvents": 14588,
       "percentileFaster": 99
     },
     {
