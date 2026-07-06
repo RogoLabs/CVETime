@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-07-05T02:59:17.539815+00:00",
+  "generatedAt": "2026-07-06T03:05:32.678284+00:00",
   "cna": {
     "name": "redhat",
     "slug": "redhat",
     "rank": 10,
-    "window30SecondsPerCve": 19938.46153846154,
-    "window90SecondsPerCve": 31481.781376518218,
-    "totalEvents": 6463,
+    "window30SecondsPerCve": 20250.0,
+    "window90SecondsPerCve": 31354.83870967742,
+    "totalEvents": 6464,
     "consistencyScore": 0,
     "consistencyGrade": "F",
-    "consistencyMedianSeconds": 24342.0,
-    "consistencyP90Seconds": 335523.60000000044,
+    "consistencyMedianSeconds": 24382.0,
+    "consistencyP90Seconds": 335443.2000000001,
     "percentileFaster": 97
   },
   "trend": [
@@ -1558,15 +1558,15 @@
     },
     {
       "date": "2026-07-01",
-      "p50IntervalSeconds": 1108.0,
-      "p90IntervalSeconds": 60806.39999999999,
-      "eventCount": 15
+      "p50IntervalSeconds": 1197.5,
+      "p90IntervalSeconds": 89947.0,
+      "eventCount": 16
     }
   ],
   "metrics": {
-    "p50Seconds": 24342.0,
-    "p90Seconds": 335523.60000000044,
-    "trimmedCount": 5842
+    "p50Seconds": 24382.0,
+    "p90Seconds": 335443.2000000001,
+    "trimmedCount": 5843
   },
   "severity": {
     "summary": {
@@ -1586,9 +1586,9 @@
         "p90Seconds": 292613.0000000001
       },
       "MEDIUM": {
-        "count": 1079,
-        "medianSeconds": 13571.0,
-        "p90Seconds": 288062.0000000003
+        "count": 1080,
+        "medianSeconds": 13589.5,
+        "p90Seconds": 287479.5000000001
       },
       "LOW": {
         "count": 129,
@@ -46830,6 +46830,13 @@
         "severity": "HIGH",
         "severityValue": 3,
         "timeToPublishSeconds": 9734.0
+      },
+      {
+        "date": "2026-07-05",
+        "cveId": "CVE-2026-14781",
+        "severity": "MEDIUM",
+        "severityValue": 2,
+        "timeToPublishSeconds": 131168.0
       }
     ]
   },
@@ -46846,8 +46853,8 @@
       "cna": "Patchstack",
       "slug": "patchstack",
       "rank": 2,
-      "window30SecondsPerCve": 4180.645161290323,
-      "totalEvents": 11941,
+      "window30SecondsPerCve": 4284.297520661157,
+      "totalEvents": 11944,
       "percentileFaster": 100
     },
     {
@@ -46867,19 +46874,19 @@
       "percentileFaster": 99
     },
     {
-      "cna": "Linux",
-      "slug": "linux",
+      "cna": "VulDB",
+      "slug": "vuldb",
       "rank": 5,
-      "window30SecondsPerCve": 6562.025316455696,
-      "totalEvents": 9762,
+      "window30SecondsPerCve": 6113.207547169812,
+      "totalEvents": 14787,
       "percentileFaster": 99
     },
     {
-      "cna": "VulDB",
-      "slug": "vuldb",
+      "cna": "Linux",
+      "slug": "linux",
       "rank": 6,
-      "window30SecondsPerCve": 7180.05540166205,
-      "totalEvents": 14712,
+      "window30SecondsPerCve": 6562.025316455696,
+      "totalEvents": 9762,
       "percentileFaster": 98
     },
     {
@@ -46910,8 +46917,8 @@
       "cna": "redhat",
       "slug": "redhat",
       "rank": 10,
-      "window30SecondsPerCve": 19938.46153846154,
-      "totalEvents": 6463,
+      "window30SecondsPerCve": 20250.0,
+      "totalEvents": 6464,
       "percentileFaster": 97
     },
     {
