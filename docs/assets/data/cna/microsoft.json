@@ -1,17 +1,17 @@
 {
-  "generatedAt": "2026-07-12T02:40:10.108652+00:00",
+  "generatedAt": "2026-07-13T02:40:28.379150+00:00",
   "cna": {
     "name": "microsoft",
     "slug": "microsoft",
-    "rank": 25,
-    "window30SecondsPerCve": 56347.82608695652,
-    "window90SecondsPerCve": 18514.285714285714,
-    "totalEvents": 5267,
+    "rank": 23,
+    "window30SecondsPerCve": 55148.936170212764,
+    "window90SecondsPerCve": 18470.308788598573,
+    "totalEvents": 5268,
     "consistencyScore": 0,
     "consistencyGrade": "F",
     "consistencyMedianSeconds": 1.0,
-    "consistencyP90Seconds": 107121.0,
-    "percentileFaster": 91
+    "consistencyP90Seconds": 106620.80000000272,
+    "percentileFaster": 92
   },
   "trend": [
     {
@@ -1523,14 +1523,14 @@
     {
       "date": "2026-07-01",
       "p50IntervalSeconds": 1.0,
-      "p90IntervalSeconds": 88378.80000000002,
-      "eventCount": 35
+      "p90IntervalSeconds": 87010.5,
+      "eventCount": 36
     }
   ],
   "metrics": {
     "p50Seconds": 1.0,
-    "p90Seconds": 107121.0,
-    "trimmedCount": 5002
+    "p90Seconds": 106620.80000000272,
+    "trimmedCount": 5003
   },
   "severity": {
     "summary": {
@@ -1540,9 +1540,9 @@
         "p90Seconds": 2333502.0
       },
       "HIGH": {
-        "count": 2987,
+        "count": 2988,
         "medianSeconds": 1.0,
-        "p90Seconds": 10.400000000000091
+        "p90Seconds": 11.0
       },
       "CRITICAL": {
         "count": 210,
@@ -38422,6 +38422,13 @@
         "severity": "HIGH",
         "severityValue": 3,
         "timeToPublishSeconds": 250257.0
+      },
+      {
+        "date": "2026-07-12",
+        "cveId": "CVE-2026-58596",
+        "severity": "HIGH",
+        "severityValue": 3,
+        "timeToPublishSeconds": 66439.0
       }
     ]
   },
@@ -38446,16 +38453,16 @@
       "cna": "VulnCheck",
       "slug": "vulncheck",
       "rank": 3,
-      "window30SecondsPerCve": 4284.297520661157,
-      "totalEvents": 3880,
+      "window30SecondsPerCve": 4363.636363636364,
+      "totalEvents": 3890,
       "percentileFaster": 99
     },
     {
       "cna": "VulDB",
       "slug": "vuldb",
       "rank": 4,
-      "window30SecondsPerCve": 6949.061662198392,
-      "totalEvents": 14850,
+      "window30SecondsPerCve": 6291.26213592233,
+      "totalEvents": 14894,
       "percentileFaster": 99
     },
     {

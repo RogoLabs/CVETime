@@ -1,17 +1,17 @@
 {
-  "generatedAt": "2026-07-12T02:40:22.697960+00:00",
+  "generatedAt": "2026-07-13T02:40:37.479483+00:00",
   "cna": {
     "name": "zephyr",
     "slug": "zephyr",
-    "rank": 41,
-    "window30SecondsPerCve": 86400.0,
-    "window90SecondsPerCve": 204631.57894736843,
-    "totalEvents": 157,
+    "rank": 37,
+    "window30SecondsPerCve": 76235.29411764706,
+    "window90SecondsPerCve": 185142.85714285713,
+    "totalEvents": 161,
     "consistencyScore": 0,
     "consistencyGrade": "F",
-    "consistencyMedianSeconds": 2476.5,
-    "consistencyP90Seconds": 4170643.5,
-    "percentileFaster": 86
+    "consistencyMedianSeconds": 2180.5,
+    "consistencyP90Seconds": 4098398.299999999,
+    "percentileFaster": 87
   },
   "trend": [
     {
@@ -250,15 +250,15 @@
     },
     {
       "date": "2026-07-01",
-      "p50IntervalSeconds": 249498.0,
-      "p90IntervalSeconds": 425124.0,
-      "eventCount": 4
+      "p50IntervalSeconds": 41898.0,
+      "p90IntervalSeconds": 387980.0,
+      "eventCount": 8
     }
   ],
   "metrics": {
-    "p50Seconds": 2476.5,
-    "p90Seconds": 4170643.5,
-    "trimmedCount": 148
+    "p50Seconds": 2180.5,
+    "p90Seconds": 4098398.299999999,
+    "trimmedCount": 152
   },
   "severity": {
     "summary": {
@@ -273,19 +273,19 @@
         "p90Seconds": 3445428.8000000003
       },
       "MEDIUM": {
-        "count": 65,
+        "count": 67,
         "medianSeconds": 2757.0,
-        "p90Seconds": 3777330.6000000006
+        "p90Seconds": 3704247.3999999994
       },
       "HIGH": {
-        "count": 59,
-        "medianSeconds": 68112.0,
-        "p90Seconds": 4116459.6000000006
+        "count": 60,
+        "medianSeconds": 54528.5,
+        "p90Seconds": 4098398.3000000003
       },
       "LOW": {
-        "count": 7,
-        "medianSeconds": 536.0,
-        "p90Seconds": 746976.0
+        "count": 8,
+        "medianSeconds": 268.5,
+        "p90Seconds": 733032.0
       }
     },
     "points": [
@@ -1380,6 +1380,34 @@
         "severity": "MEDIUM",
         "severityValue": 2,
         "timeToPublishSeconds": 360122.0
+      },
+      {
+        "date": "2026-07-12",
+        "cveId": "CVE-2026-10663",
+        "severity": "MEDIUM",
+        "severityValue": 2,
+        "timeToPublishSeconds": 83795.0
+      },
+      {
+        "date": "2026-07-12",
+        "cveId": "CVE-2026-10664",
+        "severity": "MEDIUM",
+        "severityValue": 2,
+        "timeToPublishSeconds": 1.0
+      },
+      {
+        "date": "2026-07-12",
+        "cveId": "CVE-2026-10666",
+        "severity": "HIGH",
+        "severityValue": 3,
+        "timeToPublishSeconds": 1.0
+      },
+      {
+        "date": "2026-07-12",
+        "cveId": "CVE-2026-10668",
+        "severity": "LOW",
+        "severityValue": 1,
+        "timeToPublishSeconds": 1.0
       }
     ]
   },
@@ -1404,16 +1432,16 @@
       "cna": "VulnCheck",
       "slug": "vulncheck",
       "rank": 3,
-      "window30SecondsPerCve": 4284.297520661157,
-      "totalEvents": 3880,
+      "window30SecondsPerCve": 4363.636363636364,
+      "totalEvents": 3890,
       "percentileFaster": 99
     },
     {
       "cna": "VulDB",
       "slug": "vuldb",
       "rank": 4,
-      "window30SecondsPerCve": 6949.061662198392,
-      "totalEvents": 14850,
+      "window30SecondsPerCve": 6291.26213592233,
+      "totalEvents": 14894,
       "percentileFaster": 99
     },
     {
