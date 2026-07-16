@@ -1,17 +1,17 @@
 {
-  "generatedAt": "2026-07-15T02:16:15.616902+00:00",
+  "generatedAt": "2026-07-16T02:31:16.460863+00:00",
   "cna": {
     "name": "fortinet",
     "slug": "fortinet",
-    "rank": 123,
-    "window30SecondsPerCve": 324000.0,
-    "window90SecondsPerCve": 409263.15789473685,
-    "totalEvents": 852,
+    "rank": 113,
+    "window30SecondsPerCve": 288000.0,
+    "window90SecondsPerCve": 388800.0,
+    "totalEvents": 853,
     "consistencyScore": 0,
     "consistencyGrade": "F",
-    "consistencyMedianSeconds": 27.0,
-    "consistencyP90Seconds": 1483200.0,
-    "percentileFaster": 56
+    "consistencyMedianSeconds": 29.0,
+    "consistencyP90Seconds": 1482119.9999999998,
+    "percentileFaster": 60
   },
   "trend": [
     {
@@ -628,15 +628,15 @@
     },
     {
       "date": "2026-07-01",
-      "p50IntervalSeconds": 84.0,
-      "p90IntervalSeconds": 908140.5999999995,
-      "eventCount": 8
+      "p50IntervalSeconds": 126.0,
+      "p90IntervalSeconds": 669764.2000000005,
+      "eventCount": 9
     }
   ],
   "metrics": {
-    "p50Seconds": 27.0,
-    "p90Seconds": 1483200.0,
-    "trimmedCount": 808
+    "p50Seconds": 29.0,
+    "p90Seconds": 1482119.9999999998,
+    "trimmedCount": 809
   },
   "severity": {
     "summary": {
@@ -646,9 +646,9 @@
         "p90Seconds": 3471607.999999999
       },
       "MEDIUM": {
-        "count": 403,
+        "count": 404,
         "medianSeconds": 8.0,
-        "p90Seconds": 583524.6
+        "p90Seconds": 583281.9
       },
       "HIGH": {
         "count": 208,
@@ -6623,6 +6623,13 @@
         "severity": "MEDIUM",
         "severityValue": 2,
         "timeToPublishSeconds": 4.0
+      },
+      {
+        "date": "2026-07-15",
+        "cveId": "CVE-2026-59838",
+        "severity": "MEDIUM",
+        "severityValue": 2,
+        "timeToPublishSeconds": 80625.0
       }
     ]
   },
@@ -6631,16 +6638,16 @@
       "cna": "GitHub_M",
       "slug": "github-m",
       "rank": 1,
-      "window30SecondsPerCve": 2044.1640378548896,
-      "totalEvents": 16784,
+      "window30SecondsPerCve": 1890.5908096280089,
+      "totalEvents": 16899,
       "percentileFaster": 100
     },
     {
       "cna": "VulnCheck",
       "slug": "vulncheck",
       "rank": 2,
-      "window30SecondsPerCve": 4194.174757281553,
-      "totalEvents": 3934,
+      "window30SecondsPerCve": 4050.0,
+      "totalEvents": 3972,
       "percentileFaster": 100
     },
     {
@@ -6655,8 +6662,8 @@
       "cna": "VulDB",
       "slug": "vuldb",
       "rank": 4,
-      "window30SecondsPerCve": 5411.273486430063,
-      "totalEvents": 14968,
+      "window30SecondsPerCve": 5721.854304635762,
+      "totalEvents": 14970,
       "percentileFaster": 99
     },
     {
@@ -6679,8 +6686,8 @@
       "cna": "Wordfence",
       "slug": "wordfence",
       "rank": 7,
-      "window30SecondsPerCve": 11318.777292576418,
-      "totalEvents": 7084,
+      "window30SecondsPerCve": 11269.565217391304,
+      "totalEvents": 7085,
       "percentileFaster": 98
     },
     {
@@ -6695,16 +6702,16 @@
       "cna": "apache",
       "slug": "apache",
       "rank": 9,
-      "window30SecondsPerCve": 20571.428571428572,
-      "totalEvents": 2073,
+      "window30SecondsPerCve": 19938.46153846154,
+      "totalEvents": 2077,
       "percentileFaster": 97
     },
     {
       "cna": "redhat",
       "slug": "redhat",
       "rank": 10,
-      "window30SecondsPerCve": 21781.51260504202,
-      "totalEvents": 6494,
+      "window30SecondsPerCve": 22153.846153846152,
+      "totalEvents": 6501,
       "percentileFaster": 97
     },
     {
@@ -6732,19 +6739,19 @@
       "percentileFaster": 96
     },
     {
-      "cna": "mitre",
-      "slug": "mitre",
+      "cna": "dell",
+      "slug": "dell",
       "rank": 14,
-      "window30SecondsPerCve": 39272.72727272727,
-      "totalEvents": 37455,
+      "window30SecondsPerCve": 38117.64705882353,
+      "totalEvents": 1714,
       "percentileFaster": 95
     },
     {
-      "cna": "dell",
-      "slug": "dell",
+      "cna": "mitre",
+      "slug": "mitre",
       "rank": 15,
-      "window30SecondsPerCve": 40500.0,
-      "totalEvents": 1710,
+      "window30SecondsPerCve": 38686.567164179105,
+      "totalEvents": 37456,
       "percentileFaster": 95
     },
     {
@@ -6776,7 +6783,7 @@
       "slug": "cert-pl",
       "rank": 19,
       "window30SecondsPerCve": 50823.529411764706,
-      "totalEvents": 440,
+      "totalEvents": 442,
       "percentileFaster": 94
     },
     {
