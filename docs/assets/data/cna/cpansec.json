@@ -1,17 +1,17 @@
 {
-  "generatedAt": "2026-07-25T02:33:22.770096+00:00",
+  "generatedAt": "2026-07-26T02:40:00.458277+00:00",
   "cna": {
     "name": "CPANSec",
     "slug": "cpansec",
-    "rank": 14,
-    "window30SecondsPerCve": 30494.117647058825,
-    "window90SecondsPerCve": 45741.17647058824,
-    "totalEvents": 259,
+    "rank": 13,
+    "window30SecondsPerCve": 30139.53488372093,
+    "window90SecondsPerCve": 45473.68421052631,
+    "totalEvents": 260,
     "consistencyScore": 0,
     "consistencyGrade": "F",
-    "consistencyMedianSeconds": 10183.0,
-    "consistencyP90Seconds": 398634.7000000006,
-    "percentileFaster": 95
+    "consistencyMedianSeconds": 10977.0,
+    "consistencyP90Seconds": 393514.80000000086,
+    "percentileFaster": 96
   },
   "trend": [
     {
@@ -112,15 +112,15 @@
     },
     {
       "date": "2026-07-01",
-      "p50IntervalSeconds": 97.0,
-      "p90IntervalSeconds": 89700.59999999999,
-      "eventCount": 73
+      "p50IntervalSeconds": 104.0,
+      "p90IntervalSeconds": 89321.90000000001,
+      "eventCount": 74
     }
   ],
   "metrics": {
-    "p50Seconds": 10183.0,
-    "p90Seconds": 398634.7000000006,
-    "trimmedCount": 232
+    "p50Seconds": 10977.0,
+    "p90Seconds": 393514.80000000086,
+    "trimmedCount": 233
   },
   "severity": {
     "summary": {
@@ -145,9 +145,9 @@
         "p90Seconds": 35.0
       },
       "NAN": {
-        "count": 4,
-        "medianSeconds": 56063.5,
-        "p90Seconds": 119935.40000000001
+        "count": 5,
+        "medianSeconds": 61820.0,
+        "p90Seconds": 115842.20000000001
       }
     },
     "points": [
@@ -1956,6 +1956,13 @@
         "severity": "NAN",
         "severityValue": -1,
         "timeToPublishSeconds": 20844.0
+      },
+      {
+        "date": "2026-07-25",
+        "cveId": "CVE-2026-16766",
+        "severity": "NAN",
+        "severityValue": -1,
+        "timeToPublishSeconds": 61820.0
       }
     ]
   },
@@ -1972,24 +1979,24 @@
       "cna": "VulnCheck",
       "slug": "vulncheck",
       "rank": 2,
-      "window30SecondsPerCve": 3963.302752293578,
-      "totalEvents": 4223,
+      "window30SecondsPerCve": 3957.2519083969464,
+      "totalEvents": 4225,
       "percentileFaster": 100
     },
     {
       "cna": "Linux",
       "slug": "linux",
       "rank": 3,
-      "window30SecondsPerCve": 4075.4716981132074,
-      "totalEvents": 10091,
+      "window30SecondsPerCve": 4476.683937823835,
+      "totalEvents": 10281,
       "percentileFaster": 99
     },
     {
       "cna": "VulDB",
       "slug": "vuldb",
       "rank": 4,
-      "window30SecondsPerCve": 4927.7566539923955,
-      "totalEvents": 15081,
+      "window30SecondsPerCve": 4909.090909090909,
+      "totalEvents": 15083,
       "percentileFaster": 99
     },
     {
@@ -2021,7 +2028,7 @@
       "slug": "wordfence",
       "rank": 8,
       "window30SecondsPerCve": 10800.0,
-      "totalEvents": 7152,
+      "totalEvents": 7156,
       "percentileFaster": 98
     },
     {
@@ -2057,19 +2064,19 @@
       "percentileFaster": 96
     },
     {
-      "cna": "adobe",
-      "slug": "adobe",
+      "cna": "CPANSec",
+      "slug": "cpansec",
       "rank": 13,
       "window30SecondsPerCve": 30139.53488372093,
-      "totalEvents": 4133,
+      "totalEvents": 260,
       "percentileFaster": 96
     },
     {
-      "cna": "CPANSec",
-      "slug": "cpansec",
+      "cna": "adobe",
+      "slug": "adobe",
       "rank": 14,
-      "window30SecondsPerCve": 30494.117647058825,
-      "totalEvents": 259,
+      "window30SecondsPerCve": 30139.53488372093,
+      "totalEvents": 4133,
       "percentileFaster": 95
     },
     {

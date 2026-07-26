@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-07-25T02:34:07.298829+00:00",
+  "generatedAt": "2026-07-26T02:40:43.671931+00:00",
   "cna": {
     "name": "zephyr",
     "slug": "zephyr",
     "rank": 39,
     "window30SecondsPerCve": 81000.0,
-    "window90SecondsPerCve": 152470.58823529413,
-    "totalEvents": 170,
+    "window90SecondsPerCve": 149538.46153846153,
+    "totalEvents": 171,
     "consistencyScore": 0,
     "consistencyGrade": "F",
-    "consistencyMedianSeconds": 2165.0,
-    "consistencyP90Seconds": 3954865.000000003,
+    "consistencyMedianSeconds": 2180.5,
+    "consistencyP90Seconds": 3939180.999999999,
     "percentileFaster": 86
   },
   "trend": [
@@ -250,15 +250,15 @@
     },
     {
       "date": "2026-07-01",
-      "p50IntervalSeconds": 1.0,
-      "p90IntervalSeconds": 397266.00000000006,
-      "eventCount": 17
+      "p50IntervalSeconds": 41898.0,
+      "p90IntervalSeconds": 387980.00000000006,
+      "eventCount": 18
     }
   ],
   "metrics": {
-    "p50Seconds": 2165.0,
-    "p90Seconds": 3954865.000000003,
-    "trimmedCount": 160
+    "p50Seconds": 2180.5,
+    "p90Seconds": 3939180.999999999,
+    "trimmedCount": 161
   },
   "severity": {
     "summary": {
@@ -273,9 +273,9 @@
         "p90Seconds": 3445428.8000000003
       },
       "MEDIUM": {
-        "count": 71,
-        "medianSeconds": 2757.0,
-        "p90Seconds": 3558081.0
+        "count": 72,
+        "medianSeconds": 2846.5,
+        "p90Seconds": 3514136.4999999995
       },
       "HIGH": {
         "count": 65,
@@ -1471,6 +1471,13 @@
         "severity": "MEDIUM",
         "severityValue": 2,
         "timeToPublishSeconds": 231448.0
+      },
+      {
+        "date": "2026-07-25",
+        "cveId": "CVE-2026-10681",
+        "severity": "MEDIUM",
+        "severityValue": 2,
+        "timeToPublishSeconds": 84883.0
       }
     ]
   },
@@ -1487,24 +1494,24 @@
       "cna": "VulnCheck",
       "slug": "vulncheck",
       "rank": 2,
-      "window30SecondsPerCve": 3963.302752293578,
-      "totalEvents": 4223,
+      "window30SecondsPerCve": 3957.2519083969464,
+      "totalEvents": 4225,
       "percentileFaster": 100
     },
     {
       "cna": "Linux",
       "slug": "linux",
       "rank": 3,
-      "window30SecondsPerCve": 4075.4716981132074,
-      "totalEvents": 10091,
+      "window30SecondsPerCve": 4476.683937823835,
+      "totalEvents": 10281,
       "percentileFaster": 99
     },
     {
       "cna": "VulDB",
       "slug": "vuldb",
       "rank": 4,
-      "window30SecondsPerCve": 4927.7566539923955,
-      "totalEvents": 15081,
+      "window30SecondsPerCve": 4909.090909090909,
+      "totalEvents": 15083,
       "percentileFaster": 99
     },
     {
@@ -1536,7 +1543,7 @@
       "slug": "wordfence",
       "rank": 8,
       "window30SecondsPerCve": 10800.0,
-      "totalEvents": 7152,
+      "totalEvents": 7156,
       "percentileFaster": 98
     },
     {
@@ -1572,19 +1579,19 @@
       "percentileFaster": 96
     },
     {
-      "cna": "adobe",
-      "slug": "adobe",
+      "cna": "CPANSec",
+      "slug": "cpansec",
       "rank": 13,
       "window30SecondsPerCve": 30139.53488372093,
-      "totalEvents": 4133,
+      "totalEvents": 260,
       "percentileFaster": 96
     },
     {
-      "cna": "CPANSec",
-      "slug": "cpansec",
+      "cna": "adobe",
+      "slug": "adobe",
       "rank": 14,
-      "window30SecondsPerCve": 30494.117647058825,
-      "totalEvents": 259,
+      "window30SecondsPerCve": 30139.53488372093,
+      "totalEvents": 4133,
       "percentileFaster": 95
     },
     {
