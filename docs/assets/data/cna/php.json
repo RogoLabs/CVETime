@@ -1,17 +1,17 @@
 {
-  "generatedAt": "2026-07-03T02:51:32.827609+00:00",
+  "generatedAt": "2026-07-31T02:42:38.427022+00:00",
   "cna": {
     "name": "php",
     "slug": "php",
-    "rank": 111,
-    "window30SecondsPerCve": 259200.0,
-    "window90SecondsPerCve": 777600.0,
-    "totalEvents": 77,
+    "rank": 179,
+    "window30SecondsPerCve": 648000.0,
+    "window90SecondsPerCve": 555428.5714285715,
+    "totalEvents": 81,
     "consistencyScore": 0,
     "consistencyGrade": "F",
     "consistencyMedianSeconds": 883.5,
-    "consistencyP90Seconds": 9562455.0,
-    "percentileFaster": 60
+    "consistencyP90Seconds": 9440093.400000002,
+    "percentileFaster": 36
   },
   "trend": [
     {
@@ -199,19 +199,25 @@
       "p50IntervalSeconds": 492.5,
       "p90IntervalSeconds": 1152804.099999996,
       "eventCount": 10
+    },
+    {
+      "date": "2026-07-01",
+      "p50IntervalSeconds": 1149151.0,
+      "p90IntervalSeconds": 3996328.8000000003,
+      "eventCount": 4
     }
   ],
   "metrics": {
     "p50Seconds": 883.5,
-    "p90Seconds": 9562455.0,
-    "trimmedCount": 72
+    "p90Seconds": 9440093.400000002,
+    "trimmedCount": 76
   },
   "severity": {
     "summary": {
       "MEDIUM": {
-        "count": 39,
+        "count": 41,
         "medianSeconds": 765.0,
-        "p90Seconds": 8867519.800000003
+        "p90Seconds": 8655548.0
       },
       "LOW": {
         "count": 10,
@@ -219,9 +225,9 @@
         "p90Seconds": 10703014.399999999
       },
       "HIGH": {
-        "count": 19,
+        "count": 21,
         "medianSeconds": 1733116.0,
-        "p90Seconds": 9831525.799999999
+        "p90Seconds": 9409503.0
       },
       "CRITICAL": {
         "count": 8,
@@ -761,6 +767,34 @@
         "severity": "MEDIUM",
         "severityValue": 2,
         "timeToPublishSeconds": 467.0
+      },
+      {
+        "date": "2026-07-03",
+        "cveId": "CVE-2026-14355",
+        "severity": "MEDIUM",
+        "severityValue": 2,
+        "timeToPublishSeconds": 4724067.0
+      },
+      {
+        "date": "2026-07-30",
+        "cveId": "CVE-2026-17543",
+        "severity": "HIGH",
+        "severityValue": 3,
+        "timeToPublishSeconds": 2298273.0
+      },
+      {
+        "date": "2026-07-30",
+        "cveId": "CVE-2026-17544",
+        "severity": "HIGH",
+        "severityValue": 3,
+        "timeToPublishSeconds": 20.0
+      },
+      {
+        "date": "2026-07-30",
+        "cveId": "CVE-2026-7260",
+        "severity": "MEDIUM",
+        "severityValue": 2,
+        "timeToPublishSeconds": 29.0
       }
     ]
   },
@@ -769,160 +803,160 @@
       "cna": "GitHub_M",
       "slug": "github-m",
       "rank": 1,
-      "window30SecondsPerCve": 2273.684210526316,
-      "totalEvents": 16225,
-      "percentileFaster": 100
-    },
-    {
-      "cna": "Patchstack",
-      "slug": "patchstack",
-      "rank": 2,
-      "window30SecondsPerCve": 4180.645161290323,
-      "totalEvents": 11941,
+      "window30SecondsPerCve": 2049.01185770751,
+      "totalEvents": 17424,
       "percentileFaster": 100
     },
     {
       "cna": "VulnCheck",
       "slug": "vulncheck",
-      "rank": 3,
-      "window30SecondsPerCve": 4370.9949409780775,
-      "totalEvents": 3757,
-      "percentileFaster": 99
+      "rank": 2,
+      "window30SecondsPerCve": 4320.0,
+      "totalEvents": 4298,
+      "percentileFaster": 100
     },
     {
-      "cna": "Chrome",
-      "slug": "chrome",
-      "rank": 4,
-      "window30SecondsPerCve": 5851.015801354401,
-      "totalEvents": 1995,
+      "cna": "Linux",
+      "slug": "linux",
+      "rank": 3,
+      "window30SecondsPerCve": 4579.505300353357,
+      "totalEvents": 10304,
       "percentileFaster": 99
     },
     {
       "cna": "VulDB",
       "slug": "vuldb",
-      "rank": 5,
-      "window30SecondsPerCve": 5864.253393665158,
-      "totalEvents": 14657,
+      "rank": 4,
+      "window30SecondsPerCve": 4918.4060721062615,
+      "totalEvents": 15096,
       "percentileFaster": 99
     },
     {
-      "cna": "Linux",
-      "slug": "linux",
+      "cna": "oracle",
+      "slug": "oracle",
+      "rank": 5,
+      "window30SecondsPerCve": 6400.0,
+      "totalEvents": 1830,
+      "percentileFaster": 99
+    },
+    {
+      "cna": "microsoft",
+      "slug": "microsoft",
       "rank": 6,
-      "window30SecondsPerCve": 6127.659574468085,
-      "totalEvents": 9758,
+      "window30SecondsPerCve": 6512.562814070352,
+      "totalEvents": 5630,
+      "percentileFaster": 98
+    },
+    {
+      "cna": "Chrome",
+      "slug": "chrome",
+      "rank": 7,
+      "window30SecondsPerCve": 8049.689440993789,
+      "totalEvents": 2145,
+      "percentileFaster": 98
+    },
+    {
+      "cna": "Patchstack",
+      "slug": "patchstack",
+      "rank": 8,
+      "window30SecondsPerCve": 9855.513307984791,
+      "totalEvents": 12093,
       "percentileFaster": 98
     },
     {
       "cna": "Wordfence",
       "slug": "wordfence",
-      "rank": 7,
-      "window30SecondsPerCve": 14811.42857142857,
-      "totalEvents": 6973,
-      "percentileFaster": 98
-    },
-    {
-      "cna": "microsoft",
-      "slug": "microsoft",
-      "rank": 8,
-      "window30SecondsPerCve": 17395.973154362415,
-      "totalEvents": 5237,
-      "percentileFaster": 97
-    },
-    {
-      "cna": "adobe",
-      "slug": "adobe",
       "rank": 9,
-      "window30SecondsPerCve": 19488.72180451128,
-      "totalEvents": 4059,
-      "percentileFaster": 97
-    },
-    {
-      "cna": "redhat",
-      "slug": "redhat",
-      "rank": 10,
-      "window30SecondsPerCve": 20903.225806451614,
-      "totalEvents": 6457,
+      "window30SecondsPerCve": 9931.034482758621,
+      "totalEvents": 7197,
       "percentileFaster": 97
     },
     {
       "cna": "apache",
       "slug": "apache",
+      "rank": 10,
+      "window30SecondsPerCve": 14561.797752808989,
+      "totalEvents": 2179,
+      "percentileFaster": 97
+    },
+    {
+      "cna": "apple",
+      "slug": "apple",
       "rank": 11,
-      "window30SecondsPerCve": 27284.21052631579,
-      "totalEvents": 2003,
-      "percentileFaster": 96
-    },
-    {
-      "cna": "vmware",
-      "slug": "vmware",
-      "rank": 12,
-      "window30SecondsPerCve": 28800.0,
-      "totalEvents": 674,
-      "percentileFaster": 96
-    },
-    {
-      "cna": "oracle",
-      "slug": "oracle",
-      "rank": 13,
-      "window30SecondsPerCve": 30139.53488372093,
-      "totalEvents": 1425,
+      "window30SecondsPerCve": 14982.658959537572,
+      "totalEvents": 3295,
       "percentileFaster": 96
     },
     {
       "cna": "ibm",
       "slug": "ibm",
+      "rank": 12,
+      "window30SecondsPerCve": 17632.65306122449,
+      "totalEvents": 4278,
+      "percentileFaster": 96
+    },
+    {
+      "cna": "redhat",
+      "slug": "redhat",
+      "rank": 13,
+      "window30SecondsPerCve": 18000.0,
+      "totalEvents": 6592,
+      "percentileFaster": 96
+    },
+    {
+      "cna": "Joomla",
+      "slug": "joomla",
       "rank": 14,
-      "window30SecondsPerCve": 34560.0,
-      "totalEvents": 4173,
+      "window30SecondsPerCve": 24000.0,
+      "totalEvents": 309,
       "percentileFaster": 95
     },
     {
-      "cna": "CERTVDE",
-      "slug": "certvde",
+      "cna": "adobe",
+      "slug": "adobe",
       "rank": 15,
-      "window30SecondsPerCve": 39272.72727272727,
-      "totalEvents": 641,
+      "window30SecondsPerCve": 27574.468085106382,
+      "totalEvents": 4144,
       "percentileFaster": 95
     },
     {
-      "cna": "mitre",
-      "slug": "mitre",
+      "cna": "CPANSec",
+      "slug": "cpansec",
       "rank": 16,
-      "window30SecondsPerCve": 39272.72727272727,
-      "totalEvents": 37431,
+      "window30SecondsPerCve": 33662.33766233766,
+      "totalEvents": 263,
       "percentileFaster": 95
+    },
+    {
+      "cna": "TR-CERT",
+      "slug": "tr-cert",
+      "rank": 17,
+      "window30SecondsPerCve": 38686.567164179105,
+      "totalEvents": 713,
+      "percentileFaster": 94
     },
     {
       "cna": "mozilla",
       "slug": "mozilla",
-      "rank": 17,
-      "window30SecondsPerCve": 49846.153846153844,
-      "totalEvents": 1050,
+      "rank": 18,
+      "window30SecondsPerCve": 41142.857142857145,
+      "totalEvents": 1110,
       "percentileFaster": 94
     },
     {
       "cna": "icscert",
       "slug": "icscert",
-      "rank": 18,
-      "window30SecondsPerCve": 52897.95918367347,
-      "totalEvents": 2788,
+      "rank": 19,
+      "window30SecondsPerCve": 45473.68421052631,
+      "totalEvents": 2841,
       "percentileFaster": 94
     },
     {
       "cna": "CERT-PL",
       "slug": "cert-pl",
-      "rank": 19,
-      "window30SecondsPerCve": 56347.82608695652,
-      "totalEvents": 427,
-      "percentileFaster": 94
-    },
-    {
-      "cna": "ConcreteCMS",
-      "slug": "concretecms",
       "rank": 20,
-      "window30SecondsPerCve": 56347.82608695652,
-      "totalEvents": 83,
+      "window30SecondsPerCve": 46285.71428571428,
+      "totalEvents": 464,
       "percentileFaster": 93
     }
   ]
