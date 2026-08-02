@@ -1,17 +1,17 @@
 {
-  "generatedAt": "2026-08-01T02:41:00.752470+00:00",
+  "generatedAt": "2026-08-02T02:39:36.036883+00:00",
   "cna": {
     "name": "zephyr",
     "slug": "zephyr",
-    "rank": 62,
-    "window30SecondsPerCve": 117818.18181818182,
-    "window90SecondsPerCve": 138857.14285714287,
-    "totalEvents": 175,
+    "rank": 58,
+    "window30SecondsPerCve": 108000.0,
+    "window90SecondsPerCve": 134068.9655172414,
+    "totalEvents": 177,
     "consistencyScore": 0,
     "consistencyGrade": "F",
     "consistencyMedianSeconds": 2846.5,
-    "consistencyP90Seconds": 3886519.0000000023,
-    "percentileFaster": 78
+    "consistencyP90Seconds": 3861867.0,
+    "percentileFaster": 80
   },
   "trend": [
     {
@@ -253,12 +253,18 @@
       "p50IntervalSeconds": 84339.0,
       "p90IntervalSeconds": 347254.60000000027,
       "eventCount": 22
+    },
+    {
+      "date": "2026-08-01",
+      "p50IntervalSeconds": 36963.5,
+      "p90IntervalSeconds": 65833.5,
+      "eventCount": 2
     }
   ],
   "metrics": {
     "p50Seconds": 2846.5,
-    "p90Seconds": 3886519.0000000023,
-    "trimmedCount": 165
+    "p90Seconds": 3861867.0,
+    "trimmedCount": 167
   },
   "severity": {
     "summary": {
@@ -273,9 +279,9 @@
         "p90Seconds": 3445428.8000000003
       },
       "MEDIUM": {
-        "count": 74,
+        "count": 76,
         "medianSeconds": 3489.5,
-        "p90Seconds": 3426247.5000000014
+        "p90Seconds": 3338358.5
       },
       "HIGH": {
         "count": 66,
@@ -1506,6 +1512,20 @@
         "severity": "MEDIUM",
         "severityValue": 2,
         "timeToPublishSeconds": 4043.0
+      },
+      {
+        "date": "2026-08-01",
+        "cveId": "CVE-2026-2411",
+        "severity": "MEDIUM",
+        "severityValue": 2,
+        "timeToPublishSeconds": 73051.0
+      },
+      {
+        "date": "2026-08-01",
+        "cveId": "CVE-2026-10773",
+        "severity": "MEDIUM",
+        "severityValue": 2,
+        "timeToPublishSeconds": 876.0
       }
     ]
   },
@@ -1522,8 +1542,8 @@
       "cna": "VulnCheck",
       "slug": "vulncheck",
       "rank": 2,
-      "window30SecondsPerCve": 4539.404553415061,
-      "totalEvents": 4303,
+      "window30SecondsPerCve": 4515.679442508711,
+      "totalEvents": 4306,
       "percentileFaster": 100
     },
     {
@@ -1567,19 +1587,19 @@
       "percentileFaster": 98
     },
     {
-      "cna": "Patchstack",
-      "slug": "patchstack",
+      "cna": "Wordfence",
+      "slug": "wordfence",
       "rank": 8,
-      "window30SecondsPerCve": 10409.638554216868,
-      "totalEvents": 12095,
+      "window30SecondsPerCve": 10285.714285714286,
+      "totalEvents": 7222,
       "percentileFaster": 98
     },
     {
-      "cna": "Wordfence",
-      "slug": "wordfence",
+      "cna": "Patchstack",
+      "slug": "patchstack",
       "rank": 9,
-      "window30SecondsPerCve": 10451.612903225807,
-      "totalEvents": 7204,
+      "window30SecondsPerCve": 10409.638554216868,
+      "totalEvents": 12095,
       "percentileFaster": 97
     },
     {
@@ -1634,14 +1654,22 @@
       "cna": "CPANSec",
       "slug": "cpansec",
       "rank": 16,
-      "window30SecondsPerCve": 33662.33766233766,
-      "totalEvents": 263,
+      "window30SecondsPerCve": 34105.26315789474,
+      "totalEvents": 264,
       "percentileFaster": 95
+    },
+    {
+      "cna": "WPScan",
+      "slug": "wpscan",
+      "rank": 17,
+      "window30SecondsPerCve": 37565.217391304344,
+      "totalEvents": 3333,
+      "percentileFaster": 94
     },
     {
       "cna": "TR-CERT",
       "slug": "tr-cert",
-      "rank": 17,
+      "rank": 18,
       "window30SecondsPerCve": 38117.64705882353,
       "totalEvents": 714,
       "percentileFaster": 94
@@ -1649,17 +1677,9 @@
     {
       "cna": "mozilla",
       "slug": "mozilla",
-      "rank": 18,
+      "rank": 19,
       "window30SecondsPerCve": 41142.857142857145,
       "totalEvents": 1110,
-      "percentileFaster": 94
-    },
-    {
-      "cna": "WPScan",
-      "slug": "wpscan",
-      "rank": 19,
-      "window30SecondsPerCve": 41806.45161290323,
-      "totalEvents": 3325,
       "percentileFaster": 94
     },
     {

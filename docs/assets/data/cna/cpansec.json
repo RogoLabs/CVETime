@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-08-01T02:40:28.761050+00:00",
+  "generatedAt": "2026-08-02T02:39:05.192739+00:00",
   "cna": {
     "name": "CPANSec",
     "slug": "cpansec",
     "rank": 16,
-    "window30SecondsPerCve": 33662.33766233766,
+    "window30SecondsPerCve": 34105.26315789474,
     "window90SecondsPerCve": 46011.83431952663,
-    "totalEvents": 263,
+    "totalEvents": 264,
     "consistencyScore": 0,
     "consistencyGrade": "F",
-    "consistencyMedianSeconds": 11843.0,
-    "consistencyP90Seconds": 381310.2000000001,
+    "consistencyMedianSeconds": 12709.0,
+    "consistencyP90Seconds": 379345.4000000002,
     "percentileFaster": 95
   },
   "trend": [
@@ -115,12 +115,18 @@
       "p50IntervalSeconds": 111.0,
       "p90IntervalSeconds": 96448.60000000008,
       "eventCount": 77
+    },
+    {
+      "date": "2026-08-01",
+      "p50IntervalSeconds": 161601.0,
+      "p90IntervalSeconds": 161601.0,
+      "eventCount": 1
     }
   ],
   "metrics": {
-    "p50Seconds": 11843.0,
-    "p90Seconds": 381310.2000000001,
-    "trimmedCount": 234
+    "p50Seconds": 12709.0,
+    "p90Seconds": 379345.4000000002,
+    "trimmedCount": 235
   },
   "severity": {
     "summary": {
@@ -143,6 +149,11 @@
         "count": 12,
         "medianSeconds": 18.0,
         "p90Seconds": 34.1
+      },
+      "NAN": {
+        "count": 1,
+        "medianSeconds": 161601.0,
+        "p90Seconds": 161601.0
       }
     },
     "points": [
@@ -1979,6 +1990,13 @@
         "severity": "HIGH",
         "severityValue": 3,
         "timeToPublishSeconds": 14.0
+      },
+      {
+        "date": "2026-08-01",
+        "cveId": "CVE-2026-18536",
+        "severity": "NAN",
+        "severityValue": -1,
+        "timeToPublishSeconds": 161601.0
       }
     ]
   },
@@ -1995,8 +2013,8 @@
       "cna": "VulnCheck",
       "slug": "vulncheck",
       "rank": 2,
-      "window30SecondsPerCve": 4539.404553415061,
-      "totalEvents": 4303,
+      "window30SecondsPerCve": 4515.679442508711,
+      "totalEvents": 4306,
       "percentileFaster": 100
     },
     {
@@ -2040,19 +2058,19 @@
       "percentileFaster": 98
     },
     {
-      "cna": "Patchstack",
-      "slug": "patchstack",
+      "cna": "Wordfence",
+      "slug": "wordfence",
       "rank": 8,
-      "window30SecondsPerCve": 10409.638554216868,
-      "totalEvents": 12095,
+      "window30SecondsPerCve": 10285.714285714286,
+      "totalEvents": 7222,
       "percentileFaster": 98
     },
     {
-      "cna": "Wordfence",
-      "slug": "wordfence",
+      "cna": "Patchstack",
+      "slug": "patchstack",
       "rank": 9,
-      "window30SecondsPerCve": 10451.612903225807,
-      "totalEvents": 7204,
+      "window30SecondsPerCve": 10409.638554216868,
+      "totalEvents": 12095,
       "percentileFaster": 97
     },
     {
@@ -2107,14 +2125,22 @@
       "cna": "CPANSec",
       "slug": "cpansec",
       "rank": 16,
-      "window30SecondsPerCve": 33662.33766233766,
-      "totalEvents": 263,
+      "window30SecondsPerCve": 34105.26315789474,
+      "totalEvents": 264,
       "percentileFaster": 95
+    },
+    {
+      "cna": "WPScan",
+      "slug": "wpscan",
+      "rank": 17,
+      "window30SecondsPerCve": 37565.217391304344,
+      "totalEvents": 3333,
+      "percentileFaster": 94
     },
     {
       "cna": "TR-CERT",
       "slug": "tr-cert",
-      "rank": 17,
+      "rank": 18,
       "window30SecondsPerCve": 38117.64705882353,
       "totalEvents": 714,
       "percentileFaster": 94
@@ -2122,17 +2148,9 @@
     {
       "cna": "mozilla",
       "slug": "mozilla",
-      "rank": 18,
+      "rank": 19,
       "window30SecondsPerCve": 41142.857142857145,
       "totalEvents": 1110,
-      "percentileFaster": 94
-    },
-    {
-      "cna": "WPScan",
-      "slug": "wpscan",
-      "rank": 19,
-      "window30SecondsPerCve": 41806.45161290323,
-      "totalEvents": 3325,
       "percentileFaster": 94
     },
     {
