@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-08-09T01:33:22.727766+00:00",
+  "generatedAt": "2026-08-10T01:35:12.055558+00:00",
   "cna": {
     "name": "CPANSec",
     "slug": "cpansec",
     "rank": 18,
-    "window30SecondsPerCve": 37565.217391304344,
-    "window90SecondsPerCve": 44434.28571428572,
-    "totalEvents": 274,
+    "window30SecondsPerCve": 36507.042253521126,
+    "window90SecondsPerCve": 45473.68421052631,
+    "totalEvents": 276,
     "consistencyScore": 0,
     "consistencyGrade": "F",
-    "consistencyMedianSeconds": 9389.0,
-    "consistencyP90Seconds": 362013.8000000001,
+    "consistencyMedianSeconds": 10977.0,
+    "consistencyP90Seconds": 360400.6,
     "percentileFaster": 94
   },
   "trend": [
@@ -118,15 +118,15 @@
     },
     {
       "date": "2026-08-01",
-      "p50IntervalSeconds": 4019.0,
-      "p90IntervalSeconds": 180390.0,
-      "eventCount": 11
+      "p50IntervalSeconds": 4440.0,
+      "p90IntervalSeconds": 176632.2,
+      "eventCount": 13
     }
   ],
   "metrics": {
-    "p50Seconds": 9389.0,
-    "p90Seconds": 362013.8000000001,
-    "trimmedCount": 248
+    "p50Seconds": 10977.0,
+    "p90Seconds": 360400.6,
+    "trimmedCount": 250
   },
   "severity": {
     "summary": {
@@ -151,9 +151,9 @@
         "p90Seconds": 34.1
       },
       "NAN": {
-        "count": 1,
-        "medianSeconds": 4019.0,
-        "p90Seconds": 4019.0
+        "count": 3,
+        "medianSeconds": 59300.0,
+        "p90Seconds": 99109.6
       }
     },
     "points": [
@@ -2067,6 +2067,20 @@
         "severity": "NAN",
         "severityValue": -1,
         "timeToPublishSeconds": 4019.0
+      },
+      {
+        "date": "2026-08-09",
+        "cveId": "CVE-2026-17510",
+        "severity": "NAN",
+        "severityValue": -1,
+        "timeToPublishSeconds": 109062.0
+      },
+      {
+        "date": "2026-08-09",
+        "cveId": "CVE-2026-15534",
+        "severity": "NAN",
+        "severityValue": -1,
+        "timeToPublishSeconds": 59300.0
       }
     ]
   },
@@ -2099,8 +2113,8 @@
       "cna": "VulDB",
       "slug": "vuldb",
       "rank": 4,
-      "window30SecondsPerCve": 5944.954128440367,
-      "totalEvents": 15265,
+      "window30SecondsPerCve": 5411.273486430063,
+      "totalEvents": 15323,
       "percentileFaster": 99
     },
     {
@@ -2179,8 +2193,8 @@
       "cna": "WPScan",
       "slug": "wpscan",
       "rank": 14,
-      "window30SecondsPerCve": 20250.0,
-      "totalEvents": 3398,
+      "window30SecondsPerCve": 19938.46153846154,
+      "totalEvents": 3402,
       "percentileFaster": 95
     },
     {
@@ -2211,8 +2225,8 @@
       "cna": "CPANSec",
       "slug": "cpansec",
       "rank": 18,
-      "window30SecondsPerCve": 37565.217391304344,
-      "totalEvents": 274,
+      "window30SecondsPerCve": 36507.042253521126,
+      "totalEvents": 276,
       "percentileFaster": 94
     },
     {
