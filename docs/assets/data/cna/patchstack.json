@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-08-10T01:35:23.716644+00:00",
+  "generatedAt": "2026-08-11T01:32:43.900005+00:00",
   "cna": {
     "name": "Patchstack",
     "slug": "patchstack",
     "rank": 8,
     "window30SecondsPerCve": 11835.616438356165,
     "window90SecondsPerCve": 8211.193241816261,
-    "totalEvents": 12163,
+    "totalEvents": 12164,
     "consistencyScore": 0,
     "consistencyGrade": "F",
     "consistencyMedianSeconds": 75.0,
-    "consistencyP90Seconds": 1242.8999999999996,
+    "consistencyP90Seconds": 1247.8000000000065,
     "percentileFaster": 98
   },
   "trend": [
@@ -372,20 +372,20 @@
       "date": "2026-08-01",
       "p50IntervalSeconds": 1.0,
       "p90IntervalSeconds": 1.0,
-      "eventCount": 68
+      "eventCount": 69
     }
   ],
   "metrics": {
     "p50Seconds": 75.0,
-    "p90Seconds": 1242.8999999999996,
-    "trimmedCount": 11553
+    "p90Seconds": 1247.8000000000065,
+    "trimmedCount": 11554
   },
   "severity": {
     "summary": {
       "MEDIUM": {
-        "count": 7244,
+        "count": 7245,
         "medianSeconds": 90.0,
-        "p90Seconds": 1523.9999999999982
+        "p90Seconds": 1529.4000000000015
       },
       "CRITICAL": {
         "count": 909,
@@ -85542,6 +85542,13 @@
         "severity": "HIGH",
         "severityValue": 3,
         "timeToPublishSeconds": 1.0
+      },
+      {
+        "date": "2026-08-10",
+        "cveId": "CVE-2026-66642",
+        "severity": "MEDIUM",
+        "severityValue": 2,
+        "timeToPublishSeconds": 329953.0
       }
     ]
   },
@@ -85550,32 +85557,32 @@
       "cna": "GitHub_M",
       "slug": "github-m",
       "rank": 1,
-      "window30SecondsPerCve": 2095.392077607114,
-      "totalEvents": 17719,
-      "percentileFaster": 100
-    },
-    {
-      "cna": "VulnCheck",
-      "slug": "vulncheck",
-      "rank": 2,
-      "window30SecondsPerCve": 4207.792207792208,
-      "totalEvents": 4453,
+      "window30SecondsPerCve": 2320.5013428827215,
+      "totalEvents": 17791,
       "percentileFaster": 100
     },
     {
       "cna": "Linux",
       "slug": "linux",
+      "rank": 2,
+      "window30SecondsPerCve": 2820.4570184983677,
+      "totalEvents": 10682,
+      "percentileFaster": 100
+    },
+    {
+      "cna": "VulnCheck",
+      "slug": "vulncheck",
       "rank": 3,
-      "window30SecondsPerCve": 4515.679442508711,
-      "totalEvents": 10336,
+      "window30SecondsPerCve": 4363.636363636364,
+      "totalEvents": 4474,
       "percentileFaster": 99
     },
     {
       "cna": "VulDB",
       "slug": "vuldb",
       "rank": 4,
-      "window30SecondsPerCve": 5411.273486430063,
-      "totalEvents": 15323,
+      "window30SecondsPerCve": 5400.0,
+      "totalEvents": 15324,
       "percentileFaster": 99
     },
     {
@@ -85607,31 +85614,31 @@
       "slug": "patchstack",
       "rank": 8,
       "window30SecondsPerCve": 11835.616438356165,
-      "totalEvents": 12163,
+      "totalEvents": 12164,
       "percentileFaster": 98
+    },
+    {
+      "cna": "redhat",
+      "slug": "redhat",
+      "rank": 9,
+      "window30SecondsPerCve": 13090.90909090909,
+      "totalEvents": 6682,
+      "percentileFaster": 97
     },
     {
       "cna": "apache",
       "slug": "apache",
-      "rank": 9,
-      "window30SecondsPerCve": 13570.680628272252,
-      "totalEvents": 2242,
+      "rank": 10,
+      "window30SecondsPerCve": 13292.307692307691,
+      "totalEvents": 2257,
       "percentileFaster": 97
     },
     {
       "cna": "Chrome",
       "slug": "chrome",
-      "rank": 10,
+      "rank": 11,
       "window30SecondsPerCve": 15247.058823529413,
       "totalEvents": 2165,
-      "percentileFaster": 97
-    },
-    {
-      "cna": "redhat",
-      "slug": "redhat",
-      "rank": 11,
-      "window30SecondsPerCve": 15428.57142857143,
-      "totalEvents": 6649,
       "percentileFaster": 96
     },
     {
@@ -85643,43 +85650,43 @@
       "percentileFaster": 96
     },
     {
-      "cna": "ibm",
-      "slug": "ibm",
+      "cna": "WPScan",
+      "slug": "wpscan",
       "rank": 13,
-      "window30SecondsPerCve": 18919.70802919708,
-      "totalEvents": 4310,
+      "window30SecondsPerCve": 18382.978723404256,
+      "totalEvents": 3413,
       "percentileFaster": 96
     },
     {
-      "cna": "WPScan",
-      "slug": "wpscan",
+      "cna": "ibm",
+      "slug": "ibm",
       "rank": 14,
-      "window30SecondsPerCve": 19938.46153846154,
-      "totalEvents": 3402,
-      "percentileFaster": 95
-    },
-    {
-      "cna": "Joomla",
-      "slug": "joomla",
-      "rank": 15,
-      "window30SecondsPerCve": 26181.81818181818,
-      "totalEvents": 314,
-      "percentileFaster": 95
-    },
-    {
-      "cna": "adobe",
-      "slug": "adobe",
-      "rank": 16,
-      "window30SecondsPerCve": 28483.516483516483,
-      "totalEvents": 4152,
+      "window30SecondsPerCve": 18919.70802919708,
+      "totalEvents": 4310,
       "percentileFaster": 95
     },
     {
       "cna": "TuranSec",
       "slug": "turansec",
+      "rank": 15,
+      "window30SecondsPerCve": 21421.487603305784,
+      "totalEvents": 154,
+      "percentileFaster": 95
+    },
+    {
+      "cna": "Joomla",
+      "slug": "joomla",
+      "rank": 16,
+      "window30SecondsPerCve": 27000.0,
+      "totalEvents": 315,
+      "percentileFaster": 95
+    },
+    {
+      "cna": "adobe",
+      "slug": "adobe",
       "rank": 17,
-      "window30SecondsPerCve": 30857.14285714286,
-      "totalEvents": 117,
+      "window30SecondsPerCve": 28483.516483516483,
+      "totalEvents": 4152,
       "percentileFaster": 94
     },
     {
@@ -85691,19 +85698,19 @@
       "percentileFaster": 94
     },
     {
-      "cna": "TR-CERT",
-      "slug": "tr-cert",
+      "cna": "HCL",
+      "slug": "hcl",
       "rank": 19,
-      "window30SecondsPerCve": 39876.92307692308,
-      "totalEvents": 733,
+      "window30SecondsPerCve": 41806.45161290323,
+      "totalEvents": 575,
       "percentileFaster": 94
     },
     {
-      "cna": "HCL",
-      "slug": "hcl",
+      "cna": "mozilla",
+      "slug": "mozilla",
       "rank": 20,
-      "window30SecondsPerCve": 41142.857142857145,
-      "totalEvents": 573,
+      "window30SecondsPerCve": 42491.80327868852,
+      "totalEvents": 1111,
       "percentileFaster": 93
     }
   ]
