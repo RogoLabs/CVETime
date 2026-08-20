@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-08-19T01:12:36.222993+00:00",
+  "generatedAt": "2026-08-20T01:08:39.881678+00:00",
   "cna": {
     "name": "ibm",
     "slug": "ibm",
     "rank": 7,
-    "window30SecondsPerCve": 8786.440677966102,
-    "window90SecondsPerCve": 18470.308788598573,
-    "totalEvents": 4470,
+    "window30SecondsPerCve": 7024.390243902439,
+    "window90SecondsPerCve": 14699.432892249528,
+    "totalEvents": 4578,
     "consistencyScore": 0,
     "consistencyGrade": "F",
-    "consistencyMedianSeconds": 892.0,
-    "consistencyP90Seconds": 345352.20000000007,
+    "consistencyMedianSeconds": 756.0,
+    "consistencyP90Seconds": 343438.6000000003,
     "percentileFaster": 98
   },
   "trend": [
@@ -1066,15 +1066,15 @@
     },
     {
       "date": "2026-08-01",
-      "p50IntervalSeconds": 45.0,
-      "p90IntervalSeconds": 345.30000000000007,
-      "eventCount": 192
+      "p50IntervalSeconds": 40.0,
+      "p90IntervalSeconds": 384.4000000000008,
+      "eventCount": 300
     }
   ],
   "metrics": {
-    "p50Seconds": 892.0,
-    "p90Seconds": 345352.20000000007,
-    "trimmedCount": 4246
+    "p50Seconds": 756.0,
+    "p90Seconds": 343438.6000000003,
+    "trimmedCount": 4351
   },
   "severity": {
     "summary": {
@@ -1084,24 +1084,24 @@
         "p90Seconds": 607320.0000000001
       },
       "MEDIUM": {
-        "count": 2624,
-        "medianSeconds": 416.0,
-        "p90Seconds": 256754.30000000002
+        "count": 2650,
+        "medianSeconds": 409.5,
+        "p90Seconds": 256364.59999999998
       },
       "CRITICAL": {
-        "count": 115,
-        "medianSeconds": 202.0,
-        "p90Seconds": 99138.40000000008
+        "count": 136,
+        "medianSeconds": 153.0,
+        "p90Seconds": 87631.0
       },
       "HIGH": {
-        "count": 721,
-        "medianSeconds": 309.0,
-        "p90Seconds": 254041.0
+        "count": 778,
+        "medianSeconds": 239.0,
+        "p90Seconds": 228945.90000000095
       },
       "LOW": {
-        "count": 245,
-        "medianSeconds": 262.0,
-        "p90Seconds": 257628.79999999996
+        "count": 249,
+        "medianSeconds": 250.0,
+        "p90Seconds": 254257.60000000015
       }
     },
     "points": [
@@ -32387,6 +32387,762 @@
         "severity": "HIGH",
         "severityValue": 3,
         "timeToPublishSeconds": 20.0
+      },
+      {
+        "date": "2026-08-19",
+        "cveId": "CVE-2026-15061",
+        "severity": "HIGH",
+        "severityValue": 3,
+        "timeToPublishSeconds": 414550.0
+      },
+      {
+        "date": "2026-08-19",
+        "cveId": "CVE-2026-15065",
+        "severity": "CRITICAL",
+        "severityValue": 4,
+        "timeToPublishSeconds": 36.0
+      },
+      {
+        "date": "2026-08-19",
+        "cveId": "CVE-2026-15068",
+        "severity": "CRITICAL",
+        "severityValue": 4,
+        "timeToPublishSeconds": 51.0
+      },
+      {
+        "date": "2026-08-19",
+        "cveId": "CVE-2026-15078",
+        "severity": "HIGH",
+        "severityValue": 3,
+        "timeToPublishSeconds": 61.0
+      },
+      {
+        "date": "2026-08-19",
+        "cveId": "CVE-2026-15961",
+        "severity": "MEDIUM",
+        "severityValue": 2,
+        "timeToPublishSeconds": 35.0
+      },
+      {
+        "date": "2026-08-19",
+        "cveId": "CVE-2026-16656",
+        "severity": "CRITICAL",
+        "severityValue": 4,
+        "timeToPublishSeconds": 1190.0
+      },
+      {
+        "date": "2026-08-19",
+        "cveId": "CVE-2026-14970",
+        "severity": "HIGH",
+        "severityValue": 3,
+        "timeToPublishSeconds": 35.0
+      },
+      {
+        "date": "2026-08-19",
+        "cveId": "CVE-2026-16686",
+        "severity": "HIGH",
+        "severityValue": 3,
+        "timeToPublishSeconds": 28.0
+      },
+      {
+        "date": "2026-08-19",
+        "cveId": "CVE-2026-16690",
+        "severity": "HIGH",
+        "severityValue": 3,
+        "timeToPublishSeconds": 69.0
+      },
+      {
+        "date": "2026-08-19",
+        "cveId": "CVE-2026-16703",
+        "severity": "HIGH",
+        "severityValue": 3,
+        "timeToPublishSeconds": 95.0
+      },
+      {
+        "date": "2026-08-19",
+        "cveId": "CVE-2026-16706",
+        "severity": "HIGH",
+        "severityValue": 3,
+        "timeToPublishSeconds": 38.0
+      },
+      {
+        "date": "2026-08-19",
+        "cveId": "CVE-2026-16814",
+        "severity": "HIGH",
+        "severityValue": 3,
+        "timeToPublishSeconds": 38.0
+      },
+      {
+        "date": "2026-08-19",
+        "cveId": "CVE-2026-16816",
+        "severity": "CRITICAL",
+        "severityValue": 4,
+        "timeToPublishSeconds": 18.0
+      },
+      {
+        "date": "2026-08-19",
+        "cveId": "CVE-2026-16817",
+        "severity": "HIGH",
+        "severityValue": 3,
+        "timeToPublishSeconds": 84.0
+      },
+      {
+        "date": "2026-08-19",
+        "cveId": "CVE-2026-16818",
+        "severity": "HIGH",
+        "severityValue": 3,
+        "timeToPublishSeconds": 26.0
+      },
+      {
+        "date": "2026-08-19",
+        "cveId": "CVE-2026-16819",
+        "severity": "HIGH",
+        "severityValue": 3,
+        "timeToPublishSeconds": 263.0
+      },
+      {
+        "date": "2026-08-19",
+        "cveId": "CVE-2026-19875",
+        "severity": "HIGH",
+        "severityValue": 3,
+        "timeToPublishSeconds": 9039.0
+      },
+      {
+        "date": "2026-08-19",
+        "cveId": "CVE-2026-19653",
+        "severity": "MEDIUM",
+        "severityValue": 2,
+        "timeToPublishSeconds": 424.0
+      },
+      {
+        "date": "2026-08-19",
+        "cveId": "CVE-2026-19234",
+        "severity": "HIGH",
+        "severityValue": 3,
+        "timeToPublishSeconds": 1021.0
+      },
+      {
+        "date": "2026-08-19",
+        "cveId": "CVE-2026-19321",
+        "severity": "MEDIUM",
+        "severityValue": 2,
+        "timeToPublishSeconds": 1158.0
+      },
+      {
+        "date": "2026-08-19",
+        "cveId": "CVE-2026-17100",
+        "severity": "HIGH",
+        "severityValue": 3,
+        "timeToPublishSeconds": 286.0
+      },
+      {
+        "date": "2026-08-19",
+        "cveId": "CVE-2026-17093",
+        "severity": "HIGH",
+        "severityValue": 3,
+        "timeToPublishSeconds": 281.0
+      },
+      {
+        "date": "2026-08-19",
+        "cveId": "CVE-2026-18681",
+        "severity": "MEDIUM",
+        "severityValue": 2,
+        "timeToPublishSeconds": 319.0
+      },
+      {
+        "date": "2026-08-19",
+        "cveId": "CVE-2026-16930",
+        "severity": "HIGH",
+        "severityValue": 3,
+        "timeToPublishSeconds": 74.0
+      },
+      {
+        "date": "2026-08-19",
+        "cveId": "CVE-2026-17429",
+        "severity": "HIGH",
+        "severityValue": 3,
+        "timeToPublishSeconds": 195.0
+      },
+      {
+        "date": "2026-08-19",
+        "cveId": "CVE-2026-17494",
+        "severity": "HIGH",
+        "severityValue": 3,
+        "timeToPublishSeconds": 78.0
+      },
+      {
+        "date": "2026-08-19",
+        "cveId": "CVE-2026-16828",
+        "severity": "HIGH",
+        "severityValue": 3,
+        "timeToPublishSeconds": 99.0
+      },
+      {
+        "date": "2026-08-19",
+        "cveId": "CVE-2026-18848",
+        "severity": "HIGH",
+        "severityValue": 3,
+        "timeToPublishSeconds": 69.0
+      },
+      {
+        "date": "2026-08-19",
+        "cveId": "CVE-2026-16938",
+        "severity": "MEDIUM",
+        "severityValue": 2,
+        "timeToPublishSeconds": 222.0
+      },
+      {
+        "date": "2026-08-19",
+        "cveId": "CVE-2026-16832",
+        "severity": "HIGH",
+        "severityValue": 3,
+        "timeToPublishSeconds": 55.0
+      },
+      {
+        "date": "2026-08-19",
+        "cveId": "CVE-2026-16835",
+        "severity": "CRITICAL",
+        "severityValue": 4,
+        "timeToPublishSeconds": 179.0
+      },
+      {
+        "date": "2026-08-19",
+        "cveId": "CVE-2026-16687",
+        "severity": "CRITICAL",
+        "severityValue": 4,
+        "timeToPublishSeconds": 255.0
+      },
+      {
+        "date": "2026-08-19",
+        "cveId": "CVE-2026-17063",
+        "severity": "HIGH",
+        "severityValue": 3,
+        "timeToPublishSeconds": 709.0
+      },
+      {
+        "date": "2026-08-19",
+        "cveId": "CVE-2026-17042",
+        "severity": "HIGH",
+        "severityValue": 3,
+        "timeToPublishSeconds": 157.0
+      },
+      {
+        "date": "2026-08-19",
+        "cveId": "CVE-2026-16933",
+        "severity": "HIGH",
+        "severityValue": 3,
+        "timeToPublishSeconds": 139.0
+      },
+      {
+        "date": "2026-08-19",
+        "cveId": "CVE-2026-16822",
+        "severity": "CRITICAL",
+        "severityValue": 4,
+        "timeToPublishSeconds": 752.0
+      },
+      {
+        "date": "2026-08-19",
+        "cveId": "CVE-2026-16824",
+        "severity": "HIGH",
+        "severityValue": 3,
+        "timeToPublishSeconds": 33.0
+      },
+      {
+        "date": "2026-08-19",
+        "cveId": "CVE-2026-16825",
+        "severity": "MEDIUM",
+        "severityValue": 2,
+        "timeToPublishSeconds": 21.0
+      },
+      {
+        "date": "2026-08-19",
+        "cveId": "CVE-2026-16827",
+        "severity": "MEDIUM",
+        "severityValue": 2,
+        "timeToPublishSeconds": 65.0
+      },
+      {
+        "date": "2026-08-19",
+        "cveId": "CVE-2026-16829",
+        "severity": "MEDIUM",
+        "severityValue": 2,
+        "timeToPublishSeconds": 21.0
+      },
+      {
+        "date": "2026-08-19",
+        "cveId": "CVE-2026-16831",
+        "severity": "HIGH",
+        "severityValue": 3,
+        "timeToPublishSeconds": 40.0
+      },
+      {
+        "date": "2026-08-19",
+        "cveId": "CVE-2026-16833",
+        "severity": "MEDIUM",
+        "severityValue": 2,
+        "timeToPublishSeconds": 17.0
+      },
+      {
+        "date": "2026-08-19",
+        "cveId": "CVE-2026-16834",
+        "severity": "CRITICAL",
+        "severityValue": 4,
+        "timeToPublishSeconds": 28.0
+      },
+      {
+        "date": "2026-08-19",
+        "cveId": "CVE-2026-16836",
+        "severity": "HIGH",
+        "severityValue": 3,
+        "timeToPublishSeconds": 20.0
+      },
+      {
+        "date": "2026-08-19",
+        "cveId": "CVE-2026-16837",
+        "severity": "HIGH",
+        "severityValue": 3,
+        "timeToPublishSeconds": 20.0
+      },
+      {
+        "date": "2026-08-19",
+        "cveId": "CVE-2026-16838",
+        "severity": "HIGH",
+        "severityValue": 3,
+        "timeToPublishSeconds": 18.0
+      },
+      {
+        "date": "2026-08-19",
+        "cveId": "CVE-2026-16839",
+        "severity": "CRITICAL",
+        "severityValue": 4,
+        "timeToPublishSeconds": 17.0
+      },
+      {
+        "date": "2026-08-19",
+        "cveId": "CVE-2026-16840",
+        "severity": "CRITICAL",
+        "severityValue": 4,
+        "timeToPublishSeconds": 16.0
+      },
+      {
+        "date": "2026-08-19",
+        "cveId": "CVE-2026-16661",
+        "severity": "HIGH",
+        "severityValue": 3,
+        "timeToPublishSeconds": 16.0
+      },
+      {
+        "date": "2026-08-19",
+        "cveId": "CVE-2026-16841",
+        "severity": "HIGH",
+        "severityValue": 3,
+        "timeToPublishSeconds": 3.0
+      },
+      {
+        "date": "2026-08-19",
+        "cveId": "CVE-2026-16842",
+        "severity": "HIGH",
+        "severityValue": 3,
+        "timeToPublishSeconds": 20.0
+      },
+      {
+        "date": "2026-08-19",
+        "cveId": "CVE-2026-16844",
+        "severity": "HIGH",
+        "severityValue": 3,
+        "timeToPublishSeconds": 17.0
+      },
+      {
+        "date": "2026-08-19",
+        "cveId": "CVE-2026-16845",
+        "severity": "CRITICAL",
+        "severityValue": 4,
+        "timeToPublishSeconds": 29.0
+      },
+      {
+        "date": "2026-08-19",
+        "cveId": "CVE-2026-16846",
+        "severity": "MEDIUM",
+        "severityValue": 2,
+        "timeToPublishSeconds": 21.0
+      },
+      {
+        "date": "2026-08-19",
+        "cveId": "CVE-2026-16847",
+        "severity": "HIGH",
+        "severityValue": 3,
+        "timeToPublishSeconds": 52.0
+      },
+      {
+        "date": "2026-08-19",
+        "cveId": "CVE-2026-17414",
+        "severity": "HIGH",
+        "severityValue": 3,
+        "timeToPublishSeconds": 24.0
+      },
+      {
+        "date": "2026-08-19",
+        "cveId": "CVE-2026-16848",
+        "severity": "HIGH",
+        "severityValue": 3,
+        "timeToPublishSeconds": 127.0
+      },
+      {
+        "date": "2026-08-19",
+        "cveId": "CVE-2026-18871",
+        "severity": "HIGH",
+        "severityValue": 3,
+        "timeToPublishSeconds": 11.0
+      },
+      {
+        "date": "2026-08-19",
+        "cveId": "CVE-2026-16849",
+        "severity": "MEDIUM",
+        "severityValue": 2,
+        "timeToPublishSeconds": 5.0
+      },
+      {
+        "date": "2026-08-19",
+        "cveId": "CVE-2026-16850",
+        "severity": "HIGH",
+        "severityValue": 3,
+        "timeToPublishSeconds": 21.0
+      },
+      {
+        "date": "2026-08-19",
+        "cveId": "CVE-2026-16851",
+        "severity": "HIGH",
+        "severityValue": 3,
+        "timeToPublishSeconds": 18.0
+      },
+      {
+        "date": "2026-08-19",
+        "cveId": "CVE-2026-16852",
+        "severity": "HIGH",
+        "severityValue": 3,
+        "timeToPublishSeconds": 32.0
+      },
+      {
+        "date": "2026-08-19",
+        "cveId": "CVE-2026-16855",
+        "severity": "MEDIUM",
+        "severityValue": 2,
+        "timeToPublishSeconds": 19.0
+      },
+      {
+        "date": "2026-08-19",
+        "cveId": "CVE-2026-16857",
+        "severity": "HIGH",
+        "severityValue": 3,
+        "timeToPublishSeconds": 35.0
+      },
+      {
+        "date": "2026-08-19",
+        "cveId": "CVE-2026-16862",
+        "severity": "CRITICAL",
+        "severityValue": 4,
+        "timeToPublishSeconds": 18.0
+      },
+      {
+        "date": "2026-08-19",
+        "cveId": "CVE-2026-16864",
+        "severity": "CRITICAL",
+        "severityValue": 4,
+        "timeToPublishSeconds": 17.0
+      },
+      {
+        "date": "2026-08-19",
+        "cveId": "CVE-2026-16865",
+        "severity": "HIGH",
+        "severityValue": 3,
+        "timeToPublishSeconds": 20.0
+      },
+      {
+        "date": "2026-08-19",
+        "cveId": "CVE-2026-16866",
+        "severity": "MEDIUM",
+        "severityValue": 2,
+        "timeToPublishSeconds": 16.0
+      },
+      {
+        "date": "2026-08-19",
+        "cveId": "CVE-2026-16724",
+        "severity": "MEDIUM",
+        "severityValue": 2,
+        "timeToPublishSeconds": 17.0
+      },
+      {
+        "date": "2026-08-19",
+        "cveId": "CVE-2026-16869",
+        "severity": "HIGH",
+        "severityValue": 3,
+        "timeToPublishSeconds": 1.0
+      },
+      {
+        "date": "2026-08-19",
+        "cveId": "CVE-2026-16872",
+        "severity": "CRITICAL",
+        "severityValue": 4,
+        "timeToPublishSeconds": 17.0
+      },
+      {
+        "date": "2026-08-19",
+        "cveId": "CVE-2026-18821",
+        "severity": "HIGH",
+        "severityValue": 3,
+        "timeToPublishSeconds": 73.0
+      },
+      {
+        "date": "2026-08-19",
+        "cveId": "CVE-2026-16873",
+        "severity": "HIGH",
+        "severityValue": 3,
+        "timeToPublishSeconds": 5.0
+      },
+      {
+        "date": "2026-08-19",
+        "cveId": "CVE-2026-16874",
+        "severity": "HIGH",
+        "severityValue": 3,
+        "timeToPublishSeconds": 62.0
+      },
+      {
+        "date": "2026-08-19",
+        "cveId": "CVE-2026-16875",
+        "severity": "HIGH",
+        "severityValue": 3,
+        "timeToPublishSeconds": 20.0
+      },
+      {
+        "date": "2026-08-19",
+        "cveId": "CVE-2026-16877",
+        "severity": "HIGH",
+        "severityValue": 3,
+        "timeToPublishSeconds": 18.0
+      },
+      {
+        "date": "2026-08-19",
+        "cveId": "CVE-2026-17097",
+        "severity": "HIGH",
+        "severityValue": 3,
+        "timeToPublishSeconds": 3.0
+      },
+      {
+        "date": "2026-08-19",
+        "cveId": "CVE-2026-16882",
+        "severity": "CRITICAL",
+        "severityValue": 4,
+        "timeToPublishSeconds": 14.0
+      },
+      {
+        "date": "2026-08-19",
+        "cveId": "CVE-2026-16883",
+        "severity": "MEDIUM",
+        "severityValue": 2,
+        "timeToPublishSeconds": 21.0
+      },
+      {
+        "date": "2026-08-19",
+        "cveId": "CVE-2026-17091",
+        "severity": "HIGH",
+        "severityValue": 3,
+        "timeToPublishSeconds": 69.0
+      },
+      {
+        "date": "2026-08-19",
+        "cveId": "CVE-2026-17028",
+        "severity": "MEDIUM",
+        "severityValue": 2,
+        "timeToPublishSeconds": 140.0
+      },
+      {
+        "date": "2026-08-19",
+        "cveId": "CVE-2026-16885",
+        "severity": "CRITICAL",
+        "severityValue": 4,
+        "timeToPublishSeconds": 210.0
+      },
+      {
+        "date": "2026-08-19",
+        "cveId": "CVE-2026-16888",
+        "severity": "LOW",
+        "severityValue": 1,
+        "timeToPublishSeconds": 34.0
+      },
+      {
+        "date": "2026-08-19",
+        "cveId": "CVE-2026-16886",
+        "severity": "MEDIUM",
+        "severityValue": 2,
+        "timeToPublishSeconds": 80.0
+      },
+      {
+        "date": "2026-08-19",
+        "cveId": "CVE-2026-16890",
+        "severity": "LOW",
+        "severityValue": 1,
+        "timeToPublishSeconds": 25.0
+      },
+      {
+        "date": "2026-08-19",
+        "cveId": "CVE-2026-16891",
+        "severity": "LOW",
+        "severityValue": 1,
+        "timeToPublishSeconds": 26.0
+      },
+      {
+        "date": "2026-08-19",
+        "cveId": "CVE-2026-16894",
+        "severity": "CRITICAL",
+        "severityValue": 4,
+        "timeToPublishSeconds": 17.0
+      },
+      {
+        "date": "2026-08-19",
+        "cveId": "CVE-2026-16897",
+        "severity": "MEDIUM",
+        "severityValue": 2,
+        "timeToPublishSeconds": 26.0
+      },
+      {
+        "date": "2026-08-19",
+        "cveId": "CVE-2026-16901",
+        "severity": "HIGH",
+        "severityValue": 3,
+        "timeToPublishSeconds": 17.0
+      },
+      {
+        "date": "2026-08-19",
+        "cveId": "CVE-2026-16903",
+        "severity": "CRITICAL",
+        "severityValue": 4,
+        "timeToPublishSeconds": 18.0
+      },
+      {
+        "date": "2026-08-19",
+        "cveId": "CVE-2026-16909",
+        "severity": "HIGH",
+        "severityValue": 3,
+        "timeToPublishSeconds": 18.0
+      },
+      {
+        "date": "2026-08-19",
+        "cveId": "CVE-2026-16911",
+        "severity": "HIGH",
+        "severityValue": 3,
+        "timeToPublishSeconds": 18.0
+      },
+      {
+        "date": "2026-08-19",
+        "cveId": "CVE-2026-16913",
+        "severity": "CRITICAL",
+        "severityValue": 4,
+        "timeToPublishSeconds": 15.0
+      },
+      {
+        "date": "2026-08-19",
+        "cveId": "CVE-2026-16914",
+        "severity": "MEDIUM",
+        "severityValue": 2,
+        "timeToPublishSeconds": 40.0
+      },
+      {
+        "date": "2026-08-19",
+        "cveId": "CVE-2026-16917",
+        "severity": "CRITICAL",
+        "severityValue": 4,
+        "timeToPublishSeconds": 18.0
+      },
+      {
+        "date": "2026-08-19",
+        "cveId": "CVE-2026-16919",
+        "severity": "CRITICAL",
+        "severityValue": 4,
+        "timeToPublishSeconds": 26.0
+      },
+      {
+        "date": "2026-08-19",
+        "cveId": "CVE-2026-16707",
+        "severity": "HIGH",
+        "severityValue": 3,
+        "timeToPublishSeconds": 704.0
+      },
+      {
+        "date": "2026-08-19",
+        "cveId": "CVE-2026-4937",
+        "severity": "MEDIUM",
+        "severityValue": 2,
+        "timeToPublishSeconds": 114.0
+      },
+      {
+        "date": "2026-08-19",
+        "cveId": "CVE-2026-4936",
+        "severity": "MEDIUM",
+        "severityValue": 2,
+        "timeToPublishSeconds": 234.0
+      },
+      {
+        "date": "2026-08-19",
+        "cveId": "CVE-2026-18849",
+        "severity": "MEDIUM",
+        "severityValue": 2,
+        "timeToPublishSeconds": 420.0
+      },
+      {
+        "date": "2026-08-19",
+        "cveId": "CVE-2026-18544",
+        "severity": "HIGH",
+        "severityValue": 3,
+        "timeToPublishSeconds": 435.0
+      },
+      {
+        "date": "2026-08-19",
+        "cveId": "CVE-2026-18102",
+        "severity": "LOW",
+        "severityValue": 1,
+        "timeToPublishSeconds": 220.0
+      },
+      {
+        "date": "2026-08-19",
+        "cveId": "CVE-2026-17015",
+        "severity": "MEDIUM",
+        "severityValue": 2,
+        "timeToPublishSeconds": 77.0
+      },
+      {
+        "date": "2026-08-19",
+        "cveId": "CVE-2026-14514",
+        "severity": "MEDIUM",
+        "severityValue": 2,
+        "timeToPublishSeconds": 1706.0
+      },
+      {
+        "date": "2026-08-19",
+        "cveId": "CVE-2026-14978",
+        "severity": "MEDIUM",
+        "severityValue": 2,
+        "timeToPublishSeconds": 343.0
+      },
+      {
+        "date": "2026-08-19",
+        "cveId": "CVE-2025-36398",
+        "severity": "MEDIUM",
+        "severityValue": 2,
+        "timeToPublishSeconds": 858.0
+      },
+      {
+        "date": "2026-08-19",
+        "cveId": "CVE-2025-36255",
+        "severity": "HIGH",
+        "severityValue": 3,
+        "timeToPublishSeconds": 10.0
+      },
+      {
+        "date": "2026-08-19",
+        "cveId": "CVE-2025-36254",
+        "severity": "HIGH",
+        "severityValue": 3,
+        "timeToPublishSeconds": 8.0
       }
     ]
   },
@@ -32403,16 +33159,16 @@
       "cna": "GitHub_M",
       "slug": "github-m",
       "rank": 2,
-      "window30SecondsPerCve": 2169.0376569037658,
-      "totalEvents": 18266,
+      "window30SecondsPerCve": 2119.3785772690107,
+      "totalEvents": 18392,
       "percentileFaster": 100
     },
     {
       "cna": "VulnCheck",
       "slug": "vulncheck",
       "rank": 3,
-      "window30SecondsPerCve": 3512.1951219512193,
-      "totalEvents": 4785,
+      "window30SecondsPerCve": 3451.398135818908,
+      "totalEvents": 4840,
       "percentileFaster": 99
     },
     {
@@ -32427,40 +33183,40 @@
       "cna": "VulDB",
       "slug": "vuldb",
       "rank": 5,
-      "window30SecondsPerCve": 5798.657718120805,
-      "totalEvents": 15493,
+      "window30SecondsPerCve": 5526.652452025586,
+      "totalEvents": 15521,
       "percentileFaster": 99
     },
     {
       "cna": "Patchstack",
       "slug": "patchstack",
       "rank": 6,
-      "window30SecondsPerCve": 6715.025906735751,
-      "totalEvents": 12334,
+      "window30SecondsPerCve": 6431.761786600497,
+      "totalEvents": 12351,
       "percentileFaster": 98
     },
     {
       "cna": "ibm",
       "slug": "ibm",
       "rank": 7,
-      "window30SecondsPerCve": 8786.440677966102,
-      "totalEvents": 4470,
+      "window30SecondsPerCve": 7024.390243902439,
+      "totalEvents": 4578,
       "percentileFaster": 98
     },
     {
       "cna": "microsoft",
       "slug": "microsoft",
       "rank": 8,
-      "window30SecondsPerCve": 9323.741007194245,
-      "totalEvents": 5891,
+      "window30SecondsPerCve": 9257.142857142857,
+      "totalEvents": 5893,
       "percentileFaster": 98
     },
     {
       "cna": "redhat",
       "slug": "redhat",
       "rank": 9,
-      "window30SecondsPerCve": 10204.72440944882,
-      "totalEvents": 6766,
+      "window30SecondsPerCve": 10085.603112840467,
+      "totalEvents": 6777,
       "percentileFaster": 97
     },
     {
@@ -32475,8 +33231,8 @@
       "cna": "Wordfence",
       "slug": "wordfence",
       "rank": 11,
-      "window30SecondsPerCve": 13157.360406091371,
-      "totalEvents": 7312,
+      "window30SecondsPerCve": 12831.683168316831,
+      "totalEvents": 7317,
       "percentileFaster": 96
     },
     {
@@ -32507,8 +33263,8 @@
       "cna": "WPScan",
       "slug": "wpscan",
       "rank": 15,
-      "window30SecondsPerCve": 16941.176470588234,
-      "totalEvents": 3438,
+      "window30SecondsPerCve": 16509.554140127388,
+      "totalEvents": 3447,
       "percentileFaster": 95
     },
     {
@@ -32523,14 +33279,22 @@
       "cna": "Joomla",
       "slug": "joomla",
       "rank": 17,
-      "window30SecondsPerCve": 24000.0,
-      "totalEvents": 338,
+      "window30SecondsPerCve": 21421.487603305784,
+      "totalEvents": 351,
+      "percentileFaster": 94
+    },
+    {
+      "cna": "cisco",
+      "slug": "cisco",
+      "rank": 18,
+      "window30SecondsPerCve": 23142.85714285714,
+      "totalEvents": 3717,
       "percentileFaster": 94
     },
     {
       "cna": "mozilla",
       "slug": "mozilla",
-      "rank": 18,
+      "rank": 19,
       "window30SecondsPerCve": 36000.0,
       "totalEvents": 1126,
       "percentileFaster": 94
@@ -32538,17 +33302,9 @@
     {
       "cna": "intel",
       "slug": "intel",
-      "rank": 19,
+      "rank": 20,
       "window30SecondsPerCve": 36507.042253521126,
       "totalEvents": 1798,
-      "percentileFaster": 94
-    },
-    {
-      "cna": "HCL",
-      "slug": "hcl",
-      "rank": 20,
-      "window30SecondsPerCve": 38686.567164179105,
-      "totalEvents": 580,
       "percentileFaster": 93
     }
   ]
