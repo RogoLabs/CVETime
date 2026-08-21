@@ -1,17 +1,17 @@
 {
-  "generatedAt": "2026-08-20T01:08:29.568610+00:00",
+  "generatedAt": "2026-08-21T01:13:48.042241+00:00",
   "cna": {
     "name": "Fluid Attacks",
     "slug": "fluid-attacks",
-    "rank": 121,
-    "window30SecondsPerCve": 288000.0,
-    "window90SecondsPerCve": 222171.42857142858,
-    "totalEvents": 365,
+    "rank": 114,
+    "window30SecondsPerCve": 259200.0,
+    "window90SecondsPerCve": 216000.0,
+    "totalEvents": 366,
     "consistencyScore": 0,
     "consistencyGrade": "F",
-    "consistencyMedianSeconds": 358.0,
-    "consistencyP90Seconds": 1160565.9999999995,
-    "percentileFaster": 58
+    "consistencyMedianSeconds": 363.0,
+    "consistencyP90Seconds": 1155757.0000000012,
+    "percentileFaster": 60
   },
   "trend": [
     {
@@ -274,15 +274,15 @@
     },
     {
       "date": "2026-08-01",
-      "p50IntervalSeconds": 11112.0,
-      "p90IntervalSeconds": 936116.8000000002,
-      "eventCount": 9
+      "p50IntervalSeconds": 41464.0,
+      "p90IntervalSeconds": 857257.3999999997,
+      "eventCount": 10
     }
   ],
   "metrics": {
-    "p50Seconds": 358.0,
-    "p90Seconds": 1160565.9999999995,
-    "trimmedCount": 328
+    "p50Seconds": 363.0,
+    "p90Seconds": 1155757.0000000012,
+    "trimmedCount": 329
   },
   "severity": {
     "summary": {
@@ -297,9 +297,9 @@
         "p90Seconds": 2389292.4000000027
       },
       "MEDIUM": {
-        "count": 129,
+        "count": 130,
         "medianSeconds": 918.0,
-        "p90Seconds": 966720.8000000003
+        "p90Seconds": 958681.4000000007
       },
       "CRITICAL": {
         "count": 76,
@@ -2855,6 +2855,13 @@
         "severity": "HIGH",
         "severityValue": 3,
         "timeToPublishSeconds": 11112.0
+      },
+      {
+        "date": "2026-08-20",
+        "cveId": "CVE-2026-19755",
+        "severity": "MEDIUM",
+        "severityValue": 2,
+        "timeToPublishSeconds": 91691.0
       }
     ]
   },
@@ -2871,16 +2878,16 @@
       "cna": "GitHub_M",
       "slug": "github-m",
       "rank": 2,
-      "window30SecondsPerCve": 2119.3785772690107,
-      "totalEvents": 18392,
+      "window30SecondsPerCve": 2090.3225806451615,
+      "totalEvents": 18479,
       "percentileFaster": 100
     },
     {
       "cna": "VulnCheck",
       "slug": "vulncheck",
       "rank": 3,
-      "window30SecondsPerCve": 3451.398135818908,
-      "totalEvents": 4840,
+      "window30SecondsPerCve": 3446.808510638298,
+      "totalEvents": 4871,
       "percentileFaster": 99
     },
     {
@@ -2895,64 +2902,64 @@
       "cna": "VulDB",
       "slug": "vuldb",
       "rank": 5,
-      "window30SecondsPerCve": 5526.652452025586,
-      "totalEvents": 15521,
+      "window30SecondsPerCve": 5377.593360995851,
+      "totalEvents": 15544,
       "percentileFaster": 99
-    },
-    {
-      "cna": "Patchstack",
-      "slug": "patchstack",
-      "rank": 6,
-      "window30SecondsPerCve": 6431.761786600497,
-      "totalEvents": 12351,
-      "percentileFaster": 98
     },
     {
       "cna": "ibm",
       "slug": "ibm",
+      "rank": 6,
+      "window30SecondsPerCve": 5837.8378378378375,
+      "totalEvents": 4653,
+      "percentileFaster": 98
+    },
+    {
+      "cna": "Patchstack",
+      "slug": "patchstack",
       "rank": 7,
-      "window30SecondsPerCve": 7024.390243902439,
-      "totalEvents": 4578,
+      "window30SecondsPerCve": 5864.253393665158,
+      "totalEvents": 12390,
       "percentileFaster": 98
     },
     {
       "cna": "microsoft",
       "slug": "microsoft",
       "rank": 8,
-      "window30SecondsPerCve": 9257.142857142857,
-      "totalEvents": 5893,
+      "window30SecondsPerCve": 8816.326530612245,
+      "totalEvents": 5907,
       "percentileFaster": 98
     },
     {
       "cna": "redhat",
       "slug": "redhat",
       "rank": 9,
-      "window30SecondsPerCve": 10085.603112840467,
-      "totalEvents": 6777,
-      "percentileFaster": 97
-    },
-    {
-      "cna": "apache",
-      "slug": "apache",
-      "rank": 10,
-      "window30SecondsPerCve": 12705.882352941177,
-      "totalEvents": 2283,
+      "window30SecondsPerCve": 10164.70588235294,
+      "totalEvents": 6793,
       "percentileFaster": 97
     },
     {
       "cna": "Wordfence",
       "slug": "wordfence",
-      "rank": 11,
+      "rank": 10,
       "window30SecondsPerCve": 12831.683168316831,
-      "totalEvents": 7317,
+      "totalEvents": 7319,
+      "percentileFaster": 97
+    },
+    {
+      "cna": "apache",
+      "slug": "apache",
+      "rank": 11,
+      "window30SecondsPerCve": 13025.125628140704,
+      "totalEvents": 2292,
       "percentileFaster": 96
     },
     {
       "cna": "apple",
       "slug": "apple",
       "rank": 12,
-      "window30SecondsPerCve": 14896.551724137931,
-      "totalEvents": 3329,
+      "window30SecondsPerCve": 14400.0,
+      "totalEvents": 3335,
       "percentileFaster": 96
     },
     {
@@ -2967,8 +2974,8 @@
       "cna": "Chrome",
       "slug": "chrome",
       "rank": 14,
-      "window30SecondsPerCve": 15901.840490797545,
-      "totalEvents": 2174,
+      "window30SecondsPerCve": 16099.378881987577,
+      "totalEvents": 2176,
       "percentileFaster": 95
     },
     {
@@ -2976,7 +2983,7 @@
       "slug": "wpscan",
       "rank": 15,
       "window30SecondsPerCve": 16509.554140127388,
-      "totalEvents": 3447,
+      "totalEvents": 3449,
       "percentileFaster": 95
     },
     {
@@ -2991,8 +2998,8 @@
       "cna": "Joomla",
       "slug": "joomla",
       "rank": 17,
-      "window30SecondsPerCve": 21421.487603305784,
-      "totalEvents": 351,
+      "window30SecondsPerCve": 23142.85714285714,
+      "totalEvents": 357,
       "percentileFaster": 94
     },
     {
@@ -3004,19 +3011,19 @@
       "percentileFaster": 94
     },
     {
-      "cna": "mozilla",
-      "slug": "mozilla",
+      "cna": "mitre",
+      "slug": "mitre",
       "rank": 19,
-      "window30SecondsPerCve": 36000.0,
-      "totalEvents": 1126,
+      "window30SecondsPerCve": 35506.849315068495,
+      "totalEvents": 37534,
       "percentileFaster": 94
     },
     {
-      "cna": "intel",
-      "slug": "intel",
+      "cna": "mozilla",
+      "slug": "mozilla",
       "rank": 20,
-      "window30SecondsPerCve": 36507.042253521126,
-      "totalEvents": 1798,
+      "window30SecondsPerCve": 36000.0,
+      "totalEvents": 1126,
       "percentileFaster": 93
     }
   ]
