@@ -1,17 +1,17 @@
 {
-  "generatedAt": "2026-08-21T01:13:47.935418+00:00",
+  "generatedAt": "2026-08-22T01:11:12.208151+00:00",
   "cna": {
     "name": "Esri",
     "slug": "esri",
-    "rank": 170,
-    "window30SecondsPerCve": 648000.0,
-    "window90SecondsPerCve": 972000.0,
-    "totalEvents": 148,
+    "rank": 102,
+    "window30SecondsPerCve": 199384.61538461538,
+    "window90SecondsPerCve": 457411.76470588235,
+    "totalEvents": 161,
     "consistencyScore": 0,
     "consistencyGrade": "F",
-    "consistencyMedianSeconds": 76.0,
-    "consistencyP90Seconds": 3854144.000000002,
-    "percentileFaster": 40
+    "consistencyMedianSeconds": 63.0,
+    "consistencyP90Seconds": 3733944.999999999,
+    "percentileFaster": 64
   },
   "trend": [
     {
@@ -175,19 +175,25 @@
       "p50IntervalSeconds": 40162.5,
       "p90IntervalSeconds": 2867860.4000000004,
       "eventCount": 4
+    },
+    {
+      "date": "2026-08-01",
+      "p50IntervalSeconds": 17.0,
+      "p90IntervalSeconds": 203.20000000000007,
+      "eventCount": 13
     }
   ],
   "metrics": {
-    "p50Seconds": 76.0,
-    "p90Seconds": 3854144.000000002,
-    "trimmedCount": 133
+    "p50Seconds": 63.0,
+    "p90Seconds": 3733944.999999999,
+    "trimmedCount": 146
   },
   "severity": {
     "summary": {
       "MEDIUM": {
-        "count": 103,
-        "medianSeconds": 53.0,
-        "p90Seconds": 2442024.599999999
+        "count": 114,
+        "medianSeconds": 40.0,
+        "p90Seconds": 2415360.900000001
       },
       "HIGH": {
         "count": 27,
@@ -200,9 +206,9 @@
         "p90Seconds": 4391865.999999999
       },
       "LOW": {
-        "count": 3,
-        "medianSeconds": 53710.0,
-        "p90Seconds": 17174546.8
+        "count": 5,
+        "medianSeconds": 227.0,
+        "p90Seconds": 12894337.600000001
       },
       "NAN": {
         "count": 4,
@@ -1239,32 +1245,123 @@
         "severity": "CRITICAL",
         "severityValue": 4,
         "timeToPublishSeconds": 97.0
+      },
+      {
+        "date": "2026-08-21",
+        "cveId": "CVE-2026-69224",
+        "severity": "MEDIUM",
+        "severityValue": 2,
+        "timeToPublishSeconds": 3902650.0
+      },
+      {
+        "date": "2026-08-21",
+        "cveId": "CVE-2026-69238",
+        "severity": "LOW",
+        "severityValue": 1,
+        "timeToPublishSeconds": 60.0
+      },
+      {
+        "date": "2026-08-21",
+        "cveId": "CVE-2026-69225",
+        "severity": "MEDIUM",
+        "severityValue": 2,
+        "timeToPublishSeconds": 36.0
+      },
+      {
+        "date": "2026-08-21",
+        "cveId": "CVE-2026-69228",
+        "severity": "MEDIUM",
+        "severityValue": 2,
+        "timeToPublishSeconds": 108.0
+      },
+      {
+        "date": "2026-08-21",
+        "cveId": "CVE-2026-69229",
+        "severity": "MEDIUM",
+        "severityValue": 2,
+        "timeToPublishSeconds": 19.0
+      },
+      {
+        "date": "2026-08-21",
+        "cveId": "CVE-2026-69230",
+        "severity": "MEDIUM",
+        "severityValue": 2,
+        "timeToPublishSeconds": 15.0
+      },
+      {
+        "date": "2026-08-21",
+        "cveId": "CVE-2026-69231",
+        "severity": "MEDIUM",
+        "severityValue": 2,
+        "timeToPublishSeconds": 16.0
+      },
+      {
+        "date": "2026-08-21",
+        "cveId": "CVE-2026-69232",
+        "severity": "MEDIUM",
+        "severityValue": 2,
+        "timeToPublishSeconds": 17.0
+      },
+      {
+        "date": "2026-08-21",
+        "cveId": "CVE-2026-69237",
+        "severity": "LOW",
+        "severityValue": 1,
+        "timeToPublishSeconds": 227.0
+      },
+      {
+        "date": "2026-08-21",
+        "cveId": "CVE-2026-69236",
+        "severity": "MEDIUM",
+        "severityValue": 2,
+        "timeToPublishSeconds": 15.0
+      },
+      {
+        "date": "2026-08-21",
+        "cveId": "CVE-2026-69235",
+        "severity": "MEDIUM",
+        "severityValue": 2,
+        "timeToPublishSeconds": 12.0
+      },
+      {
+        "date": "2026-08-21",
+        "cveId": "CVE-2026-69234",
+        "severity": "MEDIUM",
+        "severityValue": 2,
+        "timeToPublishSeconds": 12.0
+      },
+      {
+        "date": "2026-08-21",
+        "cveId": "CVE-2026-69233",
+        "severity": "MEDIUM",
+        "severityValue": 2,
+        "timeToPublishSeconds": 13.0
       }
     ]
   },
   "peers": [
     {
-      "cna": "Linux",
-      "slug": "linux",
+      "cna": "GitHub_M",
+      "slug": "github-m",
       "rank": 1,
-      "window30SecondsPerCve": 1701.904136572554,
-      "totalEvents": 11288,
+      "window30SecondsPerCve": 1932.8859060402685,
+      "totalEvents": 18584,
       "percentileFaster": 100
     },
     {
-      "cna": "GitHub_M",
-      "slug": "github-m",
+      "cna": "Linux",
+      "slug": "linux",
       "rank": 2,
-      "window30SecondsPerCve": 2090.3225806451615,
-      "totalEvents": 18479,
+      "window30SecondsPerCve": 2109.0317331163546,
+      "totalEvents": 11290,
       "percentileFaster": 100
     },
     {
       "cna": "VulnCheck",
       "slug": "vulncheck",
       "rank": 3,
-      "window30SecondsPerCve": 3446.808510638298,
-      "totalEvents": 4871,
+      "window30SecondsPerCve": 3479.1946308724832,
+      "totalEvents": 4887,
       "percentileFaster": 99
     },
     {
@@ -1279,8 +1376,8 @@
       "cna": "VulDB",
       "slug": "vuldb",
       "rank": 5,
-      "window30SecondsPerCve": 5377.593360995851,
-      "totalEvents": 15544,
+      "window30SecondsPerCve": 5388.773388773388,
+      "totalEvents": 15550,
       "percentileFaster": 99
     },
     {
@@ -1303,8 +1400,8 @@
       "cna": "microsoft",
       "slug": "microsoft",
       "rank": 8,
-      "window30SecondsPerCve": 8816.326530612245,
-      "totalEvents": 5907,
+      "window30SecondsPerCve": 8786.440677966102,
+      "totalEvents": 5908,
       "percentileFaster": 98
     },
     {
@@ -1312,23 +1409,23 @@
       "slug": "redhat",
       "rank": 9,
       "window30SecondsPerCve": 10164.70588235294,
-      "totalEvents": 6793,
-      "percentileFaster": 97
-    },
-    {
-      "cna": "Wordfence",
-      "slug": "wordfence",
-      "rank": 10,
-      "window30SecondsPerCve": 12831.683168316831,
-      "totalEvents": 7319,
+      "totalEvents": 6794,
       "percentileFaster": 97
     },
     {
       "cna": "apache",
       "slug": "apache",
+      "rank": 10,
+      "window30SecondsPerCve": 11781.818181818182,
+      "totalEvents": 2313,
+      "percentileFaster": 97
+    },
+    {
+      "cna": "Wordfence",
+      "slug": "wordfence",
       "rank": 11,
       "window30SecondsPerCve": 13025.125628140704,
-      "totalEvents": 2292,
+      "totalEvents": 7321,
       "percentileFaster": 96
     },
     {
@@ -1340,27 +1437,27 @@
       "percentileFaster": 96
     },
     {
+      "cna": "WPScan",
+      "slug": "wpscan",
+      "rank": 13,
+      "window30SecondsPerCve": 15709.09090909091,
+      "totalEvents": 3458,
+      "percentileFaster": 96
+    },
+    {
       "cna": "TuranSec",
       "slug": "turansec",
-      "rank": 13,
+      "rank": 14,
       "window30SecondsPerCve": 15804.878048780487,
       "totalEvents": 197,
-      "percentileFaster": 96
+      "percentileFaster": 95
     },
     {
       "cna": "Chrome",
       "slug": "chrome",
-      "rank": 14,
+      "rank": 15,
       "window30SecondsPerCve": 16099.378881987577,
       "totalEvents": 2176,
-      "percentileFaster": 95
-    },
-    {
-      "cna": "WPScan",
-      "slug": "wpscan",
-      "rank": 15,
-      "window30SecondsPerCve": 16509.554140127388,
-      "totalEvents": 3449,
       "percentileFaster": 95
     },
     {
@@ -1375,8 +1472,8 @@
       "cna": "Joomla",
       "slug": "joomla",
       "rank": 17,
-      "window30SecondsPerCve": 23142.85714285714,
-      "totalEvents": 357,
+      "window30SecondsPerCve": 21421.487603305784,
+      "totalEvents": 369,
       "percentileFaster": 94
     },
     {
@@ -1391,8 +1488,8 @@
       "cna": "mitre",
       "slug": "mitre",
       "rank": 19,
-      "window30SecondsPerCve": 35506.849315068495,
-      "totalEvents": 37534,
+      "window30SecondsPerCve": 35027.02702702703,
+      "totalEvents": 37535,
       "percentileFaster": 94
     },
     {
