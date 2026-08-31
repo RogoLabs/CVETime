@@ -1,17 +1,17 @@
 {
-  "generatedAt": "2026-08-30T03:43:29.124686+00:00",
+  "generatedAt": "2026-08-31T03:41:30.810033+00:00",
   "cna": {
     "name": "JFROG",
     "slug": "jfrog",
-    "rank": 54,
-    "window30SecondsPerCve": 86400.0,
-    "window90SecondsPerCve": 165446.8085106383,
-    "totalEvents": 142,
+    "rank": 53,
+    "window30SecondsPerCve": 81000.0,
+    "window90SecondsPerCve": 158693.8775510204,
+    "totalEvents": 144,
     "consistencyScore": 0,
     "consistencyGrade": "F",
     "consistencyMedianSeconds": 19655.0,
-    "consistencyP90Seconds": 3024000.0,
-    "percentileFaster": 81
+    "consistencyP90Seconds": 3021282.0,
+    "percentileFaster": 82
   },
   "trend": [
     {
@@ -238,14 +238,14 @@
     },
     {
       "date": "2026-08-01",
-      "p50IntervalSeconds": 75.5,
-      "p90IntervalSeconds": 33053.60000000037,
-      "eventCount": 30
+      "p50IntervalSeconds": 80.0,
+      "p90IntervalSeconds": 136671.1000000003,
+      "eventCount": 32
     }
   ],
   "metrics": {
     "p50Seconds": 19655.0,
-    "p90Seconds": 3024000.0,
+    "p90Seconds": 3021282.0,
     "trimmedCount": 127
   },
   "severity": {
@@ -256,9 +256,9 @@
         "p90Seconds": 2182476.9
       },
       "HIGH": {
-        "count": 52,
-        "medianSeconds": 330807.5,
-        "p90Seconds": 3674392.9999999995
+        "count": 54,
+        "medianSeconds": 205156.5,
+        "p90Seconds": 3589915.0000000014
       },
       "MEDIUM": {
         "count": 65,
@@ -1263,6 +1263,20 @@
         "severity": "CRITICAL",
         "severityValue": 4,
         "timeToPublishSeconds": 270290.0
+      },
+      {
+        "date": "2026-08-30",
+        "cveId": "CVE-2026-82635",
+        "severity": "HIGH",
+        "severityValue": 3,
+        "timeToPublishSeconds": 151113.0
+      },
+      {
+        "date": "2026-08-30",
+        "cveId": "CVE-2026-82642",
+        "severity": "HIGH",
+        "severityValue": 3,
+        "timeToPublishSeconds": 4698.0
       }
     ]
   },
@@ -1287,16 +1301,16 @@
       "cna": "VulnCheck",
       "slug": "vulncheck",
       "rank": 3,
-      "window30SecondsPerCve": 2754.51647183847,
-      "totalEvents": 5227,
+      "window30SecondsPerCve": 2742.8571428571427,
+      "totalEvents": 5246,
       "percentileFaster": 99
     },
     {
       "cna": "VulDB",
       "slug": "vuldb",
       "rank": 4,
-      "window30SecondsPerCve": 4653.500897666068,
-      "totalEvents": 15653,
+      "window30SecondsPerCve": 4270.181219110379,
+      "totalEvents": 15703,
       "percentileFaster": 99
     },
     {
@@ -1359,8 +1373,8 @@
       "cna": "Wordfence",
       "slug": "wordfence",
       "rank": 12,
-      "window30SecondsPerCve": 13935.483870967742,
-      "totalEvents": 7383,
+      "window30SecondsPerCve": 13860.962566844919,
+      "totalEvents": 7384,
       "percentileFaster": 96
     },
     {
@@ -1372,19 +1386,19 @@
       "percentileFaster": 96
     },
     {
-      "cna": "WPScan",
-      "slug": "wpscan",
+      "cna": "TuranSec",
+      "slug": "turansec",
       "rank": 14,
-      "window30SecondsPerCve": 15337.278106508877,
-      "totalEvents": 3486,
+      "window30SecondsPerCve": 15804.878048780487,
+      "totalEvents": 197,
       "percentileFaster": 95
     },
     {
-      "cna": "TuranSec",
-      "slug": "turansec",
+      "cna": "WPScan",
+      "slug": "wpscan",
       "rank": 15,
-      "window30SecondsPerCve": 15804.878048780487,
-      "totalEvents": 197,
+      "window30SecondsPerCve": 15901.840490797545,
+      "totalEvents": 3488,
       "percentileFaster": 95
     },
     {
@@ -1416,15 +1430,15 @@
       "slug": "mitre",
       "rank": 19,
       "window30SecondsPerCve": 29454.545454545456,
-      "totalEvents": 37562,
+      "totalEvents": 37563,
       "percentileFaster": 94
     },
     {
-      "cna": "adobe",
-      "slug": "adobe",
+      "cna": "EEF",
+      "slug": "eef",
       "rank": 20,
-      "window30SecondsPerCve": 33230.769230769234,
-      "totalEvents": 4220,
+      "window30SecondsPerCve": 32810.126582278484,
+      "totalEvents": 222,
       "percentileFaster": 93
     }
   ]
