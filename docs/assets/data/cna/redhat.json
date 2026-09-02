@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-09-01T03:38:15.310981+00:00",
+  "generatedAt": "2026-09-02T02:58:01.579369+00:00",
   "cna": {
     "name": "redhat",
     "slug": "redhat",
     "rank": 9,
-    "window30SecondsPerCve": 11418.502202643172,
-    "window90SecondsPerCve": 15520.958083832335,
-    "totalEvents": 6834,
+    "window30SecondsPerCve": 11029.787234042553,
+    "window90SecondsPerCve": 15157.894736842105,
+    "totalEvents": 6846,
     "consistencyScore": 0,
     "consistencyGrade": "F",
     "consistencyMedianSeconds": 18000.0,
-    "consistencyP90Seconds": 326959.4000000006,
+    "consistencyP90Seconds": 324287.4000000001,
     "percentileFaster": 97
   },
   "trend": [
@@ -1570,15 +1570,15 @@
     },
     {
       "date": "2026-09-01",
-      "p50IntervalSeconds": 15048.0,
-      "p90IntervalSeconds": 15048.0,
-      "eventCount": 1
+      "p50IntervalSeconds": 2557.0,
+      "p90IntervalSeconds": 19040.800000000003,
+      "eventCount": 13
     }
   ],
   "metrics": {
     "p50Seconds": 18000.0,
-    "p90Seconds": 326959.4000000006,
-    "trimmedCount": 6207
+    "p90Seconds": 324287.4000000001,
+    "trimmedCount": 6218
   },
   "severity": {
     "summary": {
@@ -1588,24 +1588,24 @@
         "p90Seconds": 342000.0
       },
       "CRITICAL": {
-        "count": 96,
-        "medianSeconds": 14980.5,
-        "p90Seconds": 300600.0
+        "count": 93,
+        "medianSeconds": 15929.0,
+        "p90Seconds": 321119.9999999998
       },
       "HIGH": {
-        "count": 823,
-        "medianSeconds": 9092.0,
-        "p90Seconds": 258773.00000000015
+        "count": 824,
+        "medianSeconds": 8947.0,
+        "p90Seconds": 258559.5000000001
       },
       "MEDIUM": {
-        "count": 1250,
-        "medianSeconds": 9728.0,
-        "p90Seconds": 259285.00000000012
+        "count": 1262,
+        "medianSeconds": 9184.5,
+        "p90Seconds": 259200.0
       },
       "LOW": {
-        "count": 149,
+        "count": 151,
         "medianSeconds": 6218.0,
-        "p90Seconds": 231238.40000000029
+        "p90Seconds": 227848.0
       },
       "NONE": {
         "count": 1,
@@ -48944,22 +48944,22 @@
       {
         "date": "2026-08-18",
         "cveId": "CVE-2026-66782",
-        "severity": "HIGH",
-        "severityValue": 3,
+        "severity": "MEDIUM",
+        "severityValue": 2,
         "timeToPublishSeconds": 8.0
       },
       {
         "date": "2026-08-18",
         "cveId": "CVE-2026-66783",
-        "severity": "HIGH",
-        "severityValue": 3,
+        "severity": "MEDIUM",
+        "severityValue": 2,
         "timeToPublishSeconds": 2.0
       },
       {
         "date": "2026-08-18",
         "cveId": "CVE-2026-66780",
-        "severity": "CRITICAL",
-        "severityValue": 4,
+        "severity": "MEDIUM",
+        "severityValue": 2,
         "timeToPublishSeconds": 1558.0
       },
       {
@@ -49126,22 +49126,22 @@
       {
         "date": "2026-08-20",
         "cveId": "CVE-2026-66785",
-        "severity": "CRITICAL",
-        "severityValue": 4,
+        "severity": "LOW",
+        "severityValue": 1,
         "timeToPublishSeconds": 6889.0
       },
       {
         "date": "2026-08-20",
         "cveId": "CVE-2026-66787",
-        "severity": "HIGH",
-        "severityValue": 3,
+        "severity": "MEDIUM",
+        "severityValue": 2,
         "timeToPublishSeconds": 17.0
       },
       {
         "date": "2026-08-20",
         "cveId": "CVE-2026-66788",
-        "severity": "CRITICAL",
-        "severityValue": 4,
+        "severity": "LOW",
+        "severityValue": 1,
         "timeToPublishSeconds": 14.0
       },
       {
@@ -49444,6 +49444,90 @@
         "severity": "LOW",
         "severityValue": 1,
         "timeToPublishSeconds": 15048.0
+      },
+      {
+        "date": "2026-09-01",
+        "cveId": "CVE-2026-11873",
+        "severity": "MEDIUM",
+        "severityValue": 2,
+        "timeToPublishSeconds": 39467.0
+      },
+      {
+        "date": "2026-09-01",
+        "cveId": "CVE-2026-53682",
+        "severity": "MEDIUM",
+        "severityValue": 2,
+        "timeToPublishSeconds": 2571.0
+      },
+      {
+        "date": "2026-09-01",
+        "cveId": "CVE-2026-84218",
+        "severity": "HIGH",
+        "severityValue": 3,
+        "timeToPublishSeconds": 2557.0
+      },
+      {
+        "date": "2026-09-01",
+        "cveId": "CVE-2026-84233",
+        "severity": "HIGH",
+        "severityValue": 3,
+        "timeToPublishSeconds": 5598.0
+      },
+      {
+        "date": "2026-09-01",
+        "cveId": "CVE-2026-84268",
+        "severity": "HIGH",
+        "severityValue": 3,
+        "timeToPublishSeconds": 1298.0
+      },
+      {
+        "date": "2026-09-01",
+        "cveId": "CVE-2026-84232",
+        "severity": "MEDIUM",
+        "severityValue": 2,
+        "timeToPublishSeconds": 216.0
+      },
+      {
+        "date": "2026-09-01",
+        "cveId": "CVE-2026-84267",
+        "severity": "MEDIUM",
+        "severityValue": 2,
+        "timeToPublishSeconds": 5.0
+      },
+      {
+        "date": "2026-09-01",
+        "cveId": "CVE-2026-84269",
+        "severity": "MEDIUM",
+        "severityValue": 2,
+        "timeToPublishSeconds": 4.0
+      },
+      {
+        "date": "2026-09-01",
+        "cveId": "CVE-2026-84270",
+        "severity": "MEDIUM",
+        "severityValue": 2,
+        "timeToPublishSeconds": 6.0
+      },
+      {
+        "date": "2026-09-01",
+        "cveId": "CVE-2026-49329",
+        "severity": "HIGH",
+        "severityValue": 3,
+        "timeToPublishSeconds": 703.0
+      },
+      {
+        "date": "2026-09-01",
+        "cveId": "CVE-2026-84470",
+        "severity": "MEDIUM",
+        "severityValue": 2,
+        "timeToPublishSeconds": 19572.0
+      },
+      {
+        "date": "2026-09-02",
+        "cveId": "CVE-2026-82968",
+        "severity": "MEDIUM",
+        "severityValue": 2,
+        "timeToPublishSeconds": 16916.0
       }
     ]
   },
@@ -49452,8 +49536,8 @@
       "cna": "GitHub_M",
       "slug": "github-m",
       "rank": 1,
-      "window30SecondsPerCve": 1891.970802919708,
-      "totalEvents": 18843,
+      "window30SecondsPerCve": 1838.2978723404256,
+      "totalEvents": 18883,
       "percentileFaster": 100
     },
     {
@@ -49468,16 +49552,16 @@
       "cna": "VulnCheck",
       "slug": "vulncheck",
       "rank": 3,
-      "window30SecondsPerCve": 2674.9226006191952,
-      "totalEvents": 5275,
+      "window30SecondsPerCve": 2602.409638554217,
+      "totalEvents": 5311,
       "percentileFaster": 99
     },
     {
       "cna": "VulDB",
       "slug": "vuldb",
       "rank": 4,
-      "window30SecondsPerCve": 3789.4736842105262,
-      "totalEvents": 15780,
+      "window30SecondsPerCve": 3676.595744680851,
+      "totalEvents": 15803,
       "percentileFaster": 99
     },
     {
@@ -49516,24 +49600,24 @@
       "cna": "redhat",
       "slug": "redhat",
       "rank": 9,
-      "window30SecondsPerCve": 11418.502202643172,
-      "totalEvents": 6834,
-      "percentileFaster": 97
-    },
-    {
-      "cna": "Chrome",
-      "slug": "chrome",
-      "rank": 10,
-      "window30SecondsPerCve": 11835.616438356165,
-      "totalEvents": 2242,
+      "window30SecondsPerCve": 11029.787234042553,
+      "totalEvents": 6846,
       "percentileFaster": 97
     },
     {
       "cna": "apple",
       "slug": "apple",
-      "rank": 11,
+      "rank": 10,
       "window30SecondsPerCve": 14241.758241758242,
       "totalEvents": 3339,
+      "percentileFaster": 97
+    },
+    {
+      "cna": "Wordfence",
+      "slug": "wordfence",
+      "rank": 11,
+      "window30SecondsPerCve": 14400.0,
+      "totalEvents": 7403,
       "percentileFaster": 96
     },
     {
@@ -49553,19 +49637,19 @@
       "percentileFaster": 96
     },
     {
-      "cna": "Wordfence",
-      "slug": "wordfence",
+      "cna": "WPScan",
+      "slug": "wpscan",
       "rank": 14,
-      "window30SecondsPerCve": 15901.840490797545,
-      "totalEvents": 7385,
+      "window30SecondsPerCve": 17165.562913907284,
+      "totalEvents": 3492,
       "percentileFaster": 95
     },
     {
-      "cna": "WPScan",
-      "slug": "wpscan",
+      "cna": "EEF",
+      "slug": "eef",
       "rank": 15,
-      "window30SecondsPerCve": 16615.384615384617,
-      "totalEvents": 3489,
+      "window30SecondsPerCve": 22539.130434782608,
+      "totalEvents": 261,
       "percentileFaster": 95
     },
     {
@@ -49577,9 +49661,17 @@
       "percentileFaster": 95
     },
     {
+      "cna": "Chrome",
+      "slug": "chrome",
+      "rank": 17,
+      "window30SecondsPerCve": 25165.04854368932,
+      "totalEvents": 2248,
+      "percentileFaster": 94
+    },
+    {
       "cna": "vmware",
       "slug": "vmware",
-      "rank": 17,
+      "rank": 18,
       "window30SecondsPerCve": 25165.04854368932,
       "totalEvents": 793,
       "percentileFaster": 94
@@ -49587,7 +49679,7 @@
     {
       "cna": "Joomla",
       "slug": "joomla",
-      "rank": 18,
+      "rank": 19,
       "window30SecondsPerCve": 25920.0,
       "totalEvents": 409,
       "percentileFaster": 94
@@ -49595,17 +49687,9 @@
     {
       "cna": "mitre",
       "slug": "mitre",
-      "rank": 19,
-      "window30SecondsPerCve": 29123.595505617977,
-      "totalEvents": 37564,
-      "percentileFaster": 94
-    },
-    {
-      "cna": "EEF",
-      "slug": "eef",
       "rank": 20,
-      "window30SecondsPerCve": 29454.545454545456,
-      "totalEvents": 234,
+      "window30SecondsPerCve": 28800.0,
+      "totalEvents": 37565,
       "percentileFaster": 93
     }
   ]

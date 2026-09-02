@@ -1,17 +1,17 @@
 {
-  "generatedAt": "2026-09-01T03:38:15.353695+00:00",
+  "generatedAt": "2026-09-02T02:58:01.647892+00:00",
   "cna": {
     "name": "samsung.tv_appliance",
     "slug": "samsungtv-appliance",
-    "rank": 158,
-    "window30SecondsPerCve": 432000.0,
-    "window90SecondsPerCve": 388800.0,
-    "totalEvents": 92,
+    "rank": 126,
+    "window30SecondsPerCve": 288000.0,
+    "window90SecondsPerCve": 338086.95652173914,
+    "totalEvents": 95,
     "consistencyScore": 0,
     "consistencyGrade": "F",
-    "consistencyMedianSeconds": 122.0,
-    "consistencyP90Seconds": 2321004.0,
-    "percentileFaster": 45
+    "consistencyMedianSeconds": 136.0,
+    "consistencyP90Seconds": 2290430.4000000004,
+    "percentileFaster": 56
   },
   "trend": [
     {
@@ -103,19 +103,25 @@
       "p50IntervalSeconds": 334453.5,
       "p90IntervalSeconds": 1802275.0,
       "eventCount": 6
+    },
+    {
+      "date": "2026-09-01",
+      "p50IntervalSeconds": 1585.0,
+      "p90IntervalSeconds": 66217.8,
+      "eventCount": 3
     }
   ],
   "metrics": {
-    "p50Seconds": 122.0,
-    "p90Seconds": 2321004.0,
-    "trimmedCount": 82
+    "p50Seconds": 136.0,
+    "p90Seconds": 2290430.4000000004,
+    "trimmedCount": 85
   },
   "severity": {
     "summary": {
       "MEDIUM": {
-        "count": 57,
-        "medianSeconds": 381.0,
-        "p90Seconds": 2356288.8
+        "count": 60,
+        "medianSeconds": 533.0,
+        "p90Seconds": 2329825.2
       },
       "HIGH": {
         "count": 20,
@@ -765,6 +771,27 @@
         "severity": "MEDIUM",
         "severityValue": 2,
         "timeToPublishSeconds": 1674301.0
+      },
+      {
+        "date": "2026-09-01",
+        "cveId": "CVE-2026-82926",
+        "severity": "MEDIUM",
+        "severityValue": 2,
+        "timeToPublishSeconds": 82376.0
+      },
+      {
+        "date": "2026-09-01",
+        "cveId": "CVE-2026-82927",
+        "severity": "MEDIUM",
+        "severityValue": 2,
+        "timeToPublishSeconds": 1280.0
+      },
+      {
+        "date": "2026-09-01",
+        "cveId": "CVE-2026-10420",
+        "severity": "MEDIUM",
+        "severityValue": 2,
+        "timeToPublishSeconds": 1585.0
       }
     ]
   },
@@ -773,8 +800,8 @@
       "cna": "GitHub_M",
       "slug": "github-m",
       "rank": 1,
-      "window30SecondsPerCve": 1891.970802919708,
-      "totalEvents": 18843,
+      "window30SecondsPerCve": 1838.2978723404256,
+      "totalEvents": 18883,
       "percentileFaster": 100
     },
     {
@@ -789,16 +816,16 @@
       "cna": "VulnCheck",
       "slug": "vulncheck",
       "rank": 3,
-      "window30SecondsPerCve": 2674.9226006191952,
-      "totalEvents": 5275,
+      "window30SecondsPerCve": 2602.409638554217,
+      "totalEvents": 5311,
       "percentileFaster": 99
     },
     {
       "cna": "VulDB",
       "slug": "vuldb",
       "rank": 4,
-      "window30SecondsPerCve": 3789.4736842105262,
-      "totalEvents": 15780,
+      "window30SecondsPerCve": 3676.595744680851,
+      "totalEvents": 15803,
       "percentileFaster": 99
     },
     {
@@ -837,24 +864,24 @@
       "cna": "redhat",
       "slug": "redhat",
       "rank": 9,
-      "window30SecondsPerCve": 11418.502202643172,
-      "totalEvents": 6834,
-      "percentileFaster": 97
-    },
-    {
-      "cna": "Chrome",
-      "slug": "chrome",
-      "rank": 10,
-      "window30SecondsPerCve": 11835.616438356165,
-      "totalEvents": 2242,
+      "window30SecondsPerCve": 11029.787234042553,
+      "totalEvents": 6846,
       "percentileFaster": 97
     },
     {
       "cna": "apple",
       "slug": "apple",
-      "rank": 11,
+      "rank": 10,
       "window30SecondsPerCve": 14241.758241758242,
       "totalEvents": 3339,
+      "percentileFaster": 97
+    },
+    {
+      "cna": "Wordfence",
+      "slug": "wordfence",
+      "rank": 11,
+      "window30SecondsPerCve": 14400.0,
+      "totalEvents": 7403,
       "percentileFaster": 96
     },
     {
@@ -874,19 +901,19 @@
       "percentileFaster": 96
     },
     {
-      "cna": "Wordfence",
-      "slug": "wordfence",
+      "cna": "WPScan",
+      "slug": "wpscan",
       "rank": 14,
-      "window30SecondsPerCve": 15901.840490797545,
-      "totalEvents": 7385,
+      "window30SecondsPerCve": 17165.562913907284,
+      "totalEvents": 3492,
       "percentileFaster": 95
     },
     {
-      "cna": "WPScan",
-      "slug": "wpscan",
+      "cna": "EEF",
+      "slug": "eef",
       "rank": 15,
-      "window30SecondsPerCve": 16615.384615384617,
-      "totalEvents": 3489,
+      "window30SecondsPerCve": 22539.130434782608,
+      "totalEvents": 261,
       "percentileFaster": 95
     },
     {
@@ -898,9 +925,17 @@
       "percentileFaster": 95
     },
     {
+      "cna": "Chrome",
+      "slug": "chrome",
+      "rank": 17,
+      "window30SecondsPerCve": 25165.04854368932,
+      "totalEvents": 2248,
+      "percentileFaster": 94
+    },
+    {
       "cna": "vmware",
       "slug": "vmware",
-      "rank": 17,
+      "rank": 18,
       "window30SecondsPerCve": 25165.04854368932,
       "totalEvents": 793,
       "percentileFaster": 94
@@ -908,7 +943,7 @@
     {
       "cna": "Joomla",
       "slug": "joomla",
-      "rank": 18,
+      "rank": 19,
       "window30SecondsPerCve": 25920.0,
       "totalEvents": 409,
       "percentileFaster": 94
@@ -916,17 +951,9 @@
     {
       "cna": "mitre",
       "slug": "mitre",
-      "rank": 19,
-      "window30SecondsPerCve": 29123.595505617977,
-      "totalEvents": 37564,
-      "percentileFaster": 94
-    },
-    {
-      "cna": "EEF",
-      "slug": "eef",
       "rank": 20,
-      "window30SecondsPerCve": 29454.545454545456,
-      "totalEvents": 234,
+      "window30SecondsPerCve": 28800.0,
+      "totalEvents": 37565,
       "percentileFaster": 93
     }
   ]
