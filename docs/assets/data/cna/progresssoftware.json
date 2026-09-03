@@ -1,17 +1,17 @@
 {
-  "generatedAt": "2026-09-02T02:57:32.272855+00:00",
+  "generatedAt": "2026-09-03T03:01:08.085472+00:00",
   "cna": {
     "name": "ProgressSoftware",
     "slug": "progresssoftware",
-    "rank": 41,
-    "window30SecondsPerCve": 63219.51219512195,
-    "window90SecondsPerCve": 123428.57142857143,
-    "totalEvents": 230,
+    "rank": 73,
+    "window30SecondsPerCve": 129600.0,
+    "window90SecondsPerCve": 138857.14285714287,
+    "totalEvents": 232,
     "consistencyScore": 0,
     "consistencyGrade": "F",
-    "consistencyMedianSeconds": 160.0,
-    "consistencyP90Seconds": 1501784.000000003,
-    "percentileFaster": 86
+    "consistencyMedianSeconds": 167.0,
+    "consistencyP90Seconds": 1467465.0,
+    "percentileFaster": 75
   },
   "trend": [
     {
@@ -211,19 +211,25 @@
       "p50IntervalSeconds": 52.0,
       "p90IntervalSeconds": 478776.8000000001,
       "eventCount": 18
+    },
+    {
+      "date": "2026-09-01",
+      "p50IntervalSeconds": 685893.0,
+      "p90IntervalSeconds": 1234409.0,
+      "eventCount": 2
     }
   ],
   "metrics": {
-    "p50Seconds": 160.0,
-    "p90Seconds": 1501784.000000003,
-    "trimmedCount": 205
+    "p50Seconds": 167.0,
+    "p90Seconds": 1467465.0,
+    "trimmedCount": 207
   },
   "severity": {
     "summary": {
       "HIGH": {
-        "count": 137,
-        "medianSeconds": 128.0,
-        "p90Seconds": 1259060.4000000004
+        "count": 139,
+        "medianSeconds": 135.0,
+        "p90Seconds": 1290787.0
       },
       "MEDIUM": {
         "count": 47,
@@ -1844,6 +1850,20 @@
         "severity": "HIGH",
         "severityValue": 3,
         "timeToPublishSeconds": 44.0
+      },
+      {
+        "date": "2026-09-02",
+        "cveId": "CVE-2026-18672",
+        "severity": "HIGH",
+        "severityValue": 3,
+        "timeToPublishSeconds": 1371538.0
+      },
+      {
+        "date": "2026-09-02",
+        "cveId": "CVE-2026-19219",
+        "severity": "HIGH",
+        "severityValue": 3,
+        "timeToPublishSeconds": 248.0
       }
     ]
   },
@@ -1852,8 +1872,8 @@
       "cna": "GitHub_M",
       "slug": "github-m",
       "rank": 1,
-      "window30SecondsPerCve": 1838.2978723404256,
-      "totalEvents": 18883,
+      "window30SecondsPerCve": 1808.7927424982554,
+      "totalEvents": 18914,
       "percentileFaster": 100
     },
     {
@@ -1868,16 +1888,16 @@
       "cna": "VulnCheck",
       "slug": "vulncheck",
       "rank": 3,
-      "window30SecondsPerCve": 2602.409638554217,
-      "totalEvents": 5311,
+      "window30SecondsPerCve": 2639.511201629328,
+      "totalEvents": 5335,
       "percentileFaster": 99
     },
     {
       "cna": "VulDB",
       "slug": "vuldb",
       "rank": 4,
-      "window30SecondsPerCve": 3676.595744680851,
-      "totalEvents": 15803,
+      "window30SecondsPerCve": 3806.1674008810573,
+      "totalEvents": 15818,
       "percentileFaster": 99
     },
     {
@@ -1892,8 +1912,8 @@
       "cna": "Patchstack",
       "slug": "patchstack",
       "rank": 6,
-      "window30SecondsPerCve": 6750.0,
-      "totalEvents": 12479,
+      "window30SecondsPerCve": 6447.761194029851,
+      "totalEvents": 12498,
       "percentileFaster": 98
     },
     {
@@ -1916,64 +1936,64 @@
       "cna": "redhat",
       "slug": "redhat",
       "rank": 9,
-      "window30SecondsPerCve": 11029.787234042553,
-      "totalEvents": 6846,
-      "percentileFaster": 97
-    },
-    {
-      "cna": "apple",
-      "slug": "apple",
-      "rank": 10,
-      "window30SecondsPerCve": 14241.758241758242,
-      "totalEvents": 3339,
+      "window30SecondsPerCve": 10983.050847457627,
+      "totalEvents": 6853,
       "percentileFaster": 97
     },
     {
       "cna": "Wordfence",
       "slug": "wordfence",
+      "rank": 10,
+      "window30SecondsPerCve": 13860.962566844919,
+      "totalEvents": 7410,
+      "percentileFaster": 97
+    },
+    {
+      "cna": "apple",
+      "slug": "apple",
       "rank": 11,
-      "window30SecondsPerCve": 14400.0,
-      "totalEvents": 7403,
-      "percentileFaster": 96
-    },
-    {
-      "cna": "apache",
-      "slug": "apache",
-      "rank": 12,
-      "window30SecondsPerCve": 15428.57142857143,
-      "totalEvents": 2350,
-      "percentileFaster": 96
-    },
-    {
-      "cna": "TuranSec",
-      "slug": "turansec",
-      "rank": 13,
-      "window30SecondsPerCve": 15804.878048780487,
-      "totalEvents": 197,
+      "window30SecondsPerCve": 14241.758241758242,
+      "totalEvents": 3339,
       "percentileFaster": 96
     },
     {
       "cna": "WPScan",
       "slug": "wpscan",
-      "rank": 14,
-      "window30SecondsPerCve": 17165.562913907284,
-      "totalEvents": 3492,
-      "percentileFaster": 95
+      "rank": 12,
+      "window30SecondsPerCve": 14896.551724137931,
+      "totalEvents": 3520,
+      "percentileFaster": 96
     },
     {
-      "cna": "EEF",
-      "slug": "eef",
-      "rank": 15,
-      "window30SecondsPerCve": 22539.130434782608,
-      "totalEvents": 261,
+      "cna": "apache",
+      "slug": "apache",
+      "rank": 13,
+      "window30SecondsPerCve": 15337.278106508877,
+      "totalEvents": 2351,
+      "percentileFaster": 96
+    },
+    {
+      "cna": "TuranSec",
+      "slug": "turansec",
+      "rank": 14,
+      "window30SecondsPerCve": 15804.878048780487,
+      "totalEvents": 197,
       "percentileFaster": 95
     },
     {
       "cna": "cisco",
       "slug": "cisco",
+      "rank": 15,
+      "window30SecondsPerCve": 21245.90163934426,
+      "totalEvents": 3728,
+      "percentileFaster": 95
+    },
+    {
+      "cna": "EEF",
+      "slug": "eef",
       "rank": 16,
-      "window30SecondsPerCve": 23142.85714285714,
-      "totalEvents": 3717,
+      "window30SecondsPerCve": 22539.130434782608,
+      "totalEvents": 261,
       "percentileFaster": 95
     },
     {
@@ -2004,8 +2024,8 @@
       "cna": "mitre",
       "slug": "mitre",
       "rank": 20,
-      "window30SecondsPerCve": 28800.0,
-      "totalEvents": 37565,
+      "window30SecondsPerCve": 28483.516483516483,
+      "totalEvents": 37566,
       "percentileFaster": 93
     }
   ]
