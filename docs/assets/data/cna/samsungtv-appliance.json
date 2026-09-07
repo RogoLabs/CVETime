@@ -1,17 +1,17 @@
 {
-  "generatedAt": "2026-09-06T03:01:36.949302+00:00",
+  "generatedAt": "2026-09-07T02:59:03.185208+00:00",
   "cna": {
     "name": "samsung.tv_appliance",
     "slug": "samsungtv-appliance",
-    "rank": 122,
-    "window30SecondsPerCve": 259200.0,
-    "window90SecondsPerCve": 432000.0,
-    "totalEvents": 97,
+    "rank": 113,
+    "window30SecondsPerCve": 216000.0,
+    "window90SecondsPerCve": 388800.0,
+    "totalEvents": 99,
     "consistencyScore": 0,
     "consistencyGrade": "F",
-    "consistencyMedianSeconds": 171.5,
-    "consistencyP90Seconds": 2270048.0,
-    "percentileFaster": 58
+    "consistencyMedianSeconds": 211.5,
+    "consistencyP90Seconds": 2249665.5999999996,
+    "percentileFaster": 61
   },
   "trend": [
     {
@@ -107,26 +107,26 @@
     {
       "date": "2026-09-01",
       "p50IntervalSeconds": 82376.0,
-      "p90IntervalSeconds": 112352.20000000001,
-      "eventCount": 5
+      "p90IntervalSeconds": 186241.40000000005,
+      "eventCount": 7
     }
   ],
   "metrics": {
-    "p50Seconds": 171.5,
-    "p90Seconds": 2270048.0,
-    "trimmedCount": 87
+    "p50Seconds": 211.5,
+    "p90Seconds": 2249665.5999999996,
+    "trimmedCount": 89
   },
   "severity": {
     "summary": {
       "MEDIUM": {
-        "count": 62,
-        "medianSeconds": 603.5,
-        "p90Seconds": 2310812.8
+        "count": 63,
+        "medianSeconds": 629.0,
+        "p90Seconds": 2300621.6000000006
       },
       "HIGH": {
-        "count": 20,
-        "medianSeconds": 66.0,
-        "p90Seconds": 774476.0000000002
+        "count": 21,
+        "medianSeconds": 71.0,
+        "p90Seconds": 754065.0
       },
       "CRITICAL": {
         "count": 14,
@@ -806,6 +806,20 @@
         "severity": "MEDIUM",
         "severityValue": 2,
         "timeToPublishSeconds": 85300.0
+      },
+      {
+        "date": "2026-09-07",
+        "cveId": "CVE-2026-86313",
+        "severity": "HIGH",
+        "severityValue": 3,
+        "timeToPublishSeconds": 270023.0
+      },
+      {
+        "date": "2026-09-07",
+        "cveId": "CVE-2026-86314",
+        "severity": "MEDIUM",
+        "severityValue": 2,
+        "timeToPublishSeconds": 1123.0
       }
     ]
   },
@@ -830,16 +844,16 @@
       "cna": "VulnCheck",
       "slug": "vulncheck",
       "rank": 3,
-      "window30SecondsPerCve": 2301.953818827709,
-      "totalEvents": 5509,
+      "window30SecondsPerCve": 2358.5077343039125,
+      "totalEvents": 5520,
       "percentileFaster": 99
     },
     {
       "cna": "VulDB",
       "slug": "vuldb",
       "rank": 4,
-      "window30SecondsPerCve": 4000.0,
-      "totalEvents": 15880,
+      "window30SecondsPerCve": 3823.008849557522,
+      "totalEvents": 15930,
       "percentileFaster": 99
     },
     {
@@ -899,19 +913,19 @@
       "percentileFaster": 96
     },
     {
-      "cna": "WPScan",
-      "slug": "wpscan",
+      "cna": "TuranSec",
+      "slug": "turansec",
       "rank": 12,
-      "window30SecondsPerCve": 14644.06779661017,
-      "totalEvents": 3536,
+      "window30SecondsPerCve": 15804.878048780487,
+      "totalEvents": 197,
       "percentileFaster": 96
     },
     {
-      "cna": "TuranSec",
-      "slug": "turansec",
+      "cna": "WPScan",
+      "slug": "wpscan",
       "rank": 13,
-      "window30SecondsPerCve": 15804.878048780487,
-      "totalEvents": 197,
+      "window30SecondsPerCve": 17632.65306122449,
+      "totalEvents": 3541,
       "percentileFaster": 96
     },
     {
@@ -950,8 +964,8 @@
       "cna": "EEF",
       "slug": "eef",
       "rank": 18,
-      "window30SecondsPerCve": 24923.076923076922,
-      "totalEvents": 264,
+      "window30SecondsPerCve": 24685.714285714286,
+      "totalEvents": 266,
       "percentileFaster": 94
     },
     {

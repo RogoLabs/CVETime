@@ -1,17 +1,17 @@
 {
-  "generatedAt": "2026-09-06T03:01:15.302169+00:00",
+  "generatedAt": "2026-09-07T02:58:41.607802+00:00",
   "cna": {
     "name": "PostgreSQL",
     "slug": "postgresql",
-    "rank": 60,
-    "window30SecondsPerCve": 99692.30769230769,
-    "window90SecondsPerCve": 216000.0,
-    "totalEvents": 96,
+    "rank": 72,
+    "window30SecondsPerCve": 123428.57142857143,
+    "window90SecondsPerCve": 204631.57894736843,
+    "totalEvents": 99,
     "consistencyScore": 0,
     "consistencyGrade": "F",
     "consistencyMedianSeconds": 4.0,
-    "consistencyP90Seconds": 3543690.000000005,
-    "percentileFaster": 79
+    "consistencyP90Seconds": 3358904.999999998,
+    "percentileFaster": 75
   },
   "trend": [
     {
@@ -145,12 +145,18 @@
       "p50IntervalSeconds": 1.0,
       "p90IntervalSeconds": 1.0,
       "eventCount": 18
+    },
+    {
+      "date": "2026-09-01",
+      "p50IntervalSeconds": 5.0,
+      "p90IntervalSeconds": 1665852.2000000002,
+      "eventCount": 3
     }
   ],
   "metrics": {
     "p50Seconds": 4.0,
-    "p90Seconds": 3543690.000000005,
-    "trimmedCount": 90
+    "p90Seconds": 3358904.999999998,
+    "trimmedCount": 93
   },
   "severity": {
     "summary": {
@@ -160,9 +166,9 @@
         "p90Seconds": 4158685.8000000003
       },
       "HIGH": {
-        "count": 49,
+        "count": 50,
         "medianSeconds": 2.0,
-        "p90Seconds": 2649669.600000002
+        "p90Seconds": 2584113.3000000007
       },
       "LOW": {
         "count": 5,
@@ -170,9 +176,9 @@
         "p90Seconds": 3897239.6000000006
       },
       "MEDIUM": {
-        "count": 27,
+        "count": 29,
         "medianSeconds": 3.0,
-        "p90Seconds": 2076144.800000001
+        "p90Seconds": 1981952.3999999997
       }
     },
     "points": [
@@ -840,6 +846,27 @@
         "severity": "HIGH",
         "severityValue": 3,
         "timeToPublishSeconds": 1.0
+      },
+      {
+        "date": "2026-09-06",
+        "cveId": "CVE-2026-19633",
+        "severity": "HIGH",
+        "severityValue": 3,
+        "timeToPublishSeconds": 2082314.0
+      },
+      {
+        "date": "2026-09-06",
+        "cveId": "CVE-2026-19634",
+        "severity": "MEDIUM",
+        "severityValue": 2,
+        "timeToPublishSeconds": 4.0
+      },
+      {
+        "date": "2026-09-06",
+        "cveId": "CVE-2026-83534",
+        "severity": "MEDIUM",
+        "severityValue": 2,
+        "timeToPublishSeconds": 5.0
       }
     ]
   },
@@ -864,16 +891,16 @@
       "cna": "VulnCheck",
       "slug": "vulncheck",
       "rank": 3,
-      "window30SecondsPerCve": 2301.953818827709,
-      "totalEvents": 5509,
+      "window30SecondsPerCve": 2358.5077343039125,
+      "totalEvents": 5520,
       "percentileFaster": 99
     },
     {
       "cna": "VulDB",
       "slug": "vuldb",
       "rank": 4,
-      "window30SecondsPerCve": 4000.0,
-      "totalEvents": 15880,
+      "window30SecondsPerCve": 3823.008849557522,
+      "totalEvents": 15930,
       "percentileFaster": 99
     },
     {
@@ -933,19 +960,19 @@
       "percentileFaster": 96
     },
     {
-      "cna": "WPScan",
-      "slug": "wpscan",
+      "cna": "TuranSec",
+      "slug": "turansec",
       "rank": 12,
-      "window30SecondsPerCve": 14644.06779661017,
-      "totalEvents": 3536,
+      "window30SecondsPerCve": 15804.878048780487,
+      "totalEvents": 197,
       "percentileFaster": 96
     },
     {
-      "cna": "TuranSec",
-      "slug": "turansec",
+      "cna": "WPScan",
+      "slug": "wpscan",
       "rank": 13,
-      "window30SecondsPerCve": 15804.878048780487,
-      "totalEvents": 197,
+      "window30SecondsPerCve": 17632.65306122449,
+      "totalEvents": 3541,
       "percentileFaster": 96
     },
     {
@@ -984,8 +1011,8 @@
       "cna": "EEF",
       "slug": "eef",
       "rank": 18,
-      "window30SecondsPerCve": 24923.076923076922,
-      "totalEvents": 264,
+      "window30SecondsPerCve": 24685.714285714286,
+      "totalEvents": 266,
       "percentileFaster": 94
     },
     {
