@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-09-13T03:15:01.244982+00:00",
+  "generatedAt": "2026-09-14T03:27:41.778951+00:00",
   "cna": {
     "name": "mitre",
     "slug": "mitre",
     "rank": 17,
-    "window30SecondsPerCve": 21245.90163934426,
-    "window90SecondsPerCve": 33373.390557939914,
-    "totalEvents": 37623,
+    "window30SecondsPerCve": 20903.225806451614,
+    "window90SecondsPerCve": 32810.126582278484,
+    "totalEvents": 37627,
     "consistencyScore": 0,
     "consistencyGrade": "F",
     "consistencyMedianSeconds": 1292.5,
-    "consistencyP90Seconds": 71999.20000000001,
+    "consistencyP90Seconds": 72000.0,
     "percentileFaster": 94
   },
   "trend": [
@@ -1931,14 +1931,14 @@
     {
       "date": "2026-09-01",
       "p50IntervalSeconds": 301.0,
-      "p90IntervalSeconds": 81977.00000000001,
-      "eventCount": 59
+      "p90IntervalSeconds": 79183.20000000004,
+      "eventCount": 63
     }
   ],
   "metrics": {
     "p50Seconds": 1292.5,
-    "p90Seconds": 71999.20000000001,
-    "trimmedCount": 34057
+    "p90Seconds": 72000.0,
+    "trimmedCount": 34061
   },
   "severity": {
     "summary": {
@@ -1948,18 +1948,18 @@
         "p90Seconds": 57600.0
       },
       "HIGH": {
-        "count": 1489,
-        "medianSeconds": 1047.0,
+        "count": 1490,
+        "medianSeconds": 1055.5,
         "p90Seconds": 86400.0
       },
       "MEDIUM": {
-        "count": 1543,
+        "count": 1545,
         "medianSeconds": 508.0,
         "p90Seconds": 86400.0
       },
       "LOW": {
-        "count": 175,
-        "medianSeconds": 2003.0,
+        "count": 176,
+        "medianSeconds": 2035.0,
         "p90Seconds": 86400.0
       },
       "CRITICAL": {
@@ -265318,10 +265318,38 @@
       },
       {
         "date": "2026-09-13",
+        "cveId": "CVE-2020-15875",
+        "severity": "MEDIUM",
+        "severityValue": 2,
+        "timeToPublishSeconds": 259.0
+      },
+      {
+        "date": "2026-09-13",
         "cveId": "CVE-2026-90668",
         "severity": "HIGH",
         "severityValue": 3,
-        "timeToPublishSeconds": 7513.0
+        "timeToPublishSeconds": 7254.0
+      },
+      {
+        "date": "2026-09-13",
+        "cveId": "CVE-2026-90678",
+        "severity": "HIGH",
+        "severityValue": 3,
+        "timeToPublishSeconds": 5821.0
+      },
+      {
+        "date": "2026-09-13",
+        "cveId": "CVE-2026-90679",
+        "severity": "MEDIUM",
+        "severityValue": 2,
+        "timeToPublishSeconds": 1029.0
+      },
+      {
+        "date": "2026-09-14",
+        "cveId": "CVE-2025-64031",
+        "severity": "LOW",
+        "severityValue": 1,
+        "timeToPublishSeconds": 72296.0
       }
     ]
   },
@@ -265346,16 +265374,16 @@
       "cna": "VulnCheck",
       "slug": "vulncheck",
       "rank": 3,
-      "window30SecondsPerCve": 2281.6901408450703,
-      "totalEvents": 5756,
+      "window30SecondsPerCve": 2339.350180505415,
+      "totalEvents": 5772,
       "percentileFaster": 99
     },
     {
       "cna": "VulDB",
       "slug": "vuldb",
       "rank": 4,
-      "window30SecondsPerCve": 3880.2395209580836,
-      "totalEvents": 16024,
+      "window30SecondsPerCve": 3595.00693481276,
+      "totalEvents": 16108,
       "percentileFaster": 99
     },
     {
@@ -265442,8 +265470,8 @@
       "cna": "WPScan",
       "slug": "wpscan",
       "rank": 15,
-      "window30SecondsPerCve": 18382.978723404256,
-      "totalEvents": 3570,
+      "window30SecondsPerCve": 17875.862068965518,
+      "totalEvents": 3577,
       "percentileFaster": 95
     },
     {
@@ -265458,8 +265486,8 @@
       "cna": "mitre",
       "slug": "mitre",
       "rank": 17,
-      "window30SecondsPerCve": 21245.90163934426,
-      "totalEvents": 37623,
+      "window30SecondsPerCve": 20903.225806451614,
+      "totalEvents": 37627,
       "percentileFaster": 94
     },
     {
