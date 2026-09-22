@@ -1,17 +1,17 @@
 {
-  "generatedAt": "2026-09-21T03:25:16.534854+00:00",
+  "generatedAt": "2026-09-22T03:22:34.368373+00:00",
   "cna": {
     "name": "dell",
     "slug": "dell",
-    "rank": 11,
-    "window30SecondsPerCve": 11675.675675675675,
-    "window90SecondsPerCve": 25663.366336633662,
-    "totalEvents": 1969,
+    "rank": 12,
+    "window30SecondsPerCve": 13090.90909090909,
+    "window90SecondsPerCve": 25578.947368421053,
+    "totalEvents": 1974,
     "consistencyScore": 0,
     "consistencyGrade": "F",
-    "consistencyMedianSeconds": 611.5,
-    "consistencyP90Seconds": 784572.1999999997,
-    "percentileFaster": 97
+    "consistencyMedianSeconds": 616.0,
+    "consistencyP90Seconds": 782163.5999999999,
+    "percentileFaster": 96
   },
   "trend": [
     {
@@ -1138,15 +1138,15 @@
     },
     {
       "date": "2026-09-01",
-      "p50IntervalSeconds": 289.0,
-      "p90IntervalSeconds": 1550.8,
-      "eventCount": 177
+      "p50IntervalSeconds": 296.5,
+      "p90IntervalSeconds": 2418.1000000000054,
+      "eventCount": 182
     }
   ],
   "metrics": {
-    "p50Seconds": 611.5,
-    "p90Seconds": 784572.1999999997,
-    "trimmedCount": 1869
+    "p50Seconds": 616.0,
+    "p90Seconds": 782163.5999999999,
+    "trimmedCount": 1874
   },
   "severity": {
     "summary": {
@@ -1161,14 +1161,14 @@
         "p90Seconds": 587338.4
       },
       "MEDIUM": {
-        "count": 774,
-        "medianSeconds": 378.5,
-        "p90Seconds": 524201.8000000001
+        "count": 776,
+        "medianSeconds": 379.0,
+        "p90Seconds": 523649.0
       },
       "HIGH": {
-        "count": 711,
-        "medianSeconds": 449.0,
-        "p90Seconds": 501768.0
+        "count": 714,
+        "medianSeconds": 451.0,
+        "p90Seconds": 501357.60000000003
       },
       "LOW": {
         "count": 108,
@@ -14952,6 +14952,41 @@
         "severity": "HIGH",
         "severityValue": 3,
         "timeToPublishSeconds": 1555.0
+      },
+      {
+        "date": "2026-09-21",
+        "cveId": "CVE-2026-82163",
+        "severity": "MEDIUM",
+        "severityValue": 2,
+        "timeToPublishSeconds": 355648.0
+      },
+      {
+        "date": "2026-09-21",
+        "cveId": "CVE-2026-49810",
+        "severity": "HIGH",
+        "severityValue": 3,
+        "timeToPublishSeconds": 421.0
+      },
+      {
+        "date": "2026-09-21",
+        "cveId": "CVE-2026-82165",
+        "severity": "MEDIUM",
+        "severityValue": 2,
+        "timeToPublishSeconds": 633.0
+      },
+      {
+        "date": "2026-09-21",
+        "cveId": "CVE-2026-81469",
+        "severity": "HIGH",
+        "severityValue": 3,
+        "timeToPublishSeconds": 3406.0
+      },
+      {
+        "date": "2026-09-21",
+        "cveId": "CVE-2026-49811",
+        "severity": "HIGH",
+        "severityValue": 3,
+        "timeToPublishSeconds": 711.0
       }
     ]
   },
@@ -14968,24 +15003,24 @@
       "cna": "GitHub_M",
       "slug": "github-m",
       "rank": 2,
-      "window30SecondsPerCve": 1968.109339407745,
-      "totalEvents": 19698,
+      "window30SecondsPerCve": 2098.7854251012145,
+      "totalEvents": 19819,
       "percentileFaster": 100
     },
     {
       "cna": "VulnCheck",
       "slug": "vulncheck",
       "rank": 3,
-      "window30SecondsPerCve": 2114.1924959216967,
-      "totalEvents": 6102,
+      "window30SecondsPerCve": 2122.8501228501227,
+      "totalEvents": 6130,
       "percentileFaster": 99
     },
     {
       "cna": "VulDB",
       "slug": "vuldb",
       "rank": 4,
-      "window30SecondsPerCve": 3115.3846153846152,
-      "totalEvents": 16382,
+      "window30SecondsPerCve": 3053.0035335689045,
+      "totalEvents": 16407,
       "percentileFaster": 99
     },
     {
@@ -15037,27 +15072,27 @@
       "percentileFaster": 97
     },
     {
-      "cna": "dell",
-      "slug": "dell",
+      "cna": "redhat",
+      "slug": "redhat",
       "rank": 11,
-      "window30SecondsPerCve": 11675.675675675675,
-      "totalEvents": 1969,
+      "window30SecondsPerCve": 12521.739130434782,
+      "totalEvents": 7000,
       "percentileFaster": 97
     },
     {
-      "cna": "redhat",
-      "slug": "redhat",
+      "cna": "dell",
+      "slug": "dell",
       "rank": 12,
-      "window30SecondsPerCve": 12831.683168316831,
-      "totalEvents": 6987,
+      "window30SecondsPerCve": 13090.90909090909,
+      "totalEvents": 1974,
       "percentileFaster": 96
     },
     {
       "cna": "WPScan",
       "slug": "wpscan",
       "rank": 13,
-      "window30SecondsPerCve": 15247.058823529413,
-      "totalEvents": 3622,
+      "window30SecondsPerCve": 15709.09090909091,
+      "totalEvents": 3626,
       "percentileFaster": 96
     },
     {
@@ -15077,19 +15112,19 @@
       "percentileFaster": 95
     },
     {
-      "cna": "apache",
-      "slug": "apache",
+      "cna": "adobe",
+      "slug": "adobe",
       "rank": 16,
-      "window30SecondsPerCve": 16200.0,
-      "totalEvents": 2443,
+      "window30SecondsPerCve": 16722.58064516129,
+      "totalEvents": 4347,
       "percentileFaster": 95
     },
     {
-      "cna": "adobe",
-      "slug": "adobe",
+      "cna": "apache",
+      "slug": "apache",
       "rank": 17,
-      "window30SecondsPerCve": 16722.58064516129,
-      "totalEvents": 4347,
+      "window30SecondsPerCve": 18514.285714285714,
+      "totalEvents": 2453,
       "percentileFaster": 94
     },
     {
