@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-09-30T04:05:04.621673+00:00",
+  "generatedAt": "2026-10-01T04:15:47.138114+00:00",
   "cna": {
     "name": "eclipse",
     "slug": "eclipse",
-    "rank": 38,
+    "rank": 40,
     "window30SecondsPerCve": 50823.529411764706,
-    "window90SecondsPerCve": 86400.0,
-    "totalEvents": 291,
+    "window90SecondsPerCve": 87370.78651685393,
+    "totalEvents": 292,
     "consistencyScore": 0,
     "consistencyGrade": "F",
-    "consistencyMedianSeconds": 86549.0,
-    "consistencyP90Seconds": 2850520.5000000005,
+    "consistencyMedianSeconds": 86400.0,
+    "consistencyP90Seconds": 2848445.0,
     "percentileFaster": 87
   },
   "trend": [
@@ -442,22 +442,22 @@
     },
     {
       "date": "2026-09-01",
-      "p50IntervalSeconds": 209.5,
-      "p90IntervalSeconds": 166170.6000000001,
-      "eventCount": 50
+      "p50IntervalSeconds": 210.0,
+      "p90IntervalSeconds": 158702.0,
+      "eventCount": 51
     }
   ],
   "metrics": {
-    "p50Seconds": 86549.0,
-    "p90Seconds": 2850520.5000000005,
-    "trimmedCount": 260
+    "p50Seconds": 86400.0,
+    "p90Seconds": 2848445.0,
+    "trimmedCount": 261
   },
   "severity": {
     "summary": {
       "NAN": {
-        "count": 76,
-        "medianSeconds": 1116850.5,
-        "p90Seconds": 4352857.0
+        "count": 74,
+        "medianSeconds": 1148106.0,
+        "p90Seconds": 4437514.6000000015
       },
       "MEDIUM": {
         "count": 98,
@@ -470,9 +470,9 @@
         "p90Seconds": 1488719.5999999999
       },
       "HIGH": {
-        "count": 78,
-        "medianSeconds": 1721.0,
-        "p90Seconds": 2646596.5999999996
+        "count": 81,
+        "medianSeconds": 1611.0,
+        "p90Seconds": 2598299.0
       },
       "CRITICAL": {
         "count": 23,
@@ -2332,8 +2332,8 @@
       {
         "date": "2026-09-29",
         "cveId": "CVE-2026-102758",
-        "severity": "NAN",
-        "severityValue": -1,
+        "severity": "HIGH",
+        "severityValue": 3,
         "timeToPublishSeconds": 110.0
       },
       {
@@ -2486,8 +2486,8 @@
       {
         "date": "2026-09-29",
         "cveId": "CVE-2026-102728",
-        "severity": "NAN",
-        "severityValue": -1,
+        "severity": "HIGH",
+        "severityValue": 3,
         "timeToPublishSeconds": 210.0
       },
       {
@@ -2510,6 +2510,13 @@
         "severity": "HIGH",
         "severityValue": 3,
         "timeToPublishSeconds": 45.0
+      },
+      {
+        "date": "2026-09-30",
+        "cveId": "CVE-2026-102717",
+        "severity": "HIGH",
+        "severityValue": 3,
+        "timeToPublishSeconds": 73912.0
       }
     ]
   },
@@ -2526,24 +2533,24 @@
       "cna": "GitHub_M",
       "slug": "github-m",
       "rank": 2,
-      "window30SecondsPerCve": 1771.701982228298,
-      "totalEvents": 20262,
+      "window30SecondsPerCve": 1781.4432989690722,
+      "totalEvents": 20289,
       "percentileFaster": 100
     },
     {
       "cna": "VulnCheck",
       "slug": "vulncheck",
       "rank": 3,
-      "window30SecondsPerCve": 2112.469437652812,
-      "totalEvents": 6473,
+      "window30SecondsPerCve": 2119.3785772690107,
+      "totalEvents": 6498,
       "percentileFaster": 99
     },
     {
       "cna": "VulDB",
       "slug": "vuldb",
       "rank": 4,
-      "window30SecondsPerCve": 2663.9260020554984,
-      "totalEvents": 16677,
+      "window30SecondsPerCve": 2817.391304347826,
+      "totalEvents": 16700,
       "percentileFaster": 99
     },
     {
@@ -2571,35 +2578,35 @@
       "percentileFaster": 98
     },
     {
+      "cna": "Patchstack",
+      "slug": "patchstack",
+      "rank": 8,
+      "window30SecondsPerCve": 8281.15015974441,
+      "totalEvents": 12774,
+      "percentileFaster": 98
+    },
+    {
       "cna": "redhat",
       "slug": "redhat",
-      "rank": 8,
-      "window30SecondsPerCve": 9707.865168539325,
-      "totalEvents": 7093,
-      "percentileFaster": 98
+      "rank": 9,
+      "window30SecondsPerCve": 9781.132075471698,
+      "totalEvents": 7098,
+      "percentileFaster": 97
     },
     {
       "cna": "apple",
       "slug": "apple",
-      "rank": 9,
+      "rank": 10,
       "window30SecondsPerCve": 10622.95081967213,
       "totalEvents": 3583,
-      "percentileFaster": 97
-    },
-    {
-      "cna": "Patchstack",
-      "slug": "patchstack",
-      "rank": 10,
-      "window30SecondsPerCve": 11571.42857142857,
-      "totalEvents": 12652,
       "percentileFaster": 97
     },
     {
       "cna": "Wordfence",
       "slug": "wordfence",
       "rank": 11,
-      "window30SecondsPerCve": 11781.818181818182,
-      "totalEvents": 7604,
+      "window30SecondsPerCve": 11318.777292576418,
+      "totalEvents": 7614,
       "percentileFaster": 97
     },
     {
@@ -2622,40 +2629,40 @@
       "cna": "apache",
       "slug": "apache",
       "rank": 14,
-      "window30SecondsPerCve": 13935.483870967742,
-      "totalEvents": 2526,
+      "window30SecondsPerCve": 13157.360406091371,
+      "totalEvents": 2545,
       "percentileFaster": 96
     },
     {
       "cna": "WPScan",
       "slug": "wpscan",
       "rank": 15,
-      "window30SecondsPerCve": 14086.95652173913,
-      "totalEvents": 3670,
+      "window30SecondsPerCve": 13714.285714285714,
+      "totalEvents": 3678,
+      "percentileFaster": 95
+    },
+    {
+      "cna": "nvidia",
+      "slug": "nvidia",
+      "rank": 16,
+      "window30SecondsPerCve": 15709.09090909091,
+      "totalEvents": 947,
       "percentileFaster": 95
     },
     {
       "cna": "TuranSec",
       "slug": "turansec",
-      "rank": 16,
+      "rank": 17,
       "window30SecondsPerCve": 15804.878048780487,
       "totalEvents": 197,
-      "percentileFaster": 95
-    },
-    {
-      "cna": "cisco",
-      "slug": "cisco",
-      "rank": 17,
-      "window30SecondsPerCve": 15901.840490797545,
-      "totalEvents": 3799,
       "percentileFaster": 95
     },
     {
       "cna": "mozilla",
       "slug": "mozilla",
       "rank": 18,
-      "window30SecondsPerCve": 16615.384615384617,
-      "totalEvents": 1282,
+      "window30SecondsPerCve": 16509.554140127388,
+      "totalEvents": 1283,
       "percentileFaster": 94
     },
     {
@@ -2667,12 +2674,12 @@
       "percentileFaster": 94
     },
     {
-      "cna": "EEF",
-      "slug": "eef",
+      "cna": "mitre",
+      "slug": "mitre",
       "rank": 20,
-      "window30SecondsPerCve": 20250.0,
-      "totalEvents": 312,
-      "percentileFaster": 93
+      "window30SecondsPerCve": 19786.25954198473,
+      "totalEvents": 37695,
+      "percentileFaster": 94
     }
   ]
 }
