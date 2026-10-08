@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-10-07T04:22:50.583001+00:00",
+  "generatedAt": "2026-10-08T04:36:39.855898+00:00",
   "cna": {
     "name": "jpcert",
     "slug": "jpcert",
     "rank": 29,
-    "window30SecondsPerCve": 39272.72727272727,
-    "window90SecondsPerCve": 60750.0,
-    "totalEvents": 1928,
+    "window30SecondsPerCve": 37028.57142857143,
+    "window90SecondsPerCve": 59815.38461538462,
+    "totalEvents": 1932,
     "consistencyScore": 0,
     "consistencyGrade": "F",
     "consistencyMedianSeconds": 7200.0,
-    "consistencyP90Seconds": 764929.0000000001,
+    "consistencyP90Seconds": 764275.0,
     "percentileFaster": 90
   },
   "trend": [
@@ -1090,42 +1090,42 @@
     },
     {
       "date": "2026-10-01",
-      "p50IntervalSeconds": 427448.0,
-      "p90IntervalSeconds": 427448.0,
-      "eventCount": 1
+      "p50IntervalSeconds": 59680.0,
+      "p90IntervalSeconds": 330935.60000000003,
+      "eventCount": 5
     }
   ],
   "metrics": {
     "p50Seconds": 7200.0,
-    "p90Seconds": 764929.0000000001,
-    "trimmedCount": 1830
+    "p90Seconds": 764275.0,
+    "trimmedCount": 1834
   },
   "severity": {
     "summary": {
       "NAN": {
-        "count": 1061,
-        "medianSeconds": 82446.0,
-        "p90Seconds": 1052654.0
+        "count": 1060,
+        "medianSeconds": 82623.0,
+        "p90Seconds": 1054097.3000000003
       },
       "HIGH": {
-        "count": 331,
-        "medianSeconds": 385.0,
-        "p90Seconds": 428510.0
+        "count": 333,
+        "medianSeconds": 348.0,
+        "p90Seconds": 428446.8
       },
       "MEDIUM": {
-        "count": 426,
-        "medianSeconds": 325.5,
-        "p90Seconds": 424857.0
+        "count": 427,
+        "medianSeconds": 338.0,
+        "p90Seconds": 424338.80000000016
       },
       "CRITICAL": {
-        "count": 69,
-        "medianSeconds": 44.0,
-        "p90Seconds": 419310.0
+        "count": 70,
+        "medianSeconds": 47.0,
+        "p90Seconds": 418717.0
       },
       "LOW": {
-        "count": 40,
-        "medianSeconds": 67047.5,
-        "p90Seconds": 522022.3
+        "count": 41,
+        "medianSeconds": 62766.0,
+        "p90Seconds": 521271.0
       }
     },
     "points": [
@@ -5451,8 +5451,8 @@
       {
         "date": "2021-05-24",
         "cveId": "CVE-2021-20722",
-        "severity": "NAN",
-        "severityValue": -1,
+        "severity": "HIGH",
+        "severityValue": 3,
         "timeToPublishSeconds": 1.0
       },
       {
@@ -14617,6 +14617,34 @@
         "severity": "MEDIUM",
         "severityValue": 2,
         "timeToPublishSeconds": 427448.0
+      },
+      {
+        "date": "2026-10-07",
+        "cveId": "CVE-2026-96408",
+        "severity": "CRITICAL",
+        "severityValue": 4,
+        "timeToPublishSeconds": 186167.0
+      },
+      {
+        "date": "2026-10-07",
+        "cveId": "CVE-2026-103668",
+        "severity": "HIGH",
+        "severityValue": 3,
+        "timeToPublishSeconds": 23.0
+      },
+      {
+        "date": "2026-10-08",
+        "cveId": "CVE-2026-92861",
+        "severity": "MEDIUM",
+        "severityValue": 2,
+        "timeToPublishSeconds": 59680.0
+      },
+      {
+        "date": "2026-10-08",
+        "cveId": "CVE-2026-92862",
+        "severity": "LOW",
+        "severityValue": 1,
+        "timeToPublishSeconds": 48.0
       }
     ]
   },
@@ -14625,32 +14653,32 @@
       "cna": "GitHub_M",
       "slug": "github-m",
       "rank": 1,
-      "window30SecondsPerCve": 1635.3312302839117,
-      "totalEvents": 20559,
+      "window30SecondsPerCve": 1569.0072639225182,
+      "totalEvents": 20626,
       "percentileFaster": 100
     },
     {
       "cna": "Linux",
       "slug": "linux",
       "rank": 2,
-      "window30SecondsPerCve": 1674.4186046511627,
-      "totalEvents": 13257,
+      "window30SecondsPerCve": 1672.258064516129,
+      "totalEvents": 13259,
       "percentileFaster": 100
     },
     {
       "cna": "VulnCheck",
       "slug": "vulncheck",
       "rank": 3,
-      "window30SecondsPerCve": 2263.755458515284,
-      "totalEvents": 6665,
+      "window30SecondsPerCve": 2259.808195292066,
+      "totalEvents": 6685,
       "percentileFaster": 99
     },
     {
       "cna": "VulDB",
       "slug": "vuldb",
       "rank": 4,
-      "window30SecondsPerCve": 2748.6744432661717,
-      "totalEvents": 16847,
+      "window30SecondsPerCve": 2975.889781859931,
+      "totalEvents": 16849,
       "percentileFaster": 99
     },
     {
@@ -14673,8 +14701,8 @@
       "cna": "Patchstack",
       "slug": "patchstack",
       "rank": 7,
-      "window30SecondsPerCve": 5972.350230414747,
-      "totalEvents": 12974,
+      "window30SecondsPerCve": 5659.388646288209,
+      "totalEvents": 12998,
       "percentileFaster": 98
     },
     {
@@ -14689,16 +14717,16 @@
       "cna": "apache",
       "slug": "apache",
       "rank": 9,
-      "window30SecondsPerCve": 8756.756756756757,
-      "totalEvents": 2654,
+      "window30SecondsPerCve": 8526.315789473685,
+      "totalEvents": 2663,
       "percentileFaster": 97
     },
     {
       "cna": "redhat",
       "slug": "redhat",
       "rank": 10,
-      "window30SecondsPerCve": 8816.326530612245,
-      "totalEvents": 7159,
+      "window30SecondsPerCve": 8582.781456953642,
+      "totalEvents": 7177,
       "percentileFaster": 97
     },
     {
@@ -14714,7 +14742,7 @@
       "slug": "wordfence",
       "rank": 12,
       "window30SecondsPerCve": 10845.188284518828,
-      "totalEvents": 7673,
+      "totalEvents": 7678,
       "percentileFaster": 96
     },
     {
@@ -14737,16 +14765,16 @@
       "cna": "WPScan",
       "slug": "wpscan",
       "rank": 15,
-      "window30SecondsPerCve": 15614.4578313253,
-      "totalEvents": 3704,
+      "window30SecondsPerCve": 15157.894736842105,
+      "totalEvents": 3712,
       "percentileFaster": 95
     },
     {
       "cna": "mitre",
       "slug": "mitre",
       "rank": 16,
-      "window30SecondsPerCve": 18514.285714285714,
-      "totalEvents": 37722,
+      "window30SecondsPerCve": 17753.424657534248,
+      "totalEvents": 37729,
       "percentileFaster": 95
     },
     {
