@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-10-17T03:02:57.901069+00:00",
+  "generatedAt": "2026-10-18T03:07:32.083309+00:00",
   "cna": {
     "name": "Patchstack",
     "slug": "patchstack",
     "rank": 5,
-    "window30SecondsPerCve": 3761.9738751814225,
-    "window90SecondsPerCve": 5873.111782477341,
-    "totalEvents": 13272,
+    "window30SecondsPerCve": 3880.2395209580836,
+    "window90SecondsPerCve": 5855.421686746988,
+    "totalEvents": 13276,
     "consistencyScore": 0,
     "consistencyGrade": "F",
     "consistencyMedianSeconds": 67.0,
-    "consistencyP90Seconds": 1258.0,
+    "consistencyP90Seconds": 1259.0,
     "percentileFaster": 99
   },
   "trend": [
@@ -383,21 +383,21 @@
     {
       "date": "2026-10-01",
       "p50IntervalSeconds": 25.0,
-      "p90IntervalSeconds": 3517.500000000001,
-      "eventCount": 498
+      "p90IntervalSeconds": 3570.9,
+      "eventCount": 502
     }
   ],
   "metrics": {
     "p50Seconds": 67.0,
-    "p90Seconds": 1258.0,
-    "trimmedCount": 12607
+    "p90Seconds": 1259.0,
+    "trimmedCount": 12611
   },
   "severity": {
     "summary": {
       "MEDIUM": {
-        "count": 7685,
+        "count": 7686,
         "medianSeconds": 85.0,
-        "p90Seconds": 1616.4000000000015
+        "p90Seconds": 1618.5
       },
       "CRITICAL": {
         "count": 1062,
@@ -405,9 +405,9 @@
         "p90Seconds": 916.8
       },
       "HIGH": {
-        "count": 4417,
+        "count": 4420,
         "medianSeconds": 1.0,
-        "p90Seconds": 818.8000000000011
+        "p90Seconds": 848.0999999999999
       },
       "LOW": {
         "count": 85,
@@ -93317,6 +93317,34 @@
         "severity": "HIGH",
         "severityValue": 3,
         "timeToPublishSeconds": 290.0
+      },
+      {
+        "date": "2026-10-17",
+        "cveId": "CVE-2026-110384",
+        "severity": "HIGH",
+        "severityValue": 3,
+        "timeToPublishSeconds": 64697.0
+      },
+      {
+        "date": "2026-10-17",
+        "cveId": "CVE-2026-110889",
+        "severity": "HIGH",
+        "severityValue": 3,
+        "timeToPublishSeconds": 14381.0
+      },
+      {
+        "date": "2026-10-17",
+        "cveId": "CVE-2026-109701",
+        "severity": "HIGH",
+        "severityValue": 3,
+        "timeToPublishSeconds": 21633.0
+      },
+      {
+        "date": "2026-10-17",
+        "cveId": "CVE-2026-110882",
+        "severity": "MEDIUM",
+        "severityValue": 2,
+        "timeToPublishSeconds": 7166.0
       }
     ]
   },
@@ -93333,8 +93361,8 @@
       "cna": "VulnCheck",
       "slug": "vulncheck",
       "rank": 2,
-      "window30SecondsPerCve": 1576.6423357664235,
-      "totalEvents": 7568,
+      "window30SecondsPerCve": 1640.506329113924,
+      "totalEvents": 7605,
       "percentileFaster": 100
     },
     {
@@ -93349,16 +93377,16 @@
       "cna": "VulDB",
       "slug": "vuldb",
       "rank": 4,
-      "window30SecondsPerCve": 3111.6446578631453,
-      "totalEvents": 17071,
+      "window30SecondsPerCve": 3318.8220230473753,
+      "totalEvents": 17075,
       "percentileFaster": 99
     },
     {
       "cna": "Patchstack",
       "slug": "patchstack",
       "rank": 5,
-      "window30SecondsPerCve": 3761.9738751814225,
-      "totalEvents": 13272,
+      "window30SecondsPerCve": 3880.2395209580836,
+      "totalEvents": 13276,
       "percentileFaster": 99
     },
     {
@@ -93389,8 +93417,8 @@
       "cna": "Wordfence",
       "slug": "wordfence",
       "rank": 9,
-      "window30SecondsPerCve": 8388.349514563106,
-      "totalEvents": 7812,
+      "window30SecondsPerCve": 8254.777070063694,
+      "totalEvents": 7820,
       "percentileFaster": 97
     },
     {
@@ -93429,8 +93457,8 @@
       "cna": "WPScan",
       "slug": "wpscan",
       "rank": 14,
-      "window30SecondsPerCve": 14320.441988950277,
-      "totalEvents": 3771,
+      "window30SecondsPerCve": 14480.446927374302,
+      "totalEvents": 3775,
       "percentileFaster": 96
     },
     {
@@ -93438,7 +93466,7 @@
       "slug": "mitre",
       "rank": 15,
       "window30SecondsPerCve": 16200.0,
-      "totalEvents": 37791,
+      "totalEvents": 37792,
       "percentileFaster": 95
     },
     {
