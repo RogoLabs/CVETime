@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-10-23T03:28:44.970179+00:00",
+  "generatedAt": "2026-10-24T03:22:25.447945+00:00",
   "cna": {
     "name": "Joomla",
     "slug": "joomla",
-    "rank": 35,
-    "window30SecondsPerCve": 41142.857142857145,
-    "window90SecondsPerCve": 34105.26315789474,
-    "totalEvents": 511,
+    "rank": 34,
+    "window30SecondsPerCve": 40500.0,
+    "window90SecondsPerCve": 33956.33187772926,
+    "totalEvents": 512,
     "consistencyScore": 0,
     "consistencyGrade": "F",
     "consistencyMedianSeconds": 55.0,
-    "consistencyP90Seconds": 707166.2000000012,
+    "consistencyP90Seconds": 701721.0,
     "percentileFaster": 89
   },
   "trend": [
@@ -280,15 +280,15 @@
     },
     {
       "date": "2026-10-01",
-      "p50IntervalSeconds": 116.0,
-      "p90IntervalSeconds": 376759.8000000002,
-      "eventCount": 13
+      "p50IntervalSeconds": 162.0,
+      "p90IntervalSeconds": 347594.2000000003,
+      "eventCount": 14
     }
   ],
   "metrics": {
     "p50Seconds": 55.0,
-    "p90Seconds": 707166.2000000012,
-    "trimmedCount": 484
+    "p90Seconds": 701721.0,
+    "trimmedCount": 485
   },
   "severity": {
     "summary": {
@@ -298,9 +298,9 @@
         "p90Seconds": 4162045.0
       },
       "HIGH": {
-        "count": 136,
-        "medianSeconds": 60.0,
-        "p90Seconds": 259678.0
+        "count": 137,
+        "medianSeconds": 62.0,
+        "p90Seconds": 258082.40000000008
       },
       "MEDIUM": {
         "count": 195,
@@ -3888,6 +3888,13 @@
         "severity": "CRITICAL",
         "severityValue": 4,
         "timeToPublishSeconds": 1209529.0
+      },
+      {
+        "date": "2026-10-23",
+        "cveId": "CVE-2026-102786",
+        "severity": "HIGH",
+        "severityValue": 3,
+        "timeToPublishSeconds": 93492.0
       }
     ]
   },
@@ -3896,40 +3903,40 @@
       "cna": "VulnCheck",
       "slug": "vulncheck",
       "rank": 1,
-      "window30SecondsPerCve": 1461.1048478015784,
-      "totalEvents": 7931,
+      "window30SecondsPerCve": 1468.5552407932012,
+      "totalEvents": 7945,
       "percentileFaster": 100
     },
     {
       "cna": "GitHub_M",
       "slug": "github-m",
       "rank": 2,
-      "window30SecondsPerCve": 1826.6384778012684,
-      "totalEvents": 21337,
+      "window30SecondsPerCve": 1796.2577962577961,
+      "totalEvents": 21434,
       "percentileFaster": 100
     },
     {
       "cna": "Linux",
       "slug": "linux",
       "rank": 3,
-      "window30SecondsPerCve": 2408.9219330855017,
-      "totalEvents": 13718,
+      "window30SecondsPerCve": 2006.1919504643963,
+      "totalEvents": 13934,
       "percentileFaster": 99
     },
     {
       "cna": "VulDB",
       "slug": "vuldb",
       "rank": 4,
-      "window30SecondsPerCve": 3071.090047393365,
-      "totalEvents": 17274,
+      "window30SecondsPerCve": 3122.89156626506,
+      "totalEvents": 17278,
       "percentileFaster": 99
     },
     {
       "cna": "Patchstack",
       "slug": "patchstack",
       "rank": 5,
-      "window30SecondsPerCve": 3545.827633378933,
-      "totalEvents": 13342,
+      "window30SecondsPerCve": 3512.1951219512193,
+      "totalEvents": 13349,
       "percentileFaster": 99
     },
     {
@@ -3960,16 +3967,16 @@
       "cna": "redhat",
       "slug": "redhat",
       "rank": 9,
-      "window30SecondsPerCve": 8937.931034482759,
-      "totalEvents": 7297,
+      "window30SecondsPerCve": 9159.010600706713,
+      "totalEvents": 7298,
       "percentileFaster": 97
     },
     {
       "cna": "Wordfence",
       "slug": "wordfence",
       "rank": 10,
-      "window30SecondsPerCve": 9671.641791044776,
-      "totalEvents": 7825,
+      "window30SecondsPerCve": 10085.603112840467,
+      "totalEvents": 7827,
       "percentileFaster": 97
     },
     {
@@ -3981,17 +3988,9 @@
       "percentileFaster": 97
     },
     {
-      "cna": "WPScan",
-      "slug": "wpscan",
-      "rank": 12,
-      "window30SecondsPerCve": 13935.483870967742,
-      "totalEvents": 3813,
-      "percentileFaster": 96
-    },
-    {
       "cna": "hpe",
       "slug": "hpe",
-      "rank": 13,
+      "rank": 12,
       "window30SecondsPerCve": 14480.446927374302,
       "totalEvents": 1363,
       "percentileFaster": 96
@@ -3999,7 +3998,7 @@
     {
       "cna": "microsoft",
       "slug": "microsoft",
-      "rank": 14,
+      "rank": 13,
       "window30SecondsPerCve": 14644.06779661017,
       "totalEvents": 6667,
       "percentileFaster": 96
@@ -4007,9 +4006,17 @@
     {
       "cna": "mitre",
       "slug": "mitre",
+      "rank": 14,
+      "window30SecondsPerCve": 14727.272727272728,
+      "totalEvents": 37829,
+      "percentileFaster": 96
+    },
+    {
+      "cna": "WPScan",
+      "slug": "wpscan",
       "rank": 15,
-      "window30SecondsPerCve": 14644.06779661017,
-      "totalEvents": 37824,
+      "window30SecondsPerCve": 14811.42857142857,
+      "totalEvents": 3820,
       "percentileFaster": 95
     },
     {
