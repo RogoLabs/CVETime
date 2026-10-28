@@ -1,17 +1,17 @@
 {
-  "generatedAt": "2026-10-27T03:48:37.462035+00:00",
+  "generatedAt": "2026-10-28T04:04:43.595192+00:00",
   "cna": {
     "name": "HCL",
     "slug": "hcl",
-    "rank": 77,
-    "window30SecondsPerCve": 123428.57142857143,
+    "rank": 74,
+    "window30SecondsPerCve": 117818.18181818182,
     "window90SecondsPerCve": 99692.30769230769,
-    "totalEvents": 640,
+    "totalEvents": 642,
     "consistencyScore": 0,
     "consistencyGrade": "F",
     "consistencyMedianSeconds": 1697.0,
-    "consistencyP90Seconds": 863741.6000000004,
-    "percentileFaster": 75
+    "consistencyP90Seconds": 861837.0,
+    "percentileFaster": 76
   },
   "trend": [
     {
@@ -418,15 +418,15 @@
     },
     {
       "date": "2026-10-01",
-      "p50IntervalSeconds": 147.0,
-      "p90IntervalSeconds": 570683.8,
-      "eventCount": 20
+      "p50IntervalSeconds": 576.5,
+      "p90IntervalSeconds": 553289.9000000004,
+      "eventCount": 22
     }
   ],
   "metrics": {
     "p50Seconds": 1697.0,
-    "p90Seconds": 863741.6000000004,
-    "trimmedCount": 576
+    "p90Seconds": 861837.0,
+    "trimmedCount": 578
   },
   "severity": {
     "summary": {
@@ -451,9 +451,9 @@
         "p90Seconds": 912921.1999999988
       },
       "CRITICAL": {
-        "count": 14,
+        "count": 16,
         "medianSeconds": 13609.0,
-        "p90Seconds": 381984.60000000044
+        "p90Seconds": 396266.0
       }
     },
     "points": [
@@ -4929,6 +4929,20 @@
         "severity": "MEDIUM",
         "severityValue": 2,
         "timeToPublishSeconds": 162969.0
+      },
+      {
+        "date": "2026-10-27",
+        "cveId": "CVE-2026-108014",
+        "severity": "CRITICAL",
+        "severityValue": 4,
+        "timeToPublishSeconds": 296026.0
+      },
+      {
+        "date": "2026-10-27",
+        "cveId": "CVE-2026-108015",
+        "severity": "CRITICAL",
+        "severityValue": 4,
+        "timeToPublishSeconds": 982.0
       }
     ]
   },
@@ -4937,24 +4951,24 @@
       "cna": "VulnCheck",
       "slug": "vulncheck",
       "rank": 1,
-      "window30SecondsPerCve": 1508.7310826542491,
-      "totalEvents": 8079,
+      "window30SecondsPerCve": 1500.868558193399,
+      "totalEvents": 8143,
       "percentileFaster": 100
     },
     {
       "cna": "GitHub_M",
       "slug": "github-m",
       "rank": 2,
-      "window30SecondsPerCve": 1981.651376146789,
-      "totalEvents": 21478,
+      "window30SecondsPerCve": 1905.8823529411766,
+      "totalEvents": 21530,
       "percentileFaster": 100
     },
     {
       "cna": "VulDB",
       "slug": "vuldb",
       "rank": 3,
-      "window30SecondsPerCve": 2896.08938547486,
-      "totalEvents": 17415,
+      "window30SecondsPerCve": 2938.7755102040815,
+      "totalEvents": 17437,
       "percentileFaster": 99
     },
     {
@@ -4969,8 +4983,8 @@
       "cna": "Patchstack",
       "slug": "patchstack",
       "rank": 5,
-      "window30SecondsPerCve": 3469.879518072289,
-      "totalEvents": 13399,
+      "window30SecondsPerCve": 3465.2406417112297,
+      "totalEvents": 13400,
       "percentileFaster": 99
     },
     {
@@ -5009,8 +5023,8 @@
       "cna": "Wordfence",
       "slug": "wordfence",
       "rank": 10,
-      "window30SecondsPerCve": 10285.714285714286,
-      "totalEvents": 7830,
+      "window30SecondsPerCve": 10755.186721991702,
+      "totalEvents": 7842,
       "percentileFaster": 97
     },
     {
@@ -5022,17 +5036,9 @@
       "percentileFaster": 97
     },
     {
-      "cna": "adobe",
-      "slug": "adobe",
-      "rank": 12,
-      "window30SecondsPerCve": 13714.285714285714,
-      "totalEvents": 4536,
-      "percentileFaster": 96
-    },
-    {
       "cna": "hpe",
       "slug": "hpe",
-      "rank": 13,
+      "rank": 12,
       "window30SecondsPerCve": 14480.446927374302,
       "totalEvents": 1363,
       "percentileFaster": 96
@@ -5040,57 +5046,65 @@
     {
       "cna": "microsoft",
       "slug": "microsoft",
+      "rank": 13,
+      "window30SecondsPerCve": 14561.797752808989,
+      "totalEvents": 6670,
+      "percentileFaster": 96
+    },
+    {
+      "cna": "Chrome",
+      "slug": "chrome",
       "rank": 14,
       "window30SecondsPerCve": 14644.06779661017,
-      "totalEvents": 6667,
+      "totalEvents": 2483,
       "percentileFaster": 96
     },
     {
       "cna": "WPScan",
       "slug": "wpscan",
       "rank": 15,
-      "window30SecondsPerCve": 15069.767441860466,
-      "totalEvents": 3831,
-      "percentileFaster": 95
-    },
-    {
-      "cna": "Chrome",
-      "slug": "chrome",
-      "rank": 16,
-      "window30SecondsPerCve": 15901.840490797545,
-      "totalEvents": 2469,
+      "window30SecondsPerCve": 15247.058823529413,
+      "totalEvents": 3834,
       "percentileFaster": 95
     },
     {
       "cna": "mitre",
       "slug": "mitre",
-      "rank": 17,
-      "window30SecondsPerCve": 16615.384615384617,
-      "totalEvents": 37830,
+      "rank": 16,
+      "window30SecondsPerCve": 16405.063291139242,
+      "totalEvents": 37832,
       "percentileFaster": 95
     },
     {
-      "cna": "nvidia",
-      "slug": "nvidia",
-      "rank": 18,
-      "window30SecondsPerCve": 16831.16883116883,
-      "totalEvents": 967,
-      "percentileFaster": 94
+      "cna": "adobe",
+      "slug": "adobe",
+      "rank": 17,
+      "window30SecondsPerCve": 16941.176470588234,
+      "totalEvents": 4542,
+      "percentileFaster": 95
     },
     {
       "cna": "juniper",
       "slug": "juniper",
-      "rank": 19,
+      "rank": 18,
       "window30SecondsPerCve": 16941.176470588234,
       "totalEvents": 774,
       "percentileFaster": 94
     },
     {
-      "cna": "GitLab",
-      "slug": "gitlab",
+      "cna": "mozilla",
+      "slug": "mozilla",
+      "rank": 19,
+      "window30SecondsPerCve": 17513.513513513513,
+      "totalEvents": 1386,
+      "percentileFaster": 94
+    },
+    {
+      "cna": "nvidia",
+      "slug": "nvidia",
       "rank": 20,
-      "window30SecondsPerCve": 20736.0,
-      "totalEvents": 1315,
+      "window30SecondsPerCve": 18253.521126760563,
+      "totalEvents": 973,
       "percentileFaster": 94
     }
   ]

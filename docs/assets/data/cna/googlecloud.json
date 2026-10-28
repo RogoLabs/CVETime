@@ -1,17 +1,17 @@
 {
-  "generatedAt": "2026-10-27T03:48:37.223930+00:00",
+  "generatedAt": "2026-10-28T04:04:43.369185+00:00",
   "cna": {
     "name": "GoogleCloud",
     "slug": "googlecloud",
-    "rank": 154,
-    "window30SecondsPerCve": 370285.71428571426,
-    "window90SecondsPerCve": 409263.15789473685,
-    "totalEvents": 57,
+    "rank": 146,
+    "window30SecondsPerCve": 324000.0,
+    "window90SecondsPerCve": 388800.0,
+    "totalEvents": 58,
     "consistencyScore": 0,
     "consistencyGrade": "F",
-    "consistencyMedianSeconds": 367007.0,
-    "consistencyP90Seconds": 1427026.5,
-    "percentileFaster": 49
+    "consistencyMedianSeconds": 362970.0,
+    "consistencyP90Seconds": 1418283.9999999998,
+    "percentileFaster": 52
   },
   "trend": [
     {
@@ -88,22 +88,22 @@
     },
     {
       "date": "2026-10-01",
-      "p50IntervalSeconds": 524104.5,
-      "p90IntervalSeconds": 1129369.7000000002,
-      "eventCount": 4
+      "p50IntervalSeconds": 511376.0,
+      "p90IntervalSeconds": 1044721.6000000001,
+      "eventCount": 5
     }
   ],
   "metrics": {
-    "p50Seconds": 367007.0,
-    "p90Seconds": 1427026.5,
-    "trimmedCount": 50
+    "p50Seconds": 362970.0,
+    "p90Seconds": 1418283.9999999998,
+    "trimmedCount": 51
   },
   "severity": {
     "summary": {
       "HIGH": {
-        "count": 32,
-        "medianSeconds": 182695.5,
-        "p90Seconds": 1082285.0000000005
+        "count": 33,
+        "medianSeconds": 101254.0,
+        "p90Seconds": 1064354.0000000002
       },
       "MEDIUM": {
         "count": 5,
@@ -508,6 +508,13 @@
         "severity": "HIGH",
         "severityValue": 3,
         "timeToPublishSeconds": 2061.0
+      },
+      {
+        "date": "2026-10-27",
+        "cveId": "CVE-2026-85299",
+        "severity": "HIGH",
+        "severityValue": 3,
+        "timeToPublishSeconds": 65042.0
       }
     ]
   },
@@ -516,24 +523,24 @@
       "cna": "VulnCheck",
       "slug": "vulncheck",
       "rank": 1,
-      "window30SecondsPerCve": 1508.7310826542491,
-      "totalEvents": 8079,
+      "window30SecondsPerCve": 1500.868558193399,
+      "totalEvents": 8143,
       "percentileFaster": 100
     },
     {
       "cna": "GitHub_M",
       "slug": "github-m",
       "rank": 2,
-      "window30SecondsPerCve": 1981.651376146789,
-      "totalEvents": 21478,
+      "window30SecondsPerCve": 1905.8823529411766,
+      "totalEvents": 21530,
       "percentileFaster": 100
     },
     {
       "cna": "VulDB",
       "slug": "vuldb",
       "rank": 3,
-      "window30SecondsPerCve": 2896.08938547486,
-      "totalEvents": 17415,
+      "window30SecondsPerCve": 2938.7755102040815,
+      "totalEvents": 17437,
       "percentileFaster": 99
     },
     {
@@ -548,8 +555,8 @@
       "cna": "Patchstack",
       "slug": "patchstack",
       "rank": 5,
-      "window30SecondsPerCve": 3469.879518072289,
-      "totalEvents": 13399,
+      "window30SecondsPerCve": 3465.2406417112297,
+      "totalEvents": 13400,
       "percentileFaster": 99
     },
     {
@@ -588,8 +595,8 @@
       "cna": "Wordfence",
       "slug": "wordfence",
       "rank": 10,
-      "window30SecondsPerCve": 10285.714285714286,
-      "totalEvents": 7830,
+      "window30SecondsPerCve": 10755.186721991702,
+      "totalEvents": 7842,
       "percentileFaster": 97
     },
     {
@@ -601,17 +608,9 @@
       "percentileFaster": 97
     },
     {
-      "cna": "adobe",
-      "slug": "adobe",
-      "rank": 12,
-      "window30SecondsPerCve": 13714.285714285714,
-      "totalEvents": 4536,
-      "percentileFaster": 96
-    },
-    {
       "cna": "hpe",
       "slug": "hpe",
-      "rank": 13,
+      "rank": 12,
       "window30SecondsPerCve": 14480.446927374302,
       "totalEvents": 1363,
       "percentileFaster": 96
@@ -619,57 +618,65 @@
     {
       "cna": "microsoft",
       "slug": "microsoft",
+      "rank": 13,
+      "window30SecondsPerCve": 14561.797752808989,
+      "totalEvents": 6670,
+      "percentileFaster": 96
+    },
+    {
+      "cna": "Chrome",
+      "slug": "chrome",
       "rank": 14,
       "window30SecondsPerCve": 14644.06779661017,
-      "totalEvents": 6667,
+      "totalEvents": 2483,
       "percentileFaster": 96
     },
     {
       "cna": "WPScan",
       "slug": "wpscan",
       "rank": 15,
-      "window30SecondsPerCve": 15069.767441860466,
-      "totalEvents": 3831,
-      "percentileFaster": 95
-    },
-    {
-      "cna": "Chrome",
-      "slug": "chrome",
-      "rank": 16,
-      "window30SecondsPerCve": 15901.840490797545,
-      "totalEvents": 2469,
+      "window30SecondsPerCve": 15247.058823529413,
+      "totalEvents": 3834,
       "percentileFaster": 95
     },
     {
       "cna": "mitre",
       "slug": "mitre",
-      "rank": 17,
-      "window30SecondsPerCve": 16615.384615384617,
-      "totalEvents": 37830,
+      "rank": 16,
+      "window30SecondsPerCve": 16405.063291139242,
+      "totalEvents": 37832,
       "percentileFaster": 95
     },
     {
-      "cna": "nvidia",
-      "slug": "nvidia",
-      "rank": 18,
-      "window30SecondsPerCve": 16831.16883116883,
-      "totalEvents": 967,
-      "percentileFaster": 94
+      "cna": "adobe",
+      "slug": "adobe",
+      "rank": 17,
+      "window30SecondsPerCve": 16941.176470588234,
+      "totalEvents": 4542,
+      "percentileFaster": 95
     },
     {
       "cna": "juniper",
       "slug": "juniper",
-      "rank": 19,
+      "rank": 18,
       "window30SecondsPerCve": 16941.176470588234,
       "totalEvents": 774,
       "percentileFaster": 94
     },
     {
-      "cna": "GitLab",
-      "slug": "gitlab",
+      "cna": "mozilla",
+      "slug": "mozilla",
+      "rank": 19,
+      "window30SecondsPerCve": 17513.513513513513,
+      "totalEvents": 1386,
+      "percentileFaster": 94
+    },
+    {
+      "cna": "nvidia",
+      "slug": "nvidia",
       "rank": 20,
-      "window30SecondsPerCve": 20736.0,
-      "totalEvents": 1315,
+      "window30SecondsPerCve": 18253.521126760563,
+      "totalEvents": 973,
       "percentileFaster": 94
     }
   ]
