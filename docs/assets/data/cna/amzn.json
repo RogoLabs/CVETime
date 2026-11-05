@@ -1,17 +1,17 @@
 {
-  "generatedAt": "2026-11-04T04:56:14.403412+00:00",
+  "generatedAt": "2026-11-05T05:11:48.106419+00:00",
   "cna": {
     "name": "AMZN",
     "slug": "amzn",
-    "rank": 46,
-    "window30SecondsPerCve": 61714.28571428572,
-    "window90SecondsPerCve": 77760.0,
-    "totalEvents": 239,
+    "rank": 44,
+    "window30SecondsPerCve": 58909.09090909091,
+    "window90SecondsPerCve": 76990.099009901,
+    "totalEvents": 241,
     "consistencyScore": 0,
     "consistencyGrade": "F",
     "consistencyMedianSeconds": 72180.0,
-    "consistencyP90Seconds": 685834.2000000002,
-    "percentileFaster": 85
+    "consistencyP90Seconds": 681913.3999999999,
+    "percentileFaster": 86
   },
   "trend": [
     {
@@ -155,14 +155,14 @@
     {
       "date": "2026-11-01",
       "p50IntervalSeconds": 8583.0,
-      "p90IntervalSeconds": 145961.40000000008,
-      "eventCount": 7
+      "p90IntervalSeconds": 115573.80000000003,
+      "eventCount": 9
     }
   ],
   "metrics": {
     "p50Seconds": 72180.0,
-    "p90Seconds": 685834.2000000002,
-    "trimmedCount": 214
+    "p90Seconds": 681913.3999999999,
+    "trimmedCount": 216
   },
   "severity": {
     "summary": {
@@ -172,9 +172,9 @@
         "p90Seconds": 547714.4
       },
       "HIGH": {
-        "count": 127,
+        "count": 129,
         "medianSeconds": 78888.0,
-        "p90Seconds": 687794.6000000001
+        "p90Seconds": 683873.8
       },
       "CRITICAL": {
         "count": 21,
@@ -1848,6 +1848,20 @@
         "severity": "HIGH",
         "severityValue": 3,
         "timeToPublishSeconds": 8583.0
+      },
+      {
+        "date": "2026-11-04",
+        "cveId": "CVE-2026-122192",
+        "severity": "HIGH",
+        "severityValue": 3,
+        "timeToPublishSeconds": 81021.0
+      },
+      {
+        "date": "2026-11-04",
+        "cveId": "CVE-2026-122266",
+        "severity": "HIGH",
+        "severityValue": 3,
+        "timeToPublishSeconds": 7696.0
       }
     ]
   },
@@ -1856,16 +1870,16 @@
       "cna": "VulnCheck",
       "slug": "vulncheck",
       "rank": 1,
-      "window30SecondsPerCve": 1407.1661237785017,
-      "totalEvents": 8484,
+      "window30SecondsPerCve": 1351.40771637122,
+      "totalEvents": 8567,
       "percentileFaster": 100
     },
     {
       "cna": "GitHub_M",
       "slug": "github-m",
       "rank": 2,
-      "window30SecondsPerCve": 1700.7874015748032,
-      "totalEvents": 21861,
+      "window30SecondsPerCve": 1752.5354969574037,
+      "totalEvents": 21912,
       "percentileFaster": 100
     },
     {
@@ -1880,16 +1894,16 @@
       "cna": "VulDB",
       "slug": "vuldb",
       "rank": 4,
-      "window30SecondsPerCve": 3344.516129032258,
-      "totalEvents": 17544,
+      "window30SecondsPerCve": 3446.808510638298,
+      "totalEvents": 17580,
       "percentileFaster": 99
     },
     {
       "cna": "Patchstack",
       "slug": "patchstack",
       "rank": 5,
-      "window30SecondsPerCve": 3465.2406417112297,
-      "totalEvents": 13581,
+      "window30SecondsPerCve": 3610.0278551532033,
+      "totalEvents": 13585,
       "percentileFaster": 99
     },
     {
@@ -1912,24 +1926,24 @@
       "cna": "ibm",
       "slug": "ibm",
       "rank": 8,
-      "window30SecondsPerCve": 8876.712328767124,
-      "totalEvents": 5357,
+      "window30SecondsPerCve": 8307.692307692309,
+      "totalEvents": 5384,
       "percentileFaster": 98
     },
     {
       "cna": "apache",
       "slug": "apache",
       "rank": 9,
-      "window30SecondsPerCve": 9257.142857142857,
-      "totalEvents": 2922,
+      "window30SecondsPerCve": 8554.455445544554,
+      "totalEvents": 2945,
       "percentileFaster": 97
     },
     {
       "cna": "Wordfence",
       "slug": "wordfence",
       "rank": 10,
-      "window30SecondsPerCve": 9818.181818181818,
-      "totalEvents": 7935,
+      "window30SecondsPerCve": 9564.575645756458,
+      "totalEvents": 7942,
       "percentileFaster": 97
     },
     {
@@ -1965,19 +1979,19 @@
       "percentileFaster": 96
     },
     {
-      "cna": "juniper",
-      "slug": "juniper",
+      "cna": "WPScan",
+      "slug": "wpscan",
       "rank": 15,
-      "window30SecondsPerCve": 15157.894736842105,
-      "totalEvents": 792,
+      "window30SecondsPerCve": 14982.658959537572,
+      "totalEvents": 3875,
       "percentileFaster": 95
     },
     {
-      "cna": "WPScan",
-      "slug": "wpscan",
+      "cna": "juniper",
+      "slug": "juniper",
       "rank": 16,
-      "window30SecondsPerCve": 15428.57142857143,
-      "totalEvents": 3869,
+      "window30SecondsPerCve": 15157.894736842105,
+      "totalEvents": 792,
       "percentileFaster": 95
     },
     {
