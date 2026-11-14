@@ -1,17 +1,17 @@
 {
-  "generatedAt": "2026-11-13T05:07:23.406947+00:00",
+  "generatedAt": "2026-11-14T05:00:18.591316+00:00",
   "cna": {
     "name": "NCSC.ch",
     "slug": "ncscch",
-    "rank": 98,
-    "window30SecondsPerCve": 152470.58823529413,
-    "window90SecondsPerCve": 228705.88235294117,
-    "totalEvents": 225,
+    "rank": 89,
+    "window30SecondsPerCve": 123428.57142857143,
+    "window90SecondsPerCve": 222171.42857142858,
+    "totalEvents": 229,
     "consistencyScore": 0,
     "consistencyGrade": "F",
     "consistencyMedianSeconds": 152.0,
-    "consistencyP90Seconds": 2446925.700000003,
-    "percentileFaster": 68
+    "consistencyP90Seconds": 2379833.3000000017,
+    "percentileFaster": 71
   },
   "trend": [
     {
@@ -274,27 +274,27 @@
     },
     {
       "date": "2026-11-01",
-      "p50IntervalSeconds": 198.0,
-      "p90IntervalSeconds": 414688.2000000002,
-      "eventCount": 7
+      "p50IntervalSeconds": 167.0,
+      "p90IntervalSeconds": 626187.0,
+      "eventCount": 11
     }
   ],
   "metrics": {
     "p50Seconds": 152.0,
-    "p90Seconds": 2446925.700000003,
-    "trimmedCount": 200
+    "p90Seconds": 2379833.3000000017,
+    "trimmedCount": 204
   },
   "severity": {
     "summary": {
       "HIGH": {
-        "count": 94,
+        "count": 96,
         "medianSeconds": 151.5,
-        "p90Seconds": 1597329.1000000003
+        "p90Seconds": 1566544.5
       },
       "MEDIUM": {
-        "count": 84,
+        "count": 86,
         "medianSeconds": 143.0,
-        "p90Seconds": 2576618.9000000004
+        "p90Seconds": 2566483.5
       },
       "LOW": {
         "count": 11,
@@ -1875,6 +1875,34 @@
         "severity": "HIGH",
         "severityValue": 3,
         "timeToPublishSeconds": 49.0
+      },
+      {
+        "date": "2026-11-13",
+        "cveId": "CVE-2026-128907",
+        "severity": "MEDIUM",
+        "severityValue": 2,
+        "timeToPublishSeconds": 626187.0
+      },
+      {
+        "date": "2026-11-13",
+        "cveId": "CVE-2026-128908",
+        "severity": "HIGH",
+        "severityValue": 3,
+        "timeToPublishSeconds": 167.0
+      },
+      {
+        "date": "2026-11-13",
+        "cveId": "CVE-2026-128909",
+        "severity": "HIGH",
+        "severityValue": 3,
+        "timeToPublishSeconds": 81.0
+      },
+      {
+        "date": "2026-11-13",
+        "cveId": "CVE-2026-128910",
+        "severity": "MEDIUM",
+        "severityValue": 2,
+        "timeToPublishSeconds": 42.0
       }
     ]
   },
@@ -1883,16 +1911,16 @@
       "cna": "VulnCheck",
       "slug": "vulncheck",
       "rank": 1,
-      "window30SecondsPerCve": 1461.1048478015784,
-      "totalEvents": 9015,
+      "window30SecondsPerCve": 1316.4042661249366,
+      "totalEvents": 9294,
       "percentileFaster": 100
     },
     {
       "cna": "GitHub_M",
       "slug": "github-m",
       "rank": 2,
-      "window30SecondsPerCve": 1725.699067909454,
-      "totalEvents": 22370,
+      "window30SecondsPerCve": 1785.1239669421489,
+      "totalEvents": 22436,
       "percentileFaster": 100
     },
     {
@@ -1915,32 +1943,32 @@
       "cna": "VulDB",
       "slug": "vuldb",
       "rank": 5,
-      "window30SecondsPerCve": 3868.6567164179105,
-      "totalEvents": 17720,
+      "window30SecondsPerCve": 3933.2321699544764,
+      "totalEvents": 17722,
       "percentileFaster": 99
     },
     {
       "cna": "Patchstack",
       "slug": "patchstack",
       "rank": 6,
-      "window30SecondsPerCve": 4445.969125214408,
-      "totalEvents": 13778,
+      "window30SecondsPerCve": 4408.163265306122,
+      "totalEvents": 13815,
       "percentileFaster": 98
     },
     {
       "cna": "ibm",
       "slug": "ibm",
       "rank": 7,
-      "window30SecondsPerCve": 5289.7959183673465,
-      "totalEvents": 5679,
+      "window30SecondsPerCve": 5972.350230414747,
+      "totalEvents": 5700,
       "percentileFaster": 98
     },
     {
       "cna": "apache",
       "slug": "apache",
       "rank": 8,
-      "window30SecondsPerCve": 6156.769596199525,
-      "totalEvents": 3111,
+      "window30SecondsPerCve": 6041.958041958042,
+      "totalEvents": 3120,
       "percentileFaster": 98
     },
     {
@@ -1963,16 +1991,16 @@
       "cna": "Wordfence",
       "slug": "wordfence",
       "rank": 11,
-      "window30SecondsPerCve": 9031.358885017422,
-      "totalEvents": 8017,
+      "window30SecondsPerCve": 9494.505494505494,
+      "totalEvents": 8027,
       "percentileFaster": 97
     },
     {
       "cna": "redhat",
       "slug": "redhat",
       "rank": 12,
-      "window30SecondsPerCve": 10085.603112840467,
-      "totalEvents": 7468,
+      "window30SecondsPerCve": 10845.188284518828,
+      "totalEvents": 7476,
       "percentileFaster": 96
     },
     {
@@ -1987,8 +2015,8 @@
       "cna": "WPScan",
       "slug": "wpscan",
       "rank": 14,
-      "window30SecondsPerCve": 13642.105263157895,
-      "totalEvents": 3936,
+      "window30SecondsPerCve": 13430.051813471502,
+      "totalEvents": 3940,
       "percentileFaster": 96
     },
     {
