@@ -1,17 +1,17 @@
 {
-  "generatedAt": "2026-11-14T05:00:27.034800+00:00",
+  "generatedAt": "2026-11-15T04:54:06.838074+00:00",
   "cna": {
     "name": "harborist",
     "slug": "harborist",
-    "rank": 127,
-    "window30SecondsPerCve": 235636.36363636365,
-    "window90SecondsPerCve": 457411.76470588235,
-    "totalEvents": 29,
+    "rank": 138,
+    "window30SecondsPerCve": 259200.0,
+    "window90SecondsPerCve": 432000.0,
+    "totalEvents": 30,
     "consistencyScore": 0,
     "consistencyGrade": "F",
-    "consistencyMedianSeconds": 570062.5,
-    "consistencyP90Seconds": 3844708.2,
-    "percentileFaster": 59
+    "consistencyMedianSeconds": 576262.0,
+    "consistencyP90Seconds": 3837197.8,
+    "percentileFaster": 56
   },
   "trend": [
     {
@@ -82,15 +82,15 @@
     },
     {
       "date": "2026-11-01",
-      "p50IntervalSeconds": 43.0,
-      "p90IntervalSeconds": 230545.0000000002,
-      "eventCount": 7
+      "p50IntervalSeconds": 54.5,
+      "p90IntervalSeconds": 646686.7,
+      "eventCount": 8
     }
   ],
   "metrics": {
-    "p50Seconds": 570062.5,
-    "p90Seconds": 3844708.2,
-    "trimmedCount": 25
+    "p50Seconds": 576262.0,
+    "p90Seconds": 3837197.8,
+    "trimmedCount": 26
   },
   "severity": {
     "summary": {
@@ -105,9 +105,9 @@
         "p90Seconds": 8102494.0
       },
       "HIGH": {
-        "count": 6,
-        "medianSeconds": 523172.5,
-        "p90Seconds": 1453379.0
+        "count": 7,
+        "medianSeconds": 563863.0,
+        "p90Seconds": 1377828.4000000004
       },
       "LOW": {
         "count": 7,
@@ -311,6 +311,13 @@
         "severity": "MEDIUM",
         "severityValue": 2,
         "timeToPublishSeconds": 42.0
+      },
+      {
+        "date": "2026-11-14",
+        "cveId": "CVE-2026-129319",
+        "severity": "HIGH",
+        "severityValue": 3,
+        "timeToPublishSeconds": 811011.0
       }
     ]
   },
@@ -319,8 +326,8 @@
       "cna": "VulnCheck",
       "slug": "vulncheck",
       "rank": 1,
-      "window30SecondsPerCve": 1316.4042661249366,
-      "totalEvents": 9294,
+      "window30SecondsPerCve": 1420.2739726027398,
+      "totalEvents": 9305,
       "percentileFaster": 100
     },
     {
@@ -351,8 +358,8 @@
       "cna": "VulDB",
       "slug": "vuldb",
       "rank": 5,
-      "window30SecondsPerCve": 3933.2321699544764,
-      "totalEvents": 17722,
+      "window30SecondsPerCve": 3840.0,
+      "totalEvents": 17746,
       "percentileFaster": 99
     },
     {
@@ -399,8 +406,8 @@
       "cna": "Wordfence",
       "slug": "wordfence",
       "rank": 11,
-      "window30SecondsPerCve": 9494.505494505494,
-      "totalEvents": 8027,
+      "window30SecondsPerCve": 9564.575645756458,
+      "totalEvents": 8033,
       "percentileFaster": 97
     },
     {
@@ -423,8 +430,8 @@
       "cna": "WPScan",
       "slug": "wpscan",
       "rank": 14,
-      "window30SecondsPerCve": 13430.051813471502,
-      "totalEvents": 3940,
+      "window30SecondsPerCve": 14010.81081081081,
+      "totalEvents": 3944,
       "percentileFaster": 96
     },
     {
